@@ -1,6 +1,6 @@
 # Tracked Models
 
-A list of HuggingFace models tracked by [Interconnects AI](https://interconnects.ai) for open model analytics.
+The core HuggingFace models used to track metrics for [The ATOM Project](https://www.atomproject.ai/).
 
 ## Format
 
