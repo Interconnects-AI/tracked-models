@@ -43,8 +43,8 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-02-07
-- Added 139 models across 9 new orgs and 11 existing orgs
-- Removed 10 guard/shield models (granite-guardian, Qwen3Guard)
+- Added 169 models across 9 new orgs and 11 existing orgs
+- Removed 11 guard/shield models (granite-guardian, Qwen3Guard, vaultgemma)
 - New orgs: OpenGVLab, tiiuae, baichuan-inc, llava-hf, EleutherAI, facebook, moondream, vikhyatk, rednote-hilab
 - Filled gaps in google, microsoft, nvidia, meta-llama, ByteDance-Seed, and other existing orgs
 - Scope: post-ChatGPT models only (released after Nov 30, 2022) with >100K total downloads
