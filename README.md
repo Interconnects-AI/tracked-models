@@ -24,6 +24,11 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 
 ## Changelog
 
+### 2026-02-07 (Tier 2)
+- Added 119 models across 20 new orgs and 5 existing orgs
+- New orgs: CohereLabs, LGAI-EXAONE, Salesforce, bigcode, AIDC-AI, TinyLlama, apple, state-spaces, typhoon-ai, swiss-ai, h2oai, llm-jp, ibm-research, LiquidAI, GSAI-ML, and more
+- Additional gaps filled in google, microsoft, allenai, Qwen, arcee-ai
+
 ### 2026-01-09
 - Added arcee-ai Trinity collection (8 models): Trinity-Mini, Trinity-Mini-Base, Trinity-Mini-Base-Pre-Anneal, Trinity-Mini-GGUF, Trinity-Nano-Base, Trinity-Nano-Base-Pre-Anneal, Trinity-Nano-Preview, Trinity-Nano-Preview-GGUF
 - Added arcee-ai AFM 4.5B series (5 models): AFM-4.5B, AFM-4.5B-Base, AFM-4.5B-GGUF, AFM-4.5B-ov, AFM-4.5B-Preview
