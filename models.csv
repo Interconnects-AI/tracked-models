@@ -640,6 +640,9 @@ google,medgemma-27b-text-it,google/medgemma-27b-text-it
 google,medgemma-4b-it,google/medgemma-4b-it
 google,paligemma-3b-mix-224,google/paligemma-3b-mix-224
 google,paligemma2-3b-pt-224,google/paligemma2-3b-pt-224
+google,t5gemma-2-1b-1b,google/t5gemma-2-1b-1b
+google,t5gemma-2-270m-270m,google/t5gemma-2-270m-270m
+google,t5gemma-2-4b-4b,google/t5gemma-2-4b-4b
 google,translategemma-12b-it,google/translategemma-12b-it
 ibm-granite,granite-20b-code-base-8k,ibm-granite/granite-20b-code-base-8k
 ibm-granite,granite-20b-code-base-r1.1,ibm-granite/granite-20b-code-base-r1.1

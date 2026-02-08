@@ -38,14 +38,13 @@ The tracked list has since expanded to cover additional frontier model providers
 
 Models intentionally excluded from tracking despite high download counts:
 
-- **[google/t5gemma-b-b-prefixlm](https://huggingface.co/google/t5gemma-b-b-prefixlm)** and other T5Gemma variants (17.5M+ downloads) -- encoder-decoder research models with download counts disproportionate to real-world impact, likely inflated by automated pipelines.
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
 
 ### 2026-02-07
-- Added 136 models across 9 new orgs and 11 existing orgs
-- Removed 10 guard/shield models (granite-guardian, Qwen3Guard) and 3 t5gemma variants (disproportionate downloads)
+- Added 139 models across 9 new orgs and 11 existing orgs
+- Removed 10 guard/shield models (granite-guardian, Qwen3Guard)
 - New orgs: OpenGVLab, tiiuae, baichuan-inc, llava-hf, EleutherAI, facebook, moondream, vikhyatk, rednote-hilab
 - Filled gaps in google, microsoft, nvidia, meta-llama, ByteDance-Seed, and other existing orgs
 - Scope: post-ChatGPT models only (released after Nov 30, 2022) with >100K total downloads
