@@ -2,9 +2,23 @@
 
 The core HuggingFace models used to track metrics for [The ATOM Project](https://www.atomproject.ai/).
 
+## Files
+
+### `models.csv` (primary list)
+
+The main tracked model list. These are the core frontier models used in ATOM Project charts and analysis.
+
+### `extra_models.csv` (secondary list)
+
+A secondary list of models that are tracked but not yet included in the main charts. These are candidates for promotion to `models.csv` in the future. Useful for broader ecosystem analysis, coverage of niche orgs, and filling gaps in existing org catalogs.
+
+**New orgs in extra list**: AI-MO, AIDC-AI, apple, bigcode, CohereLabs, docling-project, GSAI-ML, h2oai, ibm-research, LGAI-EXAONE, LiquidAI, llm-jp, opendatalab, OpenHands, openvla, Salesforce, state-spaces, swiss-ai, TinyLlama, typhoon-ai
+
+**Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
+
 ## Format
 
-`models.csv` contains three columns:
+Both CSV files share the same format with three columns:
 
 | Column | Description |
 |--------|-------------|
@@ -15,10 +29,17 @@ The core HuggingFace models used to track metrics for [The ATOM Project](https:/
 ## Usage
 
 ```bash
-# Fetch the raw CSV
+# Fetch the primary list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv
 
-# Get just the model IDs
+# Fetch the extra list
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv
+
+# Combine both lists (skip extra header)
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv > all_models.csv
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv | tail -n +2 >> all_models.csv
+
+# Get just the model IDs from primary list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv | tail -n +2 | cut -d',' -f3
 ```
 
@@ -41,6 +62,10 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
+
+### 2026-02-08
+- Added `extra_models.csv` with 119 models across 25 orgs (20 new, 5 existing)
+- Secondary tracking list for broader ecosystem coverage, can be promoted to `models.csv`
 
 ### 2026-02-07
 - Added 169 models across 9 new orgs and 11 existing orgs
