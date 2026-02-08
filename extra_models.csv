@@ -106,13 +106,13 @@ state-spaces,mamba-2.8b-hf,state-spaces/mamba-2.8b-hf
 state-spaces,mamba-370m-hf,state-spaces/mamba-370m-hf
 swiss-ai,Apertus-70B-Instruct-2509,swiss-ai/Apertus-70B-Instruct-2509
 swiss-ai,Apertus-8B-Instruct-2509,swiss-ai/Apertus-8B-Instruct-2509
-TinyLlama,TinyLlama_v1.1,TinyLlama/TinyLlama_v1.1
 TinyLlama,TinyLlama-1.1B-Chat-v0.1,TinyLlama/TinyLlama-1.1B-Chat-v0.1
 TinyLlama,TinyLlama-1.1B-Chat-v0.3,TinyLlama/TinyLlama-1.1B-Chat-v0.3
 TinyLlama,TinyLlama-1.1B-Chat-v0.4,TinyLlama/TinyLlama-1.1B-Chat-v0.4
 TinyLlama,TinyLlama-1.1B-Chat-v0.6,TinyLlama/TinyLlama-1.1B-Chat-v0.6
 TinyLlama,TinyLlama-1.1B-Chat-v1.0,TinyLlama/TinyLlama-1.1B-Chat-v1.0
 TinyLlama,TinyLlama-1.1B-step-50K-105b,TinyLlama/TinyLlama-1.1B-step-50K-105b
+TinyLlama,TinyLlama_v1.1,TinyLlama/TinyLlama_v1.1
 typhoon-ai,llama-3-typhoon-v1.5-8b,typhoon-ai/llama-3-typhoon-v1.5-8b
 typhoon-ai,llama-3-typhoon-v1.5-8b-instruct,typhoon-ai/llama-3-typhoon-v1.5-8b-instruct
 typhoon-ai,typhoon-7b,typhoon-ai/typhoon-7b
