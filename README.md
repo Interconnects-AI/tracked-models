@@ -63,6 +63,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-03-26
+- Synced new HuggingFace models since the last CSV update with `sync_hf_models.py`
+- Added new models to `models.csv` across 15 existing orgs: allenai, arcee-ai, baidu, ibm-granite, inclusionAI, internlm, microsoft, MiniMaxAI, mistralai, nvidia, openbmb, Qwen, rednote-hilab, tencent, zai-org
+- Added new models to `extra_models.csv` across 8 orgs: AIDC-AI, CohereLabs, GSAI-ML, LGAI-EXAONE, LiquidAI, llm-jp, opendatalab, OpenHands
+
 ### 2026-02-08
 - Added `extra_models.csv` with 119 models across 25 orgs (20 new, 5 existing)
 - Secondary tracking list for broader ecosystem coverage, can be promoted to `models.csv`
