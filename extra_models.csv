@@ -15,6 +15,7 @@ apple,OpenELM-1_1B-Instruct,apple/OpenELM-1_1B-Instruct
 apple,OpenELM-3B-Instruct,apple/OpenELM-3B-Instruct
 apple,OpenELM-450M-Instruct,apple/OpenELM-450M-Instruct
 arcee-ai,Arcee-Spark,arcee-ai/Arcee-Spark
+arcee-ai,Arcee-Spark-FP32,arcee-ai/Arcee-Spark-FP32
 arcee-ai,Arcee-VyLinh,arcee-ai/Arcee-VyLinh
 bigcode,gpt_bigcode-santacoder,bigcode/gpt_bigcode-santacoder
 bigcode,santacoder,bigcode/santacoder
@@ -33,7 +34,9 @@ CohereLabs,aya-vision-8b,CohereLabs/aya-vision-8b
 CohereLabs,c4ai-command-a-03-2025,CohereLabs/c4ai-command-a-03-2025
 CohereLabs,c4ai-command-r-plus,CohereLabs/c4ai-command-r-plus
 CohereLabs,c4ai-command-r-plus-08-2024,CohereLabs/c4ai-command-r-plus-08-2024
+CohereLabs,c4ai-command-r-plus-4bit,CohereLabs/c4ai-command-r-plus-4bit
 CohereLabs,c4ai-command-r-v01,CohereLabs/c4ai-command-r-v01
+CohereLabs,c4ai-command-r-v01-4bit,CohereLabs/c4ai-command-r-v01-4bit
 CohereLabs,c4ai-command-r7b-12-2024,CohereLabs/c4ai-command-r7b-12-2024
 CohereLabs,command-a-vision-07-2025,CohereLabs/command-a-vision-07-2025
 CohereLabs,tiny-aya-base,CohereLabs/tiny-aya-base
@@ -68,7 +71,9 @@ LGAI-EXAONE,EXAONE-3.5-2.4B-Instruct,LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct
 LGAI-EXAONE,EXAONE-3.5-32B-Instruct,LGAI-EXAONE/EXAONE-3.5-32B-Instruct
 LGAI-EXAONE,EXAONE-3.5-7.8B-Instruct,LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct
 LGAI-EXAONE,EXAONE-4.0-1.2B,LGAI-EXAONE/EXAONE-4.0-1.2B
+LGAI-EXAONE,EXAONE-4.0-1.2B-FP8,LGAI-EXAONE/EXAONE-4.0-1.2B-FP8
 LGAI-EXAONE,EXAONE-4.0-32B,LGAI-EXAONE/EXAONE-4.0-32B
+LGAI-EXAONE,EXAONE-4.0-32B-FP8,LGAI-EXAONE/EXAONE-4.0-32B-FP8
 LGAI-EXAONE,EXAONE-4.0.1-32B,LGAI-EXAONE/EXAONE-4.0.1-32B
 LGAI-EXAONE,EXAONE-Deep-2.4B,LGAI-EXAONE/EXAONE-Deep-2.4B
 LGAI-EXAONE,EXAONE-Deep-32B,LGAI-EXAONE/EXAONE-Deep-32B
@@ -134,4 +139,5 @@ typhoon-ai,llama-3-typhoon-v1.5-8b,typhoon-ai/llama-3-typhoon-v1.5-8b
 typhoon-ai,llama-3-typhoon-v1.5-8b-instruct,typhoon-ai/llama-3-typhoon-v1.5-8b-instruct
 typhoon-ai,typhoon-7b,typhoon-ai/typhoon-7b
 typhoon-ai,typhoon2.1-gemma3-12b,typhoon-ai/typhoon2.1-gemma3-12b
+typhoon-ai,typhoon2.1-gemma3-12b-fp8,typhoon-ai/typhoon2.1-gemma3-12b-fp8
 typhoon-ai,typhoon2.1-gemma3-4b,typhoon-ai/typhoon2.1-gemma3-4b

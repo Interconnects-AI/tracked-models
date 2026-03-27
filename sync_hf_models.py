@@ -71,8 +71,6 @@ HF_METADATA_SUFFIXES = (
 WEIGHT_SUFFIXES = (
     ".safetensors",
     ".bin",
-    ".gguf",
-    ".onnx",
     ".pt",
     ".pth",
     ".ckpt",
@@ -80,11 +78,113 @@ WEIGHT_SUFFIXES = (
     ".keras",
     ".msgpack",
 )
+SKIP_FORMAT_TOKENS = {"gguf", "onnx", "mlx", "openvino", "ov"}
+VARIANT_MODIFIER_TOKENS = {"block", "dynamic", "static"}
+VARIANT_TOKEN_PATTERN = re.compile(
+    r"^(?:fp\d+(?:\.\d+)?|bf\d+(?:\.\d+)?|int\d+|uint\d+|nf\d+|mxfp\d+|nvfp\d+|w\d+a\d+|q\d+(?:_[a-z0-9]+)*|\d+bit)$",
+    re.IGNORECASE,
+)
 
 
 def tokenize(text: str) -> set[str]:
     text = re.sub(r"([a-z])([A-Z])", r"\1 \2", text)
     return {token.lower() for token in re.findall(r"[A-Za-z]{4,}", text)}
+
+
+def format_skip_reason(model_name: str, tags: set[str], file_names: list[str]) -> str:
+    lowered_name = model_name.lower()
+    if "gguf" in lowered_name or "gguf" in tags:
+        return "gguf"
+    if any(name.endswith(".gguf") for name in file_names):
+        return "gguf"
+
+    if "onnx" in lowered_name or "onnx" in tags:
+        return "format"
+    if any(
+        name.endswith(".onnx") or name.startswith("onnx/") or "/onnx/" in name
+        for name in file_names
+    ):
+        return "format"
+
+    if re.search(r"(^|[-_])mlx($|[-_])", lowered_name) or "mlx" in tags:
+        return "format"
+
+    if "openvino" in lowered_name or "openvino" in tags:
+        return "format"
+    if re.search(r"(^|[-_])ov($|[-_])", lowered_name):
+        return "format"
+    if any("openvino" in name for name in file_names):
+        return "format"
+
+    return ""
+
+
+def is_numeric_variant_suffix(suffix: str) -> bool:
+    tokens = [token.lower() for token in suffix.split("-") if token]
+    if not tokens:
+        return False
+
+    has_numeric_token = False
+    index = 0
+    while index < len(tokens):
+        token = tokens[index]
+        if token in SKIP_FORMAT_TOKENS:
+            return False
+        if token in VARIANT_MODIFIER_TOKENS:
+            index += 1
+            continue
+        if token.isdigit() and index + 1 < len(tokens) and tokens[index + 1] == "bit":
+            has_numeric_token = True
+            index += 2
+            continue
+        if VARIANT_TOKEN_PATTERN.fullmatch(token):
+            has_numeric_token = True
+            index += 1
+            continue
+        return False
+
+    return has_numeric_token
+
+
+def strip_numeric_variant_suffix(model_name: str) -> str:
+    parts = model_name.split("-")
+    for index in range(1, len(parts)):
+        suffix = "-".join(parts[index:])
+        if is_numeric_variant_suffix(suffix):
+            return "-".join(parts[:index])
+
+    return ""
+
+
+def find_variant_path(
+    org: str,
+    model_name: str,
+    tags: set[str],
+    tracked_models_by_org: dict[str, list[tuple[str, str]]],
+) -> str:
+    base_tags: set[str] = set()
+    for tag in tags:
+        if not tag.startswith("base_model:"):
+            continue
+        base_model_id = tag.rsplit(":", 1)[-1]
+        if "/" not in base_model_id:
+            continue
+        tag_org, base_name = base_model_id.split("/", 1)
+        if tag_org == org:
+            base_tags.add(base_name.lower())
+            stem = strip_numeric_variant_suffix(base_name)
+            if stem:
+                base_tags.add(stem.lower())
+
+    for base_name, csv_name in tracked_models_by_org[org]:
+        if not model_name.startswith(base_name + "-"):
+            continue
+        if base_tags and base_name.lower() not in base_tags:
+            continue
+        if is_numeric_variant_suffix(model_name[len(base_name) + 1 :]):
+            return csv_name
+
+    return ""
 
 
 def load_catalog() -> tuple[
@@ -149,10 +249,11 @@ def should_skip(model, org_tokens: set[str]) -> str:
         return "pipeline"
 
     file_names = [sibling.rfilename.lower() for sibling in (model.siblings or [])]
-    has_gguf = any(name.endswith(".gguf") for name in file_names)
     tags = {tag.lower() for tag in (model.tags or [])}
-    if has_gguf or "gguf" in lowered_name or "gguf" in tags:
-        return "gguf"
+    format_reason = format_skip_reason(model_name, tags, file_names)
+    if format_reason:
+        return format_reason
+
     has_weights = any(name.endswith(WEIGHT_SUFFIXES) for name in file_names)
     has_hf_metadata = any(name.endswith(HF_METADATA_SUFFIXES) for name in file_names)
 
@@ -217,24 +318,54 @@ def main() -> None:
     api = HfApi()
     additions_by_path: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
     skipped_by_reason: dict[str, list[str]] = defaultdict(list)
+    default_path_by_org: dict[str, str] = {}
+    tracked_models_by_org: dict[str, list[tuple[str, str]]] = defaultdict(list)
 
     for csv_name in CSV_NAMES:
         for org in orgs_by_path[csv_name]:
-            for model in api.list_models(author=org, sort="created_at", full=True):
-                if model.created_at and model.created_at <= cutoffs[csv_name]:
-                    break
-                if not model.created_at or model.id in existing_model_ids:
-                    continue
+            default_path_by_org[org] = csv_name
+        for row in rows_by_path[csv_name]:
+            tracked_models_by_org[row["org"]].append((row["model"], csv_name))
+            stem = strip_numeric_variant_suffix(row["model"])
+            if stem:
+                tracked_models_by_org[row["org"]].append((stem, csv_name))
 
-                reason = should_skip(model, tokens_by_org[org])
-                if reason:
-                    skipped_by_reason[reason].append(model.id)
-                    continue
+    for tracked_models in tracked_models_by_org.values():
+        tracked_models.sort(key=lambda row: (-len(row[0]), row[0].lower(), row[1]))
 
-                model_name = model.id.split("/", 1)[1]
-                additions_by_path[csv_name].append((org, model_name, model.id))
-                existing_model_ids.add(model.id)
-                tokens_by_org[org].update(tokenize(model_name))
+    for org in sorted(default_path_by_org, key=str.lower):
+        default_path = default_path_by_org[org]
+        for model in api.list_models(author=org, sort="created_at", full=True):
+            if model.id in existing_model_ids:
+                continue
+
+            model_name = model.id.split("/", 1)[1]
+            tags = {tag.lower() for tag in (model.tags or [])}
+            variant_path = find_variant_path(
+                org, model_name, tags, tracked_models_by_org
+            )
+            target_path = variant_path
+
+            if not target_path:
+                if not model.created_at or model.created_at <= cutoffs[default_path]:
+                    continue
+                target_path = default_path
+
+            reason = should_skip(model, tokens_by_org[org])
+            if reason:
+                skipped_by_reason[reason].append(model.id)
+                continue
+
+            additions_by_path[target_path].append((org, model_name, model.id))
+            existing_model_ids.add(model.id)
+            tokens_by_org[org].update(tokenize(model_name))
+            tracked_models_by_org[org].append((model_name, target_path))
+            stem = strip_numeric_variant_suffix(model_name)
+            if stem:
+                tracked_models_by_org[org].append((stem, target_path))
+            tracked_models_by_org[org].sort(
+                key=lambda row: (-len(row[0]), row[0].lower(), row[1])
+            )
 
     for csv_name in CSV_NAMES:
         additions = sorted(
