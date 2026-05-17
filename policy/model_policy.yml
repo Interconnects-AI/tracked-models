@@ -1,0 +1,200 @@
+global:
+  primary_allowed_pipeline_tags:
+    - text-generation
+    - image-text-to-text
+
+  conditional_allowed_pipeline_tags:
+    - any-to-any
+
+  reject_pipeline_tags:
+    - automatic-speech-recognition
+    - audio-classification
+    - audio-text-to-text
+    - audio-to-audio
+    - depth-estimation
+    - feature-extraction
+    - image-classification
+    - image-feature-extraction
+    - image-segmentation
+    - image-to-3d
+    - image-to-image
+    - image-to-video
+    - object-detection
+    - reinforcement-learning
+    - sentence-similarity
+    - text-classification
+    - text-ranking
+    - time-series-forecasting
+    - video-classification
+
+  reject_name_patterns:
+    - "(?i)(guard|guardian|shield|safeguard|safety)"
+    - "(?i)(classifier|detector|reranker|reward|embedding|embed)"
+    - "(?i)(tokenizer|adapter|lora|checkpoint|intermediate|proxy)"
+    - "(?i)(gguf|mlx|onnx|openvino|gptq|awq|bnb|bitsandbytes|prequantized)"
+    - "(?i)(sae|probe|interpretability)"
+    - "(?i)(test|dummy|warmup)"
+
+  reject_format_patterns:
+    - "(?i)(gguf|mlx|onnx|openvino)"
+
+  official_precision_suffixes:
+    - BF16
+    - FP8
+    - NVFP4
+    - W4A16
+
+  primary_min_downloads: 100000
+
+orgs:
+  AIDC-AI:
+    primary_family_patterns:
+      - "^Ovis(?:$|[-_])"
+      - "^Ovis\\d"
+      - "^Marco-(?:Mini|Nano|DeepResearch)(?:$|[-_])"
+
+  allenai:
+    primary_family_patterns:
+      - "^BAR-(?:$|[-_0-9A-Za-z])"
+      - "^Molmo2(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)^intent-aware-lfqa-"
+      - "^EMO$"
+      - "^(?:Dense|EMO|Emo|StdMoE)_"
+
+  apple:
+    primary_family_patterns:
+      - "^CADD-Base-7B$"
+
+  arcee-ai:
+    primary_family_patterns:
+      - "^Trinity-(?:Large|Mini|Nano)(?:$|[-_])"
+
+  ByteDance-Seed:
+    primary_family_patterns:
+      - "^Cola-DLM(?:$|[-_])"
+
+  deepseek-ai:
+    primary_family_patterns:
+      - "^DeepSeek-V4(?:$|[-_])"
+
+  google:
+    primary_family_patterns:
+      - "^gemma-4(?:$|[-_])"
+
+  HuggingFaceTB:
+    primary_family_patterns:
+      - "^nanowhale(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)GSM8K-SFT"
+
+  ibm-granite:
+    primary_family_patterns:
+      - "^granite-4\\.1(?:$|[-_])"
+      - "^granite-switch-4\\.1(?:$|[-_])"
+      - "^granite-vision-4\\.1(?:$|[-_])"
+
+  inclusionAI:
+    primary_family_patterns:
+      - "^Ling-2\\.6(?:$|[-_])"
+      - "^Ring-2\\.6(?:$|[-_])"
+      - "^LLaDA2\\.0(?:$|[-_])"
+
+  internlm:
+    primary_family_patterns:
+      - "^Intern-S2(?:$|[-_])"
+
+  LGAI-EXAONE:
+    primary_family_patterns:
+      - "^EXAONE-4\\.5(?:$|[-_])"
+
+  LiquidAI:
+    primary_family_patterns:
+      - "^LFM2\\.5(?:$|[-_])"
+
+  llm-jp:
+    primary_family_patterns:
+      - "^llm-jp-4-8b-instruct$"
+
+  microsoft:
+    reject_name_patterns:
+      - "^Dayhoff-"
+
+  MiniMaxAI:
+    primary_family_patterns:
+      - "^MiniMax-M2\\.7(?:$|[-_])"
+
+  mistralai:
+    primary_family_patterns:
+      - "^Mistral-Medium-3\\.5(?:$|[-_])"
+
+  moonshotai:
+    primary_family_patterns:
+      - "^Kimi-K2\\.6(?:$|[-_])"
+
+  Qwen:
+    primary_family_patterns:
+      - "^Qwen(?:1\\.5|2(?:\\.5)?|3(?:\\.\\d+)?)(?:$|[-_])"
+      - "^Qwen3-(Coder|Next|VL|Omni)(?:$|[-_])"
+      - "^QwQ(?:$|[-_])"
+      - "^QVQ(?:$|[-_])"
+      - "^CodeQwen(?:$|[-_])"
+
+    extra_family_patterns:
+      - "^Qwen.*Research"
+      - "^Qwen.*Experimental"
+
+    reject_name_patterns:
+      - "(?i)(guard|safety|shield|classifier|reward|reranker|embedding|embed)"
+      - "(?i)(sae|probe|scope|simulator|world-model)"
+
+  nvidia:
+    primary_family_patterns:
+      - "^(?:NVIDIA-)?Nemotron(?!-Labs)(?:$|[-_])"
+      - "^Llama[-_].*Nemotron"
+      - "^NVLM(?:$|[-_])"
+      - "^Hymba(?:$|[-_])"
+      - "^Cosmos-Reason\\d*(?:$|[-_])"
+      - "^Ace(?:Instruct|Math|Reason)(?:$|[-_])"
+      - "^Open(?:CodeReasoning|Reasoning|Math)-Nemotron"
+
+    extra_family_patterns:
+      - "^(?:NVIDIA-)?Nemotron-Labs(?:$|[-_])"
+      - "^Efficient-DLM(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)(ASR|Parakeet|Canary|Audio|Speech)"
+      - "(?i)(Embed|Rerank|Proxy|Classifier|Calibration)"
+      - "(?i)^(Gemma|Kimi|MiniMax).*NVFP4$"
+      - "^EGM-"
+      - "(?i)^gpt-oss-"
+      - "(?i)(MambaVision|AnyFlow|Wan|PixelDiT|PointWorld)"
+
+  openbmb:
+    primary_family_patterns:
+      - "^MiniCPM-V-4\\.6(?:$|[-_])"
+
+    reject_name_patterns:
+      - "^SciCore-Mol$"
+
+  opendatalab:
+    primary_family_patterns:
+      - "^MinerU2\\.5-Pro(?:$|[-_])"
+
+  tencent:
+    primary_family_patterns:
+      - "^Hy3-preview(?:$|[-_])"
+      - "^Sequential-Hidden-Decoding(?:$|[-_])"
+
+    reject_name_patterns:
+      - "^HY-Embodied-"
+
+  XiaomiMiMo:
+    primary_family_patterns:
+      - "^MiMo-V2\\.5-Pro(?:$|[-_])"
+
+  zai-org:
+    primary_family_patterns:
+      - "^GLM-5\\.1(?:$|[-_])"

@@ -11,6 +11,14 @@ ai21labs,AI21-Jamba-Reasoning-3B,ai21labs/AI21-Jamba-Reasoning-3B
 ai21labs,Jamba-tiny-dev,ai21labs/Jamba-tiny-dev
 ai21labs,Jamba-tiny-random,ai21labs/Jamba-tiny-random
 ai21labs,Jamba-v0.1,ai21labs/Jamba-v0.1
+allenai,BAR-2x7B-Base,allenai/BAR-2x7B-Base
+allenai,BAR-2x7B-Code,allenai/BAR-2x7B-Code
+allenai,BAR-2x7B-Code-SFT,allenai/BAR-2x7B-Code-SFT
+allenai,BAR-2x7B-Math,allenai/BAR-2x7B-Math
+allenai,BAR-2x7B-Math-SFT,allenai/BAR-2x7B-Math-SFT
+allenai,BAR-2x7B-Tool-Use,allenai/BAR-2x7B-Tool-Use
+allenai,BAR-5x7B,allenai/BAR-5x7B
+allenai,BAR-7B,allenai/BAR-7B
 allenai,Bolmo-1B,allenai/Bolmo-1B
 allenai,Bolmo-7B,allenai/Bolmo-7B
 allenai,codetulu-2-13b,allenai/codetulu-2-13b
@@ -36,6 +44,7 @@ allenai,Molmo-7B-D-0924,allenai/Molmo-7B-D-0924
 allenai,Molmo-7B-O-0924,allenai/Molmo-7B-O-0924
 allenai,Molmo2-4B,allenai/Molmo2-4B
 allenai,Molmo2-8B,allenai/Molmo2-8B
+allenai,Molmo2-ER,allenai/Molmo2-ER
 allenai,Molmo2-O-7B,allenai/Molmo2-O-7B
 allenai,Molmo2-VideoPoint-4B,allenai/Molmo2-VideoPoint-4B
 allenai,MolmoAct-7B-D-0812,allenai/MolmoAct-7B-D-0812
@@ -145,7 +154,12 @@ arcee-ai,AFM-4.5B-Preview,arcee-ai/AFM-4.5B-Preview
 arcee-ai,Trinity-Large-Preview,arcee-ai/Trinity-Large-Preview
 arcee-ai,Trinity-Large-Preview-FP8,arcee-ai/Trinity-Large-Preview-FP8
 arcee-ai,Trinity-Large-Preview-FP8-Block,arcee-ai/Trinity-Large-Preview-FP8-Block
+arcee-ai,Trinity-Large-Preview-NVFP4,arcee-ai/Trinity-Large-Preview-NVFP4
 arcee-ai,Trinity-Large-Preview-W4A16,arcee-ai/Trinity-Large-Preview-W4A16
+arcee-ai,Trinity-Large-Thinking,arcee-ai/Trinity-Large-Thinking
+arcee-ai,Trinity-Large-Thinking-FP8-Block,arcee-ai/Trinity-Large-Thinking-FP8-Block
+arcee-ai,Trinity-Large-Thinking-NVFP4,arcee-ai/Trinity-Large-Thinking-NVFP4
+arcee-ai,Trinity-Large-Thinking-W4A16,arcee-ai/Trinity-Large-Thinking-W4A16
 arcee-ai,Trinity-Mini,arcee-ai/Trinity-Mini
 arcee-ai,Trinity-Mini-Base,arcee-ai/Trinity-Mini-Base
 arcee-ai,Trinity-Mini-Base-Pre-Anneal,arcee-ai/Trinity-Mini-Base-Pre-Anneal
@@ -188,6 +202,7 @@ baidu,Qianfan-VL-8B,baidu/Qianfan-VL-8B
 ByteDance-Seed,academic-ds-9B,ByteDance-Seed/academic-ds-9B
 ByteDance-Seed,BAGEL-7B-MoT,ByteDance-Seed/BAGEL-7B-MoT
 ByteDance-Seed,BFS-Prover-V1-7B,ByteDance-Seed/BFS-Prover-V1-7B
+ByteDance-Seed,Cola-DLM,ByteDance-Seed/Cola-DLM
 ByteDance-Seed,SAIL-7B,ByteDance-Seed/SAIL-7B
 ByteDance-Seed,Seed-Coder-8B-Base,ByteDance-Seed/Seed-Coder-8B-Base
 ByteDance-Seed,Seed-Coder-8B-Instruct,ByteDance-Seed/Seed-Coder-8B-Instruct
@@ -258,6 +273,10 @@ deepseek-ai,DeepSeek-V3.2,deepseek-ai/DeepSeek-V3.2
 deepseek-ai,DeepSeek-V3.2-Exp,deepseek-ai/DeepSeek-V3.2-Exp
 deepseek-ai,DeepSeek-V3.2-Exp-Base,deepseek-ai/DeepSeek-V3.2-Exp-Base
 deepseek-ai,DeepSeek-V3.2-Speciale,deepseek-ai/DeepSeek-V3.2-Speciale
+deepseek-ai,DeepSeek-V4-Flash,deepseek-ai/DeepSeek-V4-Flash
+deepseek-ai,DeepSeek-V4-Flash-Base,deepseek-ai/DeepSeek-V4-Flash-Base
+deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
+deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
 deepseek-ai,deepseek-vl-1.3b-chat,deepseek-ai/deepseek-vl-1.3b-chat
 deepseek-ai,deepseek-vl-7b-base,deepseek-ai/deepseek-vl-7b-base
@@ -337,6 +356,10 @@ google,gemma-3n-E4B,google/gemma-3n-E4B
 google,gemma-3n-E4B-it,google/gemma-3n-E4B-it
 google,gemma-3n-E4B-it-litert-lm-preview,google/gemma-3n-E4B-it-litert-lm-preview
 google,gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it-litert-preview
+google,gemma-4-26B-A4B-it-assistant,google/gemma-4-26B-A4B-it-assistant
+google,gemma-4-31B-it-assistant,google/gemma-4-31B-it-assistant
+google,gemma-4-E2B-it-assistant,google/gemma-4-E2B-it-assistant
+google,gemma-4-E4B-it-assistant,google/gemma-4-E4B-it-assistant
 google,gemma-7b,google/gemma-7b
 google,gemma-7b-aps-it,google/gemma-7b-aps-it
 google,gemma-7b-flax,google/gemma-7b-flax
@@ -388,6 +411,8 @@ google,t5gemma-xl-xl-ul2-it,google/t5gemma-xl-xl-ul2-it
 google,translategemma-12b-it,google/translategemma-12b-it
 google,vaultgemma-1b,google/vaultgemma-1b
 HuggingFaceTB,FineMath-Llama-3B,HuggingFaceTB/FineMath-Llama-3B
+HuggingFaceTB,nanowhale-100m,HuggingFaceTB/nanowhale-100m
+HuggingFaceTB,nanowhale-100m-base,HuggingFaceTB/nanowhale-100m-base
 HuggingFaceTB,SmolLM-1.7B,HuggingFaceTB/SmolLM-1.7B
 HuggingFaceTB,SmolLM-1.7B-Instruct,HuggingFaceTB/SmolLM-1.7B-Instruct
 HuggingFaceTB,SmolLM-135M,HuggingFaceTB/SmolLM-135M
@@ -469,6 +494,15 @@ ibm-granite,granite-4.0-h-tiny,ibm-granite/granite-4.0-h-tiny
 ibm-granite,granite-4.0-micro,ibm-granite/granite-4.0-micro
 ibm-granite,granite-4.0-tiny-base-preview,ibm-granite/granite-4.0-tiny-base-preview
 ibm-granite,granite-4.0-tiny-preview,ibm-granite/granite-4.0-tiny-preview
+ibm-granite,granite-4.1-30b,ibm-granite/granite-4.1-30b
+ibm-granite,granite-4.1-30b-base,ibm-granite/granite-4.1-30b-base
+ibm-granite,granite-4.1-30b-fp8,ibm-granite/granite-4.1-30b-fp8
+ibm-granite,granite-4.1-3b,ibm-granite/granite-4.1-3b
+ibm-granite,granite-4.1-3b-base,ibm-granite/granite-4.1-3b-base
+ibm-granite,granite-4.1-3b-fp8,ibm-granite/granite-4.1-3b-fp8
+ibm-granite,granite-4.1-8b,ibm-granite/granite-4.1-8b
+ibm-granite,granite-4.1-8b-base,ibm-granite/granite-4.1-8b-base
+ibm-granite,granite-4.1-8b-fp8,ibm-granite/granite-4.1-8b-fp8
 ibm-granite,granite-7b-base,ibm-granite/granite-7b-base
 ibm-granite,granite-7b-instruct,ibm-granite/granite-7b-instruct
 ibm-granite,granite-8b-code-base-128k,ibm-granite/granite-8b-code-base-128k
@@ -480,9 +514,13 @@ ibm-granite,granite-embedding-107m-multilingual,ibm-granite/granite-embedding-10
 ibm-granite,granite-embedding-278m-multilingual,ibm-granite/granite-embedding-278m-multilingual
 ibm-granite,granite-speech-3.2-8b,ibm-granite/granite-speech-3.2-8b
 ibm-granite,granite-speech-3.3-2b,ibm-granite/granite-speech-3.3-2b
+ibm-granite,granite-switch-4.1-30b-preview,ibm-granite/granite-switch-4.1-30b-preview
+ibm-granite,granite-switch-4.1-3b-preview,ibm-granite/granite-switch-4.1-3b-preview
+ibm-granite,granite-switch-4.1-8b-preview,ibm-granite/granite-switch-4.1-8b-preview
 ibm-granite,granite-vision-3.1-2b-preview,ibm-granite/granite-vision-3.1-2b-preview
 ibm-granite,granite-vision-3.2-2b,ibm-granite/granite-vision-3.2-2b
 ibm-granite,granite-vision-3.3-2b,ibm-granite/granite-vision-3.3-2b
+ibm-granite,granite-vision-4.1-4b,ibm-granite/granite-vision-4.1-4b
 inclusionAI,AReaL-1.5B-Preview-Stage-1,inclusionAI/AReaL-1.5B-Preview-Stage-1
 inclusionAI,AReaL-1.5B-Preview-Stage-2,inclusionAI/AReaL-1.5B-Preview-Stage-2
 inclusionAI,AReaL-1.5B-Preview-Stage-3,inclusionAI/AReaL-1.5B-Preview-Stage-3
@@ -503,6 +541,10 @@ inclusionAI,GroveMoE-Inst,inclusionAI/GroveMoE-Inst
 inclusionAI,Ling-1T,inclusionAI/Ling-1T
 inclusionAI,Ling-1T-FP8,inclusionAI/Ling-1T-FP8
 inclusionAI,Ling-2.5-1T,inclusionAI/Ling-2.5-1T
+inclusionAI,Ling-2.6-1T,inclusionAI/Ling-2.6-1T
+inclusionAI,Ling-2.6-flash,inclusionAI/Ling-2.6-flash
+inclusionAI,Ling-2.6-flash-fp8,inclusionAI/Ling-2.6-flash-fp8
+inclusionAI,Ling-2.6-flash-int4,inclusionAI/Ling-2.6-flash-int4
 inclusionAI,Ling-Coder-lite,inclusionAI/Ling-Coder-lite
 inclusionAI,Ling-Coder-lite-base,inclusionAI/Ling-Coder-lite-base
 inclusionAI,Ling-flash-2.0,inclusionAI/Ling-flash-2.0
@@ -531,6 +573,8 @@ inclusionAI,LLaDA2.0-flash-preview,inclusionAI/LLaDA2.0-flash-preview
 inclusionAI,LLaDA2.0-mini,inclusionAI/LLaDA2.0-mini
 inclusionAI,LLaDA2.0-mini-CAP,inclusionAI/LLaDA2.0-mini-CAP
 inclusionAI,LLaDA2.0-mini-preview,inclusionAI/LLaDA2.0-mini-preview
+inclusionAI,LLaDA2.0-Uni,inclusionAI/LLaDA2.0-Uni
+inclusionAI,LLaDA2.0-Uni-FP8,inclusionAI/LLaDA2.0-Uni-FP8
 inclusionAI,LLaDA2.1-flash,inclusionAI/LLaDA2.1-flash
 inclusionAI,LLaDA2.1-mini,inclusionAI/LLaDA2.1-mini
 inclusionAI,M2-Reasoning,inclusionAI/M2-Reasoning
@@ -549,6 +593,7 @@ inclusionAI,Ring-1T-FP8,inclusionAI/Ring-1T-FP8
 inclusionAI,Ring-1T-preview,inclusionAI/Ring-1T-preview
 inclusionAI,Ring-1T-preview-FP8,inclusionAI/Ring-1T-preview-FP8
 inclusionAI,Ring-2.5-1T,inclusionAI/Ring-2.5-1T
+inclusionAI,Ring-2.6-1T,inclusionAI/Ring-2.6-1T
 inclusionAI,Ring-flash-2.0,inclusionAI/Ring-flash-2.0
 inclusionAI,Ring-flash-linear-2.0,inclusionAI/Ring-flash-linear-2.0
 inclusionAI,Ring-flash-linear-2.0-128k,inclusionAI/Ring-flash-linear-2.0-128k
@@ -579,6 +624,8 @@ internlm,Intern-S1-FP8,internlm/Intern-S1-FP8
 internlm,Intern-S1-mini,internlm/Intern-S1-mini
 internlm,Intern-S1-mini-FP8,internlm/Intern-S1-mini-FP8
 internlm,Intern-S1-Pro-BF16,internlm/Intern-S1-Pro-BF16
+internlm,Intern-S2-Preview,internlm/Intern-S2-Preview
+internlm,Intern-S2-Preview-FP8,internlm/Intern-S2-Preview-FP8
 internlm,internlm-20b,internlm/internlm-20b
 internlm,internlm-7b,internlm/internlm-7b
 internlm,internlm-chat-20b,internlm/internlm-chat-20b
@@ -754,6 +801,7 @@ MiniMaxAI,MiniMax-M1-80k-hf,MiniMaxAI/MiniMax-M1-80k-hf
 MiniMaxAI,MiniMax-M2,MiniMaxAI/MiniMax-M2
 MiniMaxAI,MiniMax-M2.1,MiniMaxAI/MiniMax-M2.1
 MiniMaxAI,MiniMax-M2.5,MiniMaxAI/MiniMax-M2.5
+MiniMaxAI,MiniMax-M2.7,MiniMaxAI/MiniMax-M2.7
 MiniMaxAI,MiniMax-Text-01,MiniMaxAI/MiniMax-Text-01
 MiniMaxAI,MiniMax-Text-01-hf,MiniMaxAI/MiniMax-Text-01-hf
 MiniMaxAI,MiniMax-VL-01,MiniMaxAI/MiniMax-VL-01
@@ -804,6 +852,7 @@ mistralai,Mistral-Large-3-675B-Instruct-2512-Eagle,mistralai/Mistral-Large-3-675
 mistralai,Mistral-Large-3-675B-Instruct-2512-NVFP4,mistralai/Mistral-Large-3-675B-Instruct-2512-NVFP4
 mistralai,Mistral-Large-Instruct-2407,mistralai/Mistral-Large-Instruct-2407
 mistralai,Mistral-Large-Instruct-2411,mistralai/Mistral-Large-Instruct-2411
+mistralai,Mistral-Medium-3.5-128B,mistralai/Mistral-Medium-3.5-128B
 mistralai,Mistral-Nemo-Base-2407,mistralai/Mistral-Nemo-Base-2407
 mistralai,Mistral-Nemo-Instruct-2407,mistralai/Mistral-Nemo-Instruct-2407
 mistralai,Mistral-Small-24B-Base-2501,mistralai/Mistral-Small-24B-Base-2501
@@ -827,6 +876,7 @@ moonshotai,Kimi-K2-Instruct,moonshotai/Kimi-K2-Instruct
 moonshotai,Kimi-K2-Instruct-0905,moonshotai/Kimi-K2-Instruct-0905
 moonshotai,Kimi-K2-Thinking,moonshotai/Kimi-K2-Thinking
 moonshotai,Kimi-K2.5,moonshotai/Kimi-K2.5
+moonshotai,Kimi-K2.6,moonshotai/Kimi-K2.6
 moonshotai,Kimi-Linear-48B-A3B-Base,moonshotai/Kimi-Linear-48B-A3B-Base
 moonshotai,Kimi-Linear-48B-A3B-Instruct,moonshotai/Kimi-Linear-48B-A3B-Instruct
 moonshotai,Kimi-VL-A3B-Instruct,moonshotai/Kimi-VL-A3B-Instruct
@@ -844,6 +894,7 @@ nvidia,AceReason-Nemotron-14B,nvidia/AceReason-Nemotron-14B
 nvidia,Cosmos-H-Surgical,nvidia/Cosmos-H-Surgical
 nvidia,Cosmos-Reason1-7B,nvidia/Cosmos-Reason1-7B
 nvidia,Cosmos-Reason2-2B,nvidia/Cosmos-Reason2-2B
+nvidia,Cosmos-Reason2-32B,nvidia/Cosmos-Reason2-32B
 nvidia,Cosmos-Reason2-8B,nvidia/Cosmos-Reason2-8B
 nvidia,Eagle-2.5-8B,nvidia/Eagle-2.5-8B
 nvidia,Eagle2-2B,nvidia/Eagle2-2B
@@ -910,6 +961,9 @@ nvidia,nemotron-3-8b-chat-4k-rlhf,nvidia/nemotron-3-8b-chat-4k-rlhf
 nvidia,nemotron-3-8b-chat-4k-sft,nvidia/nemotron-3-8b-chat-4k-sft
 nvidia,nemotron-3-8b-chat-4k-steerlm,nvidia/nemotron-3-8b-chat-4k-steerlm
 nvidia,nemotron-3-8b-qa-4k,nvidia/nemotron-3-8b-qa-4k
+nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8
+nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4
 nvidia,Nemotron-4-340B-Base,nvidia/Nemotron-4-340B-Base
 nvidia,Nemotron-4-340B-Instruct,nvidia/Nemotron-4-340B-Instruct
 nvidia,Nemotron-4-Mini-Hindi-4B-Base,nvidia/Nemotron-4-Mini-Hindi-4B-Base
@@ -1026,6 +1080,8 @@ openbmb,MiniCPM-V-2_6,openbmb/MiniCPM-V-2_6
 openbmb,MiniCPM-V-2_6-int4,openbmb/MiniCPM-V-2_6-int4
 openbmb,MiniCPM-V-4,openbmb/MiniCPM-V-4
 openbmb,MiniCPM-V-4-int4,openbmb/MiniCPM-V-4-int4
+openbmb,MiniCPM-V-4.6,openbmb/MiniCPM-V-4.6
+openbmb,MiniCPM-V-4.6-Thinking,openbmb/MiniCPM-V-4.6-Thinking
 openbmb,MiniCPM-V-4_5,openbmb/MiniCPM-V-4_5
 openbmb,MiniCPM-V-4_5-int4,openbmb/MiniCPM-V-4_5-int4
 openbmb,MiniCPM3-4B,openbmb/MiniCPM3-4B
@@ -1301,6 +1357,10 @@ Qwen,Qwen3.5-4B,Qwen/Qwen3.5-4B
 Qwen,Qwen3.5-4B-Base,Qwen/Qwen3.5-4B-Base
 Qwen,Qwen3.5-9B,Qwen/Qwen3.5-9B
 Qwen,Qwen3.5-9B-Base,Qwen/Qwen3.5-9B-Base
+Qwen,Qwen3.6-27B,Qwen/Qwen3.6-27B
+Qwen,Qwen3.6-27B-FP8,Qwen/Qwen3.6-27B-FP8
+Qwen,Qwen3.6-35B-A3B,Qwen/Qwen3.6-35B-A3B
+Qwen,Qwen3.6-35B-A3B-FP8,Qwen/Qwen3.6-35B-A3B-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
@@ -1365,9 +1425,12 @@ tencent,HY-MT1.5-1.8B-FP8,tencent/HY-MT1.5-1.8B-FP8
 tencent,HY-MT1.5-7B,tencent/HY-MT1.5-7B
 tencent,HY-MT1.5-7B-FP8,tencent/HY-MT1.5-7B-FP8
 tencent,HY-WU,tencent/HY-WU
+tencent,Hy3-preview,tencent/Hy3-preview
+tencent,Hy3-preview-Base,tencent/Hy3-preview-Base
 tencent,Penguin-VL-2B,tencent/Penguin-VL-2B
 tencent,Penguin-VL-8B,tencent/Penguin-VL-8B
 tencent,POINTS-Reader,tencent/POINTS-Reader
+tencent,Sequential-Hidden-Decoding-8B-n8-Instruct,tencent/Sequential-Hidden-Decoding-8B-n8-Instruct
 tencent,Tencent-Hunyuan-Large,tencent/Tencent-Hunyuan-Large
 tencent,WeDLM-7B-Base,tencent/WeDLM-7B-Base
 tencent,WeDLM-7B-Instruct,tencent/WeDLM-7B-Instruct
@@ -1497,6 +1560,8 @@ XiaomiMiMo,MiMo-7B-RL-Zero,XiaomiMiMo/MiMo-7B-RL-Zero
 XiaomiMiMo,MiMo-7B-SFT,XiaomiMiMo/MiMo-7B-SFT
 XiaomiMiMo,MiMo-V2-Flash,XiaomiMiMo/MiMo-V2-Flash
 XiaomiMiMo,MiMo-V2-Flash-Base,XiaomiMiMo/MiMo-V2-Flash-Base
+XiaomiMiMo,MiMo-V2.5-Pro,XiaomiMiMo/MiMo-V2.5-Pro
+XiaomiMiMo,MiMo-V2.5-Pro-Base,XiaomiMiMo/MiMo-V2.5-Pro-Base
 XiaomiMiMo,MiMo-VL-7B-RL,XiaomiMiMo/MiMo-VL-7B-RL
 XiaomiMiMo,MiMo-VL-7B-RL-2508,XiaomiMiMo/MiMo-VL-7B-RL-2508
 XiaomiMiMo,MiMo-VL-7B-SFT,XiaomiMiMo/MiMo-VL-7B-SFT
@@ -1584,6 +1649,8 @@ zai-org,GLM-4.7-FP8,zai-org/GLM-4.7-FP8
 zai-org,glm-4v-9b,zai-org/glm-4v-9b
 zai-org,GLM-5,zai-org/GLM-5
 zai-org,GLM-5-FP8,zai-org/GLM-5-FP8
+zai-org,GLM-5.1,zai-org/GLM-5.1
+zai-org,GLM-5.1-FP8,zai-org/GLM-5.1-FP8
 zai-org,GLM-ASR-Nano-2512,zai-org/GLM-ASR-Nano-2512
 zai-org,glm-edge-1.5b-chat,zai-org/glm-edge-1.5b-chat
 zai-org,glm-edge-4b-chat,zai-org/glm-edge-4b-chat
