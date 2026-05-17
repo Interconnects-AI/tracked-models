@@ -1,5 +1,11 @@
 org,model,modelId
 AI-MO,Kimina-Prover-72B,AI-MO/Kimina-Prover-72B
+AIDC-AI,Marco-DeepResearch-8B,AIDC-AI/Marco-DeepResearch-8B
+AIDC-AI,Marco-Mini-Base,AIDC-AI/Marco-Mini-Base
+AIDC-AI,Marco-Mini-Global-Base,AIDC-AI/Marco-Mini-Global-Base
+AIDC-AI,Marco-Mini-Instruct,AIDC-AI/Marco-Mini-Instruct
+AIDC-AI,Marco-Nano-Base,AIDC-AI/Marco-Nano-Base
+AIDC-AI,Marco-Nano-Instruct,AIDC-AI/Marco-Nano-Instruct
 AIDC-AI,Ovis1.5-Llama3-8B,AIDC-AI/Ovis1.5-Llama3-8B
 AIDC-AI,Ovis1.6-Gemma2-9B,AIDC-AI/Ovis1.6-Gemma2-9B
 AIDC-AI,Ovis2-16B,AIDC-AI/Ovis2-16B
@@ -9,8 +15,10 @@ AIDC-AI,Ovis2-8B,AIDC-AI/Ovis2-8B
 AIDC-AI,Ovis2.5-2B,AIDC-AI/Ovis2.5-2B
 AIDC-AI,Ovis2.5-9B,AIDC-AI/Ovis2.5-9B
 AIDC-AI,Ovis2.6-30B-A3B,AIDC-AI/Ovis2.6-30B-A3B
+AIDC-AI,Ovis2.6-80B-A3B,AIDC-AI/Ovis2.6-80B-A3B
 allenai,Olmo-3-1025-7B,allenai/Olmo-3-1025-7B
 allenai,tulu-2-dpo-7b,allenai/tulu-2-dpo-7b
+apple,CADD-Base-7B,apple/CADD-Base-7B
 apple,OpenELM-1_1B-Instruct,apple/OpenELM-1_1B-Instruct
 apple,OpenELM-3B-Instruct,apple/OpenELM-3B-Instruct
 apple,OpenELM-450M-Instruct,apple/OpenELM-450M-Instruct
@@ -75,6 +83,8 @@ LGAI-EXAONE,EXAONE-4.0-1.2B-FP8,LGAI-EXAONE/EXAONE-4.0-1.2B-FP8
 LGAI-EXAONE,EXAONE-4.0-32B,LGAI-EXAONE/EXAONE-4.0-32B
 LGAI-EXAONE,EXAONE-4.0-32B-FP8,LGAI-EXAONE/EXAONE-4.0-32B-FP8
 LGAI-EXAONE,EXAONE-4.0.1-32B,LGAI-EXAONE/EXAONE-4.0.1-32B
+LGAI-EXAONE,EXAONE-4.5-33B,LGAI-EXAONE/EXAONE-4.5-33B
+LGAI-EXAONE,EXAONE-4.5-33B-FP8,LGAI-EXAONE/EXAONE-4.5-33B-FP8
 LGAI-EXAONE,EXAONE-Deep-2.4B,LGAI-EXAONE/EXAONE-Deep-2.4B
 LGAI-EXAONE,EXAONE-Deep-32B,LGAI-EXAONE/EXAONE-Deep-32B
 LGAI-EXAONE,EXAONE-Deep-7.8B,LGAI-EXAONE/EXAONE-Deep-7.8B
@@ -83,6 +93,9 @@ LiquidAI,LFM2-1.2B,LiquidAI/LFM2-1.2B
 LiquidAI,LFM2-2.6B,LiquidAI/LFM2-2.6B
 LiquidAI,LFM2-24B-A2B,LiquidAI/LFM2-24B-A2B
 LiquidAI,LFM2-350M,LiquidAI/LFM2-350M
+LiquidAI,LFM2.5-350M,LiquidAI/LFM2.5-350M
+LiquidAI,LFM2.5-350M-Base,LiquidAI/LFM2.5-350M-Base
+LiquidAI,LFM2.5-VL-450M,LiquidAI/LFM2.5-VL-450M
 llm-jp,llm-jp-3-1.8b,llm-jp/llm-jp-3-1.8b
 llm-jp,llm-jp-3-13b,llm-jp/llm-jp-3-13b
 llm-jp,llm-jp-3-3.7b-instruct,llm-jp/llm-jp-3-3.7b-instruct
@@ -90,6 +103,7 @@ llm-jp,llm-jp-3-7.2b-instruct3,llm-jp/llm-jp-3-7.2b-instruct3
 llm-jp,llm-jp-3.1-1.8b-instruct4,llm-jp/llm-jp-3.1-1.8b-instruct4
 llm-jp,llm-jp-3.1-8x13b-32K,llm-jp/llm-jp-3.1-8x13b-32K
 llm-jp,llm-jp-3.1-8x13b-32K-instruct4,llm-jp/llm-jp-3.1-8x13b-32K-instruct4
+llm-jp,llm-jp-4-8b-instruct,llm-jp/llm-jp-4-8b-instruct
 microsoft,BioGPT-Large,microsoft/BioGPT-Large
 microsoft,BioGPT-Large-PubMedQA,microsoft/BioGPT-Large-PubMedQA
 microsoft,kosmos-2.5,microsoft/kosmos-2.5
@@ -99,9 +113,13 @@ microsoft,Orca-2-13b,microsoft/Orca-2-13b
 microsoft,Orca-2-7b,microsoft/Orca-2-7b
 microsoft,Promptist,microsoft/Promptist
 microsoft,udop-large,microsoft/udop-large
+nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16
+nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8
+nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4
 opendatalab,MinerU-Diffusion-V1-0320-2.5B,opendatalab/MinerU-Diffusion-V1-0320-2.5B
 opendatalab,MinerU-HTML-v1.1-hunyuan0.5B-compact,opendatalab/MinerU-HTML-v1.1-hunyuan0.5B-compact
 opendatalab,MinerU2.5-2509-1.2B,opendatalab/MinerU2.5-2509-1.2B
+opendatalab,MinerU2.5-Pro-2604-1.2B,opendatalab/MinerU2.5-Pro-2604-1.2B
 OpenHands,CodeScout-1.7B,OpenHands/CodeScout-1.7B
 OpenHands,CodeScout-1.7B-RFT,OpenHands/CodeScout-1.7B-RFT
 OpenHands,CodeScout-14B,OpenHands/CodeScout-14B
