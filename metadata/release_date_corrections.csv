@@ -1,0 +1,15 @@
+# Manual release date corrections
+# HF created_at can differ from actual public release date
+# Format: model_id,hf_created_at,actual_release_date,notes
+model_id,hf_created_at,actual_release_date,notes
+MiniMaxAI/MiniMax-M2.1,2025-12-20,2025-12-23,3 days early
+nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,2025-12-04,2025-12-15,11 days early
+moonshotai/Kimi-K2-Thinking,2025-11-04,2025-11-06,2 days early
+openai/gpt-oss-20b,2025-08-04,2025-08-05,1 day early
+openai/gpt-oss-120b,2025-08-04,2025-08-05,1 day early
+allenai/olmOCR-2-7B-1025-FP8,2025-10-06,2025-10-22,16 days early
+moonshotai/Kimi-K2.5,2026-01-01,2026-01-27,26 days early
+google/gemma-4-E2B-it,2026-03-02,2026-04-02,official Gemma 4 launch date from Google Keyword post
+google/gemma-4-E4B-it,2026-03-02,2026-04-02,official Gemma 4 launch date from Google Keyword post
+google/gemma-4-31B-it,2026-03-11,2026-04-02,official Gemma 4 launch date from Google Keyword post
+google/gemma-4-26B-A4B-it,2026-03-11,2026-04-02,official Gemma 4 launch date from Google Keyword post

@@ -16,6 +16,13 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
+### `metadata/`
+
+Curated, project-neutral model metadata for reuse across analysis projects:
+
+- `model_parameter_counts.csv`: manual total-parameter counts in billions, including MoE cases where total and active parameters differ.
+- `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
+
 ## Format
 
 Both CSV files share the same format with three columns:
