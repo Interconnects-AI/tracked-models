@@ -41,3 +41,10 @@ does not match the public release date.
   parameters rather than active parameters.
 - Metadata here is intentionally public and project-neutral; analysis-specific
   code should consume these files rather than duplicating local corrections.
+
+## Downstream Contract
+
+Downstream projects depend on this directory's file names, field names, and
+basic data shapes. Do not change the format of `model_sizes.py` or
+`release_date_corrections.csv` without coordinating matching updates in those
+consumers.
