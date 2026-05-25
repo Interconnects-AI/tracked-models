@@ -5,18 +5,20 @@ Interconnects analysis projects.
 
 ## Files
 
-### `model_parameter_counts.csv`
+### `model_sizes.py`
 
-Manual parameter-count metadata for models whose size is missing from
-Hugging Face metadata, ambiguous for MoE architectures, or not reliably
-parseable from the model name.
+Manual model-size metadata and helper functions copied from
+`Interconnects-AI/open-model-analysis`.
 
-| Column | Description |
-|--------|-------------|
-| `model_id` | Full Hugging Face model identifier. |
-| `total_params_b` | Total parameter count in billions. For MoE models, this is total parameters rather than active parameters. |
-| `group` | Optional family or source-context note carried over from the curation source. |
-| `notes` | Optional row-specific caveat, estimate marker, or additional context. |
+The module includes:
+
+- `MANUAL_SIZES`: curated model ID to total parameter count in billions.
+- `get_size_bucket(size_b)`: shared size-bucket labels.
+- `parse_size_from_name(model_id)`: fallback parsing for `7B`, `72B`, etc.
+- `get_model_size(model_id, safetensors_params=None)`: resolution order used by
+  downstream analysis.
+- `resolve_model_sizes(df, params_col='safetensors_parameters_json')`: pandas
+  helper for adding `size_b` and `size_bucket`.
 
 ### `release_date_corrections.csv`
 
@@ -35,5 +37,7 @@ does not match the public release date.
 - Dates use `YYYY-MM-DD`.
 - Parameter counts are stored as billions to match common model naming and
   analysis conventions.
+- For MoE models, `model_sizes.py` follows the source convention of total
+  parameters rather than active parameters.
 - Metadata here is intentionally public and project-neutral; analysis-specific
   code should consume these files rather than duplicating local corrections.

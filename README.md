@@ -20,7 +20,7 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 Curated, project-neutral model metadata for reuse across analysis projects:
 
-- `model_parameter_counts.csv`: manual total-parameter counts in billions, including MoE cases where total and active parameters differ.
+- `model_sizes.py`: manual model-size metadata and helper functions, copied from `Interconnects-AI/open-model-analysis` for reuse.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
 
 ## Format
