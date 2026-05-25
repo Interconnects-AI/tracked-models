@@ -65,8 +65,9 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-05-25
 - Weekly Hugging Face sync
-- Added 2 models to `extra_models.csv`: AIDC-AI, opendatalab
-- 42 candidates rejected, 11 left for manual review
+- Added 10 models to `models.csv`: openbmb
+- Added 5 models to `extra_models.csv`: AIDC-AI, CohereLabs, opendatalab
+- 42 candidates rejected, 0 left for manual review
 
 ### 2026-05-17
 - Weekly Hugging Face sync

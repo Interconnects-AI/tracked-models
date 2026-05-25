@@ -47,6 +47,9 @@ CohereLabs,c4ai-command-r-plus-4bit,CohereLabs/c4ai-command-r-plus-4bit
 CohereLabs,c4ai-command-r-v01,CohereLabs/c4ai-command-r-v01
 CohereLabs,c4ai-command-r-v01-4bit,CohereLabs/c4ai-command-r-v01-4bit
 CohereLabs,c4ai-command-r7b-12-2024,CohereLabs/c4ai-command-r7b-12-2024
+CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
+CohereLabs,command-a-plus-05-2026-fp8,CohereLabs/command-a-plus-05-2026-fp8
+CohereLabs,command-a-plus-05-2026-w4a4,CohereLabs/command-a-plus-05-2026-w4a4
 CohereLabs,command-a-vision-07-2025,CohereLabs/command-a-vision-07-2025
 CohereLabs,tiny-aya-base,CohereLabs/tiny-aya-base
 CohereLabs,tiny-aya-earth,CohereLabs/tiny-aya-earth

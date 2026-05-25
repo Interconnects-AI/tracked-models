@@ -42,6 +42,7 @@ global:
     - BF16
     - FP8
     - NVFP4
+    - W4A4
     - W4A16
 
   primary_min_downloads: 100000
@@ -74,6 +75,10 @@ orgs:
   ByteDance-Seed:
     primary_family_patterns:
       - "^Cola-DLM(?:$|[-_])"
+
+  CohereLabs:
+    primary_family_patterns:
+      - "^command-a-plus-05-2026(?:$|[-_])"
 
   deepseek-ai:
     primary_family_patterns:
@@ -174,6 +179,8 @@ orgs:
 
   openbmb:
     primary_family_patterns:
+      - "^BitCPM-CANN(?:$|[-_])"
+      - "^MiniCPM5(?:$|[-_])"
       - "^MiniCPM-V-4\\.6(?:$|[-_])"
 
     reject_name_patterns:
