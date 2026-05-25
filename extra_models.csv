@@ -1,6 +1,7 @@
 org,model,modelId
 AI-MO,Kimina-Prover-72B,AI-MO/Kimina-Prover-72B
 AIDC-AI,Marco-DeepResearch-8B,AIDC-AI/Marco-DeepResearch-8B
+AIDC-AI,Marco-DeepResearch-8B-FP8,AIDC-AI/Marco-DeepResearch-8B-FP8
 AIDC-AI,Marco-Mini-Base,AIDC-AI/Marco-Mini-Base
 AIDC-AI,Marco-Mini-Global-Base,AIDC-AI/Marco-Mini-Global-Base
 AIDC-AI,Marco-Mini-Instruct,AIDC-AI/Marco-Mini-Instruct
@@ -120,6 +121,7 @@ opendatalab,MinerU-Diffusion-V1-0320-2.5B,opendatalab/MinerU-Diffusion-V1-0320-2
 opendatalab,MinerU-HTML-v1.1-hunyuan0.5B-compact,opendatalab/MinerU-HTML-v1.1-hunyuan0.5B-compact
 opendatalab,MinerU2.5-2509-1.2B,opendatalab/MinerU2.5-2509-1.2B
 opendatalab,MinerU2.5-Pro-2604-1.2B,opendatalab/MinerU2.5-Pro-2604-1.2B
+opendatalab,MinerU2.5-Pro-2605-1.2B,opendatalab/MinerU2.5-Pro-2605-1.2B
 OpenHands,CodeScout-1.7B,OpenHands/CodeScout-1.7B
 OpenHands,CodeScout-1.7B-RFT,OpenHands/CodeScout-1.7B-RFT
 OpenHands,CodeScout-14B,OpenHands/CodeScout-14B
