@@ -63,6 +63,12 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-05-25
+- Weekly Hugging Face sync
+- Added 10 models to `models.csv`: openbmb
+- Added 5 models to `extra_models.csv`: AIDC-AI, CohereLabs, opendatalab
+- 42 candidates rejected, 0 left for manual review
+
 ### 2026-05-17
 - Weekly Hugging Face sync
 - Added 67 models to `models.csv` across 18 orgs: allenai, arcee-ai, ByteDance-Seed, deepseek-ai, google, HuggingFaceTB, ibm-granite, inclusionAI, internlm, MiniMaxAI, mistralai, moonshotai, nvidia, openbmb, Qwen, tencent, XiaomiMiMo, zai-org

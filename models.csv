@@ -1035,6 +1035,14 @@ nvidia,OpenMath-Nemotron-7B,nvidia/OpenMath-Nemotron-7B
 nvidia,OpenReasoning-Nemotron-7B,nvidia/OpenReasoning-Nemotron-7B
 openai,gpt-oss-120b,openai/gpt-oss-120b
 openai,gpt-oss-20b,openai/gpt-oss-20b
+openbmb,BitCPM-CANN-0.5B,openbmb/BitCPM-CANN-0.5B
+openbmb,BitCPM-CANN-0.5B-unquantized,openbmb/BitCPM-CANN-0.5B-unquantized
+openbmb,BitCPM-CANN-1B,openbmb/BitCPM-CANN-1B
+openbmb,BitCPM-CANN-1B-unquantized,openbmb/BitCPM-CANN-1B-unquantized
+openbmb,BitCPM-CANN-3B,openbmb/BitCPM-CANN-3B
+openbmb,BitCPM-CANN-3B-unquantized,openbmb/BitCPM-CANN-3B-unquantized
+openbmb,BitCPM-CANN-8B,openbmb/BitCPM-CANN-8B
+openbmb,BitCPM-CANN-8B-unquantized,openbmb/BitCPM-CANN-8B-unquantized
 openbmb,BitCPM4-0.5B,openbmb/BitCPM4-0.5B
 openbmb,BitCPM4-1B,openbmb/BitCPM4-1B
 openbmb,chattts_tokenizer,openbmb/chattts_tokenizer
@@ -1100,6 +1108,8 @@ openbmb,MiniCPM4-Survey,openbmb/MiniCPM4-Survey
 openbmb,MiniCPM4.1-8B,openbmb/MiniCPM4.1-8B
 openbmb,MiniCPM4.1-8B-Eagle3,openbmb/MiniCPM4.1-8B-Eagle3
 openbmb,MiniCPM4.1-8B-Marlin,openbmb/MiniCPM4.1-8B-Marlin
+openbmb,MiniCPM5-1B,openbmb/MiniCPM5-1B
+openbmb,MiniCPM5-1B-SFT,openbmb/MiniCPM5-1B-SFT
 openbmb,OmniLMM-12B,openbmb/OmniLMM-12B
 openbmb,RLAIF-V-12B,openbmb/RLAIF-V-12B
 openbmb,RLAIF-V-7B,openbmb/RLAIF-V-7B
