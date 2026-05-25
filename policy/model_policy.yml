@@ -78,7 +78,7 @@ orgs:
 
   CohereLabs:
     primary_family_patterns:
-      - "^command-a-plus-05-2026(?:$|[-_])"
+      - "^(?:c4ai-)?command-a(?:$|[-_])"
 
   deepseek-ai:
     primary_family_patterns:
