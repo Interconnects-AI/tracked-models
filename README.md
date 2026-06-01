@@ -70,6 +70,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-06-01
+- Weekly Hugging Face sync
+- Added 2 models to `extra_models.csv`: LiquidAI
+- 33 candidates rejected, 3 left for manual review
+
 ### 2026-05-25
 - Weekly Hugging Face sync
 - Added 10 models to `models.csv`: openbmb
