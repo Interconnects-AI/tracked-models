@@ -54,6 +54,15 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 
 Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weights on HuggingFace. Threshold: >100K total downloads for new additions (exceptions for notable recent releases).
 
+## Automated Candidate Syncs
+
+This repo has two review-oriented sync workflows:
+
+- `sync-models.yml` discovers new Hugging Face models from known tracked organizations and opens a PR when `models.csv`, `extra_models.csv`, or this README changes.
+- `sync-artifacts-models.yml` reads curated LLM records from [`Interconnects-AI/artifacts-models`](https://github.com/Interconnects-AI/artifacts-models), filters already-tracked Hugging Face model IDs, applies the same policy checks, and opens a PR adding eligible text-first LLM candidates to `extra_models.csv`.
+
+The artifacts sync intentionally proposes additions to `extra_models.csv` first. That keeps the automation reviewable while still ensuring curated LLMs from artifacts do not quietly fall through the cracks.
+
 ### Original orgs
 
 The project began with private daily download data from HuggingFace covering 7 organizations (1,971 models through July 10, 2025):

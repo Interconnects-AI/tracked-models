@@ -1,0 +1,71 @@
+name: Sync artifacts model candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly, Tuesday 06:41 UTC. Keep separate from the direct HF sync.
+    - cron: "41 6 * * 2"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-artifacts-models
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out tracked-models
+        uses: actions/checkout@v6
+
+      - name: Check out artifacts-models
+        uses: actions/checkout@v6
+        with:
+          repository: Interconnects-AI/artifacts-models
+          path: artifacts-models
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: python -m pip install --upgrade uv
+
+      - name: Sync artifacts candidates
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          uv run sync_artifacts_models.py \
+            --write \
+            --artifacts-dir artifacts-models/data \
+            --policy policy/model_policy.yml \
+            --report "$RUNNER_TEMP/artifacts_model_sync.md" \
+            --update-readme \
+            --mention "@xeophon"
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git status --short -- extra_models.csv README.md | grep -q .; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: bot/sync-artifacts-models
+          delete-branch: true
+          commit-message: Add artifacts model candidates
+          title: Add artifacts model candidates
+          body-path: ${{ runner.temp }}/artifacts_model_sync.md
+          add-paths: |
+            extra_models.csv
+            README.md
