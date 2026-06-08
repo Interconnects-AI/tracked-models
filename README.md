@@ -70,6 +70,12 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-06-08
+- Weekly Hugging Face sync
+- Added 18 models to `models.csv`: google, nvidia
+- Added 3 models to `extra_models.csv`: LiquidAI
+- 47 candidates rejected, 1 left for manual review
+
 ### 2026-06-01
 - Weekly Hugging Face sync
 - Added 2 models to `extra_models.csv`: LiquidAI
