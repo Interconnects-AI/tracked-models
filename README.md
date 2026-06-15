@@ -70,6 +70,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-06-15
+- Weekly Hugging Face sync
+- Added 1 models to `models.csv`: XiaomiMiMo
+- 26 candidates rejected, 11 left for manual review
+
 ### 2026-06-08
 - Weekly Hugging Face sync
 - Added 18 models to `models.csv`: google, nvidia
