@@ -72,8 +72,9 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-06-15
 - Weekly Hugging Face sync
-- Added 1 models to `models.csv`: XiaomiMiMo
-- 26 candidates rejected, 11 left for manual review
+- Added 5 models to `models.csv`: google, MiniMaxAI, moonshotai, XiaomiMiMo
+- Added 2 models to `extra_models.csv`: CohereLabs
+- 26 candidates rejected, 5 left for manual review
 
 ### 2026-06-08
 - Weekly Hugging Face sync
