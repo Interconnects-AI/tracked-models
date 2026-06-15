@@ -130,6 +130,7 @@ orgs:
   MiniMaxAI:
     primary_family_patterns:
       - "^MiniMax-M2\\.7(?:$|[-_])"
+      - "^MiniMax-M3(?:$|[-_])"
 
   mistralai:
     primary_family_patterns:
@@ -138,6 +139,7 @@ orgs:
   moonshotai:
     primary_family_patterns:
       - "^Kimi-K2\\.6(?:$|[-_])"
+      - "^Kimi-K2\\.7(?:$|[-_])"
 
   Qwen:
     primary_family_patterns:

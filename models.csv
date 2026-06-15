@@ -310,6 +310,7 @@ google,codegemma-7b,google/codegemma-7b
 google,codegemma-7b-it,google/codegemma-7b-it
 google,codegemma-7b-it-pytorch,google/codegemma-7b-it-pytorch
 google,codegemma-7b-pytorch,google/codegemma-7b-pytorch
+google,diffusiongemma-26B-A4B-it,google/diffusiongemma-26B-A4B-it
 google,gemma-1.1-2b-it,google/gemma-1.1-2b-it
 google,gemma-1.1-2b-it-pytorch,google/gemma-1.1-2b-it-pytorch
 google,gemma-1.1-2b-it-tflite,google/gemma-1.1-2b-it-tflite
@@ -816,6 +817,8 @@ MiniMaxAI,MiniMax-M2,MiniMaxAI/MiniMax-M2
 MiniMaxAI,MiniMax-M2.1,MiniMaxAI/MiniMax-M2.1
 MiniMaxAI,MiniMax-M2.5,MiniMaxAI/MiniMax-M2.5
 MiniMaxAI,MiniMax-M2.7,MiniMaxAI/MiniMax-M2.7
+MiniMaxAI,MiniMax-M3,MiniMaxAI/MiniMax-M3
+MiniMaxAI,MiniMax-M3-MXFP8,MiniMaxAI/MiniMax-M3-MXFP8
 MiniMaxAI,MiniMax-Text-01,MiniMaxAI/MiniMax-Text-01
 MiniMaxAI,MiniMax-Text-01-hf,MiniMaxAI/MiniMax-Text-01-hf
 MiniMaxAI,MiniMax-VL-01,MiniMaxAI/MiniMax-VL-01
@@ -891,6 +894,7 @@ moonshotai,Kimi-K2-Instruct-0905,moonshotai/Kimi-K2-Instruct-0905
 moonshotai,Kimi-K2-Thinking,moonshotai/Kimi-K2-Thinking
 moonshotai,Kimi-K2.5,moonshotai/Kimi-K2.5
 moonshotai,Kimi-K2.6,moonshotai/Kimi-K2.6
+moonshotai,Kimi-K2.7-Code,moonshotai/Kimi-K2.7-Code
 moonshotai,Kimi-Linear-48B-A3B-Base,moonshotai/Kimi-Linear-48B-A3B-Base
 moonshotai,Kimi-Linear-48B-A3B-Instruct,moonshotai/Kimi-Linear-48B-A3B-Instruct
 moonshotai,Kimi-VL-A3B-Instruct,moonshotai/Kimi-VL-A3B-Instruct
@@ -1590,6 +1594,7 @@ XiaomiMiMo,MiMo-V2-Flash,XiaomiMiMo/MiMo-V2-Flash
 XiaomiMiMo,MiMo-V2-Flash-Base,XiaomiMiMo/MiMo-V2-Flash-Base
 XiaomiMiMo,MiMo-V2.5-Pro,XiaomiMiMo/MiMo-V2.5-Pro
 XiaomiMiMo,MiMo-V2.5-Pro-Base,XiaomiMiMo/MiMo-V2.5-Pro-Base
+XiaomiMiMo,MiMo-V2.5-Pro-FP4-DFlash,XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash
 XiaomiMiMo,MiMo-VL-7B-RL,XiaomiMiMo/MiMo-VL-7B-RL
 XiaomiMiMo,MiMo-VL-7B-RL-2508,XiaomiMiMo/MiMo-VL-7B-RL-2508
 XiaomiMiMo,MiMo-VL-7B-SFT,XiaomiMiMo/MiMo-VL-7B-SFT

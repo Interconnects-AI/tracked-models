@@ -70,6 +70,12 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-06-15
+- Weekly Hugging Face sync
+- Added 5 models to `models.csv`: google, MiniMaxAI, moonshotai, XiaomiMiMo
+- Added 2 models to `extra_models.csv`: CohereLabs
+- 26 candidates rejected, 5 left for manual review
+
 ### 2026-06-08
 - Weekly Hugging Face sync
 - Added 18 models to `models.csv`: google, nvidia
