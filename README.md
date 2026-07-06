@@ -70,6 +70,12 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-07-06
+- Weekly Hugging Face sync
+- Added 3 models to `models.csv`: deepseek-ai, Qwen
+- Added 1 models to `extra_models.csv`: LiquidAI
+- 37 candidates rejected, 11 left for manual review
+
 ### 2026-06-15
 - Weekly Hugging Face sync
 - Added 5 models to `models.csv`: google, MiniMaxAI, moonshotai, XiaomiMiMo

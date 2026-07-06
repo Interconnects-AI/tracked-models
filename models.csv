@@ -275,8 +275,10 @@ deepseek-ai,DeepSeek-V3.2-Exp-Base,deepseek-ai/DeepSeek-V3.2-Exp-Base
 deepseek-ai,DeepSeek-V3.2-Speciale,deepseek-ai/DeepSeek-V3.2-Speciale
 deepseek-ai,DeepSeek-V4-Flash,deepseek-ai/DeepSeek-V4-Flash
 deepseek-ai,DeepSeek-V4-Flash-Base,deepseek-ai/DeepSeek-V4-Flash-Base
+deepseek-ai,DeepSeek-V4-Flash-DSpark,deepseek-ai/DeepSeek-V4-Flash-DSpark
 deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
+deepseek-ai,DeepSeek-V4-Pro-DSpark,deepseek-ai/DeepSeek-V4-Pro-DSpark
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
 deepseek-ai,deepseek-vl-1.3b-chat,deepseek-ai/deepseek-vl-1.3b-chat
 deepseek-ai,deepseek-vl-7b-base,deepseek-ai/deepseek-vl-7b-base
@@ -1341,6 +1343,7 @@ Qwen,Qwen3-Coder-30B-A3B-Instruct,Qwen/Qwen3-Coder-30B-A3B-Instruct
 Qwen,Qwen3-Coder-30B-A3B-Instruct-FP8,Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8
 Qwen,Qwen3-Coder-480B-A35B-Instruct,Qwen/Qwen3-Coder-480B-A35B-Instruct
 Qwen,Qwen3-Coder-480B-A35B-Instruct-FP8,Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8
+Qwen,Qwen3-ForcedAligner-0.6B-hf,Qwen/Qwen3-ForcedAligner-0.6B-hf
 Qwen,Qwen3-Next-80B-A3B-Instruct,Qwen/Qwen3-Next-80B-A3B-Instruct
 Qwen,Qwen3-Next-80B-A3B-Instruct-FP8,Qwen/Qwen3-Next-80B-A3B-Instruct-FP8
 Qwen,Qwen3-Next-80B-A3B-Thinking,Qwen/Qwen3-Next-80B-A3B-Thinking
