@@ -56,7 +56,7 @@ jobs:
         if: steps.changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
-          branch: bot/sync-hf-models
+          branch: bot/sync-hf-models-${{ github.run_id }}
           delete-branch: true
           commit-message: Update tracked Hugging Face models
           title: Update tracked Hugging Face models
