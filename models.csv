@@ -1195,6 +1195,8 @@ OpenGVLab,InternVL3_5-GPT-OSS-20B-A4B-Preview,OpenGVLab/InternVL3_5-GPT-OSS-20B-
 OpenGVLab,InternVL3_5-GPT-OSS-20B-A4B-Preview-HF,OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview-HF
 OpenGVLab,Mini-InternVL-Chat-2B-V1-5,OpenGVLab/Mini-InternVL-Chat-2B-V1-5
 OpenGVLab,Mono-InternVL-2B,OpenGVLab/Mono-InternVL-2B
+poolside,Laguna-M.1,poolside/Laguna-M.1
+poolside,Laguna-XS.2,poolside/Laguna-XS.2
 Qwen,CodeQwen1.5-7B,Qwen/CodeQwen1.5-7B
 Qwen,CodeQwen1.5-7B-Chat,Qwen/CodeQwen1.5-7B-Chat
 Qwen,QVQ-72B-Preview,Qwen/QVQ-72B-Preview
@@ -1684,6 +1686,8 @@ zai-org,GLM-5,zai-org/GLM-5
 zai-org,GLM-5-FP8,zai-org/GLM-5-FP8
 zai-org,GLM-5.1,zai-org/GLM-5.1
 zai-org,GLM-5.1-FP8,zai-org/GLM-5.1-FP8
+zai-org,GLM-5.2,zai-org/GLM-5.2
+zai-org,GLM-5.2-FP8,zai-org/GLM-5.2-FP8
 zai-org,GLM-ASR-Nano-2512,zai-org/GLM-ASR-Nano-2512
 zai-org,glm-edge-1.5b-chat,zai-org/glm-edge-1.5b-chat
 zai-org,glm-edge-4b-chat,zai-org/glm-edge-4b-chat
