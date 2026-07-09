@@ -72,8 +72,8 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-07-06
 - Weekly Hugging Face sync
-- Added 4 models to `models.csv`: deepseek-ai, LiquidAI, Qwen
-- 37 candidates rejected, 11 left for manual review
+- Added 6 models to `models.csv`: deepseek-ai, LiquidAI, Qwen, tencent
+- 37 candidates rejected, 9 left for manual review
 
 ### 2026-06-15
 - Weekly Hugging Face sync

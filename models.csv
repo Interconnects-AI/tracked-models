@@ -1461,6 +1461,8 @@ tencent,HY-MT1.5-1.8B-FP8,tencent/HY-MT1.5-1.8B-FP8
 tencent,HY-MT1.5-7B,tencent/HY-MT1.5-7B
 tencent,HY-MT1.5-7B-FP8,tencent/HY-MT1.5-7B-FP8
 tencent,HY-WU,tencent/HY-WU
+tencent,Hy3,tencent/Hy3
+tencent,Hy3-FP8,tencent/Hy3-FP8
 tencent,Hy3-preview,tencent/Hy3-preview
 tencent,Hy3-preview-Base,tencent/Hy3-preview-Base
 tencent,Penguin-VL-2B,tencent/Penguin-VL-2B
