@@ -192,6 +192,10 @@ orgs:
     primary_family_patterns:
       - "^MinerU2\\.5-Pro(?:$|[-_])"
 
+  poolside:
+    primary_family_patterns:
+      - "^Laguna-(?:M\\.1|XS\\.2)(?:$|[-_])"
+
   tencent:
     primary_family_patterns:
       - "^Hy3-preview(?:$|[-_])"
@@ -206,4 +210,4 @@ orgs:
 
   zai-org:
     primary_family_patterns:
-      - "^GLM-5\\.1(?:$|[-_])"
+      - "^GLM-5(?:\\.\\d+)?(?:$|[-_])"
