@@ -125,6 +125,8 @@ microsoft,Orca-2-13b,microsoft/Orca-2-13b
 microsoft,Orca-2-7b,microsoft/Orca-2-7b
 microsoft,Promptist,microsoft/Promptist
 microsoft,udop-large,microsoft/udop-large
+nvidia,Nemotron-Labs-Audex-2B,nvidia/Nemotron-Labs-Audex-2B
+nvidia,Nemotron-Labs-Audex-30B-A3B,nvidia/Nemotron-Labs-Audex-30B-A3B
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4
