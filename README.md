@@ -70,6 +70,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-07-20
+- Weekly Hugging Face sync
+- Added 2 models to `models.csv`: internlm
+- 32 candidates rejected, 6 left for manual review
+
 ### 2026-07-13
 - Weekly Hugging Face sync
 - Added 2 models to `extra_models.csv`: nvidia
