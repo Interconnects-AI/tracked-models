@@ -647,6 +647,8 @@ internlm,Intern-S1-mini,internlm/Intern-S1-mini
 internlm,Intern-S1-mini-FP8,internlm/Intern-S1-mini-FP8
 internlm,Intern-S1-Pro-BF16,internlm/Intern-S1-Pro-BF16
 internlm,Intern-S2-Preview,internlm/Intern-S2-Preview
+internlm,Intern-S2-Preview-397B,internlm/Intern-S2-Preview-397B
+internlm,Intern-S2-Preview-397B-FP8,internlm/Intern-S2-Preview-397B-FP8
 internlm,Intern-S2-Preview-FP8,internlm/Intern-S2-Preview-FP8
 internlm,internlm-20b,internlm/internlm-20b
 internlm,internlm-7b,internlm/internlm-7b
