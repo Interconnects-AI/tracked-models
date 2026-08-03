@@ -95,8 +95,9 @@ exact architectural total. Promote metadata only after manual review of an
 official model card, paper, or launch document. Include that evidence in the
 correction issue or pull request; do not persist its URL in the metadata CSV.
 
-To report an incorrect release date or parameter count, use the
-[model metadata correction form](https://github.com/Interconnects-AI/tracked-models/issues/new?template=model-metadata-correction.yml).
+To report an incorrect release date or parameter count, open a
+[tracked-models issue](https://github.com/Interconnects-AI/tracked-models/issues/new)
+and include the checkpoint, proposed value, supporting link, and explanation.
 
 ## Hub Notification
 
