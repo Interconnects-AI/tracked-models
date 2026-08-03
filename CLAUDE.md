@@ -135,3 +135,38 @@ def check_model(model_id):
 ## Cross-Referencing with HF Download Data
 
 The [open-model-analysis](https://github.com/Interconnects-AI/open-model-analysis) repo has scripts for querying the `interconnects/hf-dumps` dataset to find high-download models not yet tracked. See `hf_utils.py` and `query_hf_data.py` there.
+
+## Curated Metadata
+
+`metadata/model_parameters.csv` is the canonical public source for exact model
+total and active parameter counts plus reviewed MoE classification. Its fixed
+header is:
+
+```text
+model_id,total_params_b,active_params_b,is_moe,notes
+```
+
+- Preserve exact, case-sensitive Hugging Face checkpoint IDs and add one row per
+  checkpoint; do not inherit counts across a family.
+- Store parameter counts as positive decimal billions. Active parameters are
+  optional and must not exceed total parameters.
+- Set `is_moe` to `true` or `false` when known; otherwise leave it blank. This
+  classification never causes active parameters to be inferred.
+- Use `notes` only for useful context such as rounding, approximation,
+  corrections, or `Legacy data; not recently reviewed.` Include supporting
+  evidence in the correction issue or pull request, not in the CSV.
+- Run `python metadata/generate_model_sizes.py --write` after changing the CSV,
+  then run `python metadata/generate_model_sizes.py --check`.
+
+Hugging Face API metadata is discovery/fallback data, not authoritative release
+or parameter metadata. A repository's `created_at` can predate public launch by
+days or weeks because repositories are often private first. Safetensors counts
+can include auxiliary vision, projector, audio, or multi-token-prediction
+modules. Model names can encode active parameters, rounded marketing values, or
+family sizes. Do not promote any of these values without manually reviewing an
+official model card, paper, or launch announcement that explicitly supports the
+field.
+
+For release-date corrections, use the official public launch date when it
+differs from Hugging Face creation time and record both in
+`metadata/release_date_corrections.csv`.
