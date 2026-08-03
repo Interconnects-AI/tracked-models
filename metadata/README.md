@@ -7,35 +7,27 @@ Interconnects analysis projects.
 
 ### `model_parameters.csv`
 
-Canonical, referenceable total and active parameter counts plus reviewed MoE
+Canonical, referenceable total and active parameter counts plus MoE
 classification for exact Hugging Face checkpoints.
 
 | Column | Description |
 |--------|-------------|
 | `model_id` | Exact, case-sensitive Hugging Face `org/checkpoint` ID. |
 | `total_params_b` | Official architectural/reported total in decimal billions. |
-| `active_params_b` | Explicit per-token active count in decimal billions, when manually reviewed. |
-| `is_moe` | `true` or `false` when manually reviewed; blank for unreviewed legacy rows. |
-| `count_status` | `verified`, `estimated`, or `needs_source`. |
-| `notes` | Rounding, architecture, or migration context. |
+| `active_params_b` | Explicit per-token active count in decimal billions, when known. |
+| `is_moe` | `true` or `false` when known; otherwise blank. |
+| `notes` | Rounding, approximation, corrections, or legacy-data context. |
 
 Total parameters are not checkpoint file size or a raw safetensors tensor sum.
 Active parameters are never inferred from total parameters, including for dense
 models. Store one explicit row per checkpoint; do not inherit values across a
 family or normalize model ID casing.
 
-Every `verified` or `estimated` row must set `is_moe` explicitly. The field
-records an architecture classification; it does not fill a missing active count.
-
-Only manually reviewed `verified` and `estimated` rows are eligible for public
-Hub sorting. `needs_source` preserves useful legacy knowledge that has not yet
-completed that review. Use `estimated` when the reviewed evidence reports an
-approximation rather than an exact count.
-
-Evidence is required during an update: include an official model card, paper,
-or launch-document link in the correction issue or pull request. Manual review
-confers the status, and the evidence remains in GitHub history rather than being
-duplicated in the CSV.
+`is_moe` records architecture only; it does not fill a missing active count.
+Rows migrated from the older manual-size table remain usable and carry a
+`Legacy data; not recently reviewed.` note. Approximate values are described in
+notes. Include supporting evidence in the correction issue or pull request so
+it remains in GitHub history without being duplicated in the CSV.
 
 ### `model_sizes.py`
 
@@ -43,7 +35,7 @@ Compatibility helpers used by `Interconnects-AI/open-model-analysis`.
 
 The module includes:
 
-- `MANUAL_SIZES`: a generated legacy-compatible model ID to total-parameter map.
+- `MANUAL_SIZES`: a generated model ID to total-parameter map.
 - `get_size_bucket(size_b)`: shared size-bucket labels.
 - `parse_size_from_name(model_id)`: fallback parsing for `7B`, `72B`, etc.
 - `get_model_size(model_id, safetensors_params=None)`: resolution order used by
@@ -51,10 +43,9 @@ The module includes:
 - `resolve_model_sizes(df, params_col='safetensors_parameters_json')`: pandas
   helper for adding `size_b` and `size_bucket`.
 
-`MANUAL_SIZES` intentionally preserves the old helper API, including unsourced
-legacy values, and therefore is not a publishable verification source. Rows
-whose notes begin with `Legacy MANUAL_SIZES entry.` form that compatibility
-set. New canonical rows do not automatically expand the legacy override map.
+`MANUAL_SIZES` preserves the old helper API and is generated from every
+canonical CSV row. New code should read the CSV when it needs active counts,
+MoE classification, or notes.
 
 After editing `model_parameters.csv`, regenerate or check the literal map:
 
@@ -64,9 +55,8 @@ python metadata/generate_model_sizes.py --check
 ```
 
 The checker validates exact headers, unique IDs, positive decimal values,
-tri-state `is_moe`, reviewed-row classification, allowed statuses,
-`active_params_b <= total_params_b`, and generated map parity. CI runs the same
-check.
+tri-state `is_moe`, stripped notes, `active_params_b <= total_params_b`, and
+generated map parity. CI runs the same check.
 
 ### `release_date_corrections.csv`
 

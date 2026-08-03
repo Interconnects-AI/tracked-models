@@ -1,9 +1,8 @@
 """Compatibility helpers for resolving model sizes in downstream analysis.
 
-``MANUAL_SIZES`` is generated from the legacy-compatibility rows in
-``model_parameters.csv``. Some legacy rows still have ``needs_source`` status;
-consumers that publish parameter metadata must read the CSV and enforce its
-status/source fields instead of treating this dictionary as verified data.
+``MANUAL_SIZES`` is generated from every row in ``model_parameters.csv``.
+Legacy values are identified by human-readable notes in the CSV rather than a
+separate machine status.
 
 The compatibility API resolves total parameters. Active parameter counts are
 available only in ``model_parameters.csv`` and are never inferred here.
@@ -298,6 +297,20 @@ MANUAL_SIZES = {
     'moondream/moondream3-preview': 9.3,
     'rednote-hilab/dots.ocr': 3,
     'llava-hf/bakLlava-v1-hf': 7,
+    'Qwen/Qwen3.5-397B-A17B': 397,
+    'google/gemma-4-26B-A4B-it': 25.2,
+    'mistralai/Mistral-Small-4-119B-2603': 119,
+    'CohereLabs/command-a-plus-05-2026-bf16': 218,
+    'nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16': 550,
+    'zai-org/GLM-5': 744,
+    'stepfun-ai/Step-3.5-Flash': 196.81,
+    'Qwen/Qwen3-Coder-480B-A35B-Instruct': 480,
+    'moonshotai/Kimi-K2.6': 1000,
+    'Qwen/Qwen3-235B-A22B-Instruct-2507': 235,
+    'nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16': 30,
+    'mistralai/Mistral-Small-24B-Instruct-2501': 24,
+    'mistralai/Mistral-Small-3.1-24B-Instruct-2503': 24,
+    'google/gemma-3-27b-it': 27,
 }
 # END GENERATED MANUAL_SIZES
 

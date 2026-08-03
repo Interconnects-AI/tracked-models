@@ -143,25 +143,20 @@ total and active parameter counts plus reviewed MoE classification. Its fixed
 header is:
 
 ```text
-model_id,total_params_b,active_params_b,is_moe,count_status,notes
+model_id,total_params_b,active_params_b,is_moe,notes
 ```
 
 - Preserve exact, case-sensitive Hugging Face checkpoint IDs and add one row per
   checkpoint; do not inherit counts across a family.
 - Store parameter counts as positive decimal billions. Active parameters are
   optional and must not exceed total parameters.
-- Set `is_moe` to `true` or `false` for manually reviewed rows. Leave it blank
-  only for unreviewed legacy metadata. This classification never causes active
-  parameters to be inferred.
-- Use only `verified`, `estimated`, or `needs_source`. Manual review of official
-  evidence confers `verified` or `estimated`; `estimated` means the reviewed
-  evidence gives an approximation, not that we inferred one. Include the
-  evidence link in the correction issue or pull request so it remains in GitHub
-  history, but do not store it in the CSV.
-- Run `python metadata/generate_model_sizes.py --write` after changing a legacy
-  compatibility row, then run `python metadata/generate_model_sizes.py --check`.
-- Preserve the `Legacy MANUAL_SIZES entry.` notes prefix on migrated rows. It
-  defines the generated compatibility subset; it does not make a row verified.
+- Set `is_moe` to `true` or `false` when known; otherwise leave it blank. This
+  classification never causes active parameters to be inferred.
+- Use `notes` only for useful context such as rounding, approximation,
+  corrections, or `Legacy data; not recently reviewed.` Include supporting
+  evidence in the correction issue or pull request, not in the CSV.
+- Run `python metadata/generate_model_sizes.py --write` after changing the CSV,
+  then run `python metadata/generate_model_sizes.py --check`.
 
 Hugging Face API metadata is discovery/fallback data, not authoritative release
 or parameter metadata. A repository's `created_at` can predate public launch by

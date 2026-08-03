@@ -11,7 +11,6 @@ from metadata.generate_model_sizes import (
     BEGIN_MARKER,
     END_MARKER,
     HEADERS,
-    LEGACY_NOTE_PREFIX,
     MetadataValidationError,
     load_and_validate,
     render_manual_sizes,
@@ -29,8 +28,7 @@ class ModelParameterMetadataTests(unittest.TestCase):
             "total_params_b": "10.5",
             "active_params_b": "3",
             "is_moe": "true",
-            "count_status": "verified",
-            "notes": "Official model card value.",
+            "notes": "Reviewed value.",
         }
 
     def write_rows(self, rows: list[dict[str, str]], headers=HEADERS) -> None:
@@ -51,7 +49,7 @@ class ModelParameterMetadataTests(unittest.TestCase):
             "model_id": "org/unreviewed-checkpoint",
             "active_params_b": "",
             "is_moe": "",
-            "count_status": "needs_source",
+            "notes": "Legacy data; not recently reviewed.",
         }
         dense = {
             **self.valid_row,
@@ -100,49 +98,28 @@ class ModelParameterMetadataTests(unittest.TestCase):
             with self.subTest(value=value):
                 self.assert_invalid(active_params_b=value)
 
-    def test_status_is_restricted(self) -> None:
-        self.assert_invalid(count_status="inferred")
-
-    def test_is_moe_is_tri_state_and_required_for_publishable_rows(self) -> None:
+    def test_is_moe_is_tri_state(self) -> None:
         self.assert_invalid(is_moe="yes")
-        self.assert_invalid(is_moe="")
 
-        for value, expected in (("true", True), ("false", False)):
+        for value, expected in (("true", True), ("false", False), ("", None)):
             with self.subTest(value=value):
                 row = {**self.valid_row, "is_moe": value}
                 self.write_rows([row])
                 self.assertIs(load_and_validate(self.csv_path)[0].is_moe, expected)
 
-        row = {
+    def test_generated_map_uses_every_canonical_row(self) -> None:
+        second = {
             **self.valid_row,
-            "is_moe": "",
-            "count_status": "needs_source",
+            "model_id": "org/second-checkpoint",
+            "total_params_b": "12",
+            "notes": "Legacy data; not recently reviewed.",
         }
-        self.write_rows([row])
-        self.assertIsNone(load_and_validate(self.csv_path)[0].is_moe)
-
-    def test_all_contract_statuses_are_accepted(self) -> None:
-        for status in ("verified", "estimated", "needs_source"):
-            with self.subTest(status=status):
-                row = {**self.valid_row, "count_status": status}
-                self.write_rows([row])
-                self.assertEqual(load_and_validate(self.csv_path)[0].count_status, status)
-
-    def test_generated_map_uses_only_marked_legacy_rows(self) -> None:
-        legacy = {
-            **self.valid_row,
-            "notes": f"{LEGACY_NOTE_PREFIX} Migrated value.",
-        }
-        canonical_only = {
-            **self.valid_row,
-            "model_id": "org/new-checkpoint",
-        }
-        self.write_rows([legacy, canonical_only])
+        self.write_rows([self.valid_row, second])
 
         rendered = render_manual_sizes(load_and_validate(self.csv_path))
 
         self.assertIn("'org/checkpoint': 10.5", rendered)
-        self.assertNotIn("org/new-checkpoint", rendered)
+        self.assertIn("'org/second-checkpoint': 12", rendered)
 
     def test_generated_markers_must_be_unique(self) -> None:
         module = f"before\n{BEGIN_MARKER}\nold\n{END_MARKER}\nafter\n"

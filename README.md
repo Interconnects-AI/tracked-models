@@ -20,14 +20,14 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 Curated, project-neutral model metadata for reuse across analysis projects:
 
-- `model_parameters.csv`: canonical total/active parameter counts, MoE classification, and review status.
+- `model_parameters.csv`: canonical total/active parameter counts, MoE classification, and concise notes.
 - `model_sizes.py`: generated legacy-compatible total-parameter map and analysis helpers.
 - `generate_model_sizes.py`: metadata validator and compatibility-map generator.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
 
-Only manually reviewed `verified` and `estimated` parameter rows are intended
-for public display and sorting. Supporting links belong in the correction issue
-or pull request history rather than the CSV. See
+Legacy values remain usable and are labeled `Legacy data; not recently
+reviewed.` in notes. Supporting links belong in the correction issue or pull
+request history rather than the CSV. See
 [`metadata/README.md`](metadata/README.md) for the contract and correction
 workflow.
 
