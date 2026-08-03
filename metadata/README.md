@@ -104,13 +104,11 @@ To report an incorrect release date or parameter count, open a
 [tracked-models issue](https://github.com/Interconnects-AI/tracked-models/issues/new)
 and include the checkpoint, proposed value, supporting link, and explanation.
 
-## Hub Notification
+## Hub Refresh
 
-Changes to `model_parameters.csv` or `release_date_corrections.csv` on `main`
-dispatch `tracked-models-metadata-updated` to `projectvail/artifacts-hub`.
-Configure the `HUB_DISPATCH_TOKEN` Actions secret with permission to create a
-repository dispatch in the Hub repository. The Hub's scheduled sync remains the
-fallback if a dispatch is missed.
+Artifacts Hub pulls `model_parameters.csv` and `release_date_corrections.csv`
+during its daily scheduled sync. Metadata changes can therefore take up to a
+day to appear; no cross-repository dispatch token is required.
 
 ## Downstream Contract
 
