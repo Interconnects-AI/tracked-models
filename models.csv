@@ -274,6 +274,7 @@ deepseek-ai,DeepSeek-V3.2-Exp,deepseek-ai/DeepSeek-V3.2-Exp
 deepseek-ai,DeepSeek-V3.2-Exp-Base,deepseek-ai/DeepSeek-V3.2-Exp-Base
 deepseek-ai,DeepSeek-V3.2-Speciale,deepseek-ai/DeepSeek-V3.2-Speciale
 deepseek-ai,DeepSeek-V4-Flash,deepseek-ai/DeepSeek-V4-Flash
+deepseek-ai,DeepSeek-V4-Flash-0731,deepseek-ai/DeepSeek-V4-Flash-0731
 deepseek-ai,DeepSeek-V4-Flash-Base,deepseek-ai/DeepSeek-V4-Flash-Base
 deepseek-ai,DeepSeek-V4-Flash-DSpark,deepseek-ai/DeepSeek-V4-Flash-DSpark
 deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
@@ -723,6 +724,8 @@ internlm,POLAR-7B-Base,internlm/POLAR-7B-Base
 internlm,SWE-Fixer-Editor-72B,internlm/SWE-Fixer-Editor-72B
 internlm,SWE-Fixer-Retriever-7B,internlm/SWE-Fixer-Retriever-7B
 LiquidAI,LFM2.5-230M,LiquidAI/LFM2.5-230M
+LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
+LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
 llava-hf,bakLlava-v1-hf,llava-hf/bakLlava-v1-hf
 llava-hf,llama3-llava-next-8b-hf,llava-hf/llama3-llava-next-8b-hf
 llava-hf,llava-1.5-13b-hf,llava-hf/llava-1.5-13b-hf
