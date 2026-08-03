@@ -28,6 +28,7 @@ class ModelParameterMetadataTests(unittest.TestCase):
             "model_id": "org/checkpoint",
             "total_params_b": "10.5",
             "active_params_b": "3",
+            "is_moe": "true",
             "count_status": "verified",
             "notes": "Official model card value.",
         }
@@ -47,17 +48,28 @@ class ModelParameterMetadataTests(unittest.TestCase):
     def test_valid_rows_and_optional_active_value(self) -> None:
         second = {
             **self.valid_row,
-            "model_id": "org/dense-checkpoint",
+            "model_id": "org/unreviewed-checkpoint",
             "active_params_b": "",
+            "is_moe": "",
             "count_status": "needs_source",
         }
-        self.write_rows([self.valid_row, second])
+        dense = {
+            **self.valid_row,
+            "model_id": "org/dense-checkpoint",
+            "active_params_b": "",
+            "is_moe": "false",
+        }
+        self.write_rows([self.valid_row, second, dense])
 
         rows = load_and_validate(self.csv_path)
 
-        self.assertEqual(len(rows), 2)
+        self.assertEqual(len(rows), 3)
         self.assertEqual(str(rows[0].total), "10.5")
+        self.assertIs(rows[0].is_moe, True)
         self.assertIsNone(rows[1].active)
+        self.assertIsNone(rows[1].is_moe)
+        self.assertIsNone(rows[2].active)
+        self.assertIs(rows[2].is_moe, False)
 
     def test_header_is_exact(self) -> None:
         wrong_headers = tuple(header for header in HEADERS if header != "notes")
@@ -90,6 +102,24 @@ class ModelParameterMetadataTests(unittest.TestCase):
 
     def test_status_is_restricted(self) -> None:
         self.assert_invalid(count_status="inferred")
+
+    def test_is_moe_is_tri_state_and_required_for_publishable_rows(self) -> None:
+        self.assert_invalid(is_moe="yes")
+        self.assert_invalid(is_moe="")
+
+        for value, expected in (("true", True), ("false", False)):
+            with self.subTest(value=value):
+                row = {**self.valid_row, "is_moe": value}
+                self.write_rows([row])
+                self.assertIs(load_and_validate(self.csv_path)[0].is_moe, expected)
+
+        row = {
+            **self.valid_row,
+            "is_moe": "",
+            "count_status": "needs_source",
+        }
+        self.write_rows([row])
+        self.assertIsNone(load_and_validate(self.csv_path)[0].is_moe)
 
     def test_all_contract_statuses_are_accepted(self) -> None:
         for status in ("verified", "estimated", "needs_source"):

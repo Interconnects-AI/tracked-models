@@ -20,10 +20,12 @@ HEADERS = (
     "model_id",
     "total_params_b",
     "active_params_b",
+    "is_moe",
     "count_status",
     "notes",
 )
 ALLOWED_STATUSES = {"verified", "estimated", "needs_source"}
+PUBLISHABLE_STATUSES = {"verified", "estimated"}
 DECIMAL_RE = re.compile(r"^(?:0|[1-9][0-9]*)(?:\.[0-9]+)?$")
 MODEL_ID_RE = re.compile(r"^[^/\s]+/[^/\s]+$")
 LEGACY_NOTE_PREFIX = "Legacy MANUAL_SIZES entry."
@@ -42,6 +44,7 @@ class ParameterRow:
     total: Decimal
     active_literal: str
     active: Decimal | None
+    is_moe: bool | None
     count_status: str
     notes: str
 
@@ -78,6 +81,18 @@ def _parse_positive_decimal(
             f"line {line_number}: {field} must be greater than zero"
         )
     return parsed
+
+
+def _parse_is_moe(value: str, *, line_number: int) -> bool | None:
+    if value == "":
+        return None
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    raise MetadataValidationError(
+        f"line {line_number}: is_moe must be true, false, or blank"
+    )
 
 
 def load_and_validate(csv_path: Path) -> list[ParameterRow]:
@@ -133,11 +148,17 @@ def load_and_validate(csv_path: Path) -> list[ParameterRow]:
                     f"line {line_number}: active_params_b must not exceed total_params_b"
                 )
 
+            is_moe = _parse_is_moe(raw["is_moe"], line_number=line_number)
+
             status = raw["count_status"]
             if status not in ALLOWED_STATUSES:
                 allowed = ", ".join(sorted(ALLOWED_STATUSES))
                 raise MetadataValidationError(
                     f"line {line_number}: count_status must be one of {allowed}"
+                )
+            if status in PUBLISHABLE_STATUSES and is_moe is None:
+                raise MetadataValidationError(
+                    f"line {line_number}: {status} rows must set is_moe"
                 )
 
             notes = raw["notes"]
@@ -153,6 +174,7 @@ def load_and_validate(csv_path: Path) -> list[ParameterRow]:
                     total=total,
                     active_literal=raw["active_params_b"],
                     active=active,
+                    is_moe=is_moe,
                     count_status=status,
                     notes=notes,
                 )

@@ -139,16 +139,20 @@ The [open-model-analysis](https://github.com/Interconnects-AI/open-model-analysi
 ## Curated Metadata
 
 `metadata/model_parameters.csv` is the canonical public source for exact model
-total and active parameter counts. Its fixed header is:
+total and active parameter counts plus reviewed MoE classification. Its fixed
+header is:
 
 ```text
-model_id,total_params_b,active_params_b,count_status,notes
+model_id,total_params_b,active_params_b,is_moe,count_status,notes
 ```
 
 - Preserve exact, case-sensitive Hugging Face checkpoint IDs and add one row per
   checkpoint; do not inherit counts across a family.
 - Store parameter counts as positive decimal billions. Active parameters are
   optional and must not exceed total parameters.
+- Set `is_moe` to `true` or `false` for manually reviewed rows. Leave it blank
+  only for unreviewed legacy metadata. This classification never causes active
+  parameters to be inferred.
 - Use only `verified`, `estimated`, or `needs_source`. Manual review of official
   evidence confers `verified` or `estimated`; `estimated` means the reviewed
   evidence gives an approximation, not that we inferred one. Include the

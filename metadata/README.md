@@ -7,14 +7,15 @@ Interconnects analysis projects.
 
 ### `model_parameters.csv`
 
-Canonical, referenceable total and active parameter counts for exact Hugging
-Face checkpoints.
+Canonical, referenceable total and active parameter counts plus reviewed MoE
+classification for exact Hugging Face checkpoints.
 
 | Column | Description |
 |--------|-------------|
 | `model_id` | Exact, case-sensitive Hugging Face `org/checkpoint` ID. |
 | `total_params_b` | Official architectural/reported total in decimal billions. |
 | `active_params_b` | Explicit per-token active count in decimal billions, when manually reviewed. |
+| `is_moe` | `true` or `false` when manually reviewed; blank for unreviewed legacy rows. |
 | `count_status` | `verified`, `estimated`, or `needs_source`. |
 | `notes` | Rounding, architecture, or migration context. |
 
@@ -22,6 +23,9 @@ Total parameters are not checkpoint file size or a raw safetensors tensor sum.
 Active parameters are never inferred from total parameters, including for dense
 models. Store one explicit row per checkpoint; do not inherit values across a
 family or normalize model ID casing.
+
+Every `verified` or `estimated` row must set `is_moe` explicitly. The field
+records an architecture classification; it does not fill a missing active count.
 
 Only manually reviewed `verified` and `estimated` rows are eligible for public
 Hub sorting. `needs_source` preserves useful legacy knowledge that has not yet
@@ -60,8 +64,9 @@ python metadata/generate_model_sizes.py --check
 ```
 
 The checker validates exact headers, unique IDs, positive decimal values,
-allowed statuses, `active_params_b <= total_params_b`, and generated map parity.
-CI runs the same check.
+tri-state `is_moe`, reviewed-row classification, allowed statuses,
+`active_params_b <= total_params_b`, and generated map parity. CI runs the same
+check.
 
 ### `release_date_corrections.csv`
 
