@@ -31,6 +31,6 @@ jobs:
           fi
           gh api \
             --method POST \
-            repos/Interconnects-AI/artifacts-hub/dispatches \
+            repos/projectvail/artifacts-hub/dispatches \
             -f event_type=tracked-models-metadata-updated \
             -f "client_payload[tracked_models_sha]=$GITHUB_SHA"

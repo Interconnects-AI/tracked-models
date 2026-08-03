@@ -107,7 +107,7 @@ and include the checkpoint, proposed value, supporting link, and explanation.
 ## Hub Notification
 
 Changes to `model_parameters.csv` or `release_date_corrections.csv` on `main`
-dispatch `tracked-models-metadata-updated` to `Interconnects-AI/artifacts-hub`.
+dispatch `tracked-models-metadata-updated` to `projectvail/artifacts-hub`.
 Configure the `HUB_DISPATCH_TOKEN` Actions secret with permission to create a
 repository dispatch in the Hub repository. The Hub's scheduled sync remains the
 fallback if a dispatch is missed.
