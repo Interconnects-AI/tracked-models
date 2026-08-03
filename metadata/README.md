@@ -14,20 +14,24 @@ Face checkpoints.
 |--------|-------------|
 | `model_id` | Exact, case-sensitive Hugging Face `org/checkpoint` ID. |
 | `total_params_b` | Official architectural/reported total in decimal billions. |
-| `active_params_b` | Explicit per-token active count in decimal billions, when stated by a source. |
+| `active_params_b` | Explicit per-token active count in decimal billions, when manually reviewed. |
 | `count_status` | `verified`, `estimated`, or `needs_source`. |
-| `source_url` | Official model card, paper, or launch-document URL. Required for `verified` and `estimated`. |
-| `notes` | Provenance, rounding, architecture, or migration context. |
+| `notes` | Rounding, architecture, or migration context. |
 
 Total parameters are not checkpoint file size or a raw safetensors tensor sum.
 Active parameters are never inferred from total parameters, including for dense
 models. Store one explicit row per checkpoint; do not inherit values across a
 family or normalize model ID casing.
 
-Only source-backed `verified` and `estimated` rows are eligible for public Hub
-sorting. `needs_source` preserves useful legacy knowledge without publishing it
-as authoritative metadata. An `estimated` value is still source-backed: it is
-used when the source itself reports an approximation.
+Only manually reviewed `verified` and `estimated` rows are eligible for public
+Hub sorting. `needs_source` preserves useful legacy knowledge that has not yet
+completed that review. Use `estimated` when the reviewed evidence reports an
+approximation rather than an exact count.
+
+Evidence is required during an update: include an official model card, paper,
+or launch-document link in the correction issue or pull request. Manual review
+confers the status, and the evidence remains in GitHub history rather than being
+duplicated in the CSV.
 
 ### `model_sizes.py`
 
@@ -56,8 +60,8 @@ python metadata/generate_model_sizes.py --check
 ```
 
 The checker validates exact headers, unique IDs, positive decimal values,
-allowed statuses, source URLs, `active_params_b <= total_params_b`, and generated
-map parity. CI runs the same check.
+allowed statuses, `active_params_b <= total_params_b`, and generated map parity.
+CI runs the same check.
 
 ### `release_date_corrections.csv`
 
@@ -87,8 +91,9 @@ Hugging Face API metadata is useful for discovery and fallback only. Repository
 privately first. Raw safetensors parameter counts can include auxiliary modules
 such as vision towers, projectors, or multi-token-prediction heads. Model names
 can advertise rounded values, active parameters, or a family size instead of an
-exact architectural total. Promote metadata only when an official model card,
-paper, or launch document explicitly supports the value.
+exact architectural total. Promote metadata only after manual review of an
+official model card, paper, or launch document. Include that evidence in the
+correction issue or pull request; do not persist its URL in the metadata CSV.
 
 To report an incorrect release date or parameter count, use the
 [model metadata correction form](https://github.com/Interconnects-AI/tracked-models/issues/new?template=model-metadata-correction.yml).

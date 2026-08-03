@@ -29,7 +29,6 @@ class ModelParameterMetadataTests(unittest.TestCase):
             "total_params_b": "10.5",
             "active_params_b": "3",
             "count_status": "verified",
-            "source_url": "https://huggingface.co/org/checkpoint",
             "notes": "Official model card value.",
         }
 
@@ -51,7 +50,6 @@ class ModelParameterMetadataTests(unittest.TestCase):
             "model_id": "org/dense-checkpoint",
             "active_params_b": "",
             "count_status": "needs_source",
-            "source_url": "",
         }
         self.write_rows([self.valid_row, second])
 
@@ -93,11 +91,12 @@ class ModelParameterMetadataTests(unittest.TestCase):
     def test_status_is_restricted(self) -> None:
         self.assert_invalid(count_status="inferred")
 
-    def test_publishable_statuses_require_http_source(self) -> None:
-        for status in ("verified", "estimated"):
+    def test_all_contract_statuses_are_accepted(self) -> None:
+        for status in ("verified", "estimated", "needs_source"):
             with self.subTest(status=status):
-                self.assert_invalid(count_status=status, source_url="")
-        self.assert_invalid(source_url="ftp://example.com/model-card")
+                row = {**self.valid_row, "count_status": status}
+                self.write_rows([row])
+                self.assertEqual(load_and_validate(self.csv_path)[0].count_status, status)
 
     def test_generated_map_uses_only_marked_legacy_rows(self) -> None:
         legacy = {

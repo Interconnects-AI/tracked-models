@@ -11,7 +11,6 @@ import sys
 from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
-from urllib.parse import urlparse
 
 
 METADATA_DIR = Path(__file__).resolve().parent
@@ -22,11 +21,9 @@ HEADERS = (
     "total_params_b",
     "active_params_b",
     "count_status",
-    "source_url",
     "notes",
 )
 ALLOWED_STATUSES = {"verified", "estimated", "needs_source"}
-PUBLISHABLE_STATUSES = {"verified", "estimated"}
 DECIMAL_RE = re.compile(r"^(?:0|[1-9][0-9]*)(?:\.[0-9]+)?$")
 MODEL_ID_RE = re.compile(r"^[^/\s]+/[^/\s]+$")
 LEGACY_NOTE_PREFIX = "Legacy MANUAL_SIZES entry."
@@ -46,7 +43,6 @@ class ParameterRow:
     active_literal: str
     active: Decimal | None
     count_status: str
-    source_url: str
     notes: str
 
     @property
@@ -144,22 +140,6 @@ def load_and_validate(csv_path: Path) -> list[ParameterRow]:
                     f"line {line_number}: count_status must be one of {allowed}"
                 )
 
-            source_url = raw["source_url"]
-            if source_url != source_url.strip():
-                raise MetadataValidationError(
-                    f"line {line_number}: source_url must not contain outer whitespace"
-                )
-            if status in PUBLISHABLE_STATUSES and not source_url:
-                raise MetadataValidationError(
-                    f"line {line_number}: {status} rows require source_url"
-                )
-            if source_url:
-                parsed_url = urlparse(source_url)
-                if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
-                    raise MetadataValidationError(
-                        f"line {line_number}: source_url must be an http(s) URL"
-                    )
-
             notes = raw["notes"]
             if notes != notes.strip():
                 raise MetadataValidationError(
@@ -174,7 +154,6 @@ def load_and_validate(csv_path: Path) -> list[ParameterRow]:
                     active_literal=raw["active_params_b"],
                     active=active,
                     count_status=status,
-                    source_url=source_url,
                     notes=notes,
                 )
             )

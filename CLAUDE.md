@@ -142,16 +142,18 @@ The [open-model-analysis](https://github.com/Interconnects-AI/open-model-analysi
 total and active parameter counts. Its fixed header is:
 
 ```text
-model_id,total_params_b,active_params_b,count_status,source_url,notes
+model_id,total_params_b,active_params_b,count_status,notes
 ```
 
 - Preserve exact, case-sensitive Hugging Face checkpoint IDs and add one row per
   checkpoint; do not inherit counts across a family.
 - Store parameter counts as positive decimal billions. Active parameters are
   optional and must not exceed total parameters.
-- Use only `verified`, `estimated`, or `needs_source`. Both `verified` and
-  `estimated` require a direct official source URL. `estimated` means the source
-  itself gives an approximation, not that we inferred one.
+- Use only `verified`, `estimated`, or `needs_source`. Manual review of official
+  evidence confers `verified` or `estimated`; `estimated` means the reviewed
+  evidence gives an approximation, not that we inferred one. Include the
+  evidence link in the correction issue or pull request so it remains in GitHub
+  history, but do not store it in the CSV.
 - Run `python metadata/generate_model_sizes.py --write` after changing a legacy
   compatibility row, then run `python metadata/generate_model_sizes.py --check`.
 - Preserve the `Legacy MANUAL_SIZES entry.` notes prefix on migrated rows. It
@@ -162,8 +164,9 @@ or parameter metadata. A repository's `created_at` can predate public launch by
 days or weeks because repositories are often private first. Safetensors counts
 can include auxiliary vision, projector, audio, or multi-token-prediction
 modules. Model names can encode active parameters, rounded marketing values, or
-family sizes. Do not promote any of these values without an official model card,
-paper, or launch announcement that explicitly supports the field.
+family sizes. Do not promote any of these values without manually reviewing an
+official model card, paper, or launch announcement that explicitly supports the
+field.
 
 For release-date corrections, use the official public launch date when it
 differs from Hugging Face creation time and record both in

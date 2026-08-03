@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve the public metadata used by Artifacts Hub. Please cite an official model card, paper, or launch announcement rather than inferred Hugging Face API metadata.
+        Thanks for helping improve the public metadata used by Artifacts Hub. Please cite an official model card, paper, or launch announcement rather than inferred Hugging Face API metadata. The link supports manual review here and is not copied into the canonical metadata CSV.
 
   - type: dropdown
     id: correction_type
