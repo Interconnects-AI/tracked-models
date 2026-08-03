@@ -95,6 +95,7 @@ LGAI-EXAONE,EXAONE-Deep-2.4B,LGAI-EXAONE/EXAONE-Deep-2.4B
 LGAI-EXAONE,EXAONE-Deep-32B,LGAI-EXAONE/EXAONE-Deep-32B
 LGAI-EXAONE,EXAONE-Deep-7.8B,LGAI-EXAONE/EXAONE-Deep-7.8B
 LGAI-EXAONE,EXAONE-Path-2.0-rev-EGFR,LGAI-EXAONE/EXAONE-Path-2.0-rev-EGFR
+LGAI-EXAONE,K-EXAONE-2.0-750B-A37B,LGAI-EXAONE/K-EXAONE-2.0-750B-A37B
 LiquidAI,LFM2-1.2B,LiquidAI/LFM2-1.2B
 LiquidAI,LFM2-2.6B,LiquidAI/LFM2-2.6B
 LiquidAI,LFM2-24B-A2B,LiquidAI/LFM2-24B-A2B
@@ -161,6 +162,8 @@ state-spaces,mamba-2.8b-hf,state-spaces/mamba-2.8b-hf
 state-spaces,mamba-370m-hf,state-spaces/mamba-370m-hf
 swiss-ai,Apertus-70B-Instruct-2509,swiss-ai/Apertus-70B-Instruct-2509
 swiss-ai,Apertus-8B-Instruct-2509,swiss-ai/Apertus-8B-Instruct-2509
+swiss-ai,Apertus-v1.5-70B,swiss-ai/Apertus-v1.5-70B
+swiss-ai,Apertus-v1.5-8B,swiss-ai/Apertus-v1.5-8B
 TinyLlama,TinyLlama-1.1B-Chat-v0.1,TinyLlama/TinyLlama-1.1B-Chat-v0.1
 TinyLlama,TinyLlama-1.1B-Chat-v0.3,TinyLlama/TinyLlama-1.1B-Chat-v0.3
 TinyLlama,TinyLlama-1.1B-Chat-v0.4,TinyLlama/TinyLlama-1.1B-Chat-v0.4

@@ -73,7 +73,8 @@ Models intentionally excluded from tracking despite high download counts:
 ### 2026-08-03
 - Weekly Hugging Face sync
 - Added 3 models to `models.csv`: deepseek-ai, LiquidAI
-- 15 candidates rejected, 7 left for manual review
+- Added 3 models to `extra_models.csv`: LGAI-EXAONE, swiss-ai
+- 15 candidates rejected, 4 left for manual review
 
 ### 2026-07-20
 - Weekly Hugging Face sync
