@@ -1,0 +1,42 @@
+name: Validate curated metadata
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "metadata/model_parameters.csv"
+      - "metadata/model_sizes.py"
+      - "metadata/generate_model_sizes.py"
+      - "metadata/test_generate_model_sizes.py"
+      - ".github/workflows/validate-metadata.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "metadata/model_parameters.csv"
+      - "metadata/model_sizes.py"
+      - "metadata/generate_model_sizes.py"
+      - "metadata/test_generate_model_sizes.py"
+      - ".github/workflows/validate-metadata.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate parameter metadata and generated map
+        run: python metadata/generate_model_sizes.py --check
+
+      - name: Test metadata validation rules
+        run: python -m unittest metadata/test_generate_model_sizes.py

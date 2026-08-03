@@ -20,12 +20,18 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 Curated, project-neutral model metadata for reuse across analysis projects:
 
-- `model_sizes.py`: manual model-size metadata and helper functions, copied from `Interconnects-AI/open-model-analysis` for reuse.
+- `model_parameters.csv`: canonical total and active parameter counts with status and source provenance.
+- `model_sizes.py`: generated legacy-compatible total-parameter map and analysis helpers.
+- `generate_model_sizes.py`: metadata validator and compatibility-map generator.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
+
+Only source-backed `verified` and `estimated` parameter rows are intended for
+public display and sorting. See [`metadata/README.md`](metadata/README.md) for
+the contract and correction workflow.
 
 ## Format
 
-Both CSV files share the same format with three columns:
+The primary and secondary model-list CSV files share the same three columns:
 
 | Column | Description |
 |--------|-------------|

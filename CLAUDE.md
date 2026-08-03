@@ -135,3 +135,36 @@ def check_model(model_id):
 ## Cross-Referencing with HF Download Data
 
 The [open-model-analysis](https://github.com/Interconnects-AI/open-model-analysis) repo has scripts for querying the `interconnects/hf-dumps` dataset to find high-download models not yet tracked. See `hf_utils.py` and `query_hf_data.py` there.
+
+## Curated Metadata
+
+`metadata/model_parameters.csv` is the canonical public source for exact model
+total and active parameter counts. Its fixed header is:
+
+```text
+model_id,total_params_b,active_params_b,count_status,source_url,notes
+```
+
+- Preserve exact, case-sensitive Hugging Face checkpoint IDs and add one row per
+  checkpoint; do not inherit counts across a family.
+- Store parameter counts as positive decimal billions. Active parameters are
+  optional and must not exceed total parameters.
+- Use only `verified`, `estimated`, or `needs_source`. Both `verified` and
+  `estimated` require a direct official source URL. `estimated` means the source
+  itself gives an approximation, not that we inferred one.
+- Run `python metadata/generate_model_sizes.py --write` after changing a legacy
+  compatibility row, then run `python metadata/generate_model_sizes.py --check`.
+- Preserve the `Legacy MANUAL_SIZES entry.` notes prefix on migrated rows. It
+  defines the generated compatibility subset; it does not make a row verified.
+
+Hugging Face API metadata is discovery/fallback data, not authoritative release
+or parameter metadata. A repository's `created_at` can predate public launch by
+days or weeks because repositories are often private first. Safetensors counts
+can include auxiliary vision, projector, audio, or multi-token-prediction
+modules. Model names can encode active parameters, rounded marketing values, or
+family sizes. Do not promote any of these values without an official model card,
+paper, or launch announcement that explicitly supports the field.
+
+For release-date corrections, use the official public launch date when it
+differs from Hugging Face creation time and record both in
+`metadata/release_date_corrections.csv`.

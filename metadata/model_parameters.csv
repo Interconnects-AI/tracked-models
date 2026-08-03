@@ -1,0 +1,300 @@
+model_id,total_params_b,active_params_b,count_status,source_url,notes
+deepseek-ai/DeepSeek-R1,671,37,needs_source,,"Legacy MANUAL_SIZES entry. R1 family (MoE) - 671B total, 37B active; Note: HF shows 685B due to 14B MTP module included in weights"
+deepseek-ai/DeepSeek-R1-Zero,671,37,needs_source,,"Legacy MANUAL_SIZES entry. R1 family (MoE) - 671B total, 37B active; Note: HF shows 685B due to 14B MTP module included in weights"
+deepseek-ai/DeepSeek-R1-0528,671,37,verified,https://arxiv.org/abs/2501.12948,Legacy MANUAL_SIZES entry. Official DeepSeek-R1 paper reports 671B total and 37B activated parameters.
+deepseek-ai/DeepSeek-V3,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3-0324,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3-Base,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3.1,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3.1-Base,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3.1-Terminus,671,37,needs_source,,"Legacy MANUAL_SIZES entry. V3 family (MoE) - 671B total, 37B active"
+deepseek-ai/DeepSeek-V3.2,685,,needs_source,,Legacy MANUAL_SIZES entry. V3.2 family (MoE) - 685B total (same arch as V3)
+deepseek-ai/DeepSeek-V3.2-Exp,685,,needs_source,,Legacy MANUAL_SIZES entry. V3.2 family (MoE) - 685B total (same arch as V3)
+deepseek-ai/DeepSeek-V3.2-Exp-Base,685,,needs_source,,Legacy MANUAL_SIZES entry. V3.2 family (MoE) - 685B total (same arch as V3)
+deepseek-ai/DeepSeek-V3.2-Speciale,685,,needs_source,,Legacy MANUAL_SIZES entry. V3.2 family (MoE) - 685B total (same arch as V3)
+deepseek-ai/DeepSeek-Math-V2,685,,needs_source,,"Legacy MANUAL_SIZES entry. Math-V2 (MoE, same arch as V3.2) - 685B total"
+deepseek-ai/DeepSeek-OCR,3.3,,needs_source,,Legacy MANUAL_SIZES entry. OCR models (small dense)
+deepseek-ai/DeepSeek-OCR-2,3.4,,needs_source,,Legacy MANUAL_SIZES entry. OCR models (small dense)
+deepseek-ai/DeepSeek-V2,236,21,needs_source,,"Legacy MANUAL_SIZES entry. V2 family (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-V2-Chat,236,21,needs_source,,"Legacy MANUAL_SIZES entry. V2 family (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-V2-Chat-0628,236,21,needs_source,,"Legacy MANUAL_SIZES entry. V2 family (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-V2.5,236,21,needs_source,,"Legacy MANUAL_SIZES entry. V2 family (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-V2.5-1210,236,21,needs_source,,"Legacy MANUAL_SIZES entry. V2 family (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-V2-Lite,15.7,2.4,needs_source,,"Legacy MANUAL_SIZES entry. V2-Lite (MoE) - 15.7B total, 2.4B active"
+deepseek-ai/DeepSeek-V2-Lite-Chat,15.7,2.4,needs_source,,"Legacy MANUAL_SIZES entry. V2-Lite (MoE) - 15.7B total, 2.4B active"
+deepseek-ai/DeepSeek-Coder-V2-Base,236,21,needs_source,,"Legacy MANUAL_SIZES entry. Coder-V2 (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-Coder-V2-Instruct,236,21,needs_source,,"Legacy MANUAL_SIZES entry. Coder-V2 (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-Coder-V2-Instruct-0724,236,21,needs_source,,"Legacy MANUAL_SIZES entry. Coder-V2 (MoE) - 236B total, 21B active"
+deepseek-ai/DeepSeek-Coder-V2-Lite-Base,16,2.4,needs_source,,"Legacy MANUAL_SIZES entry. Coder-V2-Lite - 16B total, 2.4B active"
+deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct,16,2.4,needs_source,,"Legacy MANUAL_SIZES entry. Coder-V2-Lite - 16B total, 2.4B active"
+deepseek-ai/DeepSeek-Prover-V1,7,,needs_source,,Legacy MANUAL_SIZES entry. Prover - 7B dense
+deepseek-ai/DeepSeek-Prover-V1.5-Base,7,,needs_source,,Legacy MANUAL_SIZES entry. Prover - 7B dense
+deepseek-ai/DeepSeek-Prover-V1.5-RL,7,,needs_source,,Legacy MANUAL_SIZES entry. Prover - 7B dense
+deepseek-ai/DeepSeek-Prover-V1.5-SFT,7,,needs_source,,Legacy MANUAL_SIZES entry. Prover - 7B dense
+deepseek-ai/deepseek-vl2,27,,needs_source,,"Legacy MANUAL_SIZES entry. VL2 (vision-language, MoE backbone)"
+deepseek-ai/deepseek-vl2-small,16,,needs_source,,"Legacy MANUAL_SIZES entry. VL2 (vision-language, MoE backbone)"
+deepseek-ai/deepseek-vl2-tiny,3,,needs_source,,"Legacy MANUAL_SIZES entry. VL2 (vision-language, MoE backbone)"
+deepseek-ai/deepseek-coder-5.7bmqa-base,5.7,,needs_source,,Legacy MANUAL_SIZES entry. Legacy coder
+microsoft/phi-1,1.3,,needs_source,,Legacy MANUAL_SIZES entry.
+microsoft/phi-1_5,1.3,,needs_source,,Legacy MANUAL_SIZES entry.
+microsoft/phi-2,2.7,,needs_source,,Legacy MANUAL_SIZES entry.
+microsoft/phi-2-pytdml,2.7,,needs_source,,Legacy MANUAL_SIZES entry.
+microsoft/phi-4,14,,needs_source,,Legacy MANUAL_SIZES entry.
+microsoft/Phi-3-mini-4k-instruct,3.8,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-mini-128k-instruct,3.8,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-small-8k-instruct,7,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-small-128k-instruct,7,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-medium-4k-instruct,14,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-medium-128k-instruct,14,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3-vision-128k-instruct,4.2,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3 family
+microsoft/Phi-3.5-mini-instruct,3.8,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3.5 family
+microsoft/Phi-3.5-vision-instruct,4.2,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3.5 family
+microsoft/Phi-3.5-MoE-instruct,42,,needs_source,,Legacy MANUAL_SIZES entry. Phi-3.5 family; 16x3.8B MoE
+microsoft/Phi-4-mini-instruct,3.8,,needs_source,,Legacy MANUAL_SIZES entry. Phi-4 family
+microsoft/Phi-4-mini-reasoning,3.8,,needs_source,,Legacy MANUAL_SIZES entry. Phi-4 family
+microsoft/Phi-4-multimodal-instruct,5.6,,needs_source,,Legacy MANUAL_SIZES entry. Phi-4 family
+microsoft/Phi-4-reasoning,14,,needs_source,,Legacy MANUAL_SIZES entry. Phi-4 family
+microsoft/Phi-4-reasoning-plus,14,,needs_source,,Legacy MANUAL_SIZES entry. Phi-4 family
+microsoft/Phi-mini-MoE-instruct,6.6,,needs_source,,Legacy MANUAL_SIZES entry. Phi MoE variants; estimate
+microsoft/Phi-tiny-MoE-instruct,3.3,,needs_source,,Legacy MANUAL_SIZES entry. Phi MoE variants; estimate
+mistralai/Mistral-Large-Instruct-2407,123,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Mistral-Large-Instruct-2411,123,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Mistral-Nemo-Base-2407,12,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Mistral-Nemo-Instruct-2407,12,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Mistral-Small-Instruct-2409,22,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Pixtral-Large-Instruct-2411,124,,needs_source,,Legacy MANUAL_SIZES entry.
+mistral-community/Pixtral-Large-Instruct-2411,124,,needs_source,,Legacy MANUAL_SIZES entry.
+mistralai/Mixtral-8x7B-v0.1,46.7,12.9,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x7B (MoE) - 46.7B total, 12.9B active"
+mistralai/Mixtral-8x7B-Instruct-v0.1,46.7,12.9,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x7B (MoE) - 46.7B total, 12.9B active"
+mistralai/Mixtral-8x22B-v0.1,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistralai/Mixtral-8x22B-Instruct-v0.1,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistral-community/Mixtral-8x22B-v0.1,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistral-community/Mixtral-8x22B-v0.1-original,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistral-community/mixtral-8x22B-Instruct-v0.3-original,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistral-community/mixtral-8x22B-v0.3,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistral-community/mixtral-8x22B-v0.3-original,140.6,39,needs_source,,"Legacy MANUAL_SIZES entry. Mixtral 8x22B (MoE) - 140.6B total, 39B active"
+mistralai/Devstral-Small-2505,24,,needs_source,,Legacy MANUAL_SIZES entry. Small 3 / Devstral / Magistral (24B)
+mistralai/Magistral-Small-2506,24,,needs_source,,Legacy MANUAL_SIZES entry. Small 3 / Devstral / Magistral (24B)
+mistralai/Magistral-Small-2507,24,,needs_source,,Legacy MANUAL_SIZES entry. Small 3 / Devstral / Magistral (24B)
+mistralai/Magistral-Small-2509,24,,needs_source,,Legacy MANUAL_SIZES entry. Small 3 / Devstral / Magistral (24B)
+ai21labs/AI21-Jamba-Large-1.5,398,94,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Large: 398B total, 94B active"
+ai21labs/AI21-Jamba-Large-1.6,398,94,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Large: 398B total, 94B active"
+ai21labs/AI21-Jamba-Large-1.7,398,94,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Large: 398B total, 94B active"
+ai21labs/AI21-Jamba-Large-1.7-FP8,398,94,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Large: 398B total, 94B active"
+ai21labs/AI21-Jamba-Mini-1.5,52,12,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Mini: 52B total, 12B active"
+ai21labs/AI21-Jamba-Mini-1.6,52,12,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Mini: 52B total, 12B active"
+ai21labs/AI21-Jamba-Mini-1.7,52,12,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Mini: 52B total, 12B active"
+ai21labs/AI21-Jamba-Mini-1.7-FP8,52,12,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Mini: 52B total, 12B active"
+ai21labs/Jamba-v0.1,52,12,needs_source,,"Legacy MANUAL_SIZES entry. Jamba-Mini: 52B total, 12B active"
+ai21labs/Jamba-tiny-dev,0.5,,needs_source,,Legacy MANUAL_SIZES entry. Tiny dev models; estimate for dev model
+ai21labs/Jamba-tiny-random,0.5,,needs_source,,Legacy MANUAL_SIZES entry. Tiny dev models
+moonshotai/Kimi-K2-Base,1000,32,needs_source,,"Legacy MANUAL_SIZES entry. K2: 1T total (1040B), 32B active"
+moonshotai/Kimi-K2-Instruct,1000,32,verified,https://huggingface.co/moonshotai/Kimi-K2-Instruct,Legacy MANUAL_SIZES entry. Official model card reports 1T total and 32B activated parameters.
+moonshotai/Kimi-K2-Instruct-0905,1000,32,needs_source,,"Legacy MANUAL_SIZES entry. K2: 1T total (1040B), 32B active"
+moonshotai/Kimi-K2-Thinking,1000,32,needs_source,,"Legacy MANUAL_SIZES entry. K2: 1T total (1040B), 32B active"
+moonshotai/Kimi-K2.5,1000,32,verified,https://huggingface.co/moonshotai/Kimi-K2.5,Legacy MANUAL_SIZES entry. Official model card reports 1T total and 32B activated parameters.
+moonshotai/Kimi-VL-A3B-Instruct,16,3,verified,https://huggingface.co/moonshotai/Kimi-VL-A3B-Instruct,Legacy MANUAL_SIZES entry. Official checkpoint table reports 16B total and 3B activated parameters; replaces the legacy 16.4B count.
+moonshotai/Kimi-VL-A3B-Thinking,16.4,3,needs_source,,"Legacy MANUAL_SIZES entry. Kimi-VL (MoE) - 16.4B total, 3B active"
+moonshotai/Kimi-VL-A3B-Thinking-2506,16.4,3,needs_source,,"Legacy MANUAL_SIZES entry. Kimi-VL (MoE) - 16.4B total, 3B active"
+Qwen/Qwen-VL,9.6,,needs_source,,Legacy MANUAL_SIZES entry. Based on Qwen-7B backbone + vision
+Qwen/Qwen-VL-Chat,9.6,,needs_source,,Legacy MANUAL_SIZES entry.
+HuggingFaceTB/SmolVLM-Base,2,,needs_source,,Legacy MANUAL_SIZES entry. HuggingFaceTB SmolVLM (base versions without size in name); estimate
+HuggingFaceTB/SmolVLM-Instruct,2,,needs_source,,Legacy MANUAL_SIZES entry. HuggingFaceTB SmolVLM (base versions without size in name)
+HuggingFaceTB/SmolVLM-Instruct-DPO,2,,needs_source,,Legacy MANUAL_SIZES entry. HuggingFaceTB SmolVLM (base versions without size in name)
+HuggingFaceTB/SmolVLM-Synthetic,2,,needs_source,,Legacy MANUAL_SIZES entry. HuggingFaceTB SmolVLM (base versions without size in name)
+HuggingFaceTB/SmolLM2-nanotron-ckpt,0.135,,needs_source,,Legacy MANUAL_SIZES entry. HuggingFaceTB SmolVLM (base versions without size in name)
+HuggingFaceTB/stack-edu-classifier-python,0.1,,needs_source,,Legacy MANUAL_SIZES entry. classifier
+MiniMaxAI/MiniMax-M1-40k,456,,needs_source,,Legacy MANUAL_SIZES entry. MiniMaxAI; MoE model
+MiniMaxAI/MiniMax-M1-40k-hf,456,,needs_source,,Legacy MANUAL_SIZES entry. MiniMaxAI
+MiniMaxAI/MiniMax-M1-80k,456,45.9,verified,https://huggingface.co/MiniMaxAI/MiniMax-M1-80k,Legacy MANUAL_SIZES entry. Official model card reports 456B total and 45.9B activated parameters.
+MiniMaxAI/MiniMax-M1-80k-hf,456,,needs_source,,Legacy MANUAL_SIZES entry. MiniMaxAI
+MiniMaxAI/MiniMax-Text-01,456,45.9,verified,https://huggingface.co/MiniMaxAI/MiniMax-Text-01,Legacy MANUAL_SIZES entry. Official model card reports 456B total and 45.9B activated parameters.
+MiniMaxAI/MiniMax-Text-01-hf,456,,needs_source,,Legacy MANUAL_SIZES entry. MiniMaxAI
+MiniMaxAI/MiniMax-VL-01,456,,needs_source,,Legacy MANUAL_SIZES entry. MiniMaxAI; Vision variant
+MiniMaxAI/MiniMax-M2,230,10,verified,https://huggingface.co/MiniMaxAI/MiniMax-M2,Legacy MANUAL_SIZES entry. Official model card reports 230B total and 10B activated parameters; replaces the legacy 229B count.
+MiniMaxAI/MiniMax-M2.1,229,,needs_source,,Legacy MANUAL_SIZES entry. MiniMax-M2 (MoE) - 229B total
+Snowflake/snowflake-arctic-base,480,17,needs_source,,"Legacy MANUAL_SIZES entry. Snowflake Arctic (MoE) - 480B total, 17B active"
+Snowflake/snowflake-arctic-instruct,480,17,needs_source,,"Legacy MANUAL_SIZES entry. Snowflake Arctic (MoE) - 480B total, 17B active"
+Snowflake/snowflake-arctic-instruct-vllm,480,17,needs_source,,"Legacy MANUAL_SIZES entry. Snowflake Arctic (MoE) - 480B total, 17B active"
+Snowflake/e5-base-arctic-finetune,0.1,,needs_source,,Legacy MANUAL_SIZES entry. embedding model
+Skywork/Skywork-MoE-Base,146,,needs_source,,Legacy MANUAL_SIZES entry. Skywork MoE
+Skywork/Skywork-MoE-Base-FP8,146,,needs_source,,Legacy MANUAL_SIZES entry. Skywork MoE
+Skywork/R1V4,30,3,needs_source,,"Legacy MANUAL_SIZES entry. Skywork MoE; 30B total, A3B active"
+tencent/Tencent-Hunyuan-Large,389,52,needs_source,,"Legacy MANUAL_SIZES entry. Tencent Hunyuan; MoE, 52B active"
+tencent/Hunyuan-A13B-Instruct,80,13,verified,https://huggingface.co/tencent/Hunyuan-A13B-Instruct,Legacy MANUAL_SIZES entry. Official model card reports 80B total and 13B activated parameters.
+tencent/Hunyuan-A13B-Pretrain,80,,needs_source,,Legacy MANUAL_SIZES entry. Tencent Hunyuan
+tencent/HunyuanOCR,1,,needs_source,,Legacy MANUAL_SIZES entry. Tencent Hunyuan
+tencent/POINTS-Reader,7,,needs_source,,Legacy MANUAL_SIZES entry. Tencent Hunyuan; estimate
+tencent/Hunyuan3D-Omni,7,,needs_source,,Legacy MANUAL_SIZES entry. Tencent Hunyuan
+THUDM/glm-large-chinese,0.335,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/glm-roberta-large,0.355,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm-chat-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm-base-224-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm-base-490-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm-grounding-base-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm-grounding-generalist-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogagent-chat-hf,18,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogagent-vqa-hf,18,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm2-llama3-caption,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm2-video-llama3-base,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/cogvlm2-video-llama3-chat,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/CogAgent,18,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/CogVLM,17,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/WebGLM,10,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models); based on GLM-10B
+THUDM/MathGLM,7,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/MathGLM-Vision,7,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/BPO,7,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/MSAGPT,7,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/glm-4-voice-decoder,0.5,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+THUDM/glm-4-voice-tokenizer,0.1,,needs_source,,Legacy MANUAL_SIZES entry. THUDM / zai-org (many are older/smaller models)
+zai-org/glm-large-chinese,0.335,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/glm-roberta-large,0.355,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm-chat-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm-base-224-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm-base-490-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm-grounding-base-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm-grounding-generalist-hf,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogagent-chat-hf,18,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogagent-vqa-hf,18,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm2-llama3-caption,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm2-video-llama3-base,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/cogvlm2-video-llama3-chat,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/CogAgent,18,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/CogVLM,17,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/WebGLM,10,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/MathGLM,7,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/MathGLM-Vision,7,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/BPO,7,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/MSAGPT,7,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/glm-4-voice-decoder,0.5,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/glm-4-voice-tokenizer,0.1,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/GLM-4.5,9,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM); estimate
+zai-org/GLM-4.5-Base,9,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/GLM-4.5-Air,9,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/GLM-4.5-Air-Base,9,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/GLM-4.5V,9,,needs_source,,Legacy MANUAL_SIZES entry. zai-org (mirrors of THUDM)
+zai-org/GLM-4.6,357,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family; MoE
+zai-org/GLM-4.6-FP8,357,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family
+zai-org/GLM-4.6V,108,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family; MoE vision
+zai-org/GLM-4.6V-FP8,108,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family
+zai-org/GLM-4.6V-Flash,10,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family; dense
+zai-org/GLM-4.7,358,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family; MoE
+zai-org/GLM-4.7-FP8,358,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family
+zai-org/GLM-4.7-Flash,31,,needs_source,,Legacy MANUAL_SIZES entry. GLM-4.6/4.7 family; MoE lite
+openbmb/MiniCPM-V-4,4.1,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-MoE-8x2B,14,4,needs_source,,"Legacy MANUAL_SIZES entry. openbmb MiniCPM; MoE, 4B active"
+openbmb/Eurux-8x22b-kto,141,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM; Mixtral-based
+openbmb/Eurux-8x22b-nca,141,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-V,3,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-V-2,3,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-V-2_6,8,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-V-4_5,8,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-o-2_6,8,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-Llama3-V-2_5,8,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM4-MCP,4,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM4-Survey,4,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-Embedding,0.1,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-Embedding-Light,0.05,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-Reranker,0.4,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/MiniCPM-Reranker-Light,0.1,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/VisCPM-Chat,10,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/VisCPM-Paint,10,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/VisRAG-Ret,2,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/RLHF-V,7,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/RLHF-V-SFT,7,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+openbmb/Ultra-FineWeb-classifier,0.1,,needs_source,,Legacy MANUAL_SIZES entry. openbmb MiniCPM
+nvidia/MambaVision-T-1K,0.032,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-T2-1K,0.035,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-S-1K,0.050,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-B-1K,0.098,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-B-21K,0.098,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L-1K,0.228,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L-21K,0.228,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L2-1K,0.241,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L2-512-21K,0.241,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L3-256-21K,0.280,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+nvidia/MambaVision-L3-512-21K,0.280,,needs_source,,"Legacy MANUAL_SIZES entry. nvidia MambaVision (vision models, relatively small)"
+internlm/Intern-S1,7,,needs_source,,Legacy MANUAL_SIZES entry. internlm; estimate
+internlm/Intern-S1-mini,3,,needs_source,,Legacy MANUAL_SIZES entry. internlm
+internlm/internlm-xcomposer2d5-clip,0.3,,needs_source,,Legacy MANUAL_SIZES entry. internlm
+internlm/internlm2-step-prover,7,,needs_source,,Legacy MANUAL_SIZES entry. internlm
+internlm/internlm2-wqx-vl-clip,0.3,,needs_source,,Legacy MANUAL_SIZES entry. internlm
+internlm/internlm2_5-step-prover,7,,needs_source,,Legacy MANUAL_SIZES entry. internlm
+ibm-granite/granite-4.0-tiny-base-preview,0.5,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+ibm-granite/granite-4.0-tiny-preview,0.5,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+ibm-granite/granite-embedding-107m-multilingual,0.107,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+ibm-granite/granite-embedding-278m-multilingual,0.278,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+ibm-granite/granite-guardian-hap-125m,0.125,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+ibm-granite/granite-guardian-hap-38m,0.038,,needs_source,,Legacy MANUAL_SIZES entry. ibm-granite
+inclusionAI/Ling-lite,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-lite-base,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-lite-1.5,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-lite-1.5-2506,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-lite-1.5-2507,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-lite-base-1.5,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-Coder-lite,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-Coder-lite-base,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-base-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-base-2.0-5T,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-base-2.0-10T,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-base-2.0-15T,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-mini-base-2.0-20T,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-flash-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-flash-2.0-GGUF,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-flash-base-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-plus,32,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-plus-base,32,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-lite,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-lite-2506,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-lite-2507,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-lite-distill-preview,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-lite-linear-preview,7,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-mini-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-mini-2.0-GGUF,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-mini-linear-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-flash-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ring-flash-linear-2.0,3,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/GroveMoE-Base,100,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification); MoE"
+inclusionAI/GroveMoE-Inst,100,,needs_source,,"Legacy MANUAL_SIZES entry. inclusionAI (various sizes, need verification)"
+inclusionAI/Ling-1T,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ling-1T-FP8,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ring-1T,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ring-1T-FP8,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ring-1T-preview,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ring-1T-preview-FP8,1000,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/M2-Reasoning,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ming-Lite-Omni,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ming-Lite-Omni-1.5,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Ming-Lite-Uni,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/Rubicon-Preview,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+inclusionAI/ViLaSR,7,,needs_source,,Legacy MANUAL_SIZES entry. inclusionAI 1T models (MoE) - ~1000B total
+allenai/OLMo-Ladder-760M-0.5xC,0.76,,needs_source,,Legacy MANUAL_SIZES entry. allenai
+allenai/FlexOlmo-7x7B-1T,49,,needs_source,,"Legacy MANUAL_SIZES entry. allenai; MoE, 7x7B"
+microsoft/Florence-2-base,0.2,,needs_source,,Legacy MANUAL_SIZES entry. Microsoft Florence-2
+microsoft/Florence-2-base-ft,0.2,,needs_source,,Legacy MANUAL_SIZES entry. Microsoft Florence-2
+microsoft/Florence-2-large,0.8,,needs_source,,Legacy MANUAL_SIZES entry. Microsoft Florence-2
+microsoft/Florence-2-large-ft,0.8,,needs_source,,Legacy MANUAL_SIZES entry. Microsoft Florence-2
+Qwen/Qwen1.5-MoE-A2.7B,14.3,2.7,needs_source,,"Legacy MANUAL_SIZES entry. Qwen MoE; MoE, 2.7B active"
+Qwen/Qwen1.5-MoE-A2.7B-Chat,14.3,,needs_source,,Legacy MANUAL_SIZES entry. Qwen MoE
+XiaomiMiMo/MiMo-V2-Flash,310,,needs_source,,Legacy MANUAL_SIZES entry. XiaomiMiMo (MoE) - 310B total
+XiaomiMiMo/MiMo-V2-Flash-Base,310,,needs_source,,Legacy MANUAL_SIZES entry. XiaomiMiMo (MoE) - 310B total
+vikhyatk/moondream1,1.9,,needs_source,,Legacy MANUAL_SIZES entry. vikhyatk / moondream
+vikhyatk/moondream2,1.9,,needs_source,,Legacy MANUAL_SIZES entry. vikhyatk / moondream
+moondream/moondream3-preview,9.3,,needs_source,,Legacy MANUAL_SIZES entry. vikhyatk / moondream
+rednote-hilab/dots.ocr,3,,needs_source,,Legacy MANUAL_SIZES entry. rednote-hilab
+llava-hf/bakLlava-v1-hf,7,,needs_source,,Legacy MANUAL_SIZES entry. llava-hf
+Qwen/Qwen3.5-397B-A17B,397,17,verified,https://huggingface.co/Qwen/Qwen3.5-397B-A17B,Official model card reports 397B total and 17B activated parameters.
+google/gemma-4-26B-A4B-it,25.2,3.8,verified,https://huggingface.co/google/gemma-4-26B-A4B-it,Official model card reports 25.2B total and 3.8B activated parameters; the checkpoint name rounds these to 26B-A4B.
+mistralai/Mistral-Small-4-119B-2603,119,6.5,verified,https://huggingface.co/mistralai/Mistral-Small-4-119B-2603,Official model card reports 119B total and 6.5B activated parameters.
+CohereLabs/command-a-plus-05-2026-bf16,218,25,verified,https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16,Official model card reports 218B total and 25B activated parameters.
+nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16,550,55,verified,https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16,Official model card reports 550B total and 55B activated parameters.
+zai-org/GLM-5,744,40,verified,https://huggingface.co/zai-org/GLM-5,Official model card reports 744B total and 40B activated parameters.
+stepfun-ai/Step-3.5-Flash,196.81,11,estimated,https://huggingface.co/stepfun-ai/Step-3.5-Flash,Official model card reports 196.81B total and approximately 11B activated parameters.
+Qwen/Qwen3-Coder-480B-A35B-Instruct,480,35,verified,https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct,Official model card reports 480B total and 35B activated parameters.
+moonshotai/Kimi-K2.6,1000,32,verified,https://huggingface.co/moonshotai/Kimi-K2.6,Official model card reports 1T total and 32B activated parameters.
+Qwen/Qwen3-235B-A22B-Instruct-2507,235,22,verified,https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507,Official model card reports 235B total and 22B activated parameters.
+nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,30,3.5,verified,https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,Official model card reports 30B total and 3.5B activated parameters; A3B in the checkpoint name is shorthand.
+mistralai/Mistral-Small-24B-Instruct-2501,24,,verified,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501,Official model card reports 24B total parameters; active parameters are intentionally not inferred.
+mistralai/Mistral-Small-3.1-24B-Instruct-2503,24,,verified,https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503,Official model card reports 24B total parameters; active parameters are intentionally not inferred.
+google/gemma-3-27b-it,27,,verified,https://huggingface.co/google/gemma-3-27b-it,Official model card reports 27B total parameters; active parameters are intentionally not inferred.
