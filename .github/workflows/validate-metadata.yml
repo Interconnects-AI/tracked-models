@@ -4,6 +4,11 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      - "models.csv"
+      - "extra_models.csv"
+      - "metadata/organization_regions.csv"
+      - "metadata/validate_organization_regions.py"
+      - "metadata/test_validate_organization_regions.py"
       - "metadata/model_parameters.csv"
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
@@ -13,6 +18,11 @@ on:
     branches:
       - main
     paths:
+      - "models.csv"
+      - "extra_models.csv"
+      - "metadata/organization_regions.csv"
+      - "metadata/validate_organization_regions.py"
+      - "metadata/test_validate_organization_regions.py"
       - "metadata/model_parameters.csv"
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
@@ -40,3 +50,9 @@ jobs:
 
       - name: Test metadata validation rules
         run: python -m unittest metadata/test_generate_model_sizes.py
+
+      - name: Validate organization-region metadata
+        run: python metadata/validate_organization_regions.py
+
+      - name: Test organization-region validation rules
+        run: python -m unittest metadata/test_validate_organization_regions.py
