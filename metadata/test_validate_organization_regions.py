@@ -60,7 +60,8 @@ class OrganizationRegionMetadataTests(unittest.TestCase):
         self.assertEqual(regions["THUDM"], "china")
         self.assertEqual(regions["mistral-community"], "eu")
         self.assertEqual(regions["docling-project"], "eu")
-        for hf_org in ("allura-forge", "bigcode", "EleutherAI", "open-thoughts"):
+        self.assertEqual(regions["open-thoughts"], "us")
+        for hf_org in ("allura-forge", "bigcode", "EleutherAI"):
             self.assertEqual(regions[hf_org], "unknown")
 
     def test_valid_registry_allows_extra_orgs_and_quoted_notes(self) -> None:
