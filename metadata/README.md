@@ -5,6 +5,41 @@ Interconnects analysis projects.
 
 ## Files
 
+### `organization_regions.csv`
+
+Canonical ATOM geography buckets for releasing organizations, keyed by exact
+Hugging Face namespace.
+
+| Column | Description |
+|--------|-------------|
+| `hf_org` | Exact, case-sensitive Hugging Face namespace (the first segment of an `org/checkpoint` ID). |
+| `region` | One of `us`, `china`, `eu`, `other`, or `unknown`. |
+| `notes` | Concise classification context. Required when `region` is `unknown`. |
+
+Classify the primary base of the organization publishing or developing the
+release. Do not inherit geography from a base model, a collaborator, an
+individual uploader, or the location of Hugging Face infrastructure. The `eu`
+value is ATOM's Europe-facing product bucket, not a claim of European Union
+legal membership. `other` means a reviewed primary base outside the three named
+buckets; it is never a fallback for missing evidence. Use `unknown` when a
+distributed collaboration, reupload community, or other ambiguous namespace has
+no defensible single primary base. An absent namespace remains unreviewed.
+
+Keep legacy and renamed namespaces as separate exact rows so downstream tools
+can join without their own alias tables. Registry rows are sorted
+case-insensitively by `hf_org`. Every organization in `models.csv` and
+`extra_models.csv` must have a row, while additional organizations used by
+Artifacts Hub and other consumers are allowed.
+
+Supporting first-party evidence belongs in the correction issue or pull request
+rather than as a per-row source URL. Validate the registry and its tracked-list
+coverage with:
+
+```bash
+python metadata/validate_organization_regions.py
+python -m unittest metadata/test_validate_organization_regions.py
+```
+
 ### `model_parameters.csv`
 
 Canonical, referenceable total and active parameter counts plus MoE
@@ -97,12 +132,13 @@ and include the checkpoint, proposed value, supporting link, and explanation.
 ## Hub Refresh
 
 Artifacts Hub pulls `model_parameters.csv` and `release_date_corrections.csv`
-during its daily scheduled sync. Metadata changes can therefore take up to a
-day to appear; no cross-repository dispatch token is required.
+plus `organization_regions.csv` during its daily scheduled sync. Metadata
+changes can therefore take up to a day to appear; no cross-repository dispatch
+token is required.
 
 ## Downstream Contract
 
 Downstream projects depend on this directory's file names, field names, and
-basic data shapes. Do not change the format of `model_parameters.csv`,
-`model_sizes.py`, or `release_date_corrections.csv` without coordinating matching
-updates in those consumers.
+basic data shapes. Do not change the format of `organization_regions.csv`,
+`model_parameters.csv`, `model_sizes.py`, or `release_date_corrections.csv`
+without coordinating matching updates in those consumers.

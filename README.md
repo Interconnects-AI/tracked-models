@@ -23,6 +23,7 @@ Curated, project-neutral model metadata for reuse across analysis projects:
 - `model_parameters.csv`: canonical total/active parameter counts, MoE classification, and concise notes.
 - `model_sizes.py`: generated legacy-compatible total-parameter map and analysis helpers.
 - `generate_model_sizes.py`: metadata validator and compatibility-map generator.
+- `organization_regions.csv`: canonical ATOM region buckets for exact Hugging Face organization namespaces, including explicit `unknown` classifications.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
 
 Legacy values remain usable and are labeled `Legacy data; not recently
