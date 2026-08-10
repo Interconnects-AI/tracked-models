@@ -647,6 +647,7 @@ internlm,Intern-S1-FP8,internlm/Intern-S1-FP8
 internlm,Intern-S1-mini,internlm/Intern-S1-mini
 internlm,Intern-S1-mini-FP8,internlm/Intern-S1-mini-FP8
 internlm,Intern-S1-Pro-BF16,internlm/Intern-S1-Pro-BF16
+internlm,Intern-S2-Mobius,internlm/Intern-S2-Mobius
 internlm,Intern-S2-Preview,internlm/Intern-S2-Preview
 internlm,Intern-S2-Preview-397B,internlm/Intern-S2-Preview-397B
 internlm,Intern-S2-Preview-397B-FP8,internlm/Intern-S2-Preview-397B-FP8
@@ -723,6 +724,8 @@ internlm,POLAR-7B,internlm/POLAR-7B
 internlm,POLAR-7B-Base,internlm/POLAR-7B-Base
 internlm,SWE-Fixer-Editor-72B,internlm/SWE-Fixer-Editor-72B
 internlm,SWE-Fixer-Retriever-7B,internlm/SWE-Fixer-Retriever-7B
+LiquidAI,LFM2.5-2.6B,LiquidAI/LFM2.5-2.6B
+LiquidAI,LFM2.5-2.6B-Base,LiquidAI/LFM2.5-2.6B-Base
 LiquidAI,LFM2.5-230M,LiquidAI/LFM2.5-230M
 LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
 LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
