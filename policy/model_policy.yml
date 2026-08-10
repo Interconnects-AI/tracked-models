@@ -104,6 +104,7 @@ orgs:
   inclusionAI:
     primary_family_patterns:
       - "^Ling-2\\.6(?:$|[-_])"
+      - "^Ling-3\\.0(?:$|[-_])"
       - "^Ring-2\\.6(?:$|[-_])"
       - "^LLaDA2\\.0(?:$|[-_])"
 
@@ -114,6 +115,10 @@ orgs:
   LGAI-EXAONE:
     primary_family_patterns:
       - "^EXAONE-4\\.5(?:$|[-_])"
+      - "^K-EXAONE-2\\.0-750B-A37B(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)DSpark"
 
   LiquidAI:
     primary_family_patterns:
@@ -194,7 +199,10 @@ orgs:
 
   poolside:
     primary_family_patterns:
-      - "^Laguna-(?:M\\.1|XS\\.2)(?:$|[-_])"
+      - "^Laguna-(?:M\\.1|XS\\.2|(?:S|XS)-2\\.1)(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)(DFlash|speculator)"
 
   tencent:
     primary_family_patterns:
