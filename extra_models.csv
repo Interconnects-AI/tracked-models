@@ -51,6 +51,7 @@ CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
 CohereLabs,command-a-plus-05-2026-fp8,CohereLabs/command-a-plus-05-2026-fp8
 CohereLabs,command-a-plus-05-2026-w4a4,CohereLabs/command-a-plus-05-2026-w4a4
 CohereLabs,command-a-vision-07-2025,CohereLabs/command-a-vision-07-2025
+CohereLabs,North-Micro-Vision-Instruct,CohereLabs/North-Micro-Vision-Instruct
 CohereLabs,North-Mini-Code-1.0,CohereLabs/North-Mini-Code-1.0
 CohereLabs,North-Mini-Code-1.0-fp8,CohereLabs/North-Mini-Code-1.0-fp8
 CohereLabs,tiny-aya-base,CohereLabs/tiny-aya-base
@@ -133,6 +134,11 @@ nvidia,Nemotron-Labs-Audex-30B-A3B,nvidia/Nemotron-Labs-Audex-30B-A3B
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4
+nvidia,NVIDIA-Nemotron-Labs-Teacher-Chat,nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat
+nvidia,NVIDIA-Nemotron-Labs-Teacher-Competition-Coding,nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding
+nvidia,NVIDIA-Nemotron-Labs-Teacher-General-Reasoning,nvidia/NVIDIA-Nemotron-Labs-Teacher-General-Reasoning
+nvidia,NVIDIA-Nemotron-Labs-Teacher-Instruction-Following,nvidia/NVIDIA-Nemotron-Labs-Teacher-Instruction-Following
+nvidia,NVIDIA-Nemotron-Labs-Teacher-STEM,nvidia/NVIDIA-Nemotron-Labs-Teacher-STEM
 opendatalab,MinerU-Diffusion-V1-0320-2.5B,opendatalab/MinerU-Diffusion-V1-0320-2.5B
 opendatalab,MinerU-HTML-v1.1-hunyuan0.5B-compact,opendatalab/MinerU-HTML-v1.1-hunyuan0.5B-compact
 opendatalab,MinerU2.5-2509-1.2B,opendatalab/MinerU2.5-2509-1.2B
