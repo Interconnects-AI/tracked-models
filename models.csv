@@ -278,6 +278,7 @@ deepseek-ai,DeepSeek-V4-Flash-0731,deepseek-ai/DeepSeek-V4-Flash-0731
 deepseek-ai,DeepSeek-V4-Flash-Base,deepseek-ai/DeepSeek-V4-Flash-Base
 deepseek-ai,DeepSeek-V4-Flash-DSpark,deepseek-ai/DeepSeek-V4-Flash-DSpark
 deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
+deepseek-ai,DeepSeek-V4-Pro-0813,deepseek-ai/DeepSeek-V4-Pro-0813
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
 deepseek-ai,DeepSeek-V4-Pro-DSpark,deepseek-ai/DeepSeek-V4-Pro-DSpark
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
@@ -572,6 +573,9 @@ inclusionAI,Ling-3.0-flash,inclusionAI/Ling-3.0-flash
 inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
+inclusionAI,Ling-3.0-tiny,inclusionAI/Ling-3.0-tiny
+inclusionAI,Ling-3.0-tiny-fp8,inclusionAI/Ling-3.0-tiny-fp8
+inclusionAI,Ling-3.0-tiny-int4,inclusionAI/Ling-3.0-tiny-int4
 inclusionAI,Ling-Coder-lite,inclusionAI/Ling-Coder-lite
 inclusionAI,Ling-Coder-lite-base,inclusionAI/Ling-Coder-lite-base
 inclusionAI,Ling-flash-2.0,inclusionAI/Ling-flash-2.0
@@ -652,6 +656,7 @@ internlm,Intern-S1-mini,internlm/Intern-S1-mini
 internlm,Intern-S1-mini-FP8,internlm/Intern-S1-mini-FP8
 internlm,Intern-S1-Pro-BF16,internlm/Intern-S1-Pro-BF16
 internlm,Intern-S2-Mobius,internlm/Intern-S2-Mobius
+internlm,Intern-S2-Mobius-FP8,internlm/Intern-S2-Mobius-FP8
 internlm,Intern-S2-Preview,internlm/Intern-S2-Preview
 internlm,Intern-S2-Preview-397B,internlm/Intern-S2-Preview-397B
 internlm,Intern-S2-Preview-397B-FP8,internlm/Intern-S2-Preview-397B-FP8
@@ -733,6 +738,7 @@ LiquidAI,LFM2.5-2.6B-Base,LiquidAI/LFM2.5-2.6B-Base
 LiquidAI,LFM2.5-230M,LiquidAI/LFM2.5-230M
 LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
 LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
+LiquidAI,LFM2.5-VL-3B,LiquidAI/LFM2.5-VL-3B
 llava-hf,bakLlava-v1-hf,llava-hf/bakLlava-v1-hf
 llava-hf,llama3-llava-next-8b-hf,llava-hf/llama3-llava-next-8b-hf
 llava-hf,llava-1.5-13b-hf,llava-hf/llava-1.5-13b-hf
@@ -1041,6 +1047,10 @@ nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-Base-BF16,nvidia/NVIDIA-Nemotron-3-Ultr
 nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
 nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-GenRM,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-GenRM
 nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4
+nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
+nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DFlash,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DFlash
+nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DSpark,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DSpark
 nvidia,NVIDIA-Nemotron-Nano-12B-v2,nvidia/NVIDIA-Nemotron-Nano-12B-v2
 nvidia,NVIDIA-Nemotron-Nano-12B-v2-Base,nvidia/NVIDIA-Nemotron-Nano-12B-v2-Base
 nvidia,NVIDIA-Nemotron-Nano-12B-v2-VL-BF16,nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
@@ -1430,6 +1440,10 @@ Qwen,Qwen3.6-27B,Qwen/Qwen3.6-27B
 Qwen,Qwen3.6-27B-FP8,Qwen/Qwen3.6-27B-FP8
 Qwen,Qwen3.6-35B-A3B,Qwen/Qwen3.6-35B-A3B
 Qwen,Qwen3.6-35B-A3B-FP8,Qwen/Qwen3.6-35B-A3B-FP8
+Qwen,Qwen3.8-2.4T-A95B,Qwen/Qwen3.8-2.4T-A95B
+Qwen,Qwen3.8-2.4T-A95B-FP8,Qwen/Qwen3.8-2.4T-A95B-FP8
+Qwen,Qwen3.8-27B,Qwen/Qwen3.8-27B
+Qwen,Qwen3.8-27B-FP8,Qwen/Qwen3.8-27B-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
