@@ -311,6 +311,10 @@ MANUAL_SIZES = {
     'mistralai/Mistral-Small-24B-Instruct-2501': 24,
     'mistralai/Mistral-Small-3.1-24B-Instruct-2503': 24,
     'google/gemma-3-27b-it': 27,
+    'moonshotai/Kimi-K3': 2800,
+    'thinkingmachines/Inkling': 975,
+    'thinkingmachines/Inkling-Small': 276,
+    'Zyphra/ZAYA1-74B-preview': 74,
 }
 # END GENERATED MANUAL_SIZES
 

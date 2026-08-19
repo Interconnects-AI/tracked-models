@@ -79,6 +79,10 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-08-19
+- Added 5 headline checkpoints to `models.csv`: CohereLabs, moonshotai, thinkingmachines, Zyphra
+- Promoted Command A+ from `extra_models.csv` and added reviewed Kimi K3, Inkling, Inkling-Small, and ZAYA1 parameter metadata
+
 ### 2026-08-17
 - Weekly Hugging Face sync
 - Added 14 models to `models.csv`: deepseek-ai, inclusionAI, internlm, LiquidAI, nvidia, Qwen

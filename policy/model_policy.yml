@@ -145,6 +145,7 @@ orgs:
     primary_family_patterns:
       - "^Kimi-K2\\.6(?:$|[-_])"
       - "^Kimi-K2\\.7(?:$|[-_])"
+      - "^Kimi-K3(?:$|[-_])"
 
   Qwen:
     primary_family_patterns:
@@ -212,6 +213,10 @@ orgs:
     reject_name_patterns:
       - "^HY-Embodied-"
 
+  thinkingmachines:
+    primary_family_patterns:
+      - "^Inkling(?:$|[-_])"
+
   XiaomiMiMo:
     primary_family_patterns:
       - "^MiMo-V2\\.5-Pro(?:$|[-_])"
@@ -219,3 +224,7 @@ orgs:
   zai-org:
     primary_family_patterns:
       - "^GLM-5(?:\\.\\d+)?(?:$|[-_])"
+
+  Zyphra:
+    primary_family_patterns:
+      - "^ZAYA1(?:$|[-_])"
