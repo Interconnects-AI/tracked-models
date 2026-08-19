@@ -298,3 +298,7 @@ nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,30,3.5,true,Checkpoint name's A3B is 
 mistralai/Mistral-Small-24B-Instruct-2501,24,,false,
 mistralai/Mistral-Small-3.1-24B-Instruct-2503,24,,false,
 google/gemma-3-27b-it,27,,false,
+moonshotai/Kimi-K3,2800,104,true,
+thinkingmachines/Inkling,975,41,true,
+thinkingmachines/Inkling-Small,276,12,true,
+Zyphra/ZAYA1-74B-preview,74,4,true,

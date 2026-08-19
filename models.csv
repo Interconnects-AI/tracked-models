@@ -214,6 +214,7 @@ ByteDance-Seed,Seed-OSS-36B-Instruct,ByteDance-Seed/Seed-OSS-36B-Instruct
 ByteDance-Seed,UI-TARS-1.5-7B,ByteDance-Seed/UI-TARS-1.5-7B
 ByteDance-Seed,UI-TARS-7B-DPO,ByteDance-Seed/UI-TARS-7B-DPO
 ByteDance-Seed,VINCIE-3B,ByteDance-Seed/VINCIE-3B
+CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
 deepseek-ai,deepseek-coder-1.3b-base,deepseek-ai/deepseek-coder-1.3b-base
 deepseek-ai,deepseek-coder-1.3b-instruct,deepseek-ai/deepseek-coder-1.3b-instruct
 deepseek-ai,deepseek-coder-33b-base,deepseek-ai/deepseek-coder-33b-base
@@ -921,6 +922,7 @@ moonshotai,Kimi-K2-Thinking,moonshotai/Kimi-K2-Thinking
 moonshotai,Kimi-K2.5,moonshotai/Kimi-K2.5
 moonshotai,Kimi-K2.6,moonshotai/Kimi-K2.6
 moonshotai,Kimi-K2.7-Code,moonshotai/Kimi-K2.7-Code
+moonshotai,Kimi-K3,moonshotai/Kimi-K3
 moonshotai,Kimi-Linear-48B-A3B-Base,moonshotai/Kimi-Linear-48B-A3B-Base
 moonshotai,Kimi-Linear-48B-A3B-Instruct,moonshotai/Kimi-Linear-48B-A3B-Instruct
 moonshotai,Kimi-VL-A3B-Instruct,moonshotai/Kimi-VL-A3B-Instruct
@@ -1523,6 +1525,8 @@ tencent,WeDLM-8B-Base,tencent/WeDLM-8B-Base
 tencent,WeDLM-8B-Instruct,tencent/WeDLM-8B-Instruct
 tencent,Youtu-LLM-2B,tencent/Youtu-LLM-2B
 tencent,Youtu-LLM-2B-Base,tencent/Youtu-LLM-2B-Base
+thinkingmachines,Inkling,thinkingmachines/Inkling
+thinkingmachines,Inkling-Small,thinkingmachines/Inkling-Small
 THUDM,agentlm-13b,THUDM/agentlm-13b
 THUDM,agentlm-70b,THUDM/agentlm-70b
 THUDM,agentlm-7b,THUDM/agentlm-7b
@@ -1771,3 +1775,4 @@ zai-org,webrl-llama-3.1-70b,zai-org/webrl-llama-3.1-70b
 zai-org,webrl-llama-3.1-8b,zai-org/webrl-llama-3.1-8b
 zai-org,webrl-orm-llama-3.1-8b,zai-org/webrl-orm-llama-3.1-8b
 zai-org,WebVIA-Agent,zai-org/WebVIA-Agent
+Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
