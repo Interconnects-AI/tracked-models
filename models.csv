@@ -915,6 +915,7 @@ mistralai,Pixtral-12B-Base-2409,mistralai/Pixtral-12B-Base-2409
 mistralai,Pixtral-Large-Instruct-2411,mistralai/Pixtral-Large-Instruct-2411
 moondream,moondream-2b-2025-04-14,moondream/moondream-2b-2025-04-14
 moondream,moondream3-preview,moondream/moondream3-preview
+moondream,moondream3.1-9B-A2B,moondream/moondream3.1-9B-A2B
 moonshotai,Kimi-Audio-7B-Instruct,moonshotai/Kimi-Audio-7B-Instruct
 moonshotai,Kimi-K2-Base,moonshotai/Kimi-K2-Base
 moonshotai,Kimi-K2-Instruct,moonshotai/Kimi-K2-Instruct
@@ -1781,3 +1782,4 @@ Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
 dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
 meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
 Motif-Technologies,Motif-3,Motif-Technologies/Motif-3
+meituan-longcat,LongCat-2.0,meituan-longcat/LongCat-2.0

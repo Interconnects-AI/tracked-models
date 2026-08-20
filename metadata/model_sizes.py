@@ -321,6 +321,18 @@ MANUAL_SIZES = {
     'CohereLabs/North-Micro-Vision-Instruct': 2.4,
     'dots-studio/dots3-note-prev': 280,
     'Motif-Technologies/Motif-3': 314,
+    'swiss-ai/Apertus-v1.5-70B': 70,
+    'amd/Instella-MoE-16B-A3B-Think': 16,
+    'Kwaipilot/KAT-Coder-V2.5-Dev': 35,
+    'upstage/Solar-Open2-250B': 250.287794944,
+    'Nanbeige/Nanbeige4.2-3B': 4,
+    'baseten/GLM-5.2-Vision-NVFP4': 744.5,
+    'Motif-Technologies/Motif-3-Beta': 314,
+    'moondream/moondream3.1-9B-A2B': 9,
+    'meituan-longcat/LongCat-2.0': 1600,
+    'mistralai/Leanstral-1.5-119B-A6B': 119,
+    'inclusionAI/LLaDA2.2-flash': 100,
+    'microsoft/Fara1.5-9B': 9,
 }
 # END GENERATED MANUAL_SIZES
 
