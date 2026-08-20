@@ -133,6 +133,10 @@ orgs:
     primary_family_patterns:
       - "^llm-jp-4-8b-instruct$"
 
+  meituan-longcat:
+    primary_family_patterns:
+      - "^LongCat-"
+
   meta-models:
     primary_family_patterns:
       - "^Muse-Glimmer-30B$"
@@ -149,6 +153,10 @@ orgs:
   mistralai:
     primary_family_patterns:
       - "^Mistral-Medium-3\\.5(?:$|[-_])"
+
+  moondream:
+    primary_family_patterns:
+      - "^moondream"
 
   moonshotai:
     primary_family_patterns:

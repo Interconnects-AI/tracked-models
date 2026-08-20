@@ -80,7 +80,8 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-08-20
-- Added reviewed parameter metadata for 12 Artifacts Log issue 23 checkpoints plus two release-date corrections, without changing primary tracking membership
+- Added Moondream 3.1 and LongCat 2.0 to the primary list with family discovery rules
+- Added reviewed parameter metadata for 12 Artifacts Log issue 23 checkpoints plus two release-date corrections; the other 10 remain unranked RAM-only metadata
 - Added 5 current Artifacts Log checkpoints to `models.csv`: CohereLabs, dots-studio, meta-models, Motif-Technologies, nvidia
 - Promoted North Micro Vision from `extra_models.csv` and added reviewed parameter metadata for all 5 checkpoints plus Ling 3.0 tiny
 - Added four official release-date corrections and discovery coverage for the new primary families
