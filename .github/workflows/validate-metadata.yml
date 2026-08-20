@@ -13,6 +13,9 @@ on:
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
       - "metadata/test_generate_model_sizes.py"
+      - "metadata/release_date_corrections.csv"
+      - "metadata/validate_release_date_corrections.py"
+      - "metadata/test_validate_release_date_corrections.py"
       - ".github/workflows/validate-metadata.yml"
   push:
     branches:
@@ -27,6 +30,9 @@ on:
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
       - "metadata/test_generate_model_sizes.py"
+      - "metadata/release_date_corrections.csv"
+      - "metadata/validate_release_date_corrections.py"
+      - "metadata/test_validate_release_date_corrections.py"
       - ".github/workflows/validate-metadata.yml"
 
 permissions:
@@ -56,3 +62,9 @@ jobs:
 
       - name: Test organization-region validation rules
         run: python -m unittest metadata/test_validate_organization_regions.py
+
+      - name: Validate release-date corrections
+        run: python metadata/validate_release_date_corrections.py
+
+      - name: Test release-date correction validation rules
+        run: python -m unittest metadata/test_validate_release_date_corrections.py

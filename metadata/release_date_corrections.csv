@@ -45,3 +45,18 @@ google/tabfm-1.0.0-pytorch,2026-06-29,2026-06-30,official Google Research announ
 Qwen/Qwen3.8-27B,2026-08-05,2026-08-14,official Qwen ModelScope release date
 mistralai/Ministral-3-14B-Instruct-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
 mistralai/Mistral-Small-4-119B-2603,2026-01-23,2026-03-16,official Mistral Small 4 launch date
+Qwen/Qwen3.8-2.4T-A95B,2026-08-08,2026-08-12,official Qwen ModelScope release date
+Qwen/Qwen3.8-2.4T-A95B-FP8,2026-08-08,2026-08-12,official Qwen ModelScope release date
+Qwen/Qwen3.8-27B-FP8,2026-08-13,2026-08-14,official Qwen ModelScope release date
+mistralai/Ministral-3-14B-Base-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-14B-Instruct-2512-BF16,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-14B-Reasoning-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-3B-Base-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-3B-Instruct-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-3B-Instruct-2512-BF16,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-3B-Instruct-2512-ONNX,2025-11-24,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-3B-Reasoning-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-8B-Base-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-8B-Instruct-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-8B-Instruct-2512-BF16,2025-10-31,2025-12-02,official Mistral 3 launch date
+mistralai/Ministral-3-8B-Reasoning-2512,2025-10-31,2025-12-02,official Mistral 3 launch date

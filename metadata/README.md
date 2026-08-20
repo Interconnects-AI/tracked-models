@@ -105,6 +105,14 @@ does not match the public release date.
 | `actual_release_date` | Curated public release date to use for release-relative analysis. |
 | `notes` | Reason or source context for the correction. |
 
+After editing the registry, validate its exact headers, checkpoint IDs, dates,
+unique rows, and notes:
+
+```bash
+python metadata/validate_release_date_corrections.py
+python -m unittest metadata/test_validate_release_date_corrections.py
+```
+
 ## Conventions
 
 - Dates use `YYYY-MM-DD`.
