@@ -80,8 +80,7 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-08-20
-- Added 12 Artifacts Log issue 23 LLM/VLM checkpoints to the primary list and promoted Apertus v1.5 70B from the secondary list
-- Added reviewed parameter metadata for all 12 checkpoints, Baseten and Nanbeige region metadata, exact discovery policies, and two release-date corrections
+- Added reviewed parameter metadata for 12 Artifacts Log issue 23 checkpoints plus two release-date corrections, without changing primary tracking membership
 - Added 5 current Artifacts Log checkpoints to `models.csv`: CohereLabs, dots-studio, meta-models, Motif-Technologies, nvidia
 - Promoted North Micro Vision from `extra_models.csv` and added reviewed parameter metadata for all 5 checkpoints plus Ling 3.0 tiny
 - Added four official release-date corrections and discovery coverage for the new primary families
