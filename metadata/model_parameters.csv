@@ -302,3 +302,9 @@ moonshotai/Kimi-K3,2800,104,true,
 thinkingmachines/Inkling,975,41,true,
 thinkingmachines/Inkling-Small,276,12,true,
 Zyphra/ZAYA1-74B-preview,74,4,true,
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,30,3,true,
+inclusionAI/Ling-3.0-tiny,7.9,1.3,true,
+meta-models/Muse-Glimmer-30B,29.6,,false,Official model card reports approximately 29.6B including the vision encoder; checkpoint name rounds to 30B.
+CohereLabs/North-Micro-Vision-Instruct,2.4,,false,
+dots-studio/dots3-note-prev,280,16,true,Official model-card figures; raw checkpoint tensors also include separately listed modality modules.
+Motif-Technologies/Motif-3,314,13.2,true,Official model card reports approximately 314B total and 13.2B active.

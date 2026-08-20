@@ -215,6 +215,7 @@ ByteDance-Seed,UI-TARS-1.5-7B,ByteDance-Seed/UI-TARS-1.5-7B
 ByteDance-Seed,UI-TARS-7B-DPO,ByteDance-Seed/UI-TARS-7B-DPO
 ByteDance-Seed,VINCIE-3B,ByteDance-Seed/VINCIE-3B
 CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
+CohereLabs,North-Micro-Vision-Instruct,CohereLabs/North-Micro-Vision-Instruct
 deepseek-ai,deepseek-coder-1.3b-base,deepseek-ai/deepseek-coder-1.3b-base
 deepseek-ai,deepseek-coder-1.3b-instruct,deepseek-ai/deepseek-coder-1.3b-instruct
 deepseek-ai,deepseek-coder-33b-base,deepseek-ai/deepseek-coder-33b-base
@@ -1050,6 +1051,7 @@ nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16,nvidia/NVIDIA-Nemotron-3-Ultra-550
 nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-GenRM,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-GenRM
 nvidia,NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4
 nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
+nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
 nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
 nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DFlash,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DFlash
 nvidia,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DSpark,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DSpark
@@ -1776,3 +1778,6 @@ zai-org,webrl-llama-3.1-8b,zai-org/webrl-llama-3.1-8b
 zai-org,webrl-orm-llama-3.1-8b,zai-org/webrl-orm-llama-3.1-8b
 zai-org,WebVIA-Agent,zai-org/WebVIA-Agent
 Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
+dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
+meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
+Motif-Technologies,Motif-3,Motif-Technologies/Motif-3

@@ -79,6 +79,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-08-20
+- Added 5 current Artifacts Log checkpoints to `models.csv`: CohereLabs, dots-studio, meta-models, Motif-Technologies, nvidia
+- Promoted North Micro Vision from `extra_models.csv` and added reviewed parameter metadata for all 5 checkpoints plus Ling 3.0 tiny
+- Added four official release-date corrections and discovery coverage for the new primary families
+
 ### 2026-08-19
 - Added 5 headline checkpoints to `models.csv`: CohereLabs, moonshotai, thinkingmachines, Zyphra
 - Promoted Command A+ from `extra_models.csv` and added reviewed Kimi K3, Inkling, Inkling-Small, and ZAYA1 parameter metadata

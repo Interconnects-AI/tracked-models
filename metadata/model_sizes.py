@@ -315,6 +315,12 @@ MANUAL_SIZES = {
     'thinkingmachines/Inkling': 975,
     'thinkingmachines/Inkling-Small': 276,
     'Zyphra/ZAYA1-74B-preview': 74,
+    'nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16': 30,
+    'inclusionAI/Ling-3.0-tiny': 7.9,
+    'meta-models/Muse-Glimmer-30B': 29.6,
+    'CohereLabs/North-Micro-Vision-Instruct': 2.4,
+    'dots-studio/dots3-note-prev': 280,
+    'Motif-Technologies/Motif-3': 314,
 }
 # END GENERATED MANUAL_SIZES
 

@@ -25,6 +25,7 @@ datalab-to,us,
 deepcogito,us,
 deepseek-ai,china,
 docling-project,eu,Project started by the AI for Knowledge team at IBM Research Zurich.
+dots-studio,china,
 EleutherAI,unknown,Distributed research collective without a single primary base.
 facebook,us,Legacy Meta research namespace.
 FacebookAI,us,Legacy Meta namespace used by ATOM derivatives data.
@@ -58,6 +59,7 @@ llm-jp,other,
 LLM360,other,
 meituan-longcat,china,
 meta-llama,us,
+meta-models,us,
 microsoft,us,
 MiniMaxAI,china,
 mistral-community,eu,Official Mistral community namespace.

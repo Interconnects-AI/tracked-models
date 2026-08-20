@@ -79,10 +79,15 @@ orgs:
   CohereLabs:
     primary_family_patterns:
       - "^(?:c4ai-)?command-a(?:$|[-_])"
+      - "^North-Micro-Vision(?:$|[-_])"
 
   deepseek-ai:
     primary_family_patterns:
       - "^DeepSeek-V4(?:$|[-_])"
+
+  dots-studio:
+    primary_family_patterns:
+      - "^dots3-note-prev$"
 
   google:
     primary_family_patterns:
@@ -128,6 +133,10 @@ orgs:
     primary_family_patterns:
       - "^llm-jp-4-8b-instruct$"
 
+  meta-models:
+    primary_family_patterns:
+      - "^Muse-Glimmer-30B$"
+
   microsoft:
     reject_name_patterns:
       - "^Dayhoff-"
@@ -146,6 +155,10 @@ orgs:
       - "^Kimi-K2\\.6(?:$|[-_])"
       - "^Kimi-K2\\.7(?:$|[-_])"
       - "^Kimi-K3(?:$|[-_])"
+
+  Motif-Technologies:
+    primary_family_patterns:
+      - "^Motif-3$"
 
   Qwen:
     primary_family_patterns:
