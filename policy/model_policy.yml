@@ -135,7 +135,10 @@ orgs:
 
   meituan-longcat:
     primary_family_patterns:
-      - "^LongCat-(?:2\\.0|Flash|Next)(?:$|[-_])"
+      - "^LongCat-"
+
+    reject_name_patterns:
+      - "^LongCat-(?:Audio|Image|Video)"
 
   meta-models:
     primary_family_patterns:
