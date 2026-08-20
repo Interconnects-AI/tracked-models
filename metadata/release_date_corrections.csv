@@ -60,3 +60,7 @@ mistralai/Ministral-3-8B-Base-2512,2025-10-31,2025-12-02,official Mistral 3 laun
 mistralai/Ministral-3-8B-Instruct-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
 mistralai/Ministral-3-8B-Instruct-2512-BF16,2025-10-31,2025-12-02,official Mistral 3 launch date
 mistralai/Ministral-3-8B-Reasoning-2512,2025-10-31,2025-12-02,official Mistral 3 launch date
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,2026-08-01,2026-08-11,official NVIDIA model card release date
+meta-models/Muse-Glimmer-30B,2026-08-09,2026-08-10,official Meta launch date
+CohereLabs/North-Micro-Vision-Instruct,2026-08-10,2026-08-12,official Cohere launch date
+dots-studio/dots3-note-prev,2026-08-09,2026-08-14,official dots3-note public release date
