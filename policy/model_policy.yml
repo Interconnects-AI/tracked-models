@@ -135,7 +135,7 @@ orgs:
 
   meituan-longcat:
     primary_family_patterns:
-      - "^LongCat-"
+      - "^LongCat-(?:2\\.0|Flash|Next)(?:$|[-_])"
 
   meta-models:
     primary_family_patterns:
