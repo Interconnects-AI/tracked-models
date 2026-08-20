@@ -648,6 +648,7 @@ inclusionAI,ZwZ-2B,inclusionAI/ZwZ-2B
 inclusionAI,ZwZ-4B,inclusionAI/ZwZ-4B
 inclusionAI,ZwZ-7B,inclusionAI/ZwZ-7B
 inclusionAI,ZwZ-8B,inclusionAI/ZwZ-8B
+inclusionAI,LLaDA2.2-flash,inclusionAI/LLaDA2.2-flash
 internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
@@ -837,6 +838,7 @@ microsoft,Phi-4-reasoning,microsoft/Phi-4-reasoning
 microsoft,Phi-4-reasoning-plus,microsoft/Phi-4-reasoning-plus
 microsoft,Phi-mini-MoE-instruct,microsoft/Phi-mini-MoE-instruct
 microsoft,Phi-tiny-MoE-instruct,microsoft/Phi-tiny-MoE-instruct
+microsoft,Fara1.5-9B,microsoft/Fara1.5-9B
 MiniMaxAI,MiniMax-M1-40k,MiniMaxAI/MiniMax-M1-40k
 MiniMaxAI,MiniMax-M1-40k-hf,MiniMaxAI/MiniMax-M1-40k-hf
 MiniMaxAI,MiniMax-M1-80k,MiniMaxAI/MiniMax-M1-80k
@@ -913,8 +915,10 @@ mistralai,Mixtral-8x7B-v0.1,mistralai/Mixtral-8x7B-v0.1
 mistralai,Pixtral-12B-2409,mistralai/Pixtral-12B-2409
 mistralai,Pixtral-12B-Base-2409,mistralai/Pixtral-12B-Base-2409
 mistralai,Pixtral-Large-Instruct-2411,mistralai/Pixtral-Large-Instruct-2411
+mistralai,Leanstral-1.5-119B-A6B,mistralai/Leanstral-1.5-119B-A6B
 moondream,moondream-2b-2025-04-14,moondream/moondream-2b-2025-04-14
 moondream,moondream3-preview,moondream/moondream3-preview
+moondream,moondream3.1-9B-A2B,moondream/moondream3.1-9B-A2B
 moonshotai,Kimi-Audio-7B-Instruct,moonshotai/Kimi-Audio-7B-Instruct
 moonshotai,Kimi-K2-Base,moonshotai/Kimi-K2-Base
 moonshotai,Kimi-K2-Instruct,moonshotai/Kimi-K2-Instruct
@@ -1781,3 +1785,11 @@ Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
 dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
 meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
 Motif-Technologies,Motif-3,Motif-Technologies/Motif-3
+Motif-Technologies,Motif-3-Beta,Motif-Technologies/Motif-3-Beta
+amd,Instella-MoE-16B-A3B-Think,amd/Instella-MoE-16B-A3B-Think
+baseten,GLM-5.2-Vision-NVFP4,baseten/GLM-5.2-Vision-NVFP4
+Kwaipilot,KAT-Coder-V2.5-Dev,Kwaipilot/KAT-Coder-V2.5-Dev
+meituan-longcat,LongCat-2.0,meituan-longcat/LongCat-2.0
+Nanbeige,Nanbeige4.2-3B,Nanbeige/Nanbeige4.2-3B
+swiss-ai,Apertus-v1.5-70B,swiss-ai/Apertus-v1.5-70B
+upstage,Solar-Open2-250B,upstage/Solar-Open2-250B

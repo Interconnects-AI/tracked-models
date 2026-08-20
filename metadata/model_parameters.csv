@@ -308,3 +308,15 @@ meta-models/Muse-Glimmer-30B,29.6,,false,Official model card reports approximate
 CohereLabs/North-Micro-Vision-Instruct,2.4,,false,
 dots-studio/dots3-note-prev,280,16,true,Official model-card figures; raw checkpoint tensors also include separately listed modality modules.
 Motif-Technologies/Motif-3,314,13.2,true,Official model card reports approximately 314B total and 13.2B active.
+swiss-ai/Apertus-v1.5-70B,70,,false,Official release documentation reports the model at the 70B scale; raw checkpoint tensors include multimodal modules.
+amd/Instella-MoE-16B-A3B-Think,16,2.8,true,
+Kwaipilot/KAT-Coder-V2.5-Dev,35,3,true,
+upstage/Solar-Open2-250B,250.287794944,15,true,
+Nanbeige/Nanbeige4.2-3B,4,,false,Official model card reports 4B total and 3B non-embedding; looped dense transformer.
+baseten/GLM-5.2-Vision-NVFP4,744.5,40,true,Composite of Baseten's reported 744B text backbone plus approximately 0.5B vision and projector modules.
+Motif-Technologies/Motif-3-Beta,314,13.2,true,Official model card and technical report counts for this distinct intermediate checkpoint.
+moondream/moondream3.1-9B-A2B,9,2,true,
+meituan-longcat/LongCat-2.0,1600,48,true,Official architectural count; average activation is approximately 48B per token (33B-56B dynamic range).
+mistralai/Leanstral-1.5-119B-A6B,119,6.5,true,
+inclusionAI/LLaDA2.2-flash,100,,true,Official model card reports 100B non-embedding parameters; no official per-token active count is stated.
+microsoft/Fara1.5-9B,9,,false,

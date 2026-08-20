@@ -54,6 +54,10 @@ orgs:
       - "^Ovis\\d"
       - "^Marco-(?:Mini|Nano|DeepResearch)(?:$|[-_])"
 
+  amd:
+    primary_family_patterns:
+      - "^Instella-MoE-16B-A3B-Think$"
+
   allenai:
     primary_family_patterns:
       - "^BAR-(?:$|[-_0-9A-Za-z])"
@@ -71,6 +75,10 @@ orgs:
   arcee-ai:
     primary_family_patterns:
       - "^Trinity-(?:Large|Mini|Nano)(?:$|[-_])"
+
+  baseten:
+    primary_family_patterns:
+      - "^GLM-5\\.2-Vision-NVFP4$"
 
   ByteDance-Seed:
     primary_family_patterns:
@@ -112,10 +120,15 @@ orgs:
       - "^Ling-3\\.0(?:$|[-_])"
       - "^Ring-2\\.6(?:$|[-_])"
       - "^LLaDA2\\.0(?:$|[-_])"
+      - "^LLaDA2\\.2-flash$"
 
   internlm:
     primary_family_patterns:
       - "^Intern-S2(?:$|[-_])"
+
+  Kwaipilot:
+    primary_family_patterns:
+      - "^KAT-Coder-V2\\.5-Dev$"
 
   LGAI-EXAONE:
     primary_family_patterns:
@@ -133,11 +146,18 @@ orgs:
     primary_family_patterns:
       - "^llm-jp-4-8b-instruct$"
 
+  meituan-longcat:
+    primary_family_patterns:
+      - "^LongCat-2\\.0$"
+
   meta-models:
     primary_family_patterns:
       - "^Muse-Glimmer-30B$"
 
   microsoft:
+    primary_family_patterns:
+      - "^Fara1\\.5-9B$"
+
     reject_name_patterns:
       - "^Dayhoff-"
 
@@ -148,7 +168,12 @@ orgs:
 
   mistralai:
     primary_family_patterns:
+      - "^Leanstral-1\\.5-119B-A6B$"
       - "^Mistral-Medium-3\\.5(?:$|[-_])"
+
+  moondream:
+    primary_family_patterns:
+      - "^moondream3\\.1-9B-A2B$"
 
   moonshotai:
     primary_family_patterns:
@@ -158,7 +183,11 @@ orgs:
 
   Motif-Technologies:
     primary_family_patterns:
-      - "^Motif-3$"
+      - "^Motif-3(?:-Beta)?$"
+
+  Nanbeige:
+    primary_family_patterns:
+      - "^Nanbeige4\\.2-3B$"
 
   Qwen:
     primary_family_patterns:
@@ -229,6 +258,14 @@ orgs:
   thinkingmachines:
     primary_family_patterns:
       - "^Inkling(?:$|[-_])"
+
+  swiss-ai:
+    primary_family_patterns:
+      - "^Apertus-v1\\.5-70B$"
+
+  upstage:
+    primary_family_patterns:
+      - "^Solar-Open2-250B$"
 
   XiaomiMiMo:
     primary_family_patterns:

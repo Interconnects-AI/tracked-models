@@ -168,7 +168,6 @@ state-spaces,mamba-2.8b-hf,state-spaces/mamba-2.8b-hf
 state-spaces,mamba-370m-hf,state-spaces/mamba-370m-hf
 swiss-ai,Apertus-70B-Instruct-2509,swiss-ai/Apertus-70B-Instruct-2509
 swiss-ai,Apertus-8B-Instruct-2509,swiss-ai/Apertus-8B-Instruct-2509
-swiss-ai,Apertus-v1.5-70B,swiss-ai/Apertus-v1.5-70B
 swiss-ai,Apertus-v1.5-8B,swiss-ai/Apertus-v1.5-8B
 TinyLlama,TinyLlama-1.1B-Chat-v0.1,TinyLlama/TinyLlama-1.1B-Chat-v0.1
 TinyLlama,TinyLlama-1.1B-Chat-v0.3,TinyLlama/TinyLlama-1.1B-Chat-v0.3
