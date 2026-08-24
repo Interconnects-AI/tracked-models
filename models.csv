@@ -294,6 +294,7 @@ deepseek-ai,Janus-1.3B,deepseek-ai/Janus-1.3B
 deepseek-ai,Janus-Pro-1B,deepseek-ai/Janus-Pro-1B
 deepseek-ai,Janus-Pro-7B,deepseek-ai/Janus-Pro-7B
 deepseek-ai,JanusFlow-1.3B,deepseek-ai/JanusFlow-1.3B
+dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
 EleutherAI,llemma_7b,EleutherAI/llemma_7b
 EleutherAI,pythia-1.4b,EleutherAI/pythia-1.4b
 EleutherAI,pythia-12b,EleutherAI/pythia-12b
@@ -572,10 +573,16 @@ inclusionAI,Ling-2.6-flash,inclusionAI/Ling-2.6-flash
 inclusionAI,Ling-2.6-flash-fp8,inclusionAI/Ling-2.6-flash-fp8
 inclusionAI,Ling-2.6-flash-int4,inclusionAI/Ling-2.6-flash-int4
 inclusionAI,Ling-3.0-flash,inclusionAI/Ling-3.0-flash
+inclusionAI,Ling-3.0-flash-base,inclusionAI/Ling-3.0-flash-base
+inclusionAI,Ling-3.0-flash-base-30T,inclusionAI/Ling-3.0-flash-base-30T
+inclusionAI,Ling-3.0-flash-base-midtrain,inclusionAI/Ling-3.0-flash-base-midtrain
 inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
 inclusionAI,Ling-3.0-tiny,inclusionAI/Ling-3.0-tiny
+inclusionAI,Ling-3.0-tiny-base,inclusionAI/Ling-3.0-tiny-base
+inclusionAI,Ling-3.0-tiny-base-30T,inclusionAI/Ling-3.0-tiny-base-30T
+inclusionAI,Ling-3.0-tiny-base-midtrain,inclusionAI/Ling-3.0-tiny-base-midtrain
 inclusionAI,Ling-3.0-tiny-fp8,inclusionAI/Ling-3.0-tiny-fp8
 inclusionAI,Ling-3.0-tiny-int4,inclusionAI/Ling-3.0-tiny-int4
 inclusionAI,Ling-Coder-lite,inclusionAI/Ling-Coder-lite
@@ -735,9 +742,12 @@ internlm,POLAR-7B,internlm/POLAR-7B
 internlm,POLAR-7B-Base,internlm/POLAR-7B-Base
 internlm,SWE-Fixer-Editor-72B,internlm/SWE-Fixer-Editor-72B
 internlm,SWE-Fixer-Retriever-7B,internlm/SWE-Fixer-Retriever-7B
+LiquidAI,LFM2.5-1.2B-Instruct-DSpark,LiquidAI/LFM2.5-1.2B-Instruct-DSpark
 LiquidAI,LFM2.5-2.6B,LiquidAI/LFM2.5-2.6B
 LiquidAI,LFM2.5-2.6B-Base,LiquidAI/LFM2.5-2.6B-Base
+LiquidAI,LFM2.5-2.6B-DSpark,LiquidAI/LFM2.5-2.6B-DSpark
 LiquidAI,LFM2.5-230M,LiquidAI/LFM2.5-230M
+LiquidAI,LFM2.5-8B-A1B-DSpark,LiquidAI/LFM2.5-8B-A1B-DSpark
 LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
 LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
 LiquidAI,LFM2.5-VL-3B,LiquidAI/LFM2.5-VL-3B
@@ -754,6 +764,7 @@ llava-hf,llava-v1.6-mistral-7b-hf,llava-hf/llava-v1.6-mistral-7b-hf
 llava-hf,llava-v1.6-vicuna-13b-hf,llava-hf/llava-v1.6-vicuna-13b-hf
 llava-hf,llava-v1.6-vicuna-7b-hf,llava-hf/llava-v1.6-vicuna-7b-hf
 llava-hf,vip-llava-7b-hf,llava-hf/vip-llava-7b-hf
+meituan-longcat,LongCat-2.0,meituan-longcat/LongCat-2.0
 meta-llama,CodeLlama-13b-hf,meta-llama/CodeLlama-13b-hf
 meta-llama,CodeLlama-13b-Instruct-hf,meta-llama/CodeLlama-13b-Instruct-hf
 meta-llama,CodeLlama-13b-Python-hf,meta-llama/CodeLlama-13b-Python-hf
@@ -808,6 +819,7 @@ meta-llama,Meta-Llama-3-70B,meta-llama/Meta-Llama-3-70B
 meta-llama,Meta-Llama-3-70B-Instruct,meta-llama/Meta-Llama-3-70B-Instruct
 meta-llama,Meta-Llama-3-8B,meta-llama/Meta-Llama-3-8B
 meta-llama,Meta-Llama-3-8B-Instruct,meta-llama/Meta-Llama-3-8B-Instruct
+meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
 microsoft,bitnet-b1.58-2B-4T,microsoft/bitnet-b1.58-2B-4T
 microsoft,bitnet-b1.58-2B-4T-bf16,microsoft/bitnet-b1.58-2B-4T-bf16
 microsoft,Fara-7B,microsoft/Fara-7B
@@ -932,6 +944,7 @@ moonshotai,Kimi-VL-A3B-Thinking,moonshotai/Kimi-VL-A3B-Thinking
 moonshotai,Kimi-VL-A3B-Thinking-2506,moonshotai/Kimi-VL-A3B-Thinking-2506
 moonshotai,Moonlight-16B-A3B,moonshotai/Moonlight-16B-A3B
 moonshotai,Moonlight-16B-A3B-Instruct,moonshotai/Moonlight-16B-A3B-Instruct
+Motif-Technologies,Motif-3,Motif-Technologies/Motif-3
 nvidia,AceInstruct-1.5B,nvidia/AceInstruct-1.5B
 nvidia,AceInstruct-72B,nvidia/AceInstruct-72B
 nvidia,AceInstruct-7B,nvidia/AceInstruct-7B
@@ -1779,7 +1792,3 @@ zai-org,webrl-llama-3.1-8b,zai-org/webrl-llama-3.1-8b
 zai-org,webrl-orm-llama-3.1-8b,zai-org/webrl-orm-llama-3.1-8b
 zai-org,WebVIA-Agent,zai-org/WebVIA-Agent
 Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
-dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
-meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
-Motif-Technologies,Motif-3,Motif-Technologies/Motif-3
-meituan-longcat,LongCat-2.0,meituan-longcat/LongCat-2.0
