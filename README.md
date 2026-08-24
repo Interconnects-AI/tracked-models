@@ -79,6 +79,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-08-24
+- Weekly Hugging Face sync
+- Added 9 models to `models.csv`: inclusionAI, LiquidAI
+- 28 candidates rejected, 7 left for manual review
+
 ### 2026-08-20
 - Added Moondream 3.1 and LongCat 2.0 to the primary list with family discovery rules
 - Added reviewed parameter metadata for 12 Artifacts Log issue 23 checkpoints plus two release-date corrections; the other 10 remain unranked RAM-only metadata
