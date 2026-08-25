@@ -118,6 +118,9 @@ llm-jp,llm-jp-3.1-1.8b-instruct4,llm-jp/llm-jp-3.1-1.8b-instruct4
 llm-jp,llm-jp-3.1-8x13b-32K,llm-jp/llm-jp-3.1-8x13b-32K
 llm-jp,llm-jp-3.1-8x13b-32K-instruct4,llm-jp/llm-jp-3.1-8x13b-32K-instruct4
 llm-jp,llm-jp-4-8b-instruct,llm-jp/llm-jp-4-8b-instruct
+marin-community,marin-32b-base,marin-community/marin-32b-base
+marin-community,marin-8b-base,marin-community/marin-8b-base
+marin-community,marin-8b-instruct,marin-community/marin-8b-instruct
 microsoft,BioGPT-Large,microsoft/BioGPT-Large
 microsoft,BioGPT-Large-PubMedQA,microsoft/BioGPT-Large-PubMedQA
 microsoft,kosmos-2.5,microsoft/kosmos-2.5
@@ -166,8 +169,16 @@ state-spaces,mamba-1.4b-hf,state-spaces/mamba-1.4b-hf
 state-spaces,mamba-130m-hf,state-spaces/mamba-130m-hf
 state-spaces,mamba-2.8b-hf,state-spaces/mamba-2.8b-hf
 state-spaces,mamba-370m-hf,state-spaces/mamba-370m-hf
+swiss-ai,Apertus-70B-2509,swiss-ai/Apertus-70B-2509
 swiss-ai,Apertus-70B-Instruct-2509,swiss-ai/Apertus-70B-Instruct-2509
+swiss-ai,Apertus-8B-2509,swiss-ai/Apertus-8B-2509
 swiss-ai,Apertus-8B-Instruct-2509,swiss-ai/Apertus-8B-Instruct-2509
+swiss-ai,Apertus-v1.1-0.5B,swiss-ai/Apertus-v1.1-0.5B
+swiss-ai,Apertus-v1.1-0.5B-Instruct,swiss-ai/Apertus-v1.1-0.5B-Instruct
+swiss-ai,Apertus-v1.1-1.5B,swiss-ai/Apertus-v1.1-1.5B
+swiss-ai,Apertus-v1.1-1.5B-Instruct,swiss-ai/Apertus-v1.1-1.5B-Instruct
+swiss-ai,Apertus-v1.1-4B,swiss-ai/Apertus-v1.1-4B
+swiss-ai,Apertus-v1.1-4B-Instruct,swiss-ai/Apertus-v1.1-4B-Instruct
 swiss-ai,Apertus-v1.5-70B,swiss-ai/Apertus-v1.5-70B
 swiss-ai,Apertus-v1.5-8B,swiss-ai/Apertus-v1.5-8B
 TinyLlama,TinyLlama-1.1B-Chat-v0.1,TinyLlama/TinyLlama-1.1B-Chat-v0.1

@@ -12,7 +12,7 @@ The main tracked model list. These are the core frontier models used in ATOM Pro
 
 A secondary list of models that are tracked but not yet included in the main charts. These are candidates for promotion to `models.csv` in the future. Useful for broader ecosystem analysis, coverage of niche orgs, and filling gaps in existing org catalogs.
 
-**New orgs in extra list**: AI-MO, AIDC-AI, apple, bigcode, CohereLabs, docling-project, GSAI-ML, h2oai, ibm-research, LGAI-EXAONE, LiquidAI, llm-jp, opendatalab, OpenHands, openvla, Salesforce, state-spaces, swiss-ai, TinyLlama, typhoon-ai
+**New orgs in extra list**: AI-MO, AIDC-AI, apple, bigcode, CohereLabs, docling-project, GSAI-ML, h2oai, ibm-research, LGAI-EXAONE, LiquidAI, llm-jp, marin-community, opendatalab, OpenHands, openvla, Salesforce, state-spaces, swiss-ai, TinyLlama, typhoon-ai
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
@@ -45,6 +45,13 @@ Prospective matching rules are maintained separately in the dashboard's
 [future-only arXiv watchlist](https://github.com/Interconnects-AI/dashboard/blob/main/pipeline/arxiv_emerging_families.json).
 Provider-qualified and model-specific aliases prevent ambiguous ordinary words
 from being counted as research-paper model mentions.
+
+Historical aliases describe the existing frozen scanner taxonomy and may group
+independently published derivatives with their underlying model family. The
+`hf_org` column identifies the primary family publisher, not necessarily the
+publisher of every historical alias. Editing this informational CSV does not
+change live matching or previously calculated charts; correcting historical
+groupings requires a separately reviewed scanner-taxonomy update.
 
 ### `metadata/`
 
@@ -115,6 +122,8 @@ Models intentionally excluded from tracking despite high download counts:
 ### 2026-08-25
 - Added `arxiv_models.csv` as a separate family-level research-paper tracking list
 - Documented 51 historical families and five future-only families, including Apertus and Marin
+- Added three official Marin checkpoints and eight additional Apertus checkpoints to `extra_models.csv`
+- Classified `marin-community` as a US organization in the canonical region registry
 
 ### 2026-08-24
 - Weekly Hugging Face sync
