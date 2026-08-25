@@ -1,28 +1,25 @@
 family_id,label,hf_org,access_class,tracking_scope,aliases
 qwen,Qwen,Qwen,open_weight_family,historical_and_daily,codeqwen; qvq; qwen; qwq
-llama,Llama,meta-llama,open_weight_family,historical_and_daily,codellama; llama; tinyllama
+llama,Llama,meta-llama,open_weight_family,historical_and_daily,codellama; llama
 deepseek,DeepSeek,deepseek-ai,open_weight_family,historical_and_daily,deepseek
 mistral,Mistral,mistralai,open_weight_family,historical_and_daily,codestral; devstral; magistral; mathstral; ministral; mistral; mixtral; pixtral
 gemma,Gemma,google,open_weight_family,historical_and_daily,codegemma; diffusiongemma; gemma; medgemma; paligemma; recurrentgemma; txgemma
 kimi,Kimi,moonshotai,open_weight_family,historical_and_daily,kimi; kimi-audio; kimi-k; kimi-linear; kimi-vl
 glm,GLM,zai-org,open_weight_family,historical_and_daily,chatglm; glm
-olmo,OLMo,allenai,open_weight_family,historical_and_daily,flexolmo; olmo; olmoe
+olmo,OLMo,allenai,open_weight_family,historical_and_daily,flexolmo; molmo; olmo; olmoe; tulu; tülu
 nemotron,Nemotron,nvidia,open_weight_family,historical_and_daily,nemotron
 phi,Phi,microsoft,open_weight_family,historical_and_daily,phi
 gpt_oss,GPT-OSS,openai,open_weight_family,historical_and_daily,gpt-oss
-hunyuan,Hunyuan,tencent,open_weight_family,historical_and_daily,hunyuan
+hunyuan,Hunyuan,tencent,open_weight_family,historical_and_daily,hunyuan; Tencent Hy2; Tencent Hy3; tencent/Hy3
 internvl,InternVL,OpenGVLab,open_weight_family,historical_and_daily,internvl
-llava,LLaVA,llava-hf,open_weight_family,historical_and_daily,llava; mobilevlm; tinyllava; video-llava
 minimax,MiniMax,MiniMaxAI,open_weight_family,historical_and_daily,minimax
 mimo,MiMo,XiaomiMiMo,open_weight_family,historical_and_daily,mimo
 granite,Granite,ibm-granite,open_weight_family,historical_and_daily,granite
 minicpm,MiniCPM,openbmb,open_weight_family,historical_and_daily,minicpm
 smol,SmolLM/SmolVLM,HuggingFaceTB,open_weight_family,historical_and_daily,smollm; smolvlm
-molmo,Molmo,allenai,open_weight_family,historical_and_daily,molmo
 falcon,Falcon,tiiuae,open_weight_family,historical_and_daily,falcon
 cohere_command,Command,CohereLabs,open_weight_family,historical_and_daily,command
 aya,Aya,CohereLabs,open_weight_family,historical_and_daily,aya
-tulu,Tulu,allenai,open_weight_family,historical_and_daily,tulu
 internlm,InternLM,internlm,open_weight_family,historical_and_daily,intern-s; internlm
 yi,Yi,01-ai,open_weight_family,historical_and_daily,yi
 dbrx,DBRX,databricks,open_weight_family,historical_and_daily,dbrx
@@ -30,8 +27,6 @@ jamba,Jamba,ai21labs,open_weight_family,historical_and_daily,jamba
 arctic,Arctic,Snowflake,open_weight_family,historical_and_daily,arctic
 lfm,LFM,LiquidAI,open_weight_family,historical_and_daily,lfm
 seed_oss,Seed-OSS,ByteDance-Seed,open_weight_family,historical_and_daily,seed-oss
-vicuna,Vicuna,lmsys,open_weight_family,historical_and_daily,vicuna
-alpaca,Alpaca,tatsu-lab,open_weight_family,historical_and_daily,alpaca
 bloom,BLOOM/BLOOMZ,bigscience,open_weight_family,historical_and_daily,bloom; bloomz
 opt,OPT,facebook,open_weight_family,historical_and_daily,opt
 gpt_neo,GPT-J/Neo/NeoX,EleutherAI,open_weight_family,historical_and_daily,gpt-j; gpt-neo; gpt-neox
@@ -39,14 +34,10 @@ pythia,Pythia,EleutherAI,open_weight_family,historical_and_daily,pythia
 mpt,MPT,mosaicml,open_weight_family,historical_and_daily,mpt
 stablelm,StableLM,stabilityai,open_weight_family,historical_and_daily,stablelm
 redpajama,RedPajama,togethercomputer,open_weight_family,historical_and_daily,redpajama; redpajama-incite
-openllama,OpenLLaMA,openlm-research,open_weight_family,historical_and_daily,openllama
-rwkv,RWKV,,open_weight_family,historical_and_daily,rwkv
 starcoder,StarCoder,bigcode,open_weight_family,historical_and_daily,starcoder
 baichuan,Baichuan,baichuan-inc,open_weight_family,historical_and_daily,baichuan
 ernie,ERNIE,baidu,open_weight_family,historical_and_daily,ernie
 exaone,EXAONE,LGAI-EXAONE,open_weight_family,historical_and_daily,exaone
-llada,LLaDA,GSAI-ML,open_weight_family,historical_and_daily,llada
-cog,CogVLM/CogVideo,THUDM,open_weight_family,historical_and_daily,cogvideo; cogvlm
 openai_gpt,OpenAI GPT,openai,proprietary,historical_and_daily,chatgpt; gpt; gpt-2-historical-open-weight; gpt-api-legacy; gpt-api-multimodal; gpt-unspecified; instructgpt; openai-o-series
 claude,Claude,,proprietary,historical_and_daily,claude
 gemini,Gemini,google,proprietary,historical_and_daily,gemini; med-gemini

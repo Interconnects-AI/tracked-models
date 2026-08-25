@@ -23,12 +23,22 @@ A separate family-level list for tracking model mentions in arXiv papers. Unlike
 than downloadable checkpoints. Inclusion here does not promote a model into the
 download-tracking lists.
 
-The list contains all 51 families in the frozen historical arXiv taxonomy and
-five additional families tracked only in new daily scans: Muse Glimmer,
-Inkling, Laguna, Apertus, and Marin. The historical taxonomy is unchanged, and
-future-only families are not backfilled into old papers. Apertus is published
-by Swiss AI; Marin is published by the Marin community in collaboration with
-Open Athena. See [the original request](https://github.com/Interconnects-AI/tracked-models/issues/38).
+The list contains 42 curated historical families and five additional families
+tracked only in new daily scans: Muse Glimmer, Inkling, Laguna, Apertus, and
+Marin. The scanner's frozen historical taxonomy still contains all 51 raw
+families; this CSV is an intentionally curated view, not a one-row-per-family
+copy of that source taxonomy. Future-only families are not backfilled into old
+papers and do not appear in the featured public chart unless separately
+promoted. Apertus is published by Swiss AI; Marin is published by the Marin
+community in collaboration with Open Athena. See
+[the original request](https://github.com/Interconnects-AI/tracked-models/issues/38).
+
+The `olmo` row uses the preferred **OLMo** display label as an umbrella for the
+AI2-published OLMo, Tulu, and Molmo model families. LLaVA, Vicuna, Alpaca,
+OpenLLaMA, RWKV, LLaDA, and CogVLM/CogVideo are intentionally omitted from
+this curated list, but remain intact in the frozen raw taxonomy and historical
+source data. TinyLlama is not attributed to Meta's Llama family. Tencent-
+qualified Hy2 and Hy3 names are illustrative Hunyuan-lineage aliases.
 
 | Column | Description |
 |--------|-------------|
@@ -36,7 +46,7 @@ Open Athena. See [the original request](https://github.com/Interconnects-AI/trac
 | `label` | Human-readable model-family name |
 | `hf_org` | Official Hugging Face provider namespace when available; otherwise blank |
 | `access_class` | `open_weight_family` or `proprietary` |
-| `tracking_scope` | `historical_and_daily` for the frozen taxonomy, or `future_only` for new-paper monitoring |
+| `tracking_scope` | `historical_and_daily` for a curated historical family, or `future_only` for new-paper monitoring |
 | `aliases` | Semicolon-separated illustrative names, not the executable matching rules |
 
 Historical family definitions come from the scanner's
@@ -46,12 +56,12 @@ Prospective matching rules are maintained separately in the dashboard's
 Provider-qualified and model-specific aliases prevent ambiguous ordinary words
 from being counted as research-paper model mentions.
 
-Historical aliases describe the existing frozen scanner taxonomy and may group
-independently published derivatives with their underlying model family. The
-`hf_org` column identifies the primary family publisher, not necessarily the
-publisher of every historical alias. Editing this informational CSV does not
-change live matching or previously calculated charts; correcting historical
-groupings requires a separately reviewed scanner-taxonomy update.
+The `hf_org` column identifies the primary family publisher. Historical aliases
+describe the curated presentation intent, including the OLMo umbrella and
+prospective Hunyuan names; they are not guaranteed to mirror every executable
+alias in the frozen scanner. Editing this informational CSV does not change
+live matching, raw taxonomy membership, or previously calculated charts;
+changing those requires separately reviewed scanner or dashboard updates.
 
 ### `metadata/`
 
@@ -121,7 +131,8 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-08-25
 - Added `arxiv_models.csv` as a separate family-level research-paper tracking list
-- Documented 51 historical families and five future-only families, including Apertus and Marin
+- Documented 42 curated historical families and five future-only families, including Apertus and Marin
+- Grouped Tulu and Molmo under OLMo, removed low-priority historical families from the curated view, and clarified Llama and Hunyuan aliases
 - Added three official Marin checkpoints and eight additional Apertus checkpoints to `extra_models.csv`
 - Classified `marin-community` as a US organization in the canonical region registry
 
