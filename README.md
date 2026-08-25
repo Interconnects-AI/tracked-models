@@ -16,6 +16,36 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
+### `arxiv_models.csv` (research-paper mentions)
+
+A separate family-level list for tracking model mentions in arXiv papers. Unlike
+`models.csv` and `extra_models.csv`, its rows describe model families rather
+than downloadable checkpoints. Inclusion here does not promote a model into the
+download-tracking lists.
+
+The list contains all 51 families in the frozen historical arXiv taxonomy and
+five additional families tracked only in new daily scans: Muse Glimmer,
+Inkling, Laguna, Apertus, and Marin. The historical taxonomy is unchanged, and
+future-only families are not backfilled into old papers. Apertus is published
+by Swiss AI; Marin is published by the Marin community in collaboration with
+Open Athena. See [the original request](https://github.com/Interconnects-AI/tracked-models/issues/38).
+
+| Column | Description |
+|--------|-------------|
+| `family_id` | Stable family identifier shared with the arXiv scanner or future-only watchlist |
+| `label` | Human-readable model-family name |
+| `hf_org` | Official Hugging Face provider namespace when available; otherwise blank |
+| `access_class` | `open_weight_family` or `proprietary` |
+| `tracking_scope` | `historical_and_daily` for the frozen taxonomy, or `future_only` for new-paper monitoring |
+| `aliases` | Semicolon-separated illustrative names, not the executable matching rules |
+
+Historical family definitions come from the scanner's
+[canonical taxonomy](https://github.com/Interconnects-AI/arxiv-model-mentions/blob/main/arxiv_mentions_lib/arxiv_model_families.json).
+Prospective matching rules are maintained separately in the dashboard's
+[future-only arXiv watchlist](https://github.com/Interconnects-AI/dashboard/blob/main/pipeline/arxiv_emerging_families.json).
+Provider-qualified and model-specific aliases prevent ambiguous ordinary words
+from being counted as research-paper model mentions.
+
 ### `metadata/`
 
 Curated, project-neutral model metadata for reuse across analysis projects:
@@ -51,6 +81,9 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 # Fetch the extra list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv
 
+# Fetch the arXiv model-family list
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/arxiv_models.csv
+
 # Combine both lists (skip extra header)
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv > all_models.csv
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv | tail -n +2 >> all_models.csv
@@ -78,6 +111,10 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
+
+### 2026-08-25
+- Added `arxiv_models.csv` as a separate family-level research-paper tracking list
+- Documented 51 historical families and five future-only families, including Apertus and Marin
 
 ### 2026-08-24
 - Weekly Hugging Face sync
