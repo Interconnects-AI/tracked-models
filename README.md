@@ -12,9 +12,56 @@ The main tracked model list. These are the core frontier models used in ATOM Pro
 
 A secondary list of models that are tracked but not yet included in the main charts. These are candidates for promotion to `models.csv` in the future. Useful for broader ecosystem analysis, coverage of niche orgs, and filling gaps in existing org catalogs.
 
-**New orgs in extra list**: AI-MO, AIDC-AI, apple, bigcode, CohereLabs, docling-project, GSAI-ML, h2oai, ibm-research, LGAI-EXAONE, LiquidAI, llm-jp, opendatalab, OpenHands, openvla, Salesforce, state-spaces, swiss-ai, TinyLlama, typhoon-ai
+**New orgs in extra list**: AI-MO, AIDC-AI, apple, bigcode, CohereLabs, docling-project, GSAI-ML, h2oai, ibm-research, LGAI-EXAONE, LiquidAI, llm-jp, marin-community, opendatalab, OpenHands, openvla, Salesforce, state-spaces, swiss-ai, TinyLlama, typhoon-ai
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
+
+### `arxiv_models.csv` (research-paper mentions)
+
+A separate family-level list for tracking model mentions in arXiv papers. Unlike
+`models.csv` and `extra_models.csv`, its rows describe model families rather
+than downloadable checkpoints. Inclusion here does not promote a model into the
+download-tracking lists.
+
+The list contains 42 curated historical families and five additional families
+tracked only in new daily scans: Muse Glimmer, Inkling, Laguna, Apertus, and
+Marin. The scanner's frozen historical taxonomy still contains all 51 raw
+families; this CSV is an intentionally curated view, not a one-row-per-family
+copy of that source taxonomy. Future-only families are not backfilled into old
+papers and do not appear in the featured public chart unless separately
+promoted. Apertus is published by Swiss AI; Marin is published by the Marin
+community in collaboration with Open Athena. See
+[the original request](https://github.com/Interconnects-AI/tracked-models/issues/38).
+
+The `olmo` row uses the preferred **OLMo** display label as an umbrella for the
+AI2-published OLMo, Tulu, and Molmo model families. LLaVA, Vicuna, Alpaca,
+OpenLLaMA, RWKV, LLaDA, and CogVLM/CogVideo are intentionally omitted from
+this curated list, but remain intact in the frozen raw taxonomy and historical
+source data. TinyLlama is not attributed to Meta's Llama family. Tencent-
+qualified Hy2 and Hy3 names are illustrative Hunyuan-lineage aliases.
+
+| Column | Description |
+|--------|-------------|
+| `family_id` | Stable family identifier shared with the arXiv scanner or future-only watchlist |
+| `label` | Human-readable model-family name |
+| `hf_org` | Official Hugging Face provider namespace when available; otherwise blank |
+| `access_class` | `open_weight_family` or `proprietary` |
+| `tracking_scope` | `historical_and_daily` for a curated historical family, or `future_only` for new-paper monitoring |
+| `aliases` | Semicolon-separated illustrative names, not the executable matching rules |
+
+Historical family definitions come from the scanner's
+[canonical taxonomy](https://github.com/Interconnects-AI/arxiv-model-mentions/blob/main/arxiv_mentions_lib/arxiv_model_families.json).
+Prospective matching rules are maintained separately in the dashboard's
+[future-only arXiv watchlist](https://github.com/Interconnects-AI/dashboard/blob/main/pipeline/arxiv_emerging_families.json).
+Provider-qualified and model-specific aliases prevent ambiguous ordinary words
+from being counted as research-paper model mentions.
+
+The `hf_org` column identifies the primary family publisher. Historical aliases
+describe the curated presentation intent, including the OLMo umbrella and
+prospective Hunyuan names; they are not guaranteed to mirror every executable
+alias in the frozen scanner. Editing this informational CSV does not change
+live matching, raw taxonomy membership, or previously calculated charts;
+changing those requires separately reviewed scanner or dashboard updates.
 
 ### `metadata/`
 
@@ -51,6 +98,9 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 # Fetch the extra list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv
 
+# Fetch the arXiv model-family list
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/arxiv_models.csv
+
 # Combine both lists (skip extra header)
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv > all_models.csv
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv | tail -n +2 >> all_models.csv
@@ -78,6 +128,13 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
+
+### 2026-08-25
+- Added `arxiv_models.csv` as a separate family-level research-paper tracking list
+- Documented 42 curated historical families and five future-only families, including Apertus and Marin
+- Grouped Tulu and Molmo under OLMo, removed low-priority historical families from the curated view, and clarified Llama and Hunyuan aliases
+- Added three official Marin checkpoints and eight additional Apertus checkpoints to `extra_models.csv`
+- Classified `marin-community` as a US organization in the canonical region registry
 
 ### 2026-08-24
 - Weekly Hugging Face sync
