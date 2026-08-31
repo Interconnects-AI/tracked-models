@@ -129,6 +129,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-08-31
+- Weekly Hugging Face sync
+- Added 8 models to `models.csv`: Qwen, tencent, zai-org
+- 25 candidates rejected, 8 left for manual review
+
 ### 2026-08-25
 - Added `arxiv_models.csv` as a separate family-level research-paper tracking list
 - Documented 42 curated historical families and five future-only families, including Apertus and Marin
