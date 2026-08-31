@@ -231,7 +231,7 @@ orgs:
 
   tencent:
     primary_family_patterns:
-      - "^Hy3(?:$|[-_])"
+      - "^Hy\\d(?:$|[-_])"
       - "^Sequential-Hidden-Decoding(?:$|[-_])"
 
     reject_name_patterns:
