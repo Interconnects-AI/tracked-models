@@ -1462,6 +1462,8 @@ Qwen,Qwen3.8-2.4T-A95B,Qwen/Qwen3.8-2.4T-A95B
 Qwen,Qwen3.8-2.4T-A95B-FP8,Qwen/Qwen3.8-2.4T-A95B-FP8
 Qwen,Qwen3.8-27B,Qwen/Qwen3.8-27B
 Qwen,Qwen3.8-27B-FP8,Qwen/Qwen3.8-27B-FP8
+Qwen,Qwen3.8-Flash-Next,Qwen/Qwen3.8-Flash-Next
+Qwen,Qwen3.8-Flash-Next-FP8,Qwen/Qwen3.8-Flash-Next-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
@@ -1759,6 +1761,10 @@ zai-org,GLM-5.1,zai-org/GLM-5.1
 zai-org,GLM-5.1-FP8,zai-org/GLM-5.1-FP8
 zai-org,GLM-5.2,zai-org/GLM-5.2
 zai-org,GLM-5.2-FP8,zai-org/GLM-5.2-FP8
+zai-org,GLM-5.3,zai-org/GLM-5.3
+zai-org,GLM-5.3-BF16,zai-org/GLM-5.3-BF16
+zai-org,GLM-5.3-Flash,zai-org/GLM-5.3-Flash
+zai-org,GLM-5.3-Flash-BF16,zai-org/GLM-5.3-Flash-BF16
 zai-org,GLM-ASR-Nano-2512,zai-org/GLM-ASR-Nano-2512
 zai-org,glm-edge-1.5b-chat,zai-org/glm-edge-1.5b-chat
 zai-org,glm-edge-4b-chat,zai-org/glm-edge-4b-chat
