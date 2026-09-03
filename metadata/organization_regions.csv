@@ -15,7 +15,7 @@ ATH-MaaS,china,
 BAAI,china,
 baichuan-inc,china,
 baidu,china,
-bigcode,unknown,Distributed international collaboration without a single primary base.
+bigcode,us,U.S. attribution via joint leads Hugging Face and ServiceNow; international research collaboration.
 black-forest-labs,eu,
 ByteDance,china,
 ByteDance-Seed,china,
@@ -26,7 +26,7 @@ deepcogito,us,
 deepseek-ai,china,
 docling-project,eu,Project started by the AI for Knowledge team at IBM Research Zurich.
 dots-studio,china,
-EleutherAI,unknown,Distributed research collective without a single primary base.
+EleutherAI,us,U.S. nonprofit institute with a globally distributed research community.
 facebook,us,Legacy Meta research namespace.
 FacebookAI,us,Legacy Meta namespace used by ATOM derivatives data.
 fal,us,
@@ -103,7 +103,7 @@ swiss-ai,eu,
 tencent,china,
 thinkingmachines,us,
 THUDM,china,Legacy GLM namespace now represented by zai-org.
-tiiuae,other,
+tiiuae,other,Technology Innovation Institute in Abu Dhabi; United Arab Emirates.
 TildeAI,eu,
 TinyLlama,other,
 tngtech,eu,

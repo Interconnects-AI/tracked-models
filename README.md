@@ -129,6 +129,10 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-09-03
+- Classified EleutherAI and BigCode as US using institutional attribution, while retaining their international research context
+- Documented TII's UAE attribution without changing its region bucket
+
 ### 2026-08-31
 - Weekly Hugging Face sync
 - Added 8 models to `models.csv`: Qwen, tencent, zai-org

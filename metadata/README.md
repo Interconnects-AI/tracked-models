@@ -25,6 +25,13 @@ buckets; it is never a fallback for missing evidence. Use `unknown` when a
 distributed collaboration, reupload community, or other ambiguous namespace has
 no defensible single primary base. An absent namespace remains unreviewed.
 
+Institutional attribution does not imply that every contributor or research
+activity is in that region. A jointly governed project may use the shared
+region of its formally responsible lead institutions when that attribution is
+explicit in `notes`; incidental collaborators alone do not establish it.
+For example, BigCode is attributed to the US through its joint leads Hugging
+Face and ServiceNow, while retaining its international collaboration context.
+
 Keep legacy and renamed namespaces as separate exact rows so downstream tools
 can join without their own alias tables. Registry rows are sorted
 case-insensitively by `hf_org`. Every organization in `models.csv` and
