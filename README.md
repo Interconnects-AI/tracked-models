@@ -131,8 +131,8 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-09-07
 - Weekly Hugging Face sync
-- Added 2 models to `models.csv`: deepseek-ai, inclusionAI
-- 33 candidates rejected, 10 left for manual review
+- Added 8 models to `models.csv`: deepseek-ai, inclusionAI, Qwen, tencent
+- 33 candidates rejected, 4 left for manual review
 
 ### 2026-09-03
 - Classified EleutherAI and BigCode as US using institutional attribution, while retaining their international research context

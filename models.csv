@@ -657,6 +657,8 @@ inclusionAI,ZwZ-2B,inclusionAI/ZwZ-2B
 inclusionAI,ZwZ-4B,inclusionAI/ZwZ-4B
 inclusionAI,ZwZ-7B,inclusionAI/ZwZ-7B
 inclusionAI,ZwZ-8B,inclusionAI/ZwZ-8B
+inclusionAI,LLaDA2.2-mini,inclusionAI/LLaDA2.2-mini
+inclusionAI,UI-Venus-2-9B,inclusionAI/UI-Venus-2-9B
 internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
@@ -1468,6 +1470,7 @@ Qwen,Qwen3.8-Flash-Next,Qwen/Qwen3.8-Flash-Next
 Qwen,Qwen3.8-Flash-Next-FP8,Qwen/Qwen3.8-Flash-Next-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
+Qwen,Qwen-Drive-1.0-4B,Qwen/Qwen-Drive-1.0-4B
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
 rednote-hilab,dots.mocr-svg,rednote-hilab/dots.mocr-svg
 rednote-hilab,dots.ocr,rednote-hilab/dots.ocr
@@ -1547,6 +1550,9 @@ tencent,WeDLM-8B-Base,tencent/WeDLM-8B-Base
 tencent,WeDLM-8B-Instruct,tencent/WeDLM-8B-Instruct
 tencent,Youtu-LLM-2B,tencent/Youtu-LLM-2B
 tencent,Youtu-LLM-2B-Base,tencent/Youtu-LLM-2B-Base
+tencent,ContextPilot-14B,tencent/ContextPilot-14B
+tencent,ContextPilot-8B,tencent/ContextPilot-8B
+tencent,ContextPilot-E4B,tencent/ContextPilot-E4B
 thinkingmachines,Inkling,thinkingmachines/Inkling
 thinkingmachines,Inkling-Small,thinkingmachines/Inkling-Small
 THUDM,agentlm-13b,THUDM/agentlm-13b
