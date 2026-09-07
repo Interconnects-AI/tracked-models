@@ -279,6 +279,7 @@ deepseek-ai,DeepSeek-V4-Flash,deepseek-ai/DeepSeek-V4-Flash
 deepseek-ai,DeepSeek-V4-Flash-0731,deepseek-ai/DeepSeek-V4-Flash-0731
 deepseek-ai,DeepSeek-V4-Flash-Base,deepseek-ai/DeepSeek-V4-Flash-Base
 deepseek-ai,DeepSeek-V4-Flash-DSpark,deepseek-ai/DeepSeek-V4-Flash-DSpark
+deepseek-ai,DeepSeek-V4-Flash-Vision-Exp,deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
 deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
 deepseek-ai,DeepSeek-V4-Pro-0813,deepseek-ai/DeepSeek-V4-Pro-0813
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
@@ -576,6 +577,7 @@ inclusionAI,Ling-3.0-flash,inclusionAI/Ling-3.0-flash
 inclusionAI,Ling-3.0-flash-base,inclusionAI/Ling-3.0-flash-base
 inclusionAI,Ling-3.0-flash-base-30T,inclusionAI/Ling-3.0-flash-base-30T
 inclusionAI,Ling-3.0-flash-base-midtrain,inclusionAI/Ling-3.0-flash-base-midtrain
+inclusionAI,Ling-3.0-flash-Fin,inclusionAI/Ling-3.0-flash-Fin
 inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
