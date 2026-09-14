@@ -216,6 +216,9 @@ ByteDance-Seed,UI-TARS-7B-DPO,ByteDance-Seed/UI-TARS-7B-DPO
 ByteDance-Seed,VINCIE-3B,ByteDance-Seed/VINCIE-3B
 CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
 CohereLabs,North-Micro-Vision-Instruct,CohereLabs/North-Micro-Vision-Instruct
+CohereLabs,tiny-aya-base-32K,CohereLabs/tiny-aya-base-32K
+CohereLabs,tiny-aya-en-thinker,CohereLabs/tiny-aya-en-thinker
+CohereLabs,tiny-aya-l2-thinker,CohereLabs/tiny-aya-l2-thinker
 deepseek-ai,deepseek-coder-1.3b-base,deepseek-ai/deepseek-coder-1.3b-base
 deepseek-ai,deepseek-coder-1.3b-instruct,deepseek-ai/deepseek-coder-1.3b-instruct
 deepseek-ai,deepseek-coder-33b-base,deepseek-ai/deepseek-coder-33b-base
@@ -284,6 +287,7 @@ deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
 deepseek-ai,DeepSeek-V4-Pro-0813,deepseek-ai/DeepSeek-V4-Pro-0813
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
 deepseek-ai,DeepSeek-V4-Pro-DSpark,deepseek-ai/DeepSeek-V4-Pro-DSpark
+deepseek-ai,DeepSeek-V4.1-Flash,deepseek-ai/DeepSeek-V4.1-Flash
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
 deepseek-ai,deepseek-vl-1.3b-chat,deepseek-ai/deepseek-vl-1.3b-chat
 deepseek-ai,deepseek-vl-7b-base,deepseek-ai/deepseek-vl-7b-base
@@ -578,9 +582,16 @@ inclusionAI,Ling-3.0-flash-base,inclusionAI/Ling-3.0-flash-base
 inclusionAI,Ling-3.0-flash-base-30T,inclusionAI/Ling-3.0-flash-base-30T
 inclusionAI,Ling-3.0-flash-base-midtrain,inclusionAI/Ling-3.0-flash-base-midtrain
 inclusionAI,Ling-3.0-flash-Fin,inclusionAI/Ling-3.0-flash-Fin
+inclusionAI,Ling-3.0-flash-Fin-fp4,inclusionAI/Ling-3.0-flash-Fin-fp4
+inclusionAI,Ling-3.0-flash-Fin-fp8,inclusionAI/Ling-3.0-flash-Fin-fp8
+inclusionAI,Ling-3.0-flash-Fin-int4,inclusionAI/Ling-3.0-flash-Fin-int4
 inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
+inclusionAI,Ling-3.0-flash-VL,inclusionAI/Ling-3.0-flash-VL
+inclusionAI,Ling-3.0-flash-VL-fp4,inclusionAI/Ling-3.0-flash-VL-fp4
+inclusionAI,Ling-3.0-flash-VL-fp8,inclusionAI/Ling-3.0-flash-VL-fp8
+inclusionAI,Ling-3.0-flash-VL-int4,inclusionAI/Ling-3.0-flash-VL-int4
 inclusionAI,Ling-3.0-tiny,inclusionAI/Ling-3.0-tiny
 inclusionAI,Ling-3.0-tiny-base,inclusionAI/Ling-3.0-tiny-base
 inclusionAI,Ling-3.0-tiny-base-30T,inclusionAI/Ling-3.0-tiny-base-30T
@@ -619,6 +630,7 @@ inclusionAI,LLaDA2.0-Uni,inclusionAI/LLaDA2.0-Uni
 inclusionAI,LLaDA2.0-Uni-FP8,inclusionAI/LLaDA2.0-Uni-FP8
 inclusionAI,LLaDA2.1-flash,inclusionAI/LLaDA2.1-flash
 inclusionAI,LLaDA2.1-mini,inclusionAI/LLaDA2.1-mini
+inclusionAI,LLaDA2.2-mini,inclusionAI/LLaDA2.2-mini
 inclusionAI,M2-Reasoning,inclusionAI/M2-Reasoning
 inclusionAI,Ming-flash-omni-2.0,inclusionAI/Ming-flash-omni-2.0
 inclusionAI,Ming-flash-omni-Preview,inclusionAI/Ming-flash-omni-Preview
@@ -652,13 +664,12 @@ inclusionAI,Rubicon-Preview,inclusionAI/Rubicon-Preview
 inclusionAI,UI-Venus-1.5-2B,inclusionAI/UI-Venus-1.5-2B
 inclusionAI,UI-Venus-1.5-30B-A3B,inclusionAI/UI-Venus-1.5-30B-A3B
 inclusionAI,UI-Venus-1.5-8B,inclusionAI/UI-Venus-1.5-8B
+inclusionAI,UI-Venus-2-9B,inclusionAI/UI-Venus-2-9B
 inclusionAI,ViLaSR,inclusionAI/ViLaSR
 inclusionAI,ZwZ-2B,inclusionAI/ZwZ-2B
 inclusionAI,ZwZ-4B,inclusionAI/ZwZ-4B
 inclusionAI,ZwZ-7B,inclusionAI/ZwZ-7B
 inclusionAI,ZwZ-8B,inclusionAI/ZwZ-8B
-inclusionAI,LLaDA2.2-mini,inclusionAI/LLaDA2.2-mini
-inclusionAI,UI-Venus-2-9B,inclusionAI/UI-Venus-2-9B
 internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
@@ -668,6 +679,8 @@ internlm,Intern-S1-FP8,internlm/Intern-S1-FP8
 internlm,Intern-S1-mini,internlm/Intern-S1-mini
 internlm,Intern-S1-mini-FP8,internlm/Intern-S1-mini-FP8
 internlm,Intern-S1-Pro-BF16,internlm/Intern-S1-Pro-BF16
+internlm,Intern-S2-397B,internlm/Intern-S2-397B
+internlm,Intern-S2-397B-FP8,internlm/Intern-S2-397B-FP8
 internlm,Intern-S2-Mobius,internlm/Intern-S2-Mobius
 internlm,Intern-S2-Mobius-FP8,internlm/Intern-S2-Mobius-FP8
 internlm,Intern-S2-Preview,internlm/Intern-S2-Preview
@@ -1026,6 +1039,8 @@ nvidia,nemotron-3-8b-chat-4k-rlhf,nvidia/nemotron-3-8b-chat-4k-rlhf
 nvidia,nemotron-3-8b-chat-4k-sft,nvidia/nemotron-3-8b-chat-4k-sft
 nvidia,nemotron-3-8b-chat-4k-steerlm,nvidia/nemotron-3-8b-chat-4k-steerlm
 nvidia,nemotron-3-8b-qa-4k,nvidia/nemotron-3-8b-qa-4k
+nvidia,Nemotron-3-Labs-Ultra-Math-RL,nvidia/Nemotron-3-Labs-Ultra-Math-RL
+nvidia,Nemotron-3-Labs-Ultra-Math-SFT,nvidia/Nemotron-3-Labs-Ultra-Math-SFT
 nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
 nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8
 nvidia,Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4
@@ -1184,6 +1199,9 @@ openbmb,MiniCPM4.1-8B-Eagle3,openbmb/MiniCPM4.1-8B-Eagle3
 openbmb,MiniCPM4.1-8B-Marlin,openbmb/MiniCPM4.1-8B-Marlin
 openbmb,MiniCPM5-1B,openbmb/MiniCPM5-1B
 openbmb,MiniCPM5-1B-SFT,openbmb/MiniCPM5-1B-SFT
+openbmb,MiniCPM5-2B,openbmb/MiniCPM5-2B
+openbmb,MiniCPM5-2B-DSpark,openbmb/MiniCPM5-2B-DSpark
+openbmb,MiniCPM5-2B-Midtrain,openbmb/MiniCPM5-2B-Midtrain
 openbmb,OmniLMM-12B,openbmb/OmniLMM-12B
 openbmb,RLAIF-V-12B,openbmb/RLAIF-V-12B
 openbmb,RLAIF-V-7B,openbmb/RLAIF-V-7B
@@ -1282,6 +1300,7 @@ Qwen,Qwen-7B,Qwen/Qwen-7B
 Qwen,Qwen-7B-Chat,Qwen/Qwen-7B-Chat
 Qwen,Qwen-7B-Chat-Int4,Qwen/Qwen-7B-Chat-Int4
 Qwen,Qwen-7B-Chat-Int8,Qwen/Qwen-7B-Chat-Int8
+Qwen,Qwen-Drive-1.0-4B,Qwen/Qwen-Drive-1.0-4B
 Qwen,Qwen-VL,Qwen/Qwen-VL
 Qwen,Qwen-VL-Chat,Qwen/Qwen-VL-Chat
 Qwen,Qwen-VL-Chat-Int4,Qwen/Qwen-VL-Chat-Int4
@@ -1470,7 +1489,6 @@ Qwen,Qwen3.8-Flash-Next,Qwen/Qwen3.8-Flash-Next
 Qwen,Qwen3.8-Flash-Next-FP8,Qwen/Qwen3.8-Flash-Next-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
-Qwen,Qwen-Drive-1.0-4B,Qwen/Qwen-Drive-1.0-4B
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
 rednote-hilab,dots.mocr-svg,rednote-hilab/dots.mocr-svg
 rednote-hilab,dots.ocr,rednote-hilab/dots.ocr
@@ -1507,6 +1525,9 @@ Snowflake,Qwen-2.5-coder-Arctic-ExCoT-32B,Snowflake/Qwen-2.5-coder-Arctic-ExCoT-
 Snowflake,snowflake-arctic-base,Snowflake/snowflake-arctic-base
 Snowflake,snowflake-arctic-instruct,Snowflake/snowflake-arctic-instruct
 Snowflake,snowflake-arctic-instruct-vllm,Snowflake/snowflake-arctic-instruct-vllm
+tencent,ContextPilot-14B,tencent/ContextPilot-14B
+tencent,ContextPilot-8B,tencent/ContextPilot-8B
+tencent,ContextPilot-E4B,tencent/ContextPilot-E4B
 tencent,Hunyuan-0.5B-Instruct,tencent/Hunyuan-0.5B-Instruct
 tencent,Hunyuan-0.5B-Instruct-FP8,tencent/Hunyuan-0.5B-Instruct-FP8
 tencent,Hunyuan-0.5B-Pretrain,tencent/Hunyuan-0.5B-Pretrain
@@ -1550,9 +1571,6 @@ tencent,WeDLM-8B-Base,tencent/WeDLM-8B-Base
 tencent,WeDLM-8B-Instruct,tencent/WeDLM-8B-Instruct
 tencent,Youtu-LLM-2B,tencent/Youtu-LLM-2B
 tencent,Youtu-LLM-2B-Base,tencent/Youtu-LLM-2B-Base
-tencent,ContextPilot-14B,tencent/ContextPilot-14B
-tencent,ContextPilot-8B,tencent/ContextPilot-8B
-tencent,ContextPilot-E4B,tencent/ContextPilot-E4B
 thinkingmachines,Inkling,thinkingmachines/Inkling
 thinkingmachines,Inkling-Small,thinkingmachines/Inkling-Small
 THUDM,agentlm-13b,THUDM/agentlm-13b
