@@ -216,6 +216,9 @@ ByteDance-Seed,UI-TARS-7B-DPO,ByteDance-Seed/UI-TARS-7B-DPO
 ByteDance-Seed,VINCIE-3B,ByteDance-Seed/VINCIE-3B
 CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
 CohereLabs,North-Micro-Vision-Instruct,CohereLabs/North-Micro-Vision-Instruct
+CohereLabs,tiny-aya-base-32K,CohereLabs/tiny-aya-base-32K
+CohereLabs,tiny-aya-en-thinker,CohereLabs/tiny-aya-en-thinker
+CohereLabs,tiny-aya-l2-thinker,CohereLabs/tiny-aya-l2-thinker
 deepseek-ai,deepseek-coder-1.3b-base,deepseek-ai/deepseek-coder-1.3b-base
 deepseek-ai,deepseek-coder-1.3b-instruct,deepseek-ai/deepseek-coder-1.3b-instruct
 deepseek-ai,deepseek-coder-33b-base,deepseek-ai/deepseek-coder-33b-base
@@ -284,6 +287,7 @@ deepseek-ai,DeepSeek-V4-Pro,deepseek-ai/DeepSeek-V4-Pro
 deepseek-ai,DeepSeek-V4-Pro-0813,deepseek-ai/DeepSeek-V4-Pro-0813
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
 deepseek-ai,DeepSeek-V4-Pro-DSpark,deepseek-ai/DeepSeek-V4-Pro-DSpark
+deepseek-ai,DeepSeek-V4.1-Flash,deepseek-ai/DeepSeek-V4.1-Flash
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
 deepseek-ai,deepseek-vl-1.3b-chat,deepseek-ai/deepseek-vl-1.3b-chat
 deepseek-ai,deepseek-vl-7b-base,deepseek-ai/deepseek-vl-7b-base
