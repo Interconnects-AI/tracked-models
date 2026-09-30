@@ -20,6 +20,7 @@ AIDC-AI,Ovis2.6-80B-A3B,AIDC-AI/Ovis2.6-80B-A3B
 allenai,Olmo-3-1025-7B,allenai/Olmo-3-1025-7B
 allenai,tulu-2-dpo-7b,allenai/tulu-2-dpo-7b
 apple,CADD-Base-7B,apple/CADD-Base-7B
+apple,LensVLM-9B,apple/LensVLM-9B
 apple,OpenELM-1_1B-Instruct,apple/OpenELM-1_1B-Instruct
 apple,OpenELM-3B-Instruct,apple/OpenELM-3B-Instruct
 apple,OpenELM-450M-Instruct,apple/OpenELM-450M-Instruct
@@ -118,6 +119,9 @@ llm-jp,llm-jp-3.1-1.8b-instruct4,llm-jp/llm-jp-3.1-1.8b-instruct4
 llm-jp,llm-jp-3.1-8x13b-32K,llm-jp/llm-jp-3.1-8x13b-32K
 llm-jp,llm-jp-3.1-8x13b-32K-instruct4,llm-jp/llm-jp-3.1-8x13b-32K-instruct4
 llm-jp,llm-jp-4-8b-instruct,llm-jp/llm-jp-4-8b-instruct
+llm-jp,llm-jp-4.1-32b-a3b-thinking,llm-jp/llm-jp-4.1-32b-a3b-thinking
+llm-jp,llm-jp-4.1-33b-thinking,llm-jp/llm-jp-4.1-33b-thinking
+llm-jp,llm-jp-4.1-8b-thinking,llm-jp/llm-jp-4.1-8b-thinking
 marin-community,marin-32b-base,marin-community/marin-32b-base
 marin-community,marin-8b-base,marin-community/marin-8b-base
 marin-community,marin-8b-instruct,marin-community/marin-8b-instruct

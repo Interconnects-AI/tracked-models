@@ -674,6 +674,9 @@ internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
 internlm,AlchemistCoder-L-7B,internlm/AlchemistCoder-L-7B
+internlm,Intern-Decision-0.8B,internlm/Intern-Decision-0.8B
+internlm,Intern-Decision-2B,internlm/Intern-Decision-2B
+internlm,Intern-Decision-4B,internlm/Intern-Decision-4B
 internlm,Intern-S1,internlm/Intern-S1
 internlm,Intern-S1-FP8,internlm/Intern-S1-FP8
 internlm,Intern-S1-mini,internlm/Intern-S1-mini
@@ -768,6 +771,7 @@ LiquidAI,LFM2.5-8B-A1B-DSpark,LiquidAI/LFM2.5-8B-A1B-DSpark
 LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
 LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
 LiquidAI,LFM2.5-VL-3B,LiquidAI/LFM2.5-VL-3B
+LiquidAI,LFM2.5-VL-3B-DSpark,LiquidAI/LFM2.5-VL-3B-DSpark
 llava-hf,bakLlava-v1-hf,llava-hf/bakLlava-v1-hf
 llava-hf,llama3-llava-next-8b-hf,llava-hf/llama3-llava-next-8b-hf
 llava-hf,llava-1.5-13b-hf,llava-hf/llava-1.5-13b-hf
@@ -1698,6 +1702,11 @@ XiaomiMiMo,MiMo-V2-Flash-Base,XiaomiMiMo/MiMo-V2-Flash-Base
 XiaomiMiMo,MiMo-V2.5-Pro,XiaomiMiMo/MiMo-V2.5-Pro
 XiaomiMiMo,MiMo-V2.5-Pro-Base,XiaomiMiMo/MiMo-V2.5-Pro-Base
 XiaomiMiMo,MiMo-V2.5-Pro-FP4-DFlash,XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash
+XiaomiMiMo,MiMo-V2.6-Distill-Qwen-9B,XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B
+XiaomiMiMo,MiMo-V2.6-Flash-MOPD,XiaomiMiMo/MiMo-V2.6-Flash-MOPD
+XiaomiMiMo,MiMo-V2.6-Flash-RL,XiaomiMiMo/MiMo-V2.6-Flash-RL
+XiaomiMiMo,MiMo-V2.6-Pro-MOPD,XiaomiMiMo/MiMo-V2.6-Pro-MOPD
+XiaomiMiMo,MiMo-V2.6-Pro-RL,XiaomiMiMo/MiMo-V2.6-Pro-RL
 XiaomiMiMo,MiMo-VL-7B-RL,XiaomiMiMo/MiMo-VL-7B-RL
 XiaomiMiMo,MiMo-VL-7B-RL-2508,XiaomiMiMo/MiMo-VL-7B-RL-2508
 XiaomiMiMo,MiMo-VL-7B-SFT,XiaomiMiMo/MiMo-VL-7B-SFT

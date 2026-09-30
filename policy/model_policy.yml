@@ -67,6 +67,7 @@ orgs:
   apple:
     primary_family_patterns:
       - "^CADD-Base-7B$"
+      - "^LensVLM(?:$|[-_])"
 
   arcee-ai:
     primary_family_patterns:
@@ -116,6 +117,7 @@ orgs:
   internlm:
     primary_family_patterns:
       - "^Intern-S2(?:$|[-_])"
+      - "^Intern-Decision(?:$|[-_])"
 
   LGAI-EXAONE:
     primary_family_patterns:
@@ -132,6 +134,7 @@ orgs:
   llm-jp:
     primary_family_patterns:
       - "^llm-jp-4-8b-instruct$"
+      - "^llm-jp-4\\.1(?:$|[-_])"
 
   meituan-longcat:
     primary_family_patterns:
@@ -243,7 +246,7 @@ orgs:
 
   XiaomiMiMo:
     primary_family_patterns:
-      - "^MiMo-V2\\.5-Pro(?:$|[-_])"
+      - "^MiMo-V2(?:\\.\\d+)?(?:$|[-_])"
 
   zai-org:
     primary_family_patterns:

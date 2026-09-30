@@ -129,6 +129,13 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-09-28
+- Weekly Hugging Face sync
+- Added 9 models to `models.csv`: internlm, LiquidAI, XiaomiMiMo
+- Added 4 models to `extra_models.csv`: apple, llm-jp
+- Added discovery rules for Intern-Decision, LLM-jp 4.1, and LensVLM; expanded MiMo V2 matching to include minor versions and variants
+- 21 candidates rejected, 4 left for manual review
+
 ### 2026-09-14
 - Weekly Hugging Face sync
 - Added 18 models to `models.csv`: CohereLabs, deepseek-ai, inclusionAI, internlm, nvidia, openbmb
