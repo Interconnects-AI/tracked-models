@@ -143,6 +143,133 @@
     ]
   },
   {
+    "model_id": "brunopio/Llama3-8B-1.58-100B-tokens-GGUF",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "reason": "Pinned publisher conversion statement identifies HF1BitLLM/Llama3-8B-1.58-100B-tokens as the immediate GGUF source. The two YAML base IDs are a sequential lineage, not a merge: the separately reviewed HF1BitLLM card identifies the earlier Meta starting checkpoint.",
+    "source_urls": [
+      "https://huggingface.co/HF1BitLLM/Llama3-8B-1.58-100B-tokens/blob/5c35ae1f2c622b75a9c28e3603074863d74e4792/README.md",
+      "https://huggingface.co/brunopio/Llama3-8B-1.58-100B-tokens-GGUF/blob/d0edcae1715f2be182b9885a9d8ef8209f2d74d9/README.md"
+    ],
+    "base_model_id": "HF1BitLLM/Llama3-8B-1.58-100B-tokens",
+    "modification_categories": []
+  },
+  {
+    "model_id": "casperhansen/deepseek-r1-distill-qwen-32b-awq",
+    "action": "include",
+    "parent_model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "base_model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+    "modification_categories": [],
+    "reason": "The pinned config identifies its input checkpoint via the exact Hugging Face cache path for deepseek-ai/DeepSeek-R1-Distill-Qwen-32B at snapshot 2a29ab14a7dcfb5132537e18050d0ebe5008f7fb and specifies 4-bit AWQ. The repository name corroborates that exact checkpoint. This is reviewed config evidence; no general name-only inference is enabled.",
+    "source_urls": [
+      "https://huggingface.co/casperhansen/deepseek-r1-distill-qwen-32b-awq/blob/e20a4933e66aa5eccc8270489f5aeab17f90b888/config.json"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-2B-Distill",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-2B",
+    "base_model_id": "Qwen/Qwen3.5-2B",
+    "modification_categories": [
+      "distilled"
+    ],
+    "reason": "The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces. The much larger Qwen3.8 model supplies training outputs, not merged parent weights. Record the known distillation modification on this intermediate.",
+    "source_urls": [
+      "https://huggingface.co/empero-ai/Qwen3.8-2B-Distill/blob/e37a2dc4acc68ad75a91e07e63168cb04cc06345/README.md"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-2B-Distill-GGUF",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-2B",
+    "base_model_id": "empero-ai/Qwen3.8-2B-Distill",
+    "modification_categories": [],
+    "reason": "The pinned publisher card calls this GGUF quantization of its Empero student checkpoint. The older short repository ID redirects to the -Distill checkpoint; these are sequential names of one student rather than two merged weight sources. Preserve that immediate checkpoint in lineage, then inherit its reviewed Qwen3.5 distillation ancestry.",
+    "source_urls": [
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-2B",
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-2B-Distill",
+      "https://huggingface.co/empero-ai/Qwen3.8-2B-Distill-GGUF/blob/f4f73582d0b149595450c719b9a7521a03894f9c/README.md"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-4B-Distill",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-4B",
+    "base_model_id": "Qwen/Qwen3.5-4B",
+    "modification_categories": [
+      "distilled"
+    ],
+    "reason": "The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces. The much larger Qwen3.8 model supplies training outputs, not merged parent weights. Record the known distillation modification on this intermediate.",
+    "source_urls": [
+      "https://huggingface.co/empero-ai/Qwen3.8-4B-Distill/blob/c83cb7aa2999d2f35c43e9ae0634a30eb8985a1e/README.md"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-4B-Distill-GGUF",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-4B",
+    "base_model_id": "empero-ai/Qwen3.8-4B-Distill",
+    "modification_categories": [],
+    "reason": "The pinned publisher card calls this GGUF quantization of its Empero student checkpoint. The older short repository ID redirects to the -Distill checkpoint; these are sequential names of one student rather than two merged weight sources. Preserve that immediate checkpoint in lineage, then inherit its reviewed Qwen3.5 distillation ancestry.",
+    "source_urls": [
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-4B",
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-4B-Distill",
+      "https://huggingface.co/empero-ai/Qwen3.8-4B-Distill-GGUF/blob/391fc7d103e3942a408def3e4f51c2f85d464417/README.md"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-9B-Distill",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-9B",
+    "base_model_id": "Qwen/Qwen3.5-9B",
+    "modification_categories": [
+      "distilled"
+    ],
+    "reason": "The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces. The much larger Qwen3.8 model supplies training outputs, not merged parent weights. Record the known distillation modification on this intermediate.",
+    "source_urls": [
+      "https://huggingface.co/empero-ai/Qwen3.8-9B-Distill/blob/0934f3d2327ff2df2197495278c4c46ae5a56bd9/README.md"
+    ]
+  },
+  {
+    "model_id": "empero-ai/Qwen3.8-9B-Distill-GGUF",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-9B",
+    "base_model_id": "empero-ai/Qwen3.8-9B-Distill",
+    "modification_categories": [],
+    "reason": "The pinned publisher card calls this GGUF quantization of its Empero student checkpoint. The older short repository ID redirects to the -Distill checkpoint; these are sequential names of one student rather than two merged weight sources. Preserve that immediate checkpoint in lineage, then inherit its reviewed Qwen3.5 distillation ancestry.",
+    "source_urls": [
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-9B",
+      "https://huggingface.co/api/models/empero-ai/Qwen3.8-9B-Distill",
+      "https://huggingface.co/empero-ai/Qwen3.8-9B-Distill-GGUF/blob/760121cd70bb4c36b2b5ec58eb765e0df5987efe/README.md"
+    ]
+  },
+  {
+    "model_id": "fireworks-ai/llama-3-firefunction-v2",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "reason": "Pinned config explicitly identifies Meta-Llama-3-70B-Instruct as source. Publisher card states training on Llama3 for function calling and compares the result with the Llama3 70B Instruct baseline. Use the current canonical FireFunction repository ID returned by its public API.",
+    "source_urls": [
+      "https://huggingface.co/fireworks-ai/firefunction-v2/blob/7954e120254ced10ac26a2dd346679d7328fa9ae/README.md",
+      "https://huggingface.co/fireworks-ai/firefunction-v2/blob/7954e120254ced10ac26a2dd346679d7328fa9ae/config.json"
+    ],
+    "modification_categories": [
+      "finetune"
+    ]
+  },
+  {
+    "model_id": "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-4B",
+    "base_model_id": "Qwen/Qwen3.5-4B",
+    "modification_categories": [
+      "unknown"
+    ],
+    "reason": "The pinned publisher card explicitly credits Qwen/Qwen3.5-4B and describes stronger uncensoring and refusal removal. The specific modification technique is not established, so mark modified/unknown rather than assert conversion-only or a particular training method.",
+    "source_urls": [
+      "https://huggingface.co/HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive/blob/c09cdbcdb1fefad6d335809d445621b5f5ba0c6e/README.md"
+    ]
+  },
+  {
     "model_id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
     "action": "include",
     "reason": "Publisher states it applies the HauhauCS Aggressive uncensoring profile to Qwen before distributing quantizations. This behavioral modification is beyond a conversion-only child of the tracked parent.",
@@ -153,6 +280,38 @@
     "modification_categories": [
       "abliterated"
     ]
+  },
+  {
+    "model_id": "HF1BitLLM/Llama3-8B-1.58-100B-tokens",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "reason": "Pinned publisher card explicitly identifies Llama3-8B-Instruct as the starting model and describes continued BitNet1.58 training on 100B tokens. This is a trained descendant, not a pure weight conversion.",
+    "source_urls": [
+      "https://huggingface.co/HF1BitLLM/Llama3-8B-1.58-100B-tokens/blob/5c35ae1f2c622b75a9c28e3603074863d74e4792/README.md"
+    ],
+    "modification_categories": [
+      "finetune"
+    ]
+  },
+  {
+    "model_id": "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4",
+    "action": "include",
+    "parent_model_id": "meta-llama/Llama-3.1-70B-Instruct",
+    "reason": "Pinned publisher card identifies the original Meta Llama 3.1 Instruct checkpoint and describes AutoAWQ INT4 conversion. The source uses the previous Meta-Llama spelling; the reviewed canonical rename is already registered.",
+    "source_urls": [
+      "https://huggingface.co/hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4/blob/2123003760781134cfc31124aa6560a45b491fdf/README.md"
+    ],
+    "modification_categories": []
+  },
+  {
+    "model_id": "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4",
+    "action": "include",
+    "parent_model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "reason": "Pinned publisher card identifies the original Meta Llama 3.1 Instruct checkpoint and describes AutoAWQ INT4 conversion. The source uses the previous Meta-Llama spelling; the reviewed canonical rename is already registered.",
+    "source_urls": [
+      "https://huggingface.co/hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4/blob/db1f81ad4b8c7e39777509fac66c652eb0a52f91/README.md"
+    ],
+    "modification_categories": []
   },
   {
     "model_id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
@@ -176,6 +335,16 @@
     ]
   },
   {
+    "model_id": "kaitchup/Phi-3-mini-4k-instruct-gptq-4bit",
+    "action": "include",
+    "parent_model_id": "microsoft/Phi-3-mini-4k-instruct",
+    "reason": "Pinned published config explicitly records _name_or_path=microsoft/Phi-3-mini-4k-instruct and quantization_config.quant_method=gptq with 4-bit weights. The repository preserves that exact checkpoint name and has no claimed further training; its generic model-card template omitted base metadata.",
+    "source_urls": [
+      "https://huggingface.co/kaitchup/Phi-3-mini-4k-instruct-gptq-4bit/blob/8d0c383a88f9b355bbc7ac0c36625fa7b9421e71/config.json"
+    ],
+    "modification_categories": []
+  },
+  {
     "model_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ",
     "action": "include",
     "parent_model_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
@@ -183,6 +352,20 @@
     "source_urls": [
       "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ/blob/e50260813863d02f6aafb889bb2820d447704c6c/README.md"
     ]
+  },
+  {
+    "model_id": "MaziyarPanahi/firefunction-v2-GGUF",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "reason": "Pinned card documents GGUF conversion of fireworks-ai/firefunction-v2. Its public API returns fireworks-ai/llama-3-firefunction-v2 as the exact repository ID. Correct the duplicate old/current immediate-source metadata while retaining the reviewed training edge from that source to Meta.",
+    "source_urls": [
+      "https://huggingface.co/MaziyarPanahi/firefunction-v2-GGUF/blob/e48d670a217a6e6fbbc3d929dbd8cb0ea25d80f8/README.md",
+      "https://huggingface.co/api/models/fireworks-ai/firefunction-v2",
+      "https://huggingface.co/fireworks-ai/firefunction-v2/blob/7954e120254ced10ac26a2dd346679d7328fa9ae/README.md",
+      "https://huggingface.co/fireworks-ai/firefunction-v2/blob/7954e120254ced10ac26a2dd346679d7328fa9ae/config.json"
+    ],
+    "base_model_id": "fireworks-ai/llama-3-firefunction-v2",
+    "modification_categories": []
   },
   {
     "model_id": "mlx-community/gemma-3-12b-it-4bit",
@@ -217,6 +400,16 @@
     ]
   },
   {
+    "model_id": "mlx-community/Llama-3.2-1B-Instruct-bf16",
+    "action": "include",
+    "parent_model_id": "meta-llama/Llama-3.2-1B-Instruct",
+    "reason": "Pinned publisher card explicitly states conversion from meta-llama/Llama-3.2-1B-Instruct to MLX with mlx-lm 0.17.1; missing YAML base metadata is corrected. This intermediate is the documented source of the 4-bit repository.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Llama-3.2-1B-Instruct-bf16/blob/863c846a9ac6fad4e49e1743d52984dff262e953/README.md"
+    ],
+    "modification_categories": []
+  },
+  {
     "model_id": "mlx-community/Meta-Llama-3-70B-Instruct-4bit",
     "action": "include",
     "parent_model_id": "meta-llama/Meta-Llama-3-70B-Instruct",
@@ -249,8 +442,8 @@
     ],
     "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3.1-70B-Instruct. The public Hugging Face model API redirects that former repository identifier to canonical tracked parent meta-llama/Llama-3.1-70B-Instruct.",
     "source_urls": [
-      "https://huggingface.co/mlx-community/Meta-Llama-3.1-70B-Instruct-4bit/blob/7772c93cf077b642f5503dd8d763a4176d7d406c/README.md",
-      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-70B-Instruct"
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "https://huggingface.co/mlx-community/Meta-Llama-3.1-70B-Instruct-4bit/blob/7772c93cf077b642f5503dd8d763a4176d7d406c/README.md"
     ]
   },
   {
@@ -262,8 +455,8 @@
     ],
     "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3.1-8B-Instruct. The public Hugging Face model API redirects that former repository identifier to canonical tracked parent meta-llama/Llama-3.1-8B-Instruct.",
     "source_urls": [
-      "https://huggingface.co/mlx-community/Meta-Llama-3.1-8B-Instruct-4bit/blob/241a666dad6cb93c8ff213d39a7f34a36bf26db4/README.md",
-      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct"
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "https://huggingface.co/mlx-community/Meta-Llama-3.1-8B-Instruct-4bit/blob/241a666dad6cb93c8ff213d39a7f34a36bf26db4/README.md"
     ]
   },
   {
@@ -507,6 +700,78 @@
     ]
   },
   {
+    "model_id": "openbmb/MiniCPM5-1B-GGUF",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-1B",
+    "base_model_id": "openbmb/MiniCPM5-1B",
+    "modification_categories": [],
+    "reason": "The pinned official release table distinguishes the final BF16 MiniCPM5-1B checkpoint from SFT and base checkpoints and identifies this repository as its GGUF release. Missing structured parent metadata is supplied from that publisher statement.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-1B-GGUF/blob/3d55fac80935ae6456986ad2384b5cbcc4d6c948/README.md"
+    ]
+  },
+  {
+    "model_id": "openbmb/MiniCPM5-1B-MLX",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-1B",
+    "base_model_id": "openbmb/MiniCPM5-1B",
+    "modification_categories": [],
+    "reason": "The pinned official release table distinguishes the final BF16 MiniCPM5-1B checkpoint from SFT and base checkpoints and identifies this repository as its MLX release. Missing structured parent metadata is supplied from that publisher statement.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-1B-MLX/blob/9879b18bf2928355fcdf4287635388a3665a40cb/README.md"
+    ],
+    "local_formats": [
+      "mlx"
+    ]
+  },
+  {
+    "model_id": "openbmb/MiniCPM5-2B-DSpark-GGUF",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-2B-DSpark",
+    "base_model_id": "openbmb/MiniCPM5-2B-DSpark",
+    "modification_categories": [],
+    "reason": "The pinned publisher card explicitly calls this the GGUF version of openbmb/MiniCPM5-2B-DSpark for speculative decoding. Attribute to the separately tracked DSpark checkpoint, not the target MiniCPM5-2B model.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-2B-DSpark-GGUF/blob/a261d2b4abc9c9ebfbad2af8a817a09802fc4ca3/README.md"
+    ]
+  },
+  {
+    "model_id": "openbmb/MiniCPM5-2B-GGUF",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-2B",
+    "base_model_id": "openbmb/MiniCPM5-2B",
+    "modification_categories": [],
+    "reason": "The pinned official release table lists MiniCPM5-2B as the final BF16 checkpoint and this repository as its GGUF version for llama.cpp, Ollama, and LM Studio. Separate SFT, mid-training, base, and DSpark checkpoints are explicitly distinguished.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-2B-GGUF/blob/2079a22f3beaa4e306449978533478fe0522f4b3/README.md"
+    ]
+  },
+  {
+    "model_id": "openbmb/MiniCPM5-2B-GPTQ",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-2B",
+    "base_model_id": "openbmb/MiniCPM5-2B",
+    "modification_categories": [],
+    "reason": "The pinned official release table identifies this as the quantized release of the final MiniCPM5-2B checkpoint. The name/card say GPTQ but the pinned config and Hub tags explicitly report AWQ; retain the machine-readable AWQ format evidence instead of inferring GPTQ from the name.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-2B-GPTQ/blob/48d57c14fba6b1f86109e1a54fafb0848c163f04/README.md"
+    ]
+  },
+  {
+    "model_id": "openbmb/MiniCPM5-2B-MLX",
+    "action": "include",
+    "parent_model_id": "openbmb/MiniCPM5-2B",
+    "base_model_id": "openbmb/MiniCPM5-2B",
+    "modification_categories": [],
+    "reason": "The pinned official release table lists MiniCPM5-2B as the final BF16 checkpoint and this repository as its MLX/4bit release for Apple Silicon. Review supplies the MLX format absent from the Hub library/tags; metadata only advertises 4-bit quantization.",
+    "source_urls": [
+      "https://huggingface.co/openbmb/MiniCPM5-2B-MLX/blob/8a9ad7539ac86281d0ac2b017ba04a5de53fe9a3/README.md"
+    ],
+    "local_formats": [
+      "mlx"
+    ]
+  },
+  {
     "model_id": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
     "action": "include",
     "parent_model_id": "Qwen/Qwen3.8-27B",
@@ -532,6 +797,40 @@
     ],
     "modification_categories": [
       "unknown"
+    ]
+  },
+  {
+    "model_id": "Qwen/Qwen3.5-122B-A10B-GPTQ-Int4",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.5-122B-A10B",
+    "base_model_id": "Qwen/Qwen3.5-122B-A10B",
+    "modification_categories": [],
+    "reason": "The pinned official Qwen card identifies this checkpoint as the int4/GPTQ-quantized release of the post-trained Qwen3.5-122B-A10B model and links the original checkpoint license. The missing YAML base-model field does not reflect a different parent.",
+    "source_urls": [
+      "https://huggingface.co/Qwen/Qwen3.5-122B-A10B-GPTQ-Int4/blob/30cd92cba9707a9aba09d1e490ed4b66b78e9606/README.md"
+    ]
+  },
+  {
+    "model_id": "v2ray/Mixtral-8x22B-v0.1",
+    "action": "include",
+    "parent_model_id": "mistralai/Mixtral-8x22B-v0.1",
+    "reason": "Pinned publisher card identifies the Mistral AI Mixtral 8x22B torrent weights, links the official base checkpoint, and documents conversion to Hugging Face Transformers format. Preserve this mirror as an intermediate for later GGUF conversions.",
+    "source_urls": [
+      "https://huggingface.co/v2ray/Mixtral-8x22B-v0.1/blob/701e2d7a02ab9fea587f2a71bda2b98d725adb3b/README.md"
+    ],
+    "modification_categories": []
+  },
+  {
+    "model_id": "winglian/Llama-3-8b-64k-PoSE",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-8B",
+    "reason": "Pinned config identifies meta-llama/Meta-Llama-3-8B; publisher card documents PoSE context extension using continued training on 300M RedPajama tokens and rank 256 LoRA. This is a trained ancestor, and the Llama3 base checkpoint is distinct from Instruct.",
+    "source_urls": [
+      "https://huggingface.co/winglian/Llama-3-8b-64k-PoSE/blob/5481d9b74a3ec5a95789673e194c8ff86e2bc2bc/README.md",
+      "https://huggingface.co/winglian/Llama-3-8b-64k-PoSE/blob/5481d9b74a3ec5a95789673e194c8ff86e2bc2bc/config.json"
+    ],
+    "modification_categories": [
+      "finetune"
     ]
   },
   {

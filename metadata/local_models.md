@@ -101,36 +101,40 @@ incorrect lineage remain limitations.
 
 ## Initial coverage
 
-The October 10, 2026 catalog combines 802,175 public metadata observations
+The October 10, 2026 catalog combines 802,310 public metadata observations
 selected from a complete 3,137,236-row pinned metadata snapshot and targeted
-public Hub queries. It includes 101,775 repositories from 20,742 publishers,
-covering 1,157 of 1,840 primary parents and 132 of 199 secondary parents.
-There are 64,989 GGUF repositories among the 14 overlapping format categories.
+public Hub queries. It includes 103,299 repositories from 21,008 publishers,
+covering 1,160 of 1,840 primary parents and 133 of 199 secondary parents.
+There are 65,026 GGUF repositories among the 16 overlapping format categories.
 
 | Lineage classification | Repositories |
 | --- | ---: |
-| Conversion only (`is_modified=false`) | 22,885 |
-| Fine-tuned | 30,158 |
-| Pruned | 441 |
-| Adapter | 7,349 |
-| Merge with a supported single-parent declaration | 296 |
-| Abliterated | 1,411 |
-| Distilled | 147 |
-| Mixed modifications or uncertainty | 17,328 |
-| Unknown | 21,760 |
+| Conversion only (`is_modified=false`) | 23,640 |
+| Fine-tuned | 30,340 |
+| Pruned | 472 |
+| Adapter | 7,369 |
+| Merge with a supported single-parent declaration | 297 |
+| Abliterated | 1,443 |
+| Distilled | 179 |
+| Mixed modifications or uncertainty | 17,522 |
+| Unknown | 22,037 |
 
-All categories except conversion-only have `is_modified=true`, totaling 78,890
+All categories except conversion-only have `is_modified=true`, totaling 79,659
 repositories. Five catalog repositories already occur in a tracked list; use
 `already_tracked` and the consumer's exact baseline cohort to prevent duplicate
-counting. There are 61,855 associated entries in the review queue. The report's
+counting. There are 62,439 associated entries in the review queue. The report's
 larger unresolved count also includes unrelated or unsupported candidates and
-must not be interpreted as 288,116 confirmed missing local variants.
+must not be interpreted as 289,212 confirmed missing local variants.
 
 Per-repository evidence is stored as deterministic gzip JSON Lines in
 `local_models_evidence.jsonl.gz`; decompress with Python's standard `gzip`
 module or `gzip -dc`. The CSV remains uncompressed. The validator checks the
 compressed artifact hash and validates every decompressed record against its
 CSV row, parent, reviewed mappings, and lineage categories.
+
+The [popularity review](local_models_popularity.md) independently checks global
+recent and lifetime download leaders and records repaired mappings, missing
+format categories, and unresolved parent-cohort gaps.
 
 ## Refresh and validation
 
@@ -218,7 +222,7 @@ reasons, and lineage. Neither queue is a list approved for download aggregation.
 
 Supported format categories are `gguf`, `mlx`, `awq`, `gptq`, `exl2`, `onnx`,
 `openvino`, `hqq`, `exl3`, `bitsandbytes`, `aqlm`, `quanto`, `compressed-tensors`,
-and legacy `ggml`.
+`auto-round`, `modelopt`, and legacy `ggml`.
 These mix serialization/runtime ecosystems and quantization methods, so they
 are deliberately not mutually exclusive. Filename evidence is required when
 format tags/configuration do not identify a category. Format names occurring

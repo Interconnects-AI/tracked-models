@@ -2,3 +2,5 @@ local-models.csv linguist-generated=true
 metadata/local_models_candidates.csv linguist-generated=true
 metadata/local_models_evidence.jsonl.gz linguist-generated=true
 metadata/local_models_report.json linguist-generated=true
+metadata/local_models_popularity_*.jsonl* linguist-generated=true
+metadata/local_models_popularity_*_report.json linguist-generated=true

@@ -1,0 +1,16 @@
+{
+  "scope": "Top 2000 of all 3,134,913 model repositories in the full global snapshot, ordered by downloads_all_time DESC, id ASC; no local-format or candidate-pool filter",
+  "ranking": "downloads_all_time",
+  "as_of": "2026-10-09",
+  "dataset": "interconnects/hf-dumps",
+  "revision": "ef89c8f4e19c6b97ab5a74bfa6946517f8cde7c5",
+  "metrics_path": "models_metrics/date=2026-10-09/part-0000.parquet",
+  "metrics_sha256": "6ef9a05af137769c64c267beb1222df5d5efec56c09db861e82d6857348b2c67",
+  "metadata_path": "models_dim.parquet",
+  "metadata_sha256": "8cdb5050f4912aac17077ea7964eaaa2c03057faf70e5dee2761b86113dac214",
+  "rows": 2000,
+  "uncompressed_output_sha256": "c78827edb0dbd68dfc2ed439272b5adef17b4a6b53c421c54092c357862a119c",
+  "sha256": "96b753afc34ebb20bf33c3d5d3c9fc15cc703546f79b848b460ef610c549a649",
+  "compression": "deterministic gzip of original normalized JSONL",
+  "uncompressed_bytes": 4605228
+}

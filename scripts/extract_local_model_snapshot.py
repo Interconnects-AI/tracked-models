@@ -22,7 +22,7 @@ ALIASES = (
     "exl2", "exllamav2", "onnx", "onnxruntime", "onnxruntime-web", "onnxruntime-genai",
     "onnxruntime_genai", "onnx-genai", "openvino", "openvino-genai", "openvino-export",
     "hqq", "exl3", "exllamav3", "bitsandbytes", "bnb", "bitsandbytes-4bit",
-    "bitsandbytes-8bit", "compressed-tensors", "aqlm", "quanto", "optimum-quanto", "eetq",
+    "bitsandbytes-8bit", "compressed-tensors", "aqlm", "quanto", "optimum-quanto", "eetq", "auto-round", "autoround", "auto_round", "modelopt",
 )
 COLUMNS = (
     "id", "author", "created_at", "private", "disabled", "library_name", "pipeline_tag",
@@ -36,7 +36,7 @@ CARD_FIELDS = frozenset({
 ARTIFACT_PATTERN = r'\.gguf"|\.onnx"|openvino[^" ]*\.xml"|\.exl3"|\.ggml"|ggml[^" ]*\.bin"'
 NAME_PATTERN = (
     r"(?:^|[._/ -])(?:gguf|ggml|mlx|awq|gptq|exl2|exl3|hqq|bnb|bitsandbytes|"
-    r"openvino|onnx|aqlm|quanto|4bit|8bit|4-bit|8-bit|q[2-8]_[a-z0-9]+)(?:$|[._/ -])"
+    r"openvino|onnx|aqlm|quanto|auto[-_]?round|modelopt|4bit|8bit|4-bit|8-bit|q[2-8]_[a-z0-9]+)(?:$|[._/ -])"
 )
 
 

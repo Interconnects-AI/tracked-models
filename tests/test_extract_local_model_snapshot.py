@@ -112,3 +112,24 @@ def test_output_cannot_overwrite_source(tmp_path):
     source = tmp_path / "source.parquet"
     with pytest.raises(ValueError, match="distinct"):
         extract_snapshot(source, tmp_path / "models.csv", tmp_path / "extra.csv", source, tmp_path / "manifest.json")
+
+
+def test_auto_round_and_modelopt_select_opaque_tags_libraries_and_name_hints(tmp_path):
+    source = tmp_path / "source.parquet"
+    aliases = ("auto-round", "autoround", "auto_round", "modelopt")
+    rows = [row("Root/Base")]
+    for index, alias in enumerate(aliases):
+        rows.extend([
+            row(f"u/tagged-{index}", tags_json=json.dumps([alias])),
+            row(f"u/library-{index}", library_name=alias),
+            row(f"u/checkpoint-{alias}"),
+        ])
+    rows.append(row("u/nonmodeloptimization"))
+    write_parquet(source, rows)
+    primary, extra = tmp_path / "models.csv", tmp_path / "extra.csv"
+    write_parents(primary, ["Root/Base"])
+    write_parents(extra, [])
+    output = tmp_path / "metadata.jsonl"
+    extract_snapshot(source, primary, extra, output, tmp_path / "manifest.json")
+    actual = {json.loads(line)["id"] for line in output.read_text().splitlines()}
+    assert actual == {item["id"] for item in rows[:-1]}

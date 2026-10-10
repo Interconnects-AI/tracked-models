@@ -26,6 +26,7 @@ CARD_FIELDS = ("base_model", "base_model_relation", "library_name", "pipeline_ta
 FORMAT_FILTERS = (
     "gguf", "mlx", "awq", "gptq", "exl2", "exl3", "onnx", "openvino",
     "hqq", "bitsandbytes", "compressed-tensors", "gptqmodel", "aqlm", "quanto", "ggml",
+    "auto-round", "autoround", "auto_round", "modelopt",
 )
 
 

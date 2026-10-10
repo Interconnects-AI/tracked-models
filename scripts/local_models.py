@@ -36,6 +36,8 @@ FORMATS = (
     "quanto",
     "ggml",
     "compressed-tensors",
+    "auto-round",
+    "modelopt",
 )
 COLUMNS = (
     "org",
@@ -130,6 +132,10 @@ ALIASES = {
     "optimum-quanto": "quanto",
     "ggml": "ggml",
     "compressed-tensors": "compressed-tensors",
+    "auto-round": "auto-round",
+    "autoround": "auto-round",
+    "auto_round": "auto-round",
+    "modelopt": "modelopt",
 }
 FORMAT_NAME_PATTERN = re.compile(
     r"(?<![a-z])(?:"

@@ -44,3 +44,17 @@ jobs:
           --source-manifest metadata/local_models_sources.json
       - name: Test discovery and collection rules offline
         run: python -m pytest tests -q
+      - name: Replay popularity coverage audits offline
+        run: |
+          python scripts/audit_local_model_popularity.py --check --metric downloads --top 2000 \
+            --metadata metadata/local_models_popularity_recent_input.jsonl.gz \
+            --source-manifest metadata/local_models_popularity_recent_input.jsonl.gz.manifest.json \
+            --candidates metadata/local_models_candidates.csv \
+            --output metadata/local_models_popularity_recent.jsonl \
+            --report metadata/local_models_popularity_recent_report.json
+          python scripts/audit_local_model_popularity.py --check --metric downloadsAllTime --top 2000 \
+            --metadata metadata/local_models_popularity_lifetime_input.jsonl.gz \
+            --source-manifest metadata/local_models_popularity_lifetime_input.jsonl.gz.manifest.json \
+            --candidates metadata/local_models_candidates.csv \
+            --output metadata/local_models_popularity_lifetime.jsonl \
+            --report metadata/local_models_popularity_lifetime_report.json

@@ -154,8 +154,9 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-10-10
-- Added 101,775 repositories to the separate `local-models.csv` catalog, covering 1,289 tracked parents and 14 local formats. The 20,742 publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
-- Added parent regions and full lineage, modification categories, and an `is_modified` flag: 22,885 conversion-only repositories and 78,890 modified or uncertain descendants.
+- Added 103,299 repositories to the separate `local-models.csv` catalog, covering 1,293 tracked parents and 16 local formats. The 21,008 publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
+- Added parent regions and full lineage, modification categories, and an `is_modified` flag: 23,640 conversion-only repositories and 79,659 modified or uncertain descendants.
+- Audited the global top 2,000 recent and top 2,000 lifetime download rankings (2,829 distinct repositories), adding 1,524 catalog entries and AutoRound/ModelOpt discovery. See [the popularity review](metadata/local_models_popularity.md) for repaired gaps and remaining parent-cohort exclusions.
 - Added reproducible metadata discovery, reviewed parent corrections and redirects, a coverage audit, and offline validation. Main and extra model lists are unchanged.
 
 ### 2026-09-28

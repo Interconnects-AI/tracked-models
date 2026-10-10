@@ -102,5 +102,18 @@
     "http_status": 307,
     "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-Instruct-FP8",
     "resolved_sha": "64a54b704768dfd589a3e4ac05d546052f67f4fd"
+  },
+  {
+    "alias_id": "PY007/TinyLlama-1.1B-Chat-v0.3",
+    "canonical_id": "TinyLlama/TinyLlama-1.1B-Chat-v0.3",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/TinyLlama/TinyLlama-1.1B-Chat-v0.3",
+    "resolved_sha": "1ea93498c83d6d5aece90cf3b160aadf9f8875f8",
+    "observed_at": "2026-10-10T21:27:54.969316+00:00",
+    "source_urls": [
+      "https://huggingface.co/api/models/PY007/TinyLlama-1.1B-Chat-v0.3",
+      "https://huggingface.co/api/models/TinyLlama/TinyLlama-1.1B-Chat-v0.3"
+    ],
+    "reason": "Reviewed public Hub API redirect to canonical repository."
   }
 ]
