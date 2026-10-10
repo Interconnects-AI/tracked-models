@@ -899,6 +899,7 @@ mistralai,Codestral-22B-v0.1,mistralai/Codestral-22B-v0.1
 mistralai,Devstral-2-123B-Instruct-2512,mistralai/Devstral-2-123B-Instruct-2512
 mistralai,Devstral-Small-2-24B-Instruct-2512,mistralai/Devstral-Small-2-24B-Instruct-2512
 mistralai,Devstral-Small-2505,mistralai/Devstral-Small-2505
+mistralai,Leanstral-1.5-119B-A6B,mistralai/Leanstral-1.5-119B-A6B
 mistralai,Magistral-Small-2506,mistralai/Magistral-Small-2506
 mistralai,Magistral-Small-2507,mistralai/Magistral-Small-2507
 mistralai,Magistral-Small-2509,mistralai/Magistral-Small-2509
@@ -938,6 +939,7 @@ mistralai,Mistral-Small-24B-Instruct-2501,mistralai/Mistral-Small-24B-Instruct-2
 mistralai,Mistral-Small-3.1-24B-Base-2503,mistralai/Mistral-Small-3.1-24B-Base-2503
 mistralai,Mistral-Small-3.1-24B-Instruct-2503,mistralai/Mistral-Small-3.1-24B-Instruct-2503
 mistralai,Mistral-Small-3.2-24B-Instruct-2506,mistralai/Mistral-Small-3.2-24B-Instruct-2506
+mistralai,Mistral-Small-4-119B-2603,mistralai/Mistral-Small-4-119B-2603
 mistralai,Mistral-Small-Instruct-2409,mistralai/Mistral-Small-Instruct-2409
 mistralai,Mixtral-8x22B-Instruct-v0.1,mistralai/Mixtral-8x22B-Instruct-v0.1
 mistralai,Mixtral-8x22B-v0.1,mistralai/Mixtral-8x22B-v0.1
@@ -1529,6 +1531,7 @@ Snowflake,Qwen-2.5-coder-Arctic-ExCoT-32B,Snowflake/Qwen-2.5-coder-Arctic-ExCoT-
 Snowflake,snowflake-arctic-base,Snowflake/snowflake-arctic-base
 Snowflake,snowflake-arctic-instruct,Snowflake/snowflake-arctic-instruct
 Snowflake,snowflake-arctic-instruct-vllm,Snowflake/snowflake-arctic-instruct-vllm
+stepfun-ai,Step-3.5-Flash,stepfun-ai/Step-3.5-Flash
 tencent,ContextPilot-14B,tencent/ContextPilot-14B
 tencent,ContextPilot-8B,tencent/ContextPilot-8B
 tencent,ContextPilot-E4B,tencent/ContextPilot-E4B
@@ -1690,6 +1693,7 @@ tiiuae,Falcon3-1B-Instruct,tiiuae/Falcon3-1B-Instruct
 tiiuae,Falcon3-3B-Instruct,tiiuae/Falcon3-3B-Instruct
 tiiuae,Falcon3-7B-Instruct,tiiuae/Falcon3-7B-Instruct
 tiiuae,Falcon3-Mamba-7B-Instruct,tiiuae/Falcon3-Mamba-7B-Instruct
+upstage,Solar-Open2-250B,upstage/Solar-Open2-250B
 vikhyatk,moondream1,vikhyatk/moondream1
 vikhyatk,moondream2,vikhyatk/moondream2
 XiaomiMiMo,MiMo-7B-Base,XiaomiMiMo/MiMo-7B-Base

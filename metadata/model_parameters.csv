@@ -320,3 +320,71 @@ meituan-longcat/LongCat-2.0,1600,48,true,Official architectural count; average a
 mistralai/Leanstral-1.5-119B-A6B,119,6.5,true,
 inclusionAI/LLaDA2.2-flash,100,,true,Official model card reports 100B non-embedding parameters; no official per-token active count is stated.
 microsoft/Fara1.5-9B,9,,false,
+arcee-ai/Trinity-Large-Preview,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Preview-FP8,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Preview-FP8-Block,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Preview-NVFP4,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Preview-W4A16,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Thinking,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Thinking-FP8-Block,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Thinking-NVFP4,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+arcee-ai/Trinity-Large-Thinking-W4A16,398,13,true,"Approximately 398B total and 13B active, as reported in the checkpoint model card."
+deepseek-ai/DeepSeek-V4-Flash,284,13,true,
+deepseek-ai/DeepSeek-V4-Flash-DSpark,284,13,true,
+deepseek-ai/DeepSeek-V4-Pro,1600,49,true,
+deepseek-ai/DeepSeek-V4-Pro-DSpark,1600,49,true,
+inclusionAI/Ling-2.5-1T,1000,63,true,
+inclusionAI/Ring-2.5-1T,1000,63,true,
+internlm/Intern-S1-Pro-BF16,1000,22,true,
+meta-llama/Llama-4-Maverick-17B-128E,400,17,true,
+meta-llama/Llama-4-Maverick-17B-128E-Instruct,400,17,true,
+meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8,400,17,true,
+meta-llama/Llama-4-Maverick-17B-128E-Instruct-Original,400,17,true,
+meta-llama/Llama-4-Maverick-17B-128E-Original,400,17,true,
+meta-llama/Llama-4-Scout-17B-16E,109,17,true,
+meta-llama/Llama-4-Scout-17B-16E-Instruct,109,17,true,
+meta-llama/Llama-4-Scout-17B-16E-Instruct-Original,109,17,true,
+meta-llama/Llama-4-Scout-17B-16E-Original,109,17,true,
+MiniMaxAI/MiniMax-M3,428,23,true,Approximately 428B total and 23B active.
+MiniMaxAI/MiniMax-M3-MXFP8,428,23,true,Approximately 428B total and 23B active.
+moonshotai/Kimi-K2.7-Code,1000,32,true,Reported model total; the card separately lists a 400M vision encoder.
+zai-org/GLM-5-FP8,744,40,true,
+zai-org/GLM-5.3-Flash,320,18,true,
+zai-org/GLM-5.3-Flash-BF16,320,18,true,
+baidu/ERNIE-4.5-300B-A47B-Base-Paddle,300,47,true,
+baidu/ERNIE-4.5-300B-A47B-Base-PT,300,47,true,
+baidu/ERNIE-4.5-300B-A47B-PT,300,47,true,
+baidu/ERNIE-4.5-VL-424B-A47B-Base-PT,424,47,true,
+baidu/ERNIE-4.5-VL-424B-A47B-PT,424,47,true,
+deepseek-ai/DeepSeek-Prover-V2-671B,671,,true,
+meta-llama/Llama-3.1-405B,405,,false,
+meta-llama/Llama-3.1-405B-FP8,405,,false,
+meta-llama/Llama-3.1-405B-Instruct,405,,false,
+meta-llama/Llama-3.1-405B-Instruct-FP8,405,,false,
+mistralai/Mistral-Large-3-675B-Base-2512,675,41,true,Full multimodal model; the language backbone is 673B total and 39B active.
+mistralai/Mistral-Large-3-675B-Instruct-2512,675,41,true,Full multimodal model; the language backbone is 673B total and 39B active.
+mistralai/Mistral-Large-3-675B-Instruct-2512-BF16,675,41,true,Full multimodal model; the language backbone is 673B total and 39B active.
+mistralai/Mistral-Large-3-675B-Instruct-2512-NVFP4,675,41,true,Full multimodal model; the language backbone is 673B total and 39B active.
+mistralai/Mistral-Medium-3.5-128B,128,,false,
+nvidia/Llama-3_1-Nemotron-Ultra-253B-CPT-v1,253,,,
+nvidia/Llama-3_1-Nemotron-Ultra-253B-v1,253,,,
+nvidia/Llama-3_1-Nemotron-Ultra-253B-v1-FP8,253,,,
+nvidia/Nemotron-4-340B-Base,340,,false,
+nvidia/Nemotron-4-340B-Instruct,340,,false,
+nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-Base-BF16,120,12,true,
+nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16,120,12,true,
+nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8,120,12,true,
+nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4,120,12,true,
+nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-Base-BF16,550,55,true,
+nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-GenRM,550,55,true,
+nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4,550,55,true,
+openai/gpt-oss-120b,117,5.1,true,Official architectural count; checkpoint name rounds the 117B total to 120B.
+Qwen/Qwen3-235B-A22B,235,22,true,
+Qwen/Qwen3-235B-A22B-FP8,235,22,true,
+Qwen/Qwen3-235B-A22B-Instruct-2507-FP8,235,22,true,
+Qwen/Qwen3-235B-A22B-Thinking-2507,235,22,true,
+Qwen/Qwen3-235B-A22B-Thinking-2507-FP8,235,22,true,
+Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8,480,35,true,
+Qwen/Qwen3.5-122B-A10B,122,10,true,
+Qwen/Qwen3.5-122B-A10B-FP8,122,10,true,
+Qwen/Qwen3.5-397B-A17B-FP8,397,17,true,
