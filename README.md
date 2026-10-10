@@ -18,20 +18,12 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 ### `local-models.csv` (local variants)
 
-A separate repository-level list of quantized and local-format variants of
-checkpoints in the primary and secondary lists, including fine-tuned and pruned
-descendants. Each row records the tracked parent, its organization and region,
-the immediate source and parent lineage, format and modification categories,
-and whether the variant is already tracked. Filter `is_modified == "false"`
-to compare conversion-only adoption with the broader catalog. This list
-does not change the main model lists or automatically add downloads to charts.
-
-Discovery combines a full metadata snapshot with public Hub searches, file and
-configuration evidence, parent-lineage checks, and reviewed model-card
-corrections. The accompanying evidence, coverage report, and review queue make
-mapping decisions and remaining gaps inspectable. See
-[`metadata/local_models.md`](metadata/local_models.md) for the schema,
-refresh commands, taxonomy, and limitations.
+A separate list of quantized and local-format descendants of tracked models.
+Each row includes its tracked parent, original region, immediate source,
+lineage, format, and modification category. Filter `is_modified == "false"`
+for conversion-only paths; other rows include modified or uncertain descendants.
+This list does not change the primary/secondary lists or main chart totals.
+See [the catalog schema and refresh commands](metadata/local_models.md).
 
 ### `arxiv_models.csv` (research-paper mentions)
 
@@ -154,10 +146,9 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-10-10
-- Added 103,299 repositories to the separate `local-models.csv` catalog, covering 1,293 tracked parents and 16 local formats. The 21,008 publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
-- Added parent regions and full lineage, modification categories, and an `is_modified` flag: 23,640 conversion-only repositories and 79,659 modified or uncertain descendants.
-- Audited the global top 2,000 recent and top 2,000 lifetime download rankings (2,829 distinct repositories), adding 1,524 catalog entries and AutoRound/ModelOpt discovery. See [the popularity review](metadata/local_models_popularity.md) for repaired gaps and remaining parent-cohort exclusions.
-- Added reproducible metadata discovery, reviewed parent corrections and redirects, a coverage audit, and offline validation. Main and extra model lists are unchanged.
+- Added 103,299 repositories to the separate `local-models.csv` catalog, covering 1,293 tracked parents and 16 local formats. Publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
+- Added parent regions, lineage, modification categories, and `is_modified`: 23,640 conversion-only repositories and 79,659 modified or uncertain descendants.
+- Added refresh scripts, small reviewed mapping/redirect corrections, and offline CSV validation. Main and extra model lists are unchanged.
 
 ### 2026-09-28
 - Weekly Hugging Face sync

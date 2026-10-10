@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from scripts.local_models import (
     CatalogError,
@@ -17,6 +18,7 @@ from scripts.local_models import (
     name_corroboration,
     normalize_metadata,
     validate_catalog,
+    validate_catalog_rows,
 )
 
 
@@ -454,7 +456,11 @@ class LocalModelsTests(unittest.TestCase):
             meta = root / "metadata.jsonl"
             output, evidence, report = (
                 root / name
-                for name in ("local.csv", "evidence.jsonl.gz", "report.json")
+                for name in (
+                    "local.csv",
+                    ".local-model-cache/local_models_evidence.jsonl.gz",
+                    ".local-model-cache/local_models_report.json",
+                )
             )
             models.write_text("org,model,modelId\nQwen,Root,Qwen/Root\n")
             extra.write_text("org,model,modelId\n")
@@ -476,10 +482,6 @@ class LocalModelsTests(unittest.TestCase):
                 str(regions),
                 "--output",
                 str(output),
-                "--evidence",
-                str(evidence),
-                "--report",
-                str(report),
                 "--overrides",
                 str(root / "absent-overrides.json"),
                 "--aliases",
@@ -487,26 +489,144 @@ class LocalModelsTests(unittest.TestCase):
                 "--source-manifest",
                 str(manifest),
             ]
-            main([*args, "--metadata", str(meta)])
-            main([*args, "--metadata", str(meta), "--check"])
+            with patch("scripts.local_models.ROOT", root):
+                main([*args, "--metadata", str(meta)])
+                main([*args, "--metadata", str(meta), "--check"])
+                self.assertTrue(evidence.exists())
+                self.assertTrue(report.exists())
+                original_manifest = manifest.read_bytes()
+                manifest.write_text(
+                    json.dumps({"schema_version": 1, "sha256": "0" * 64, "rows": 1})
+                )
+                with self.assertRaisesRegex(CatalogError, "Source manifest"):
+                    main([*args, "--metadata", str(meta), "--check"])
+                manifest.write_bytes(original_manifest)
             self.assertEqual(before, (models.read_bytes(), extra.read_bytes()))
-            meta.unlink()
-            main([*args, "--validate"])
-            original_manifest = manifest.read_bytes()
-            manifest.write_text(
-                json.dumps({"schema_version": 1, "sha256": "0" * 64, "rows": 1})
-            )
-            with self.assertRaisesRegex(CatalogError, "Source manifest"):
-                main([*args, "--validate"])
-            manifest.write_bytes(original_manifest)
-            with self.assertRaisesRegex(CatalogError, "Pass --source-manifest"):
-                main([*args[:-2], "--validate"])
+            # Plain CSV validation has no generated evidence/report/input dependency.
+            for path in (meta, manifest, evidence, report):
+                path.unlink()
+            main([*args[:-2], "--validate"])
             # Unrelated weekly canonical additions do not stale a valid catalog.
             models.write_text(models.read_text() + "Qwen,Another,Qwen/Another\n")
-            main([*args, "--validate"])
+            main([*args[:-2], "--validate"])
             output.write_bytes(output.read_bytes().replace(b"china", b"us"))
             with self.assertRaises(CatalogError):
-                main([*args, "--validate"])
+                main([*args[:-2], "--validate"])
+
+    def test_csv_only_validation_checks_parent_identity_formats_and_lineage(self):
+        row = discover([metadata("c/Root-GGUF", base="Qwen/Root")])["rows"][0]
+        validate_catalog_rows([row], [parent()], {"qwen": "china"})
+        invalid = [
+            {"parent_model_id": "qwen/root"},
+            {"parent_org": "c"},
+            {"parent_model": "Other"},
+            {"parent_list": "extra_models"},
+            {"parent_region": "us"},
+            {"org": "wrong"},
+            {"local_formats": "mlx;gguf"},
+            {"local_formats": "gguf;gguf"},
+            {"local_formats": "invented"},
+            {"already_tracked": "true"},
+            {"created_at": "2026-02-30"},
+            {"base_model_id": "Other/Root"},
+            {"parent_lineage": "c/Root-GGUF;Qwen/Root;c/Root-GGUF;Qwen/Root"},
+            {"parent_lineage": "Other/Root;Qwen/Root"},
+            {"mapping_method": "lineage_chain"},
+            {"model": None},
+        ]
+        for changes in invalid:
+            with self.subTest(changes=changes), self.assertRaises(CatalogError):
+                validate_catalog_rows(
+                    [{**row, **changes}], [parent()], {"qwen": "china"}
+                )
+        with self.assertRaisesRegex(CatalogError, "Duplicate"):
+            validate_catalog_rows([row, row], [parent()], {"qwen": "china"})
+        other = discover([metadata("a/Root-GGUF", base="Qwen/Root")])["rows"][0]
+        with self.assertRaisesRegex(CatalogError, "sorted"):
+            validate_catalog_rows([row, other], [parent()], {"qwen": "china"})
+
+    def test_csv_only_validation_checks_category_aggregation(self):
+        result = discover(
+            [
+                metadata(
+                    "c/Root-GGUF",
+                    base="middle/Root-SFT",
+                    card={"base_model_relation": "quantized"},
+                ),
+                metadata(
+                    "middle/Root-SFT", base="Qwen/Root", formats=(), relation="finetune"
+                ),
+            ]
+        )
+        row = result["rows"][0]
+        validate_catalog_rows([row], [parent()], {"qwen": "china"})
+        for changes in [
+            {"is_modified": "false"},
+            {"variant_category": "conversion"},
+            {"modification_categories": ""},
+            {"lineage_categories": "conversion"},
+            {"lineage_categories": "conversion;conversion+finetune"},
+            {"lineage_categories": "conversion;finetune+finetune"},
+            {"lineage_categories": "conversion;invented"},
+        ]:
+            with self.subTest(changes=changes), self.assertRaises(CatalogError):
+                validate_catalog_rows(
+                    [{**row, **changes}], [parent()], {"qwen": "china"}
+                )
+        # Structural checks cannot establish that declared source categories are true.
+        consistent_but_unproved = {
+            **row,
+            "lineage_categories": "conversion;conversion",
+            "is_modified": "false",
+            "variant_category": "conversion",
+            "modification_categories": "",
+        }
+        validate_catalog_rows([consistent_but_unproved], [parent()], {"qwen": "china"})
+        with self.assertRaisesRegex(CatalogError, "categories"):
+            validate_catalog(
+                [consistent_but_unproved],
+                result["evidence"],
+                [parent()],
+                {"qwen": "china"},
+            )
+
+    def test_csv_only_validation_enforces_reviewed_intermediate_corrections(self):
+        reviewed = override(
+            "middle/Changed", "Qwen/Root", modification_categories=["pruned"]
+        )
+        result = discover(
+            [
+                metadata(
+                    "c/Changed-GGUF",
+                    base="middle/Changed",
+                    card={"base_model_relation": "quantized"},
+                ),
+                metadata("middle/Changed", formats=()),
+            ],
+            overrides=[reviewed],
+        )
+        row = result["rows"][0]
+        validate_catalog_rows([row], [parent()], {"qwen": "china"}, [reviewed])
+        for replacement in [
+            override("middle/Changed"),
+            {**reviewed, "base_model_id": "other/Root"},
+            {**reviewed, "modification_categories": ["finetune"]},
+        ]:
+            with self.subTest(replacement=replacement), self.assertRaises(CatalogError):
+                validate_catalog_rows(
+                    [row], [parent()], {"qwen": "china"}, [replacement]
+                )
+        leaf = override("c/Renamed", "Qwen/Root", local_formats=["gguf"])
+        leaf_row = discover([metadata("c/Renamed")], overrides=[leaf])["rows"][0]
+        with self.assertRaisesRegex(CatalogError, "matching override"):
+            validate_catalog_rows([leaf_row], [parent()], {"qwen": "china"})
+        with self.assertRaisesRegex(CatalogError, "formats"):
+            validate_catalog_rows(
+                [{**leaf_row, "local_formats": "mlx"}],
+                [parent()],
+                {"qwen": "china"},
+                [leaf],
+            )
 
     def test_standard_conversion_configuration_suffixes_are_accepted(self):
         cases = [

@@ -1316,39 +1316,30 @@ def validate_source_manifest(path: Path, metadata_sha256: str, rows: int) -> str
     return _sha(payload)
 
 
-def _jsonl(path: Path) -> list[dict]:
-    handle = gzip.open(path, "rt") if path.suffix.casefold() == ".gz" else path.open()
-    with handle:
-        return [json.loads(line) for line in handle if line.strip()]
-
-
-def validate_catalog(
+def validate_catalog_rows(
     rows: list[dict],
-    evidence: list[dict],
     parent_rows: list[dict],
     regions: dict,
     overrides: list[dict] | None = None,
     aliases: list[dict] | None = None,
 ) -> None:
+    """Check CSV consistency and reviewed corrections, not unavailable source proof."""
     parents = _parent_index(parent_rows)
-    alias_map = validate_aliases(aliases or [], parents)
+    validate_aliases(aliases or [], parents)
     override_map = {
         row["model_id"].casefold(): row for row in validate_overrides(overrides or [])
     }
+    for row in rows:
+        if set(row) != set(COLUMNS) or any(
+            not isinstance(value, str) for value in row.values()
+        ):
+            raise CatalogError("Invalid local catalog row shape")
     if [row["modelId"].casefold() for row in rows] != sorted(
         row["modelId"].casefold() for row in rows
     ):
         raise CatalogError("Catalog must be sorted by case-folded modelId")
     seen = set()
-    facts = {}
-    for item in evidence:
-        key = _repo(item.get("model_id"), "evidence model_id").casefold()
-        if key in facts:
-            raise CatalogError("Duplicate evidence repository")
-        facts[key] = item
     for row in rows:
-        if set(row) != set(COLUMNS) or any(value is None for value in row.values()):
-            raise CatalogError("Invalid local catalog row shape")
         key = _repo(row["modelId"]).casefold()
         if key in seen:
             raise CatalogError(f"Duplicate catalog repository: {row['modelId']}")
@@ -1379,10 +1370,95 @@ def validate_catalog(
             "reviewed_override",
         }:
             raise CatalogError("Invalid mapping method")
-        if row["base_model_id"]:
-            _repo(row["base_model_id"], "base_model_id")
-        elif row["mapping_method"] != "reviewed_override":
-            raise CatalogError("Automatic mapping requires a base model")
+        _repo(row["base_model_id"], "base_model_id")
+        chain = row["parent_lineage"].split(";")
+        for part in chain:
+            _repo(part, "lineage repository")
+        if (
+            len(chain) < 2
+            or chain[0] != row["modelId"]
+            or chain[-1] != row["parent_model_id"]
+            or len({part.casefold() for part in chain}) != len(chain)
+            or row["base_model_id"] != chain[1]
+        ):
+            raise CatalogError("Invalid catalog lineage or immediate base")
+        if row["mapping_method"] == "direct" and len(chain) != 2:
+            raise CatalogError("Direct mapping has intermediate lineage")
+        if row["mapping_method"] == "lineage_chain" and len(chain) < 3:
+            raise CatalogError("Lineage chain lacks an intermediate")
+        edges = [edge.split("+") for edge in row["lineage_categories"].split(";")]
+        if len(edges) != len(chain) - 1 or any(
+            edge != ["conversion"]
+            and (not edge or edge != [c for c in CATEGORIES[1:] if c in edge])
+            for edge in edges
+        ):
+            raise CatalogError("Invalid catalog lineage categories")
+        changes = [c for c in CATEGORIES[1:] if any(c in edge for edge in edges)]
+        expected = {
+            "variant_category": "mixed"
+            if len(changes) > 1
+            else changes[0]
+            if changes
+            else "conversion",
+            "is_modified": "true" if changes else "false",
+            "modification_categories": ";".join(changes),
+        }
+        if any(row[field] != value for field, value in expected.items()):
+            raise CatalogError("Catalog modification categories disagree with lineage")
+        leaf_override = override_map.get(key)
+        if (row["mapping_method"] == "reviewed_override") != bool(
+            leaf_override and leaf_override["action"] == "include"
+        ):
+            raise CatalogError("Reviewed mapping lacks matching override")
+        for index, step_id in enumerate(chain[:-1]):
+            reviewed = override_map.get(step_id.casefold())
+            if not reviewed:
+                continue
+            if reviewed["action"] == "exclude":
+                raise CatalogError("Reviewed exclusion appears in catalog lineage")
+            if (
+                reviewed["parent_model_id"].casefold() != chain[-1].casefold()
+                or reviewed.get("base_model_id", reviewed["parent_model_id"]).casefold()
+                != chain[index + 1].casefold()
+                or edges[index]
+                != (reviewed.get("modification_categories", []) or ["conversion"])
+            ):
+                raise CatalogError(
+                    "Reviewed lineage disagrees with corrected base, parent, or categories"
+                )
+            if (
+                index == 0
+                and reviewed.get("local_formats")
+                and formats != reviewed["local_formats"]
+            ):
+                raise CatalogError("Local formats disagree with reviewed override")
+
+
+def validate_catalog(
+    rows: list[dict],
+    evidence: list[dict],
+    parent_rows: list[dict],
+    regions: dict,
+    overrides: list[dict] | None = None,
+    aliases: list[dict] | None = None,
+) -> None:
+    """Validate the CSV and reconstruct its claims from source evidence."""
+    validate_catalog_rows(rows, parent_rows, regions, overrides, aliases)
+    parents = _parent_index(parent_rows)
+    alias_map = validate_aliases(aliases or [], parents)
+    override_map = {
+        row["model_id"].casefold(): row for row in validate_overrides(overrides or [])
+    }
+    seen = {row["modelId"].casefold() for row in rows}
+    facts = {}
+    for item in evidence:
+        key = _repo(item.get("model_id"), "evidence model_id").casefold()
+        if key in facts:
+            raise CatalogError("Duplicate evidence repository")
+        facts[key] = item
+    for row in rows:
+        key = row["modelId"].casefold()
+        formats = row["local_formats"].split(";")
         item = facts.get(key)
         if (
             item is None
@@ -1391,33 +1467,11 @@ def validate_catalog(
             or item.get("local_formats") != formats
         ):
             raise CatalogError("Catalog and evidence disagree")
-        chain = item.get("lineage")
-        if (
-            not isinstance(chain, list)
-            or len(chain) < 2
-            or chain[0] != row["modelId"]
-            or chain[-1].casefold() != row["parent_model_id"].casefold()
-            or len({part.casefold() for part in chain}) != len(chain)
-        ):
-            raise CatalogError("Invalid evidence lineage")
-        override = override_map.get(key)
-        if override and override["action"] == "exclude":
-            raise CatalogError("Reviewed exclusion appears in catalog")
-        if item.get("override") != override:
+        chain = row["parent_lineage"].split(";")
+        if item.get("lineage") != chain:
+            raise CatalogError("Catalog and evidence lineage disagree")
+        if item.get("override") != override_map.get(key):
             raise CatalogError("Evidence override does not match reviewed source")
-        if row["mapping_method"] == "reviewed_override" and (
-            not override
-            or override["action"] != "include"
-            or override["parent_model_id"].casefold()
-            != row["parent_model_id"].casefold()
-        ):
-            raise CatalogError("Reviewed mapping lacks matching override")
-        if row["base_model_id"].casefold() != chain[1].casefold():
-            raise CatalogError("Immediate base disagrees with evidence lineage")
-        if row["mapping_method"] == "direct" and len(chain) != 2:
-            raise CatalogError("Direct mapping has intermediate lineage")
-        if row["mapping_method"] == "lineage_chain" and len(chain) < 3:
-            raise CatalogError("Lineage chain lacks an intermediate")
 
         def check_step(step, step_id, next_id, expected_formats=None):
             reviewed = override_map.get(step_id.casefold())
@@ -1527,7 +1581,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "--evidence",
         type=Path,
-        default=ROOT / "metadata/local_models_evidence.jsonl.gz",
+        default=ROOT / ".local-model-cache/local_models_evidence.jsonl.gz",
     )
     parser.add_argument(
         "--candidates",
@@ -1540,7 +1594,9 @@ def main(argv: list[str] | None = None) -> None:
         help="Write complete unresolved audit (use outside the repository)",
     )
     parser.add_argument(
-        "--report", type=Path, default=ROOT / "metadata/local_models_report.json"
+        "--report",
+        type=Path,
+        default=ROOT / ".local-model-cache/local_models_report.json",
     )
     parser.add_argument("--source-url")
     parser.add_argument("--source-revision")
@@ -1558,7 +1614,7 @@ def main(argv: list[str] | None = None) -> None:
     mode.add_argument(
         "--validate",
         action="store_true",
-        help="Validate committed artifacts without raw metadata",
+        help="Validate CSV structure and reviewed corrections without source evidence",
     )
     args = parser.parse_args(argv)
     parents = load_parents(args.models, args.extra_models)
@@ -1567,6 +1623,19 @@ def main(argv: list[str] | None = None) -> None:
     aliases = json.loads(args.aliases.read_text()) if args.aliases.exists() else []
     if not isinstance(aliases, list):
         raise CatalogError("Repository aliases must be a JSON list")
+    if args.validate:
+        payload = args.output.read_bytes()
+        reader = csv.DictReader(io.StringIO(payload.decode()))
+        if reader.fieldnames != list(COLUMNS):
+            raise CatalogError("Invalid catalog header")
+        rows = list(reader)
+        validate_catalog_rows(rows, parents, regions, overrides, aliases)
+        if b"\r" in payload:
+            raise CatalogError("Catalog must use Unix newlines")
+        print(
+            f"Validated {len(rows)} local repositories: CSV structure and reviewed corrections; source evidence not checked"
+        )
+        return
     input_paths = {
         "models": args.models,
         "extra_models": args.extra_models,
@@ -1594,46 +1663,6 @@ def main(argv: list[str] | None = None) -> None:
         raise CatalogError(
             "Output paths must be distinct and must not overwrite canonical input lists"
         )
-    if args.validate:
-        reader = csv.DictReader(io.StringIO(args.output.read_text()))
-        if reader.fieldnames != list(COLUMNS):
-            raise CatalogError("Invalid catalog header")
-        rows, evidence = list(reader), _jsonl(args.evidence)
-        validate_catalog(rows, evidence, parents, regions, overrides, aliases)
-        report = json.loads(args.report.read_text())
-        if report.get("schema_version") != 2:
-            raise CatalogError("Unsupported report schema")
-        if report.get("inputs", {}).get("overrides") != inputs.get("overrides"):
-            raise CatalogError("Report reviewed override hash disagrees")
-        if report.get("inputs", {}).get("aliases") != inputs.get("aliases"):
-            raise CatalogError("Report reviewed alias hash disagrees")
-        source = report.get("source", {})
-        if source.get("manifest_sha256") and not args.source_manifest:
-            raise CatalogError("Pass --source-manifest to validate recorded provenance")
-        if args.source_manifest:
-            manifest_sha256 = validate_source_manifest(
-                args.source_manifest,
-                source.get("metadata_sha256"),
-                report.get("counts", {}).get("metadata_repositories"),
-            )
-            if source.get("manifest_sha256") != manifest_sha256:
-                raise CatalogError("Report source manifest hash disagrees")
-        actual = {
-            key: _sha(path.read_bytes())
-            for key, path in output_paths.items()
-            if key != "report"
-        }
-        if any(
-            report.get("artifacts", {}).get(key) != digest
-            for key, digest in actual.items()
-        ):
-            raise CatalogError("Report artifact hashes disagree")
-        if report.get("counts", {}).get("included_repositories") != len(rows):
-            raise CatalogError("Report catalog count disagrees")
-        if b"\r" in args.output.read_bytes():
-            raise CatalogError("Catalog must use Unix newlines")
-        print(f"Validated {len(rows)} local repositories and their evidence")
-        return
     if args.metadata is None:
         parser.error("--metadata is required unless --validate is used")
     result = discover_local_models(
