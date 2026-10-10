@@ -1,0 +1,550 @@
+[
+  {
+    "model_id": "006aman/Bharat-Model-V1",
+    "action": "include",
+    "reason": "Publisher describes a custom Mistral fine-tune on 15,001 instruction pairs before GGUF export. Inferred quantized metadata does not establish a conversion-only relationship to the tracked Mistral parent.",
+    "source_urls": [
+      "https://huggingface.co/006aman/Bharat-Model-V1/blob/2a5bc04518f5ba7cf10da2f0fc7271f08ad4d785/README.md"
+    ],
+    "parent_model_id": "mistralai/Mistral-7B-v0.1",
+    "modification_categories": [
+      "finetune"
+    ]
+  },
+  {
+    "model_id": "0xSero/deepseek-v4-flash-0731-spark",
+    "action": "include",
+    "reason": "Publisher describes REAP pruning and routed-expert compaction before EXL3 quantization; Classify this local descendant as pruned.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/deepseek-v4-flash-0731-spark/blob/ce5ff0f1efb2e184aafc759d281bfae47d3a359c/README.md"
+    ],
+    "parent_model_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/DeepSeek-V4-Flash-Spark-GGUF",
+    "action": "include",
+    "reason": "Publisher states the GGUF is produced from a REAP-pruned Spark lineage, despite the original checkpoint in base metadata.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/DeepSeek-V4-Flash-Spark-GGUF/blob/3ada2b5fa5af01a7c7f21401c87962c8720d4942/README.md"
+    ],
+    "parent_model_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/DeepSeek-V4-Flash-Spark-Mini-GGUF",
+    "action": "include",
+    "reason": "Publisher states this is a mini variant of the REAP-pruned Spark lineage, despite the original checkpoint in base metadata.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/DeepSeek-V4-Flash-Spark-Mini-GGUF/blob/19f1a61ac09c82a0647117b0b021dabdbd7f9c69/README.md"
+    ],
+    "parent_model_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/GLM-5-381B-GGUF-IQ2_M",
+    "action": "include",
+    "reason": "Publisher describes 50% expert removal from GLM-5 before GGUF quantization; Classify this local descendant as pruned.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5-381B-GGUF-IQ2_M/blob/841061081bfac555755d1a6047ad95a8902e4538/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/GLM-5.1-444B-GGUF",
+    "action": "include",
+    "reason": "Publisher describes 40% expert pruning from GLM-5.1 before GGUF quantization; Classify this local descendant as pruned.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5.1-444B-GGUF/blob/5c1c48a31b63ad9acbdc8355f873d337aca7f450/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5.1",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/GLM-5.1-555B-GGUF",
+    "action": "include",
+    "reason": "Publisher describes 25% expert pruning from GLM-5.1 before GGUF quantization; Classify this local descendant as pruned.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5.1-555B-GGUF/blob/4fcd6296b4b28b49fb8a6aab3dfefc0a13675d6c/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5.1",
+    "modification_categories": [
+      "pruned"
+    ]
+  },
+  {
+    "model_id": "0xSero/GLM-5.3-488B-EXL3-TR3-3.42bpw",
+    "action": "include",
+    "reason": "Publisher describes removing 36% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5.3-488B-EXL3-TR3-3.42bpw/blob/1df8836b308bb6bb4b4f7fade03a103ad5d800f6/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5.3",
+    "modification_categories": [
+      "pruned"
+    ],
+    "base_model_id": "davidsyoung/GLM-5.3-EXL3-TR3-3.42bpw"
+  },
+  {
+    "model_id": "0xSero/GLM-5.3-569B-EXL3-TR3-3.42bpw",
+    "action": "include",
+    "reason": "Publisher describes removing 25% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5.3-569B-EXL3-TR3-3.42bpw/blob/1d4e64db189ec6ed734d05d48ebbee7b8f182898/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5.3",
+    "modification_categories": [
+      "pruned"
+    ],
+    "base_model_id": "davidsyoung/GLM-5.3-EXL3-TR3-3.42bpw"
+  },
+  {
+    "model_id": "0xSero/GLM-5.3-621B-EXL3-TR3-3.42bpw",
+    "action": "include",
+    "reason": "Publisher describes removing 18% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/GLM-5.3-621B-EXL3-TR3-3.42bpw/blob/83ea4973dafe6fb4d6a62e2cba8ca50c971e1749/README.md"
+    ],
+    "parent_model_id": "zai-org/GLM-5.3",
+    "modification_categories": [
+      "pruned"
+    ],
+    "base_model_id": "davidsyoung/GLM-5.3-EXL3-TR3-3.42bpw"
+  },
+  {
+    "model_id": "0xSero/Qwen3.5-264B-W4A16",
+    "action": "exclude",
+    "reason": "Publisher describes a REAP-pruned 264B model with a transplanted vision encoder followed by AutoRound quantization; this modifies the tracked original beyond quantization.",
+    "source_urls": [
+      "https://huggingface.co/0xSero/Qwen3.5-264B-W4A16/blob/d26801480857e42be71d72fe2e090ff3a6e39634/README.md"
+    ]
+  },
+  {
+    "model_id": "bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+    "action": "include",
+    "parent_model_id": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+    "local_formats": [
+      "gguf"
+    ],
+    "reason": "Publisher describes llama.cpp imatrix quantization and explicitly links deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct as the original model; YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/blob/8f248fa2072348f77a8bc37754e470de1f61866e/README.md"
+    ]
+  },
+  {
+    "model_id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF",
+    "action": "include",
+    "reason": "Publisher states it applies the HauhauCS Aggressive uncensoring profile to Qwen before distributing quantizations. This behavioral modification is beyond a conversion-only child of the tracked parent.",
+    "source_urls": [
+      "https://huggingface.co/HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF/blob/993a5971fda8f30dd1b7eb2654792ba4415c7460/README.md"
+    ],
+    "parent_model_id": "Qwen/Qwen3.8-27B",
+    "modification_categories": [
+      "abliterated"
+    ]
+  },
+  {
+    "model_id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF",
+    "action": "exclude",
+    "reason": "Publisher describes abliteration of Qwen and additional GGUF series sourced from several derivative repositories, including mixed weights. Repository-level downloads cannot be treated as a single conversion-only child of tracked Qwen.",
+    "source_urls": [
+      "https://huggingface.co/huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF/blob/1c69098e9c32db6dc06fc48f1d6cc75ad07da89e/README.md"
+    ]
+  },
+  {
+    "model_id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+    "action": "include",
+    "reason": "Despite an explicit quantized card relation, the publisher describes bf16 abliteration and a merged LoRA that changes attention and MLP weights. This changes model behavior beyond format conversion of the tracked Qwen parent.",
+    "source_urls": [
+      "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/blob/45d0fc0ad6cfcf9eeee6008ddaea925536409b18/README.md"
+    ],
+    "parent_model_id": "Qwen/Qwen3.8-27B",
+    "modification_categories": [
+      "adapter",
+      "abliterated"
+    ]
+  },
+  {
+    "model_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ",
+    "action": "include",
+    "parent_model_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+    "reason": "Official publisher card identifies this as AWQ quantization of EXAONE 3.5 instruction-tuned 7.8B weights; reviewed qualified parent corrects the unqualified base metadata.",
+    "source_urls": [
+      "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ/blob/e50260813863d02f6aafb889bb2820d447704c6c/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/gemma-3-12b-it-4bit",
+    "action": "include",
+    "parent_model_id": "google/gemma-3-12b-it",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher conversion statement and original-model link identify google/gemma-3-12b-it. They correct inherited YAML metadata naming the pretraining checkpoint google/gemma-3-12b-pt.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/gemma-3-12b-it-4bit/blob/86cc6a8dedbc456dd0e4af01a9d09f396f77e558/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/gemma-3-27b-it-4bit",
+    "action": "include",
+    "parent_model_id": "google/gemma-3-27b-it",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from google/gemma-3-27b-it. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/gemma-3-27b-it-4bit/blob/83acee3d10064661a7a39ead3732dddb16fe15bb/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/gemma-3-4b-it-qat-4bit",
+    "action": "exclude",
+    "reason": "Publisher metadata names an unrelated InternVL parent and the conversion statement references a local filesystem path rather than a verifiable Hub parent. No unambiguous tracked conversion parent can be established from this card.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/gemma-3-4b-it-qat-4bit/blob/3d9ef289111449933c22761961f16a5df237ce2a/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Meta-Llama-3-70B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3-70B-Instruct. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Meta-Llama-3-70B-Instruct-4bit/blob/de868feebd6ec3704319d445cc464abf7d37ab7b/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Meta-Llama-3-8B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3-8B-Instruct. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Meta-Llama-3-8B-Instruct-4bit/blob/c38b3b1f03cce0ce0ccd235e5c97b0d3d255e651/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Meta-Llama-3.1-70B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "meta-llama/Llama-3.1-70B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3.1-70B-Instruct. The public Hugging Face model API redirects that former repository identifier to canonical tracked parent meta-llama/Llama-3.1-70B-Instruct.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Meta-Llama-3.1-70B-Instruct-4bit/blob/7772c93cf077b642f5503dd8d763a4176d7d406c/README.md",
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-70B-Instruct"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from meta-llama/Meta-Llama-3.1-8B-Instruct. The public Hugging Face model API redirects that former repository identifier to canonical tracked parent meta-llama/Llama-3.1-8B-Instruct.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Meta-Llama-3.1-8B-Instruct-4bit/blob/241a666dad6cb93c8ff213d39a7f34a36bf26db4/README.md",
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-7B-Instruct-v0.2-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-7B-Instruct-v0.2",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-7B-Instruct-v0.2. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-7B-Instruct-v0.2-4bit/blob/64481e3a4a7bb0990c45c991958f8d6c00c1e785/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-7B-Instruct-v0.3",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-7B-Instruct-v0.3 with mlx-lm 0.14.3; YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-7B-Instruct-v0.3-4bit/blob/a4b8f870474b0eb527f466a03fbc187830d271f5/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-7B-v0.3-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-7B-v0.3",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-7B-v0.3. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-7B-v0.3-4bit/blob/5e8b40756eaa1cb5131715937c77107b4421c3a5/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-Large-Instruct-2407-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-Large-Instruct-2407",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-Large-Instruct-2407. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-Large-Instruct-2407-4bit/blob/1b496d417b097d407929998529dec7f2152c27f0/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-Nemo-Base-2407-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-Nemo-Base-2407",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-Nemo-Base-2407. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-Nemo-Base-2407-4bit/blob/cca2104000e7ca5f75d6281b3e75ed15fcc2ee1a/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-Nemo-Instruct-2407-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-Nemo-Instruct-2407. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-Nemo-Instruct-2407-4bit/blob/647ca0751669b21a364c86ccc5df54c4d7e4e91c/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Mistral-Small-Instruct-2409-4bit",
+    "action": "include",
+    "parent_model_id": "mistralai/Mistral-Small-Instruct-2409",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from mistralai/Mistral-Small-Instruct-2409. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Mistral-Small-Instruct-2409-4bit/blob/81b15f31a74f2ed106aa142e61454e3d478db0ce/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-0.5B-Instruct with mlx-lm 0.18.1; this corrects inherited YAML pointing to the non-instruct checkpoint.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-0.5B-Instruct-4bit/blob/a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-1.5B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-1.5B-Instruct-4bit/blob/8b403126fc14f14cfc99bb4cfa72ecbc129ea677/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-14B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-14B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-14B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-14B-Instruct-4bit/blob/dad510143ae5cdb1466778bde3161460f9e9f604/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-32B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-32B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-32B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-32B-Instruct-4bit/blob/2938092373e5f97b95538884112085364c2da315/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-3B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-3B-Instruct-4bit/blob/4f83f8f146fdf28b512a06562b671d7af4fab457/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-7B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-7B-Instruct-4bit/blob/c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-Coder-1.5B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-Coder-1.5B-Instruct. This corrects inherited YAML pointing to the pretraining checkpoint rather than the named instruction model.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-Coder-1.5B-Instruct-4bit/blob/b3252a2f97102b1fb1571fec2c9b27219a8536be/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-Coder-7B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-Coder-7B-Instruct with mlx-lm 0.18.1; this corrects inherited YAML pointing to the non-instruct checkpoint.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-Coder-7B-Instruct-4bit/blob/019cc73c45c770444708a6dd8690c66243cc5c80/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-VL-32B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-VL-32B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-VL-32B-Instruct. YAML base_model is absent.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-VL-32B-Instruct-4bit/blob/926bd4bb494a7d0e187f9b81b3924a31227bd1c7/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-VL-3B-Instruct. The conversion statement resolves an inherited or Hub-inferred finetune relation; it does not introduce additional training in this conversion repository.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-VL-3B-Instruct-4bit/blob/46d4cf06a06ffc1a766c214174f9cbed2f45bcab/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-VL-72B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-VL-72B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-VL-72B-Instruct. The conversion statement resolves an inherited or Hub-inferred finetune relation; it does not introduce additional training in this conversion repository.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-VL-72B-Instruct-4bit/blob/e054d8e056aa77e85538e02e317b2c9cd37071ca/README.md"
+    ]
+  },
+  {
+    "model_id": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "local_formats": [
+      "mlx"
+    ],
+    "reason": "Publisher explicitly states MLX conversion from Qwen/Qwen2.5-VL-7B-Instruct. The conversion statement resolves an inherited or Hub-inferred finetune relation; it does not introduce additional training in this conversion repository.",
+    "source_urls": [
+      "https://huggingface.co/mlx-community/Qwen2.5-VL-7B-Instruct-4bit/blob/fdcc572e8b05ba9daeaf71be8c9e4267c826ff9b/README.md"
+    ]
+  },
+  {
+    "model_id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED",
+    "action": "include",
+    "reason": "Publisher describes refusal-direction projection and blending weights from different ablation procedures. This is a modified model rather than a conversion-only child of tracked Qwen.",
+    "source_urls": [
+      "https://huggingface.co/OBLITERATUS/Qwen3.8-27B-OBLITERATED/blob/a58c3b53b3ce71551eafde2ed5ec8df48e0f4ff8/README.md"
+    ],
+    "parent_model_id": "Qwen/Qwen3.8-27B",
+    "modification_categories": [
+      "abliterated"
+    ]
+  },
+  {
+    "model_id": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.8-27B",
+    "local_formats": [
+      "gguf"
+    ],
+    "reason": "Publisher identifies Qwen/Qwen3.8-27B, describes distribution of its GGUF quantizations, and explicitly says only chat-template metadata changes while weights and MTP tensors remain untouched.",
+    "source_urls": [
+      "https://huggingface.co/peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF/blob/52cb3e759635ab4605e08790b6c47df8adcf0744/README.md"
+    ]
+  },
+  {
+    "model_id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+    "action": "include",
+    "parent_model_id": "Qwen/Qwen3.8-27B",
+    "local_formats": [
+      "gguf"
+    ],
+    "reason": "Publisher identifies Qwen3.8-27B as the parent and describes ternary weight quantization and GGUF packing. The companion whitepaper supports that quantization representation. This is a publisher-described quantization mapping; its training history has not been independently established, and unchanged architecture is not evidence of an absence of additional training.",
+    "source_urls": [
+      "https://github.com/PrismML-Eng/Bonsai-demo/blob/b306f4e13a260f2954e33acf25b2a0136877eb33/bonsai-2-27b-whitepaper.pdf",
+      "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/blob/b072e1d3b35a0a630cece372c2127528e0994386/README.md"
+    ],
+    "modification_categories": [
+      "unknown"
+    ]
+  },
+  {
+    "model_id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+    "action": "include",
+    "reason": "Publisher identifies a focused fine-tune and documents new agentic, coding, and general training data with distilled reasoning. It is not a direct format conversion of tracked Gemma despite inferred quantized metadata.",
+    "source_urls": [
+      "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF/blob/190a31365a6b80a692349be34ccdac730cad4fe4/README.md"
+    ],
+    "parent_model_id": "google/gemma-4-12B-it",
+    "modification_categories": [
+      "finetune",
+      "distilled"
+    ]
+  }
+]

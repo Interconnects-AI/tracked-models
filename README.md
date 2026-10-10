@@ -16,6 +16,23 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
+### `local-models.csv` (local variants)
+
+A separate repository-level list of quantized and local-format variants of
+checkpoints in the primary and secondary lists, including fine-tuned and pruned
+descendants. Each row records the tracked parent, its organization and region,
+the immediate source and parent lineage, format and modification categories,
+and whether the variant is already tracked. Filter `is_modified == "false"`
+to compare conversion-only adoption with the broader catalog. This list
+does not change the main model lists or automatically add downloads to charts.
+
+Discovery combines a full metadata snapshot with public Hub searches, file and
+configuration evidence, parent-lineage checks, and reviewed model-card
+corrections. The accompanying evidence, coverage report, and review queue make
+mapping decisions and remaining gaps inspectable. See
+[`metadata/local_models.md`](metadata/local_models.md) for the schema,
+refresh commands, taxonomy, and limitations.
+
 ### `arxiv_models.csv` (research-paper mentions)
 
 A separate family-level list for tracking model mentions in arXiv papers. Unlike
@@ -98,6 +115,9 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 # Fetch the extra list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv
 
+# Fetch local variants (separate cohort; do not concatenate with main totals)
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/local-models.csv
+
 # Fetch the arXiv model-family list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/arxiv_models.csv
 
@@ -112,6 +132,10 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 ## Scope
 
 Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weights on HuggingFace. Threshold: >100K total downloads for new additions (exceptions for notable recent releases).
+
+The separate `local-models.csv` catalogs local-format descendants of those tracked
+parents, including third-party publishers, without a variant download threshold. Its
+rows are not promotions to the primary or secondary lists.
 
 ### Original orgs
 
@@ -128,6 +152,11 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
+
+### 2026-10-10
+- Added 101,775 repositories to the separate `local-models.csv` catalog, covering 1,289 tracked parents and 14 local formats. The 20,742 publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
+- Added parent regions and full lineage, modification categories, and an `is_modified` flag: 22,885 conversion-only repositories and 78,890 modified or uncertain descendants.
+- Added reproducible metadata discovery, reviewed parent corrections and redirects, a coverage audit, and offline validation. Main and extra model lists are unchanged.
 
 ### 2026-09-28
 - Weekly Hugging Face sync

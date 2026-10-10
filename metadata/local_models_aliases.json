@@ -1,0 +1,106 @@
+[
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-8B",
+    "canonical_id": "meta-llama/Llama-3.1-8B",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-8B"
+    ],
+    "observed_at": "2026-10-10T21:06:43.488504+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-8B",
+    "resolved_sha": "d04e592bb4f6aa9cfee91e2e20afa771667e1d4b"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "canonical_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct"
+    ],
+    "observed_at": "2026-10-10T21:06:43.436712+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-8B-Instruct",
+    "resolved_sha": "0e9e39f249a16976918f6564b8830bc894c89659"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-70B",
+    "canonical_id": "meta-llama/Llama-3.1-70B",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-70B",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-70B"
+    ],
+    "observed_at": "2026-10-10T21:06:43.466203+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-70B",
+    "resolved_sha": "349b2ddb53ce8f2849a6c168a81980ab25258dac"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-70B-Instruct",
+    "canonical_id": "meta-llama/Llama-3.1-70B-Instruct",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-70B-Instruct",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-70B-Instruct"
+    ],
+    "observed_at": "2026-10-10T21:06:43.466643+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-70B-Instruct",
+    "resolved_sha": "1605565b47bb9346c5515c34102e054115b4f98b"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-405B",
+    "canonical_id": "meta-llama/Llama-3.1-405B",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-405B",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B"
+    ],
+    "observed_at": "2026-10-10T21:06:43.655500+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B",
+    "resolved_sha": "b906e4dc842aa489c962f9db26554dcfdde901fe"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-405B-Instruct",
+    "canonical_id": "meta-llama/Llama-3.1-405B-Instruct",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-405B-Instruct",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-Instruct"
+    ],
+    "observed_at": "2026-10-10T21:06:43.662133+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-Instruct",
+    "resolved_sha": "be673f326cab4cd22ccfef76109faf68e41aa5f1"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-405B-FP8",
+    "canonical_id": "meta-llama/Llama-3.1-405B-FP8",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-405B-FP8",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-FP8"
+    ],
+    "observed_at": "2026-10-10T21:06:43.699200+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-FP8",
+    "resolved_sha": "cb4739810a51170037906b5daa2bb78ed13cd43c"
+  },
+  {
+    "alias_id": "meta-llama/Meta-Llama-3.1-405B-Instruct-FP8",
+    "canonical_id": "meta-llama/Llama-3.1-405B-Instruct-FP8",
+    "reason": "Reviewed Hugging Face repository rename: the alias API endpoint redirects to the canonical repository, which returns the canonical model ID.",
+    "source_urls": [
+      "https://huggingface.co/api/models/meta-llama/Meta-Llama-3.1-405B-Instruct-FP8",
+      "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-Instruct-FP8"
+    ],
+    "observed_at": "2026-10-10T21:06:43.707305+00:00",
+    "http_status": 307,
+    "redirect_url": "https://huggingface.co/api/models/meta-llama/Llama-3.1-405B-Instruct-FP8",
+    "resolved_sha": "64a54b704768dfd589a3e4ac05d546052f67f4fd"
+  }
+]

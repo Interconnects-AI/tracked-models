@@ -1,0 +1,774 @@
+{
+  "schema_version": 1,
+  "precedence": "last input wins by case-insensitive repository ID",
+  "inputs": [
+    {
+      "name": "combined-enriched.jsonl",
+      "sha256": "9007f55de6a8a3f1a4c8bcb6760674cad259a5b050318bdf027871b85139d19d",
+      "rows": 802095,
+      "replaced": 0,
+      "collection": {
+        "schema_version": 1,
+        "precedence": "last input wins by case-insensitive repository ID",
+        "inputs": [
+          {
+            "name": "combined.jsonl",
+            "sha256": "d431915a2c9736203dc9f8f4b1e0be5bee0aad4e020111b74e480edf16d3ca29",
+            "rows": 802095,
+            "replaced": 0,
+            "collection": {
+              "schema_version": 1,
+              "precedence": "last input wins by case-insensitive repository ID",
+              "inputs": [
+                {
+                  "name": "metadata-snapshot.jsonl",
+                  "sha256": "e16b090f8e715665599e9ad61ba6a332f9c269d9d4a07e5b020cfef4d5f140e6",
+                  "rows": 792542,
+                  "replaced": 0,
+                  "collection": {
+                    "ancestor_rounds": [
+                      {
+                        "depth": 1,
+                        "found": 43966,
+                        "requested": 56458
+                      },
+                      {
+                        "depth": 2,
+                        "found": 1197,
+                        "requested": 1955
+                      },
+                      {
+                        "depth": 3,
+                        "found": 140,
+                        "requested": 176
+                      },
+                      {
+                        "depth": 4,
+                        "found": 55,
+                        "requested": 63
+                      },
+                      {
+                        "depth": 5,
+                        "found": 39,
+                        "requested": 39
+                      },
+                      {
+                        "depth": 6,
+                        "found": 28,
+                        "requested": 28
+                      },
+                      {
+                        "depth": 7,
+                        "found": 20,
+                        "requested": 20
+                      },
+                      {
+                        "depth": 8,
+                        "found": 17,
+                        "requested": 18
+                      },
+                      {
+                        "depth": 9,
+                        "found": 18,
+                        "requested": 18
+                      },
+                      {
+                        "depth": 10,
+                        "found": 11,
+                        "requested": 11
+                      },
+                      {
+                        "depth": 11,
+                        "found": 10,
+                        "requested": 10
+                      },
+                      {
+                        "depth": 12,
+                        "found": 10,
+                        "requested": 10
+                      },
+                      {
+                        "depth": 13,
+                        "found": 2,
+                        "requested": 2
+                      }
+                    ],
+                    "ancestor_rows": 45513,
+                    "dataset": "interconnects/hf-dumps",
+                    "dataset_revision": "ef89c8f4e19c6b97ab5a74bfa6946517f8cde7c5",
+                    "extra_sha256": "59e01907bd4ac9758e35b81941e0c5e8133ee119b90de812d7bbf1d73653dab2",
+                    "initial_candidates_and_parents": 747029,
+                    "input_bytes": 608384553,
+                    "input_rows": 3137236,
+                    "input_sha256": "8cdb5050f4912aac17077ea7964eaaa2c03057faf70e5dee2761b86113dac214",
+                    "metrics": {
+                      "date": "2026-10-09",
+                      "purpose": "review priority only; no download eligibility cutoff",
+                      "sha256": "6ef9a05af137769c64c267beb1222df5d5efec56c09db861e82d6857348b2c67"
+                    },
+                    "output_bytes": 2666925522,
+                    "output_sha256": "e16b090f8e715665599e9ad61ba6a332f9c269d9d4a07e5b020cfef4d5f140e6",
+                    "primary_sha256": "912b7fc359461febba9cfd3d0dc18cdca616103e7437e4a9d332b351f3360562",
+                    "public_input_rows": 3137236,
+                    "rows": 792542,
+                    "schema_version": 1,
+                    "selection": {
+                      "aliases": [
+                        "gguf",
+                        "ggml",
+                        "llama.cpp",
+                        "mlx",
+                        "mlx-lm",
+                        "mlx-vlm",
+                        "mlx_lm",
+                        "mlx_vlm",
+                        "awq",
+                        "autoawq",
+                        "auto-awq",
+                        "gptq",
+                        "autogptq",
+                        "auto-gptq",
+                        "gptqmodel",
+                        "exl2",
+                        "exllamav2",
+                        "onnx",
+                        "onnxruntime",
+                        "onnxruntime-web",
+                        "onnxruntime-genai",
+                        "onnxruntime_genai",
+                        "onnx-genai",
+                        "openvino",
+                        "openvino-genai",
+                        "openvino-export",
+                        "hqq",
+                        "exl3",
+                        "exllamav3",
+                        "bitsandbytes",
+                        "bnb",
+                        "bitsandbytes-4bit",
+                        "bitsandbytes-8bit",
+                        "aqlm",
+                        "quanto",
+                        "optimum-quanto",
+                        "eetq"
+                      ],
+                      "ancestors": "all declared metadata/tag/card bases, with no inferred name links",
+                      "artifact_pattern": "\\.gguf\"|\\.onnx\"|openvino[^\" ]*\\.xml\"|\\.exl3\"|\\.ggml\"|ggml[^\" ]*\\.bin\"",
+                      "card_fields": [
+                        "base_model",
+                        "base_model_relation",
+                        "library_name",
+                        "pipeline_tag",
+                        "quantization",
+                        "quantization_config",
+                        "quantized_by",
+                        "tags"
+                      ],
+                      "disabled_rows": "retained for catalog rejection",
+                      "name_matches": "review candidates only; never proof of format or parentage",
+                      "name_pattern": "(?:^|[._/ -])(?:gguf|ggml|mlx|awq|gptq|exl2|exl3|hqq|bnb|bitsandbytes|openvino|onnx|aqlm|quanto|4bit|8bit|4-bit|8-bit|q[2-8]_[a-z0-9]+)(?:$|[._/ -])",
+                      "private_rows": "excluded",
+                      "quantization_config_fields": [
+                        "config_json",
+                        "card_data_json"
+                      ],
+                      "tracked_parent_name_count": 1942
+                    },
+                    "unavailable_or_private_ancestor_ids": 13295
+                  }
+                },
+                {
+                  "name": "expanded-hub.jsonl",
+                  "sha256": "76ab41d008b2a6092256e2aab83ec047686f8f74bff80a1271137d83e7efc8e1",
+                  "rows": 49675,
+                  "replaced": 49647,
+                  "collection": {
+                    "schema_version": 1,
+                    "source": "public Hugging Face Hub API",
+                    "complete": true,
+                    "queries": [
+                      {
+                        "query": {
+                          "filter": "openvino"
+                        },
+                        "observed_at": "2026-10-10T20:48:25.303288+00:00",
+                        "rows": 3119
+                      },
+                      {
+                        "query": {
+                          "filter": "hqq"
+                        },
+                        "observed_at": "2026-10-10T20:48:28.341988+00:00",
+                        "rows": 214
+                      },
+                      {
+                        "query": {
+                          "filter": "exl3"
+                        },
+                        "observed_at": "2026-10-10T20:48:28.509238+00:00",
+                        "rows": 2244
+                      },
+                      {
+                        "query": {
+                          "filter": "bitsandbytes"
+                        },
+                        "observed_at": "2026-10-10T20:48:30.090506+00:00",
+                        "rows": 42954
+                      },
+                      {
+                        "query": {
+                          "filter": "ggml"
+                        },
+                        "observed_at": "2026-10-10T20:48:47.800687+00:00",
+                        "rows": 1144
+                      }
+                    ],
+                    "rows": 49675,
+                    "sha256": "76ab41d008b2a6092256e2aab83ec047686f8f74bff80a1271137d83e7efc8e1",
+                    "scope": "Complete query pagination, not an exhaustive census of all local variants. Names are discovery only."
+                  }
+                },
+                {
+                  "name": "parent-search-hub.jsonl",
+                  "sha256": "a374aae9de6df389e903c677eabe5f89bca77003181b0d36ea14df37118ebacd",
+                  "rows": 88088,
+                  "replaced": 78563,
+                  "collection": {
+                    "schema_version": 1,
+                    "source": "public Hugging Face Hub API",
+                    "complete": true,
+                    "queries": [
+                      {
+                        "query": {
+                          "search": "Qwen3-8B"
+                        },
+                        "observed_at": "2026-10-10T20:49:35.978810+00:00",
+                        "rows": 17098
+                      },
+                      {
+                        "query": {
+                          "search": "Qwen3-4B"
+                        },
+                        "observed_at": "2026-10-10T20:49:44.480853+00:00",
+                        "rows": 30298
+                      },
+                      {
+                        "query": {
+                          "search": "Qwen2.5-7B-Instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:00.975789+00:00",
+                        "rows": 9976
+                      },
+                      {
+                        "query": {
+                          "search": "DeepSeek-R1-0528"
+                        },
+                        "observed_at": "2026-10-10T20:50:05.528155+00:00",
+                        "rows": 489
+                      },
+                      {
+                        "query": {
+                          "search": "Llama-3.1-8B-Instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:06.147984+00:00",
+                        "rows": 11254
+                      },
+                      {
+                        "query": {
+                          "search": "Llama-3.2-3B-Instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:11.772695+00:00",
+                        "rows": 6073
+                      },
+                      {
+                        "query": {
+                          "search": "gemma-3-4b-it"
+                        },
+                        "observed_at": "2026-10-10T20:50:14.670883+00:00",
+                        "rows": 3419
+                      },
+                      {
+                        "query": {
+                          "search": "gemma-3-27b-it"
+                        },
+                        "observed_at": "2026-10-10T20:50:16.089178+00:00",
+                        "rows": 1794
+                      },
+                      {
+                        "query": {
+                          "search": "gpt-oss-20b"
+                        },
+                        "observed_at": "2026-10-10T20:50:16.665615+00:00",
+                        "rows": 3438
+                      },
+                      {
+                        "query": {
+                          "search": "gpt-oss-120b"
+                        },
+                        "observed_at": "2026-10-10T20:50:19.361672+00:00",
+                        "rows": 1154
+                      },
+                      {
+                        "query": {
+                          "search": "Mistral-Small-3.2-24B-Instruct-2506"
+                        },
+                        "observed_at": "2026-10-10T20:50:20.033505+00:00",
+                        "rows": 161
+                      },
+                      {
+                        "query": {
+                          "search": "Phi-4-mini-instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:20.186543+00:00",
+                        "rows": 3504
+                      },
+                      {
+                        "query": {
+                          "search": "GLM-4.5-Air"
+                        },
+                        "observed_at": "2026-10-10T20:50:21.270108+00:00",
+                        "rows": 278
+                      },
+                      {
+                        "query": {
+                          "search": "Qwen3-Coder-30B-A3B-Instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:21.580360+00:00",
+                        "rows": 310
+                      },
+                      {
+                        "query": {
+                          "search": "Kimi-K2-Instruct"
+                        },
+                        "observed_at": "2026-10-10T20:50:21.765596+00:00",
+                        "rows": 129
+                      }
+                    ],
+                    "rows": 88088,
+                    "sha256": "a374aae9de6df389e903c677eabe5f89bca77003181b0d36ea14df37118ebacd",
+                    "scope": "Complete query pagination, not an exhaustive census of all local variants. Names are discovery only."
+                  }
+                },
+                {
+                  "name": "reviewed-hub.jsonl",
+                  "sha256": "7c0fafaf9d615063e3d387996478d8945e74dd01abad48d0be95e43bf05612cc",
+                  "rows": 14,
+                  "replaced": 14,
+                  "collection": {
+                    "schema_version": 1,
+                    "source": "public Hugging Face Hub API",
+                    "complete": true,
+                    "queries": [
+                      {
+                        "query": {
+                          "repo_id": "006aman/Bharat-Model-V1"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.036618+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.147066+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.176072+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.204988+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.235979+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/gemma-3-12b-it-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.261897+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/gemma-3-4b-it-qat-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.293328+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-7B-Instruct-v0.3-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.321386+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-0.5B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.347703+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-Coder-7B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.493464+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "OBLITERATUS/Qwen3.8-27B-OBLITERATED"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.527829+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.563611+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "prism-ml/Ternary-Bonsai-2-27B-gguf"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.595163+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF"
+                        },
+                        "observed_at": "2026-10-10T20:50:59.624392+00:00",
+                        "rows": 1
+                      }
+                    ],
+                    "rows": 14,
+                    "sha256": "7c0fafaf9d615063e3d387996478d8945e74dd01abad48d0be95e43bf05612cc",
+                    "scope": "Complete query pagination, not an exhaustive census of all local variants. Names are discovery only."
+                  }
+                },
+                {
+                  "name": "reviewed-additional-hub.jsonl",
+                  "sha256": "863b2b63040a14b537eb952543a328bbf567a6507aa409c39c13df97ea694bae",
+                  "rows": 21,
+                  "replaced": 21,
+                  "collection": {
+                    "schema_version": 1,
+                    "source": "public Hugging Face Hub API",
+                    "complete": true,
+                    "queries": [
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-VL-7B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.558518+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.693009+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.724344+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-3B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.757309+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-14B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.786679+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-Nemo-Instruct-2407-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.815838+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.843090+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-VL-3B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.873805+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Meta-Llama-3-8B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.904228+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-Coder-1.5B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.932033+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-32B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.964062+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-VL-72B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:50.992692+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Meta-Llama-3.1-70B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.021360+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/gemma-3-27b-it-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.051810+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-Large-Instruct-2407-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.166160+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Qwen2.5-VL-32B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.194340+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Meta-Llama-3-70B-Instruct-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.221907+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-7B-Instruct-v0.2-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.252175+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-Nemo-Base-2407-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.281824+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-7B-v0.3-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.313107+00:00",
+                        "rows": 1
+                      },
+                      {
+                        "query": {
+                          "repo_id": "mlx-community/Mistral-Small-Instruct-2409-4bit"
+                        },
+                        "observed_at": "2026-10-10T20:52:51.340984+00:00",
+                        "rows": 1
+                      }
+                    ],
+                    "rows": 21,
+                    "sha256": "863b2b63040a14b537eb952543a328bbf567a6507aa409c39c13df97ea694bae",
+                    "scope": "Complete query pagination, not an exhaustive census of all local variants. Names are discovery only."
+                  }
+                }
+              ],
+              "rows": 802095,
+              "sha256": "d431915a2c9736203dc9f8f4b1e0be5bee0aad4e020111b74e480edf16d3ca29"
+            }
+          },
+          {
+            "name": "config-review-hub.jsonl",
+            "sha256": "43ab3166c6f40bbc76bb471d3211e50481ad3e0b0ae310815f708fc693b4db8d",
+            "rows": 4,
+            "replaced": 4,
+            "collection": {
+              "schema_version": 1,
+              "source": "public Hugging Face Hub API",
+              "complete": true,
+              "queries": [
+                {
+                  "query": {
+                    "repo_id": "cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit"
+                  },
+                  "observed_at": "2026-10-10T21:06:37.954571+00:00",
+                  "rows": 1
+                },
+                {
+                  "query": {
+                    "repo_id": "cyankiwi/Qwen3.6-27B-AWQ-INT4"
+                  },
+                  "observed_at": "2026-10-10T21:06:38.152215+00:00",
+                  "rows": 1
+                },
+                {
+                  "query": {
+                    "repo_id": "cyankiwi/Qwen3-Coder-30B-A3B-Instruct-AWQ-4bit"
+                  },
+                  "observed_at": "2026-10-10T21:06:38.201995+00:00",
+                  "rows": 1
+                },
+                {
+                  "query": {
+                    "repo_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct-AWQ"
+                  },
+                  "observed_at": "2026-10-10T21:06:38.232025+00:00",
+                  "rows": 1
+                }
+              ],
+              "rows": 4,
+              "sha256": "43ab3166c6f40bbc76bb471d3211e50481ad3e0b0ae310815f708fc693b4db8d",
+              "scope": "Complete query pagination, not an exhaustive census of all local variants. Names are discovery only."
+            }
+          }
+        ],
+        "rows": 802095,
+        "sha256": "9007f55de6a8a3f1a4c8bcb6760674cad259a5b050318bdf027871b85139d19d"
+      }
+    },
+    {
+      "name": "compressed-tensors-missing.jsonl",
+      "sha256": "0807a6fe3430365daf7ca358cf47c699545e60679ca4b6691e6e86249a8af12b",
+      "rows": 80,
+      "replaced": 0,
+      "collection": {
+        "schema_version": 1,
+        "dataset": "interconnects/hf-dumps",
+        "dataset_revision": "ef89c8f4e19c6b97ab5a74bfa6946517f8cde7c5",
+        "source_file": "models_dim.parquet",
+        "input_sha256": "8cdb5050f4912aac17077ea7964eaaa2c03057faf70e5dee2761b86113dac214",
+        "input_bytes": 608384553,
+        "primary_sha256": "912b7fc359461febba9cfd3d0dc18cdca616103e7437e4a9d332b351f3360562",
+        "extra_sha256": "59e01907bd4ac9758e35b81941e0c5e8133ee119b90de812d7bbf1d73653dab2",
+        "selection": {
+          "purpose": "Incremental missing-only discovery supplement for compressed-tensors selector added after initial extraction",
+          "predicate": "Public rows whose library_name is compressed-tensors or whose tags contain exact compressed-tensors, not selected by the original snapshot predicate",
+          "initial_candidates": 61,
+          "ancestors": "All declared metadata/tag/card bases of delta candidates, recursively from the same pinned snapshot",
+          "config_fields": [
+            "quantization_config"
+          ],
+          "exclusion": "Remove every repository already in combined-enriched.jsonl, case-insensitive exact repository identity; never overrides newer live observations"
+        },
+        "ancestor_rounds": [
+          {
+            "depth": 1,
+            "requested": 31,
+            "found": 31
+          },
+          {
+            "depth": 2,
+            "requested": 22,
+            "found": 19
+          },
+          {
+            "depth": 3,
+            "requested": 17,
+            "found": 17
+          },
+          {
+            "depth": 4,
+            "requested": 21,
+            "found": 20
+          },
+          {
+            "depth": 5,
+            "requested": 22,
+            "found": 22
+          },
+          {
+            "depth": 6,
+            "requested": 12,
+            "found": 10
+          },
+          {
+            "depth": 7,
+            "requested": 5,
+            "found": 4
+          },
+          {
+            "depth": 8,
+            "requested": 1,
+            "found": 1
+          }
+        ],
+        "unavailable_or_private_ancestor_ids": [
+          "anthracite-org/magnum-12b-v2",
+          "anthracite-org/magnum-12b-v2.5-kto",
+          "delta-vector/francois-pe",
+          "dreadpoor/faber-12-model_stock",
+          "nvidia/nemotron-3-nano-30b-a3b",
+          "sberbank-ai/rubert-large",
+          "sicarius-prototyping/impish_longtail_12b"
+        ],
+        "existing_source": {
+          "name": "combined-enriched.jsonl",
+          "sha256": "9007f55de6a8a3f1a4c8bcb6760674cad259a5b050318bdf027871b85139d19d",
+          "rows": 802095
+        },
+        "already_present_ancestors": 105,
+        "missing_candidates": 61,
+        "missing_ancestors": 19,
+        "rows": 80,
+        "bytes": 190733,
+        "sha256": "0807a6fe3430365daf7ca358cf47c699545e60679ca4b6691e6e86249a8af12b"
+      }
+    }
+  ],
+  "rows": 802175,
+  "sha256": "fa2735a8bc5f07feb7f394420cf89ecb34c4431eecac44fb4279a5db6d000257"
+}
