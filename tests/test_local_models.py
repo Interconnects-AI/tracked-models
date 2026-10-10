@@ -8,6 +8,8 @@ from unittest.mock import patch
 from scripts.local_models import (
     CatalogError,
     candidate_csv_bytes,
+    check_catalog_size,
+    curate_catalog,
     csv_bytes,
     discover_local_models,
     file_sha,
@@ -58,6 +60,48 @@ def override(model_id, parent_id=None, **kwargs):
 
 
 class LocalModelsTests(unittest.TestCase):
+    def test_curation_keeps_parent_publishers_and_major_community_variants(self):
+        rows = [
+            {"modelId": "qwen/Official", "org": "qwen", "parent_org": "Qwen"},
+            *(
+                {"modelId": f"c/{name}", "org": "c", "parent_org": "Qwen"}
+                for name in ("Historical", "Recent", "Tiny", "Missing")
+            ),
+        ]
+        selected, report = curate_catalog(
+            rows,
+            [
+                {"id": "c/Historical", "downloads": 0, "downloads_all_time": 100_000},
+                {"id": "c/Recent", "downloads": 10_000, "downloads_all_time": None},
+                {"id": "c/Tiny", "downloads": 9_999, "downloads_all_time": 99_999},
+            ],
+        )
+        self.assertEqual(
+            [r["modelId"] for r in selected],
+            ["qwen/Official", "c/Historical", "c/Recent"],
+        )
+        self.assertEqual(report["same_parent_publisher"], 1)
+        self.assertEqual(report["community_without_download_counts"], 1)
+
+    def test_curation_rejects_invalid_or_duplicate_popularity(self):
+        rows = [{"modelId": "c/Root", "org": "c", "parent_org": "Qwen"}]
+        for value in (-1, True, "100000", 1.5):
+            with self.subTest(value=value), self.assertRaises(CatalogError):
+                curate_catalog(rows, [{"id": "c/Root", "downloads": value}])
+        with self.assertRaisesRegex(CatalogError, "Duplicate popularity"):
+            curate_catalog(rows, [{"id": "c/Root"}, {"id": "C/ROOT"}])
+
+    def test_curation_and_validation_stop_at_three_thousand_rows(self):
+        rows = [
+            {"modelId": f"Qwen/Root-{i}", "org": "Qwen", "parent_org": "Qwen"}
+            for i in range(3001)
+        ]
+        self.assertEqual(len(curate_catalog(rows[:3000], [])[0]), 3000)
+        with self.assertRaisesRegex(CatalogError, "maximum is 3,000"):
+            curate_catalog(rows, [])
+        with self.assertRaisesRegex(CatalogError, "maximum is 3,000"):
+            check_catalog_size(rows)
+
     def test_direct_parent_and_metadata_join(self):
         result = discover([metadata("converter/Root-GGUF", base="qwen/root")])
         row = result["rows"][0]
@@ -466,7 +510,12 @@ class LocalModelsTests(unittest.TestCase):
             extra.write_text("org,model,modelId\n")
             regions.write_text("hf_org,region,notes\nQwen,china,\n")
             meta.write_text(
-                json.dumps(metadata("c/Root-GGUF", base="Qwen/Root")) + "\n"
+                json.dumps(
+                    metadata(
+                        "c/Root-GGUF", base="Qwen/Root", downloads_all_time=100_000
+                    )
+                )
+                + "\n"
             )
             manifest = root / "sources.json"
             manifest.write_text(
@@ -486,10 +535,35 @@ class LocalModelsTests(unittest.TestCase):
                 str(root / "absent-overrides.json"),
                 "--aliases",
                 str(root / "absent-aliases.json"),
+                "--popularity",
+                str(meta),
                 "--source-manifest",
                 str(manifest),
             ]
             with patch("scripts.local_models.ROOT", root):
+                metadata_alias = root / "metadata-alias.jsonl"
+                metadata_alias.symlink_to(meta)
+                metadata_before = meta.read_bytes()
+                for output_flag in (
+                    "--output",
+                    "--evidence",
+                    "--report",
+                    "--candidates",
+                ):
+                    with (
+                        self.subTest(output_flag=output_flag),
+                        self.assertRaises(CatalogError),
+                    ):
+                        main(
+                            [
+                                *args,
+                                "--metadata",
+                                str(meta),
+                                output_flag,
+                                str(metadata_alias),
+                            ]
+                        )
+                    self.assertEqual(meta.read_bytes(), metadata_before)
                 main([*args, "--metadata", str(meta)])
                 main([*args, "--metadata", str(meta), "--check"])
                 self.assertTrue(evidence.exists())

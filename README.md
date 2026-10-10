@@ -125,9 +125,11 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 
 Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weights on HuggingFace. Threshold: >100K total downloads for new additions (exceptions for notable recent releases).
 
-The separate `local-models.csv` catalogs local-format descendants of those tracked
-parents, including third-party publishers, without a variant download threshold. Its
-rows are not promotions to the primary or secondary lists.
+The separate `local-models.csv` curates major local-format descendants of tracked
+parents. It includes variants published by the parent organization, plus community
+variants with at least 100K lifetime or 10K recent (30-day) downloads. Generation
+and CI reject catalogs above 3,000 rows pending review. Its rows are not promotions
+to the primary or secondary lists; broad discovery data stays outside Git.
 
 ### Original orgs
 
@@ -146,8 +148,8 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-10-10
-- Added 103,299 repositories to the separate `local-models.csv` catalog, covering 1,293 tracked parents and 16 local formats. Publishers include mradermacher, mlx-community, tensorblock, bartowski, unsloth, and lmstudio-community.
-- Added parent regions, lineage, modification categories, and `is_modified`: 23,640 conversion-only repositories and 79,659 modified or uncertain descendants.
+- Added 2,584 major repositories to `local-models.csv`, covering 462 tracked parents. Includes 427 variants from their parent's publisher and popular community conversions from publishers such as unsloth, lmstudio-community, bartowski, and mlx-community.
+- Added parent regions, lineage, modification categories, and `is_modified`: 1,639 conversion-only repositories and 945 modified or uncertain descendants.
 - Added refresh scripts, small reviewed mapping/redirect corrections, and offline CSV validation. Main and extra model lists are unchanged.
 
 ### 2026-09-28

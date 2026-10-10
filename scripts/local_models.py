@@ -21,6 +21,9 @@ from typing import Any, Iterable
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+MAX_CATALOG_ROWS = 3000
+MIN_LIFETIME_DOWNLOADS = 100_000
+MIN_RECENT_DOWNLOADS = 10_000
 FORMATS = (
     "gguf",
     "mlx",
@@ -1232,6 +1235,8 @@ def iter_metadata(path: Path) -> Iterable[dict]:
                 "sha",
                 "source_url",
                 "observed_at",
+                "downloads",
+                "downloads_all_time",
             )
             if key in names
         ]
@@ -1300,6 +1305,61 @@ def file_sha(path: Path) -> str:
         while chunk := handle.read(1024 * 1024):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def check_catalog_size(rows: list[dict]) -> None:
+    if len(rows) > MAX_CATALOG_ROWS:
+        raise CatalogError(
+            f"Catalog has {len(rows):,} rows; maximum is {MAX_CATALOG_ROWS:,}. "
+            "Review the selection policy before publishing a larger catalog."
+        )
+
+
+def curate_catalog(
+    rows: list[dict], popularity_rows: Iterable[dict]
+) -> tuple[list[dict], dict]:
+    """Keep parent-published variants and major community variants, not a census."""
+    wanted = {row["modelId"].casefold() for row in rows}
+    metrics = {}
+    for item in popularity_rows:
+        key = _repo(item.get("id", item.get("modelId"))).casefold()
+        if key not in wanted:
+            continue
+        values = tuple(item.get(field) for field in ("downloads", "downloads_all_time"))
+        if any(
+            value is not None and (type(value) is not int or value < 0)
+            for value in values
+        ):
+            raise CatalogError(f"Invalid download counts for {key}")
+        if key in metrics:
+            raise CatalogError(f"Duplicate popularity repository: {key}")
+        metrics[key] = values
+    selected = []
+    same_publisher = 0
+    missing_metrics = 0
+    for row in rows:
+        recent, lifetime = metrics.get(row["modelId"].casefold(), (None, None))
+        official = row["org"].casefold() == row["parent_org"].casefold()
+        if not official and recent is None and lifetime is None:
+            missing_metrics += 1
+        if (
+            official
+            or (recent or 0) >= MIN_RECENT_DOWNLOADS
+            or (lifetime or 0) >= MIN_LIFETIME_DOWNLOADS
+        ):
+            selected.append(row)
+            same_publisher += official
+    check_catalog_size(selected)
+    return selected, {
+        "candidate_repositories": len(rows),
+        "selected_repositories": len(selected),
+        "same_parent_publisher": same_publisher,
+        "community_without_download_counts": missing_metrics,
+        "minimum_lifetime_downloads": MIN_LIFETIME_DOWNLOADS,
+        "minimum_recent_downloads": MIN_RECENT_DOWNLOADS,
+        "maximum_catalog_rows": MAX_CATALOG_ROWS,
+        "rule": "same parent publisher OR lifetime threshold OR recent threshold",
+    }
 
 
 def validate_source_manifest(path: Path, metadata_sha256: str, rows: int) -> str:
@@ -1566,6 +1626,11 @@ def validate_catalog(
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--metadata", type=Path)
+    parser.add_argument(
+        "--popularity",
+        type=Path,
+        help="Pinned JSONL/Parquet with id, downloads (recent), downloads_all_time; required for generation",
+    )
     parser.add_argument("--models", type=Path, default=ROOT / "models.csv")
     parser.add_argument("--extra-models", type=Path, default=ROOT / "extra_models.csv")
     parser.add_argument(
@@ -1629,6 +1694,7 @@ def main(argv: list[str] | None = None) -> None:
         if reader.fieldnames != list(COLUMNS):
             raise CatalogError("Invalid catalog header")
         rows = list(reader)
+        check_catalog_size(rows)
         validate_catalog_rows(rows, parents, regions, overrides, aliases)
         if b"\r" in payload:
             raise CatalogError("Catalog must use Unix newlines")
@@ -1641,13 +1707,17 @@ def main(argv: list[str] | None = None) -> None:
         "extra_models": args.extra_models,
         "regions": args.regions,
     }
+    if args.metadata:
+        input_paths["metadata"] = args.metadata
     if args.overrides and args.overrides.exists():
         input_paths["overrides"] = args.overrides
     if args.source_manifest:
         input_paths["source_manifest"] = args.source_manifest
     if args.aliases.exists():
         input_paths["aliases"] = args.aliases
-    inputs = {key: _sha(path.read_bytes()) for key, path in input_paths.items()}
+    if args.popularity:
+        input_paths["popularity"] = args.popularity
+    inputs = {key: file_sha(path) for key, path in input_paths.items()}
     output_paths = {
         "catalog": args.output,
         "evidence": args.evidence,
@@ -1665,12 +1735,23 @@ def main(argv: list[str] | None = None) -> None:
         )
     if args.metadata is None:
         parser.error("--metadata is required unless --validate is used")
+    if args.popularity is None:
+        parser.error("--popularity is required to select major variants")
     result = discover_local_models(
         iter_metadata(args.metadata), parents, regions, overrides, aliases
     )
     validate_catalog(
         result["rows"], result["evidence"], parents, regions, overrides, aliases
     )
+    result["rows"], curation = curate_catalog(
+        result["rows"], iter_metadata(args.popularity)
+    )
+    selected_ids = {row["modelId"].casefold() for row in result["rows"]}
+    result["evidence"] = [
+        item
+        for item in result["evidence"]
+        if item["model_id"].casefold() in selected_ids
+    ]
     payloads = {
         "catalog": csv_bytes(result["rows"]),
         "evidence": jsonl_bytes(
@@ -1689,6 +1770,8 @@ def main(argv: list[str] | None = None) -> None:
             else jsonl_bytes(review_rows)
         )
     report = result["report"]
+    # Discovery statistics describe the local research pool; publication is bounded.
+    report = {"discovery": report, "curation": curation}
     report["candidate_scope"] = (
         "all_unresolved" if args.all_candidates else "tracked_parent_association"
     )
@@ -1705,7 +1788,7 @@ def main(argv: list[str] | None = None) -> None:
         source["manifest_sha256"] = validate_source_manifest(
             args.source_manifest,
             source["metadata_sha256"],
-            report["counts"]["metadata_repositories"],
+            report["discovery"]["counts"]["metadata_repositories"],
         )
     report.update(
         inputs=inputs,

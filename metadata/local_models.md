@@ -1,9 +1,19 @@
 # Local-model catalog
 
-[`local-models.csv`](../local-models.csv) lists quantized and local-format
+[`local-models.csv`](../local-models.csv) curates major quantized and local-format
 variants, including modified descendants, with supported lineage to a checkpoint
 in `models.csv` or `extra_models.csv`. It does not change those lists or dashboard
 totals. One row represents one repository, not a quantization file or user.
+
+Include a variant when its publisher is the tracked parent's organization, or it
+has at least **100,000 lifetime downloads** or **10,000 recent (30-day) downloads**.
+The same-publisher rule prioritizes original providers, including new releases;
+it does not label third-party quantizers as official. Generation and CI reject
+more than **3,000 rows** so growth requires a reviewed policy change. Discovery
+may inspect a wider pool, which stays local rather than entering this catalog.
+Thresholds use a pinned download snapshot; selection is not a complete census and
+can favor established models. Keep the cohort fixed when comparing historical
+months. The initial selection uses the October 9, 2026 snapshot.
 
 ## Schema and use
 
@@ -50,13 +60,15 @@ repository redirects. These small inputs prevent known metadata errors from
 returning during refresh. They include supporting links and are loaded by default.
 Metadata-based mappings are not independent verification of every publisher claim.
 
-Collect public metadata and filenames, never weights. Completed queries are
-cached; add `--refresh` for fresh observations. Include reviewed repositories and
-required ancestors, using `--repo-id` or `--repo-id-file` for missing inputs.
+Collect public metadata and filenames, never weights. For routine refreshes,
+put the existing catalog's lineage IDs and reviewed new candidates in an ID file
+(one repository per line). Completed queries are cached; add `--refresh` for
+fresh observations. Broad format/parent searches are optional local research,
+not a required census on every refresh.
 
 ```bash
 uv run scripts/collect_local_models.py \
-  --all-formats --parent-search --parent-links \
+  --repo-id-file .local-model-cache/reviewed-ids.txt \
   --cache .local-model-cache/hub --output .local-model-cache/hub.jsonl
 
 # Optional pinned snapshot extraction; supply its actual dataset revision.
@@ -71,13 +83,19 @@ python scripts/merge_local_model_sources.py \
   --output .local-model-cache/combined.jsonl
 
 python scripts/local_models.py --metadata .local-model-cache/combined.jsonl \
-  --source-manifest .local-model-cache/combined.jsonl.manifest.json
+  --source-manifest .local-model-cache/combined.jsonl.manifest.json \
+  --popularity .local-model-cache/popularity.jsonl
 
 python scripts/local_models.py --validate
 python -m pytest tests -q
 ```
 
 For Hub-only generation, use the Hub JSONL and its adjacent manifest directly.
+Supply a pinned popularity JSONL (or Parquet) with one row per repository:
+`id`, `downloads` (recent 30 days), and `downloads_all_time`. Nulls remain missing;
+they do not qualify community repositories. Preserve its source/date locally.
+The generation report records its hash and the selection counts. Do not commit
+this download snapshot or the full discovery output.
 Generation writes `local-models.csv`; evidence and reports stay under the ignored
 `.local-model-cache/` directory. Add `--candidates .local-model-cache/review.csv`
 for an unresolved review queue. Preserve cached inputs/manifests to replay the
