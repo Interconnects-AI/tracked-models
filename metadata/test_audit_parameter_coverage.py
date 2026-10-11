@@ -18,6 +18,7 @@ class ParameterCoverageTests(unittest.TestCase):
         self.assertEqual(report["primary_models"], 3)
         self.assertEqual(report["known_sizes"], 2)
         self.assertEqual(report["over_100b"], ["a/moe"])
+        self.assertEqual(report["at_100b_boundary"], ["a/dense"])
         self.assertEqual(report["missing_sizes"], ["a/missing"])
 
     def test_baseline_does_not_hide_new_model_or_lost_metadata(self):

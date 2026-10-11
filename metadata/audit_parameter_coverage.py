@@ -58,6 +58,7 @@ def coverage(primary: set[str], parameters: dict[str, Decimal | float], baseline
         "primary_models": len(primary),
         "known_sizes": len(known),
         "over_100b": sorted(mid for mid in known if parameters[mid] > 100),
+        "at_100b_boundary": sorted(mid for mid in known if parameters[mid] == 100),
         "at_or_below_100b": len(known) - sum(parameters[mid] > 100 for mid in known),
         "missing_sizes": sorted(missing),
         "newly_missing_sizes": sorted(missing if baseline is None else missing - baseline),
@@ -89,6 +90,9 @@ def main(argv: list[str] | None = None) -> int:
         print("\n### Primary model parameter coverage\n")
     print(f"Known sizes: {report['known_sizes']}/{report['primary_models']}; "
           f">100B: {len(report['over_100b'])}; missing: {len(report['missing_sizes'])}.")
+    if report["at_100b_boundary"]:
+        print("Published sizes at exactly 100B (review rounding/component scope): "
+              + ", ".join(report["at_100b_boundary"]) + ".")
     new = report["newly_missing_sizes"]
     if args.base_ref:
         print(f"Newly missing sizes relative to {args.base_ref}: {len(new)}.")
