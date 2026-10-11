@@ -58,12 +58,26 @@ def override(model_id, parent_id=None, **kwargs):
     }
 
 
+def admission_row(model_id, org=None):
+    return {
+        "modelId": model_id,
+        "org": org or model_id.split("/")[0],
+        "parent_org": "Qwen",
+        "parent_list": "models",
+        "is_modified": "false",
+        "variant_category": "conversion",
+        "modification_categories": "",
+        "lineage_categories": "conversion",
+        "parent_lineage": model_id + ";Qwen/Root",
+    }
+
+
 class LocalModelsTests(unittest.TestCase):
     def test_curation_keeps_parent_publishers_and_major_community_variants(self):
         rows = [
-            {"modelId": "qwen/Official", "org": "qwen", "parent_org": "Qwen"},
+            admission_row("qwen/Official"),
             *(
-                {"modelId": f"c/{name}", "org": "c", "parent_org": "Qwen"}
+                admission_row(f"c/{name}")
                 for name in ("Historical", "Recent", "Tiny", "Missing")
             ),
         ]
@@ -83,7 +97,7 @@ class LocalModelsTests(unittest.TestCase):
         self.assertEqual(report["community_without_download_counts"], 1)
 
     def test_curation_rejects_invalid_or_duplicate_popularity(self):
-        rows = [{"modelId": "c/Root", "org": "c", "parent_org": "Qwen"}]
+        rows = [admission_row("c/Root")]
         for value in (-1, True, "100000", 1.5):
             with self.subTest(value=value), self.assertRaises(CatalogError):
                 curate_catalog(rows, [{"id": "c/Root", "downloads": value}])
@@ -91,10 +105,7 @@ class LocalModelsTests(unittest.TestCase):
             curate_catalog(rows, [{"id": "c/Root"}, {"id": "C/ROOT"}])
 
     def test_curation_keeps_all_qualifying_rows_without_a_size_cap(self):
-        rows = [
-            {"modelId": f"Qwen/Root-{i}", "org": "Qwen", "parent_org": "Qwen"}
-            for i in range(3001)
-        ]
+        rows = [admission_row(f"Qwen/Root-{i}") for i in range(3001)]
         self.assertEqual(curate_catalog(rows, [])[0], rows)
 
     def test_direct_parent_and_metadata_join(self):
@@ -526,6 +537,8 @@ class LocalModelsTests(unittest.TestCase):
                 str(regions),
                 "--output",
                 str(output),
+                "--extra-output",
+                str(root / "local-extra.csv"),
                 "--overrides",
                 str(root / "absent-overrides.json"),
                 "--aliases",
@@ -541,6 +554,7 @@ class LocalModelsTests(unittest.TestCase):
                 metadata_before = meta.read_bytes()
                 for output_flag in (
                     "--output",
+                    "--extra-output",
                     "--evidence",
                     "--report",
                     "--candidates",

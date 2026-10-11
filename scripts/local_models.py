@@ -795,7 +795,9 @@ def discover_local_models(
             raise CatalogError(f"Conflicting metadata rows: {row['id']}")
         metadata[key], facts[key] = row, fact
     for key, override in override_map.items():
-        if key not in metadata:
+        # Exclusions also cover repositories removed from the Hub. Their reviewed
+        # evidence is sufficient to block admission without fresh model metadata.
+        if key not in metadata and override["action"] != "exclude":
             raise CatalogError(
                 f"Override repository missing from metadata: {override['model_id']}"
             )
@@ -1306,10 +1308,41 @@ def file_sha(path: Path) -> str:
     return digest.hexdigest()
 
 
+def is_conversion_only(row: dict) -> bool:
+    """Require a supported conversion on every edge, not just a leaf format."""
+    return (
+        row.get("is_modified") == "false"
+        and row.get("variant_category") == "conversion"
+        and row.get("modification_categories") == ""
+        and bool(row.get("lineage_categories"))
+        and all(edge == "conversion" for edge in row["lineage_categories"].split(";"))
+    )
+
+
+def read_catalog(path: Path) -> list[dict]:
+    payload = path.read_bytes()
+    reader = csv.DictReader(io.StringIO(payload.decode()))
+    if reader.fieldnames != list(COLUMNS) or b"\r" in payload:
+        raise CatalogError(f"Invalid catalog header or non-Unix newlines: {path}")
+    rows = list(reader)
+    if any(
+        set(row) != set(COLUMNS) or any(value is None for value in row.values())
+        for row in rows
+    ):
+        raise CatalogError(f"Invalid catalog row shape: {path}")
+    ids = [_repo(row["modelId"]).casefold() for row in rows]
+    if len(ids) != len(set(ids)) or ids != sorted(ids):
+        raise CatalogError(f"Catalog must have unique, sorted repository IDs: {path}")
+    return rows
+
+
 def curate_catalog(
-    rows: list[dict], popularity_rows: Iterable[dict]
+    rows: list[dict],
+    popularity_rows: Iterable[dict],
+    previous_rows: Iterable[dict] = (),
+    overrides: list[dict] | None = None,
 ) -> tuple[list[dict], dict]:
-    """Keep parent-published variants and major community variants, not a census."""
+    """Admit major conversions and retain prior admissions with valid source lineage."""
     wanted = {row["modelId"].casefold() for row in rows}
     metrics = {}
     for item in popularity_rows:
@@ -1325,30 +1358,104 @@ def curate_catalog(
         if key in metrics:
             raise CatalogError(f"Duplicate popularity repository: {key}")
         metrics[key] = values
+    # Older research catalogs included modified descendants. They are intentionally
+    # excluded from admission history when migrating to the conversion-only lists.
+    previous = {}
+    for row in previous_rows:
+        if is_conversion_only(row):
+            key = row["modelId"].casefold()
+            if key in previous:
+                raise CatalogError(
+                    f"Duplicate repository across prior catalogs: {row['modelId']}"
+                )
+            previous[key] = row
+    fresh = {row["modelId"].casefold(): row for row in rows}
+    reviewed = {
+        row["model_id"].casefold(): row for row in validate_overrides(overrides or [])
+    }
+    for key, old in previous.items():
+        new = fresh.get(key)
+        if new is not None and is_conversion_only(new):
+            continue
+        lineage = set(old["parent_lineage"].split(";")[:-1])
+        if new is not None:
+            lineage.update(new["parent_lineage"].split(";")[:-1])
+        corrections = [
+            reviewed[repo.casefold()] for repo in lineage if repo.casefold() in reviewed
+        ]
+        if any(row["action"] == "exclude" for row in corrections):
+            continue
+        if new is not None and any(
+            row.get("modification_categories") for row in corrections
+        ):
+            continue
+        raise CatalogError(
+            f"Previously admitted conversion lacks valid refreshed lineage: {old['modelId']}. "
+            "Refresh its source metadata or record an explicit reviewed exclusion/category correction."
+        )
     selected = []
     same_publisher = 0
     missing_metrics = 0
+    retained_below_threshold = 0
     for row in rows:
-        recent, lifetime = metrics.get(row["modelId"].casefold(), (None, None))
+        if not is_conversion_only(row):
+            continue
+        key = row["modelId"].casefold()
+        recent, lifetime = metrics.get(key, (None, None))
         official = row["org"].casefold() == row["parent_org"].casefold()
-        if not official and recent is None and lifetime is None:
-            missing_metrics += 1
-        if (
+        qualifies = (
             official
             or (recent or 0) >= MIN_RECENT_DOWNLOADS
             or (lifetime or 0) >= MIN_LIFETIME_DOWNLOADS
-        ):
+        )
+        if not official and recent is None and lifetime is None:
+            missing_metrics += 1
+        if qualifies or key in previous:
             selected.append(row)
             same_publisher += official
+            retained_below_threshold += not qualifies
     return selected, {
         "candidate_repositories": len(rows),
+        "conversion_candidates": sum(is_conversion_only(row) for row in rows),
         "selected_repositories": len(selected),
+        "primary_repositories": sum(row["parent_list"] == "models" for row in selected),
+        "secondary_repositories": sum(
+            row["parent_list"] == "extra_models" for row in selected
+        ),
         "same_parent_publisher": same_publisher,
+        "retained_below_threshold": retained_below_threshold,
         "community_without_download_counts": missing_metrics,
         "minimum_lifetime_downloads": MIN_LIFETIME_DOWNLOADS,
         "minimum_recent_downloads": MIN_RECENT_DOWNLOADS,
-        "rule": "same parent publisher OR lifetime threshold OR recent threshold",
+        "rule": "conversion-only; same parent publisher OR lifetime threshold OR recent threshold OR prior admission",
     }
+
+
+def validate_public_catalogs(
+    primary: list[dict],
+    secondary: list[dict],
+    parent_rows: list[dict],
+    regions: dict,
+    overrides: list[dict] | None = None,
+    aliases: list[dict] | None = None,
+) -> None:
+    """Validate the two public conversion-only catalogs and their parent scopes."""
+    seen = set()
+    for rows, parent_list in ((primary, "models"), (secondary, "extra_models")):
+        validate_catalog_rows(rows, parent_rows, regions, overrides, aliases)
+        for row in rows:
+            if row["parent_list"] != parent_list:
+                raise CatalogError(f"Wrong public catalog for parent: {row['modelId']}")
+            if not is_conversion_only(row):
+                raise CatalogError(
+                    f"Public catalog contains a modified or uncertain descendant: {row['modelId']}"
+                )
+            key = row["modelId"].casefold()
+            if key in seen:
+                raise CatalogError(
+                    f"Duplicate repository across public catalogs: {row['modelId']}"
+                )
+            seen.add(key)
 
 
 def validate_source_manifest(path: Path, metadata_sha256: str, rows: int) -> str:
@@ -1633,6 +1740,12 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument("--output", type=Path, default=ROOT / "local-models.csv")
     parser.add_argument(
+        "--extra-output",
+        type=Path,
+        default=ROOT / "local-models-extra.csv",
+        help="Secondary-parent conversion backup; excluded from the default catalog",
+    )
+    parser.add_argument(
         "--evidence",
         type=Path,
         default=ROOT / ".local-model-cache/local_models_evidence.jsonl.gz",
@@ -1678,16 +1791,13 @@ def main(argv: list[str] | None = None) -> None:
     if not isinstance(aliases, list):
         raise CatalogError("Repository aliases must be a JSON list")
     if args.validate:
-        payload = args.output.read_bytes()
-        reader = csv.DictReader(io.StringIO(payload.decode()))
-        if reader.fieldnames != list(COLUMNS):
-            raise CatalogError("Invalid catalog header")
-        rows = list(reader)
-        validate_catalog_rows(rows, parents, regions, overrides, aliases)
-        if b"\r" in payload:
-            raise CatalogError("Catalog must use Unix newlines")
+        primary, secondary = read_catalog(args.output), read_catalog(args.extra_output)
+        validate_public_catalogs(
+            primary, secondary, parents, regions, overrides, aliases
+        )
         print(
-            f"Validated {len(rows)} local repositories: CSV structure and reviewed corrections; source evidence not checked"
+            f"Validated {len(primary)} primary and {len(secondary)} secondary local conversions: "
+            "CSV structure and reviewed corrections; source evidence not checked"
         )
         return
     input_paths = {
@@ -1708,6 +1818,7 @@ def main(argv: list[str] | None = None) -> None:
     inputs = {key: file_sha(path) for key, path in input_paths.items()}
     output_paths = {
         "catalog": args.output,
+        "extra_catalog": args.extra_output,
         "evidence": args.evidence,
         "report": args.report,
     }
@@ -1725,6 +1836,12 @@ def main(argv: list[str] | None = None) -> None:
         parser.error("--metadata is required unless --validate is used")
     if args.popularity is None:
         parser.error("--popularity is required to select major variants")
+    previous = [
+        row
+        for path in (args.output, args.extra_output)
+        if path.exists()
+        for row in read_catalog(path)
+    ]
     result = discover_local_models(
         iter_metadata(args.metadata), parents, regions, overrides, aliases
     )
@@ -1732,8 +1849,11 @@ def main(argv: list[str] | None = None) -> None:
         result["rows"], result["evidence"], parents, regions, overrides, aliases
     )
     result["rows"], curation = curate_catalog(
-        result["rows"], iter_metadata(args.popularity)
+        result["rows"], iter_metadata(args.popularity), previous, overrides
     )
+    primary = [row for row in result["rows"] if row["parent_list"] == "models"]
+    secondary = [row for row in result["rows"] if row["parent_list"] == "extra_models"]
+    validate_public_catalogs(primary, secondary, parents, regions, overrides, aliases)
     selected_ids = {row["modelId"].casefold() for row in result["rows"]}
     result["evidence"] = [
         item
@@ -1741,7 +1861,8 @@ def main(argv: list[str] | None = None) -> None:
         if item["model_id"].casefold() in selected_ids
     ]
     payloads = {
-        "catalog": csv_bytes(result["rows"]),
+        "catalog": csv_bytes(primary),
+        "extra_catalog": csv_bytes(secondary),
         "evidence": jsonl_bytes(
             result["evidence"], compressed=args.evidence.suffix.casefold() == ".gz"
         ),
@@ -1758,6 +1879,9 @@ def main(argv: list[str] | None = None) -> None:
             else jsonl_bytes(review_rows)
         )
     report = result["report"]
+    # Admission history is the published CSV pair. Replaying uses those same
+    # members, while every retained row still needs fresh source validation.
+    # Counts depend on the final cohort, so an unchanged replay is byte-stable.
     # Separate broad discovery statistics from the rule-selected public cohort.
     report = {"discovery": report, "curation": curation}
     report["candidate_scope"] = (

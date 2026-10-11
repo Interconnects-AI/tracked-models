@@ -16,14 +16,16 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
-### `local-models.csv` (local variants)
+### `local-models.csv` (primary local conversions)
 
-A separate list of quantized and local-format descendants of tracked models.
-Each row includes its tracked parent, original region, immediate source,
-lineage, format, and modification category. Filter `is_modified == "false"`
-for conversion-only paths; other rows include modified or uncertain descendants.
-This list does not change the primary/secondary lists or main chart totals.
-See [the catalog schema and refresh commands](metadata/local_models.md).
+A separate list of major quantized and local-format conversions of `models.csv`
+checkpoints. Fine-tuned, pruned, and uncertain descendants are excluded. Each row
+records its tracked parent, original region, supported format, and conversion
+lineage. This list does not change the primary/secondary lists or main totals.
+
+`local-models-extra.csv` holds conversions of secondary `extra_models.csv` parents
+as a separate backup, excluded from default consumers. See
+[the catalog schema and refresh commands](metadata/local_models.md).
 
 ### `arxiv_models.csv` (research-paper mentions)
 
@@ -125,11 +127,12 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 
 Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weights on HuggingFace. Threshold: >100K total downloads for new additions (exceptions for notable recent releases).
 
-The separate `local-models.csv` curates major local-format descendants of tracked
-parents. It includes variants published by the parent organization, plus community
-variants with at least 100K lifetime or 10K recent (30-day) downloads. Growth follows
-these eligibility rules, with no row-count cap. Its rows are not promotions to the
-primary or secondary lists; broad discovery data stays outside Git.
+The local catalogs admit conversion-only variants published by the parent
+organization, or community conversions with at least 100K lifetime or 10K recent
+(30-day) downloads. Admitted rows remain when usage declines, provided their
+source lineage stays valid. There is no row-count cap; removals require explicit
+review. Primary-parent conversions and secondary-parent backups stay separate.
+Broad discovery and audit data remain outside Git.
 
 ### Original orgs
 
@@ -148,9 +151,9 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-10-10
-- Added 2,584 major repositories to `local-models.csv`, covering 462 tracked parents. Includes 427 variants from their parent's publisher and popular community conversions from publishers such as unsloth, lmstudio-community, bartowski, and mlx-community.
-- Added parent regions, lineage, modification categories, and `is_modified`: 1,639 conversion-only repositories and 945 modified or uncertain descendants.
-- Added refresh scripts, small reviewed mapping/redirect corrections, and offline CSV validation. Main and extra model lists are unchanged.
+- Added 1,566 major conversion-only repositories to `local-models.csv` and 73 secondary-parent conversions to the separate `local-models-extra.csv` backup.
+- Added parent regions, supported formats, conversion lineage, and reviewed corrections. Modified and uncertain descendants are excluded; main and extra model lists are unchanged.
+- Added admission rules that retain eligible conversions after usage declines, source validation, and offline checks for both catalogs. Broad research data stays local.
 
 ### 2026-09-28
 - Weekly Hugging Face sync
