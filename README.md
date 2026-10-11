@@ -127,9 +127,9 @@ Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weight
 
 The separate `local-models.csv` curates major local-format descendants of tracked
 parents. It includes variants published by the parent organization, plus community
-variants with at least 100K lifetime or 10K recent (30-day) downloads. Generation
-and CI reject catalogs above 3,000 rows pending review. Its rows are not promotions
-to the primary or secondary lists; broad discovery data stays outside Git.
+variants with at least 100K lifetime or 10K recent (30-day) downloads. Growth follows
+these eligibility rules, with no row-count cap. Its rows are not promotions to the
+primary or secondary lists; broad discovery data stays outside Git.
 
 ### Original orgs
 

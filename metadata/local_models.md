@@ -8,9 +8,9 @@ totals. One row represents one repository, not a quantization file or user.
 Include a variant when its publisher is the tracked parent's organization, or it
 has at least **100,000 lifetime downloads** or **10,000 recent (30-day) downloads**.
 The same-publisher rule prioritizes original providers, including new releases;
-it does not label third-party quantizers as official. Generation and CI reject
-more than **3,000 rows** so growth requires a reviewed policy change. Discovery
-may inspect a wider pool, which stays local rather than entering this catalog.
+it does not label third-party quantizers as official. The catalog grows as tracked
+parents publish variants or community variants meet the download thresholds.
+There is no row-count cap. Broader discovery results stay local.
 Thresholds use a pinned download snapshot; selection is not a complete census and
 can favor established models. Keep the cohort fixed when comparing historical
 months. The initial selection uses the October 9, 2026 snapshot.

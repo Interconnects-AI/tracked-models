@@ -21,7 +21,6 @@ from typing import Any, Iterable
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-MAX_CATALOG_ROWS = 3000
 MIN_LIFETIME_DOWNLOADS = 100_000
 MIN_RECENT_DOWNLOADS = 10_000
 FORMATS = (
@@ -1307,14 +1306,6 @@ def file_sha(path: Path) -> str:
     return digest.hexdigest()
 
 
-def check_catalog_size(rows: list[dict]) -> None:
-    if len(rows) > MAX_CATALOG_ROWS:
-        raise CatalogError(
-            f"Catalog has {len(rows):,} rows; maximum is {MAX_CATALOG_ROWS:,}. "
-            "Review the selection policy before publishing a larger catalog."
-        )
-
-
 def curate_catalog(
     rows: list[dict], popularity_rows: Iterable[dict]
 ) -> tuple[list[dict], dict]:
@@ -1349,7 +1340,6 @@ def curate_catalog(
         ):
             selected.append(row)
             same_publisher += official
-    check_catalog_size(selected)
     return selected, {
         "candidate_repositories": len(rows),
         "selected_repositories": len(selected),
@@ -1357,7 +1347,6 @@ def curate_catalog(
         "community_without_download_counts": missing_metrics,
         "minimum_lifetime_downloads": MIN_LIFETIME_DOWNLOADS,
         "minimum_recent_downloads": MIN_RECENT_DOWNLOADS,
-        "maximum_catalog_rows": MAX_CATALOG_ROWS,
         "rule": "same parent publisher OR lifetime threshold OR recent threshold",
     }
 
@@ -1694,7 +1683,6 @@ def main(argv: list[str] | None = None) -> None:
         if reader.fieldnames != list(COLUMNS):
             raise CatalogError("Invalid catalog header")
         rows = list(reader)
-        check_catalog_size(rows)
         validate_catalog_rows(rows, parents, regions, overrides, aliases)
         if b"\r" in payload:
             raise CatalogError("Catalog must use Unix newlines")
@@ -1770,7 +1758,7 @@ def main(argv: list[str] | None = None) -> None:
             else jsonl_bytes(review_rows)
         )
     report = result["report"]
-    # Discovery statistics describe the local research pool; publication is bounded.
+    # Separate broad discovery statistics from the rule-selected public cohort.
     report = {"discovery": report, "curation": curation}
     report["candidate_scope"] = (
         "all_unresolved" if args.all_candidates else "tracked_parent_association"

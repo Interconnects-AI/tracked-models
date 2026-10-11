@@ -8,7 +8,6 @@ from unittest.mock import patch
 from scripts.local_models import (
     CatalogError,
     candidate_csv_bytes,
-    check_catalog_size,
     curate_catalog,
     csv_bytes,
     discover_local_models,
@@ -91,16 +90,12 @@ class LocalModelsTests(unittest.TestCase):
         with self.assertRaisesRegex(CatalogError, "Duplicate popularity"):
             curate_catalog(rows, [{"id": "c/Root"}, {"id": "C/ROOT"}])
 
-    def test_curation_and_validation_stop_at_three_thousand_rows(self):
+    def test_curation_keeps_all_qualifying_rows_without_a_size_cap(self):
         rows = [
             {"modelId": f"Qwen/Root-{i}", "org": "Qwen", "parent_org": "Qwen"}
             for i in range(3001)
         ]
-        self.assertEqual(len(curate_catalog(rows[:3000], [])[0]), 3000)
-        with self.assertRaisesRegex(CatalogError, "maximum is 3,000"):
-            curate_catalog(rows, [])
-        with self.assertRaisesRegex(CatalogError, "maximum is 3,000"):
-            check_catalog_size(rows)
+        self.assertEqual(curate_catalog(rows, [])[0], rows)
 
     def test_direct_parent_and_metadata_join(self):
         result = discover([metadata("converter/Root-GGUF", base="qwen/root")])
