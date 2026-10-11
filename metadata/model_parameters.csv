@@ -8,11 +8,11 @@ deepseek-ai/DeepSeek-V3-Base,671,37,,"Legacy data; not recently reviewed. V3 fam
 deepseek-ai/DeepSeek-V3.1,671,37,,"Legacy data; not recently reviewed. V3 family (MoE) - 671B total, 37B active"
 deepseek-ai/DeepSeek-V3.1-Base,671,37,,"Legacy data; not recently reviewed. V3 family (MoE) - 671B total, 37B active"
 deepseek-ai/DeepSeek-V3.1-Terminus,671,37,,"Legacy data; not recently reviewed. V3 family (MoE) - 671B total, 37B active"
-deepseek-ai/DeepSeek-V3.2,685,,,Legacy data; not recently reviewed. V3.2 family (MoE) - 685B total (same arch as V3)
-deepseek-ai/DeepSeek-V3.2-Exp,685,,,Legacy data; not recently reviewed. V3.2 family (MoE) - 685B total (same arch as V3)
-deepseek-ai/DeepSeek-V3.2-Exp-Base,685,,,Legacy data; not recently reviewed. V3.2 family (MoE) - 685B total (same arch as V3)
-deepseek-ai/DeepSeek-V3.2-Speciale,685,,,Legacy data; not recently reviewed. V3.2 family (MoE) - 685B total (same arch as V3)
-deepseek-ai/DeepSeek-Math-V2,685,,,"Legacy data; not recently reviewed. Math-V2 (MoE, same arch as V3.2) - 685B total"
+deepseek-ai/DeepSeek-V3.2,685,,,Legacy data; total not reverified. No checkpoint-specific official count established in this reconciliation.
+deepseek-ai/DeepSeek-V3.2-Exp,685,,,Legacy data; total not reverified. No checkpoint-specific official count established in this reconciliation.
+deepseek-ai/DeepSeek-V3.2-Exp-Base,685,,,Legacy data; total not reverified. No checkpoint-specific official count established in this reconciliation.
+deepseek-ai/DeepSeek-V3.2-Speciale,685,,,Legacy data; total not reverified. No checkpoint-specific official count established in this reconciliation.
+deepseek-ai/DeepSeek-Math-V2,685,,,Legacy data; total not reverified. No checkpoint-specific official count established in this reconciliation.
 deepseek-ai/DeepSeek-OCR,3.3,,,Legacy data; not recently reviewed. OCR models (small dense)
 deepseek-ai/DeepSeek-OCR-2,3.4,,,Legacy data; not recently reviewed. OCR models (small dense)
 deepseek-ai/DeepSeek-V2,236,21,,"Legacy data; not recently reviewed. V2 family (MoE) - 236B total, 21B active"
@@ -173,14 +173,14 @@ zai-org/GLM-4.5-Base,355,32,true,
 zai-org/GLM-4.5-Air,106,12,true,
 zai-org/GLM-4.5-Air-Base,106,12,true,
 zai-org/GLM-4.5V,106,12,true,
-zai-org/GLM-4.6,357,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family; MoE
-zai-org/GLM-4.6-FP8,357,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family
-zai-org/GLM-4.6V,108,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family; MoE vision
-zai-org/GLM-4.6V-FP8,108,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family
-zai-org/GLM-4.6V-Flash,10,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family; dense
-zai-org/GLM-4.7,358,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family; MoE
-zai-org/GLM-4.7-FP8,358,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family
-zai-org/GLM-4.7-Flash,31,,,Legacy data; not recently reviewed. GLM-4.6/4.7 family; MoE lite
+zai-org/GLM-4.6,355,32,true,Official checkpoint release table reports total and active parameters.
+zai-org/GLM-4.6-FP8,355,32,true,Official checkpoint release table reports total and active parameters.
+zai-org/GLM-4.6V,106,12,true,Rounded official full VLM total; paper reports 12B active.
+zai-org/GLM-4.6V-FP8,106,12,true,Rounded official full VLM total; paper reports 12B active.
+zai-org/GLM-4.6V-Flash,9,,false,Rounded official full VLM total; dense architecture.
+zai-org/GLM-4.7,355,32,true,Official checkpoint release table reports total and active parameters.
+zai-org/GLM-4.7-FP8,355,32,true,Official checkpoint release table reports total and active parameters.
+zai-org/GLM-4.7-Flash,30,3,true,Official checkpoint release table reports total and active parameters.
 openbmb/MiniCPM-V-4,4.1,,,Legacy data; not recently reviewed. openbmb MiniCPM
 openbmb/MiniCPM-MoE-8x2B,14,4,,"Legacy data; not recently reviewed. openbmb MiniCPM; MoE, 4B active"
 openbmb/Eurux-8x22b-kto,141,,,Legacy data; not recently reviewed. openbmb MiniCPM; Mixtral-based
@@ -573,7 +573,6 @@ deepseek-ai/DeepSeek-R1-Distill-Qwen-32B,32,,false,Rounded model size explicitly
 deepseek-ai/DeepSeek-R1-Distill-Qwen-7B,7,,false,Rounded model size explicitly reported in the official paper.
 deepseek-ai/DeepSeek-V4-Flash-0731,284,13,true,Reported language-backbone total and active count; attached DSpark draft module excluded.
 deepseek-ai/DeepSeek-V4-Flash-Base,284,13,true,Official reported backbone total.
-deepseek-ai/DeepSeek-V4-Flash-Vision-Exp,284,,true,Reported language-backbone total; added vision modules and DSpark draft module excluded.
 deepseek-ai/DeepSeek-V4-Pro-0813,1600,49,true,Reported language-backbone total and active count; attached DSpark draft module excluded.
 deepseek-ai/DeepSeek-V4-Pro-Base,1600,49,true,Official reported backbone total.
 deepseek-ai/DeepSeek-V4.1-Flash,552,,true,Reported backbone total; excludes 196B conditional memory and auxiliary vision/draft components. Active 8B prefill/16B decode.
@@ -599,7 +598,7 @@ google/codegemma-7b,7,,false,Rounded official model size.
 google/codegemma-7b-it,7,,false,Rounded official model size.
 google/codegemma-7b-it-pytorch,7,,false,Rounded official model size.
 google/codegemma-7b-pytorch,7,,false,Rounded official model size.
-google/diffusiongemma-26B-A4B-it,25.2,3.8,true,
+google/diffusiongemma-26B-A4B-it,25.2,3.8,true,Official model-card architecture table; vision encoder is reported separately.
 google/gemma-1.1-2b-it,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
 google/gemma-1.1-2b-it-pytorch,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
 google/gemma-1.1-2b-it-tflite,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
@@ -648,8 +647,8 @@ google/gemma-3n-E4B-it-litert-preview,8,,false,Rounded official total. Effective
 google/gemma-4-12B-it,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
 google/gemma-4-12B-it-qat-q4_0-unquantized,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
 google/gemma-4-12B-it-qat-w4a16-ct,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
-google/gemma-4-31B-it,30.7,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
-google/gemma-4-31B-it-qat-w4a16-ct,30.7,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-31B-it,30.7,,false,Official reported language-model total; separate vision encoder and optional drafter excluded.
+google/gemma-4-31B-it-qat-w4a16-ct,30.7,,false,Official reported language-model total; separate vision encoder and optional drafter excluded.
 google/gemma-4-E2B-it,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
 google/gemma-4-E2B-it-qat-mobile-ct,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
 google/gemma-4-E2B-it-qat-mobile-transformers,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
