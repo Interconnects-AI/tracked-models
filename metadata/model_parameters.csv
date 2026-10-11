@@ -573,6 +573,7 @@ deepseek-ai/DeepSeek-R1-Distill-Qwen-32B,32,,false,Rounded model size explicitly
 deepseek-ai/DeepSeek-R1-Distill-Qwen-7B,7,,false,Rounded model size explicitly reported in the official paper.
 deepseek-ai/DeepSeek-V4-Flash-0731,284,13,true,Reported language-backbone total and active count; attached DSpark draft module excluded.
 deepseek-ai/DeepSeek-V4-Flash-Base,284,13,true,Official reported backbone total.
+deepseek-ai/DeepSeek-V4-Flash-Vision-Exp,285,,true,Approximate language-plus-vision total; auxiliary DSpark draft module excluded. The 13B active figure covers the language backbone only.
 deepseek-ai/DeepSeek-V4-Pro-0813,1600,49,true,Reported language-backbone total and active count; attached DSpark draft module excluded.
 deepseek-ai/DeepSeek-V4-Pro-Base,1600,49,true,Official reported backbone total.
 deepseek-ai/DeepSeek-V4.1-Flash,552,,true,Reported backbone total; excludes 196B conditional memory and auxiliary vision/draft components. Active 8B prefill/16B decode.

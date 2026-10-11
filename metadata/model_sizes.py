@@ -586,6 +586,7 @@ MANUAL_SIZES = {
     'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B': 7,
     'deepseek-ai/DeepSeek-V4-Flash-0731': 284,
     'deepseek-ai/DeepSeek-V4-Flash-Base': 284,
+    'deepseek-ai/DeepSeek-V4-Flash-Vision-Exp': 285,
     'deepseek-ai/DeepSeek-V4-Pro-0813': 1600,
     'deepseek-ai/DeepSeek-V4-Pro-Base': 1600,
     'deepseek-ai/DeepSeek-V4.1-Flash': 552,
