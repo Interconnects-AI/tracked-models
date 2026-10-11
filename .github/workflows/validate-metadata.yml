@@ -13,6 +13,8 @@ on:
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
       - "metadata/test_generate_model_sizes.py"
+      - "metadata/audit_parameter_coverage.py"
+      - "metadata/test_audit_parameter_coverage.py"
       - "metadata/release_date_corrections.csv"
       - "metadata/validate_release_date_corrections.py"
       - "metadata/test_validate_release_date_corrections.py"
@@ -30,6 +32,8 @@ on:
       - "metadata/model_sizes.py"
       - "metadata/generate_model_sizes.py"
       - "metadata/test_generate_model_sizes.py"
+      - "metadata/audit_parameter_coverage.py"
+      - "metadata/test_audit_parameter_coverage.py"
       - "metadata/release_date_corrections.csv"
       - "metadata/validate_release_date_corrections.py"
       - "metadata/test_validate_release_date_corrections.py"
@@ -45,6 +49,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -55,7 +61,28 @@ jobs:
         run: python metadata/generate_model_sizes.py --check
 
       - name: Test metadata validation rules
-        run: python -m unittest metadata/test_generate_model_sizes.py
+        run: python -m unittest metadata/test_generate_model_sizes.py metadata/test_audit_parameter_coverage.py
+
+      - name: Check primary model size coverage
+        shell: bash
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          args=()
+          if [[ -n "$BASE_REF" && ! "$BASE_REF" =~ ^0+$ ]]; then
+            args=(--base-ref "$BASE_REF" --check)
+          fi
+          python -m metadata.audit_parameter_coverage "${args[@]}" \
+            --json-output "$RUNNER_TEMP/parameter-coverage.json" --markdown \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload parameter coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parameter-coverage
+          path: ${{ runner.temp }}/parameter-coverage.json
+          if-no-files-found: ignore
 
       - name: Validate organization-region metadata
         run: python metadata/validate_organization_regions.py

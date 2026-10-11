@@ -388,3 +388,959 @@ Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8,480,35,true,
 Qwen/Qwen3.5-122B-A10B,122,10,true,
 Qwen/Qwen3.5-122B-A10B-FP8,122,10,true,
 Qwen/Qwen3.5-397B-A17B-FP8,397,17,true,
+ai21labs/AI21-Jamba-Reasoning-3B,3,,false,
+allenai/BAR-7B,7,,false,
+allenai/Llama-3.1-Tulu-3-405B,405,,false,
+allenai/Llama-3.1-Tulu-3-405B-DPO,405,,false,
+allenai/Llama-3.1-Tulu-3-405B-SFT,405,,false,
+allenai/Llama-3.1-Tulu-3-70B,70,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-70B-DPO,70,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-70B-SFT,70,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-8B,8,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-8B-DPO,8,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-8B-RM,8,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Llama-3.1-Tulu-3-8B-SFT,8,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/MolmoE-1B-0924,7.2,1.5,true,
+allenai/OLMo-1B,1,,false,Rounded official model size.
+allenai/OLMo-1B-0724-hf,1,,false,Rounded official model size.
+allenai/OLMo-1B-hf,1,,false,Rounded official model size.
+allenai/OLMo-2-0325-32B,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0325-32B-DPO,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0325-32B-Instruct,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0325-32B-SFT,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0425-1B,1,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0425-1B-DPO,1,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0425-1B-Instruct,1,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-0425-1B-SFT,1,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-13B,13,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-13B-DPO,13,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-13B-Instruct,13,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-13B-SFT,13,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-7B,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-7B-DPO,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-7B-Instruct,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-7B-RM,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-2-1124-7B-SFT,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-1125-32B,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-32B-Think,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-32B-Think-DPO,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-32B-Think-SFT,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Instruct,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Instruct-DPO,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Instruct-SFT,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Think,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Think-DPO,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3-7B-Think-SFT,7,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3.1-32B-Instruct,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3.1-32B-Instruct-DPO,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3.1-32B-Instruct-SFT,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/Olmo-3.1-32B-Think,32,,false,Rounded official model-family size; checkpoint explicitly listed in release table.
+allenai/OLMo-7B,7,,false,Rounded official model size.
+allenai/OLMo-7B-0424,7,,false,Rounded official model size.
+allenai/OLMo-7B-0424-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-0424-Instruct-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-0424-SFT-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-0724-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-0724-Instruct-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-0724-SFT-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-Instruct,7,,false,Rounded official model size.
+allenai/OLMo-7B-Instruct-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-SFT,7,,false,Rounded official model size.
+allenai/OLMo-7B-SFT-hf,7,,false,Rounded official model size.
+allenai/OLMo-7B-Twin-2T,7,,false,Rounded official model size.
+allenai/OLMo-7B-Twin-2T-hf,7,,false,Rounded official model size.
+allenai/OLMoE-1B-7B-0125,7,1,true,Rounded official total and active counts.
+allenai/OLMoE-1B-7B-0924,7,1,true,Rounded official total and active counts.
+allenai/OLMoE-1B-7B-0924-Instruct,7,1,true,Rounded official total and active counts.
+allenai/tulu-13b,13,,false,Rounded official full-model size; repository contains a model diff.
+allenai/tulu-30b,30,,false,Rounded official full-model size; repository contains a model diff.
+allenai/tulu-65b,65,,false,Rounded official full-model size; repository contains a model diff.
+allenai/tulu-7b,7,,false,Rounded official full-model size; repository contains a model diff.
+arcee-ai/AFM-4.5B,4.5,,false,
+arcee-ai/AFM-4.5B-Base,4.5,,false,
+arcee-ai/AFM-4.5B-GGUF,4.5,,false,
+arcee-ai/AFM-4.5B-ov,4.5,,false,
+arcee-ai/AFM-4.5B-Preview,4.5,,false,
+arcee-ai/Trinity-Mini,26,3,true,
+arcee-ai/Trinity-Mini-Base,26,3,true,
+arcee-ai/Trinity-Mini-Base-Pre-Anneal,26,3,true,
+arcee-ai/Trinity-Mini-FP8-Block,26,3,true,
+arcee-ai/Trinity-Mini-GGUF,26,3,true,
+arcee-ai/Trinity-Mini-NVFP4,26,3,true,
+arcee-ai/Trinity-Mini-W4A16,26,3,true,
+arcee-ai/Trinity-Nano-Base,6,1,true,
+arcee-ai/Trinity-Nano-Base-Pre-Anneal,6,1,true,
+arcee-ai/Trinity-Nano-Preview,6,1,true,
+arcee-ai/Trinity-Nano-Preview-FP8-Block,6,1,true,
+arcee-ai/Trinity-Nano-Preview-GGUF,6,1,true,
+arcee-ai/Trinity-Nano-Preview-NVFP4,6,1,true,
+arcee-ai/Trinity-Nano-Preview-W4A16,6,1,true,
+baichuan-inc/Baichuan-13B-Base,13.26490112,,false,
+baichuan-inc/Baichuan-13B-Chat,13.26490112,,false,
+baichuan-inc/Baichuan-7B,7.000559616,,false,
+baichuan-inc/Baichuan-M2-32B,32,,false,Rounded reported size.
+baichuan-inc/Baichuan2-13B-Base,13,,false,Official reported model size; rounded.
+baichuan-inc/Baichuan2-13B-Chat,13,,false,Official reported model size; rounded.
+baichuan-inc/Baichuan2-7B-Base,7,,false,Official reported model size; rounded.
+baichuan-inc/Baichuan2-7B-Chat,7,,false,Official reported model size; rounded.
+baidu/ERNIE-4.5-0.3B-Base-PT,0.36,,false,
+baidu/ERNIE-4.5-0.3B-PT,0.36,,false,
+baidu/ERNIE-4.5-21B-A3B-Base-PT,21,3,true,
+baidu/ERNIE-4.5-21B-A3B-PT,21,3,true,
+baidu/ERNIE-4.5-21B-A3B-Thinking,21,3,true,
+baidu/ERNIE-4.5-VL-28B-A3B-Base-PT,28,3,true,
+baidu/ERNIE-4.5-VL-28B-A3B-PT,28,3,true,
+baidu/Qianfan-OCR,4,,false,Official reported end-to-end VLM size; rounded.
+baidu/Qianfan-VL-3B,3,,false,Official reported VLM size; rounded.
+baidu/Qianfan-VL-70B,70,,false,Official reported VLM size; rounded.
+baidu/Qianfan-VL-8B,8,,false,Official reported VLM size; rounded.
+ByteDance-Seed/academic-ds-9B,9,,true,Rounded reported size.
+ByteDance-Seed/BAGEL-7B-MoT,14,7,,Mixture-of-Transformers; reported 14B total and 7B active.
+ByteDance-Seed/BFS-Prover-V1-7B,7,,false,Rounded reported size.
+ByteDance-Seed/Cola-DLM,2.3,,false,Approximate combined VAE and DiT total.
+ByteDance-Seed/SAIL-7B,7,,false,Rounded reported size.
+ByteDance-Seed/Seed-Coder-8B-Base,8,,false,Official reported model scale; rounded.
+ByteDance-Seed/Seed-Coder-8B-Instruct,8,,false,Official reported model scale; rounded.
+ByteDance-Seed/Seed-Coder-8B-Reasoning,8,,false,Official reported model scale; rounded.
+ByteDance-Seed/Seed-Coder-8B-Reasoning-bf16,8,,false,Official reported model scale; rounded.
+ByteDance-Seed/Seed-OSS-36B-Base,36,,false,
+ByteDance-Seed/Seed-OSS-36B-Base-woSyn,36,,false,
+ByteDance-Seed/Seed-OSS-36B-Instruct,36,,false,
+ByteDance-Seed/VINCIE-3B,3,,false,Reported MM-DiT backbone size; image-editing model.
+CohereLabs/tiny-aya-base-32K,3.35,,false,
+CohereLabs/tiny-aya-en-thinker,3.35,,false,
+CohereLabs/tiny-aya-l2-thinker,3.35,,false,
+deepseek-ai/deepseek-coder-1.3b-base,1.3,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-1.3b-instruct,1.3,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-33b-base,33,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-33b-instruct,33,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-6.7b-base,6.7,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-6.7b-instruct,6.7,,,Rounded official model-card total.
+deepseek-ai/deepseek-coder-7b-base-v1.5,7,,,Rounded official published model size.
+deepseek-ai/deepseek-llm-67b-base,67,,,Rounded official model-card parameter count.
+deepseek-ai/deepseek-llm-67b-chat,67,,,Rounded official model-card parameter count.
+deepseek-ai/deepseek-llm-7b-base,7,,,Rounded official model-card parameter count.
+deepseek-ai/deepseek-llm-7b-chat,7,,,Rounded official model-card parameter count.
+deepseek-ai/deepseek-math-7b-base,7,,,Rounded official published model size.
+deepseek-ai/deepseek-math-7b-instruct,7,,,Rounded official published model size.
+deepseek-ai/deepseek-math-7b-rl,7,,,Rounded official published model size.
+deepseek-ai/deepseek-moe-16b-base,16.4,2.8,true,Approximate official architecture counts.
+deepseek-ai/deepseek-moe-16b-chat,16.4,2.8,true,Approximate official architecture counts.
+deepseek-ai/DeepSeek-Prover-V2-7B,7,,,Rounded official reported total.
+deepseek-ai/DeepSeek-R1-Distill-Llama-70B,70,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-R1-Distill-Llama-8B,8,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B,1.5,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-R1-Distill-Qwen-14B,14,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-R1-Distill-Qwen-32B,32,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-R1-Distill-Qwen-7B,7,,false,Rounded model size explicitly reported in the official paper.
+deepseek-ai/DeepSeek-V4-Flash-Base,284,13,true,Official reported backbone total.
+deepseek-ai/DeepSeek-V4-Pro-Base,1600,49,true,Official reported backbone total.
+EleutherAI/llemma_7b,7,,false,Rounded reported size.
+EleutherAI/pythia-1.4b,1.414647808,,false,Official total including embeddings.
+EleutherAI/pythia-12b,11.84607232,,false,Official total including embeddings.
+EleutherAI/pythia-14m,0.014067712,,false,Official total including embeddings.
+EleutherAI/pythia-160m,0.162322944,,false,Official total including embeddings.
+EleutherAI/pythia-1b,1.011781632,,false,Official total including embeddings.
+EleutherAI/pythia-2.8b,2.77520896,,false,Official total including embeddings.
+EleutherAI/pythia-31m,0.03049472,,false,Official total including embeddings.
+EleutherAI/pythia-410m,0.405334016,,false,Official total including embeddings.
+EleutherAI/pythia-6.9b,6.857302016,,false,Official total including embeddings.
+EleutherAI/pythia-70m-deduped,0.070426624,,false,Official total including embeddings.
+facebook/chameleon-7b,7,,false,Official reported model size; rounded.
+google/codegemma-1.1-2b,2,,false,Rounded official model size.
+google/codegemma-1.1-2b-pytorch,2,,false,Rounded official model size.
+google/codegemma-1.1-7b-it,7,,false,Rounded official model size.
+google/codegemma-1.1-7b-it-pytorch,7,,false,Rounded official model size.
+google/codegemma-2b,2,,false,Rounded official model size.
+google/codegemma-2b-pytorch,2,,false,Rounded official model size.
+google/codegemma-7b,7,,false,Rounded official model size.
+google/codegemma-7b-it,7,,false,Rounded official model size.
+google/codegemma-7b-it-pytorch,7,,false,Rounded official model size.
+google/codegemma-7b-pytorch,7,,false,Rounded official model size.
+google/diffusiongemma-26B-A4B-it,25.2,3.8,true,
+google/gemma-1.1-2b-it,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-1.1-2b-it-pytorch,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-1.1-2b-it-tflite,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-1.1-7b-it,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-1.1-7b-it-pytorch,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-27b,27.227718144,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-27b-it,27.227718144,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-27b-it-pytorch,27.227718144,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-27b-pytorch,27.227718144,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-2b,2.6146368,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-2b-it,2.6146368,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-2b-it-pytorch,2.6146368,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-2b-jpn-it,2,,false,Rounded official model size.
+google/gemma-2-2b-jpn-it-flax,2,,false,Rounded official model size.
+google/gemma-2-2b-jpn-it-pytorch,2,,false,Rounded official model size.
+google/gemma-2-2b-pytorch,2.6146368,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-9b,9.242164736,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-9b-it,9.242164736,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-9b-it-pytorch,9.242164736,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2-9b-pytorch,9.242164736,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-aps-it,2,,false,Rounded official model size.
+google/gemma-2b-flax,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-it,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-it-flax,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-it-pytorch,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-it-tflite,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-2b-pytorch,2.50643456,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-3-12b-it,12.188,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-12b-pt,12.188,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-1b-it,1,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-1b-pt,1,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-270m,0.27,,false,Rounded official model size.
+google/gemma-3-270m-it,0.27,,false,Rounded official model size.
+google/gemma-3-27b-pt,27.433,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-4b-it,4.301,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3-4b-pt,4.301,,false,Approximate total includes vision and embeddings; summed from rounded official architectural component counts.
+google/gemma-3n-E2B,5,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E2B-it,5,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E2B-it-litert-lm-preview,5,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E2B-it-litert-preview,5,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E4B,8,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E4B-it,8,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E4B-it-litert-lm-preview,8,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-3n-E4B-it-litert-preview,8,,false,Rounded official total. Effective2B/4B memory footprint is not a per-token active parameter count.
+google/gemma-4-12B-it,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-12B-it-qat-q4_0-unquantized,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-12B-it-qat-w4a16-ct,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-31B-it,30.7,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-31B-it-qat-w4a16-ct,30.7,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E2B-it,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E2B-it-qat-mobile-ct,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E2B-it-qat-mobile-transformers,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E2B-it-qat-w4a16-ct,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B-it,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B-it-qat-mobile-ct,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B-it-qat-mobile-transformers,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B-it-qat-w4a16-ct,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-7b,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-7b-aps-it,7,,false,Rounded official model size.
+google/gemma-7b-flax,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-7b-it,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-7b-it-flax,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-7b-it-pytorch,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/gemma-7b-pytorch,8.538074112,,false,Total includes embeddings; sum of disjoint architectural counts explicitly reported in the official paper.
+google/medgemma-27b-it,27,,false,Rounded official model size.
+google/medgemma-27b-text-it,27,,false,Rounded official model size.
+google/medgemma-4b-it,4,,false,Rounded official model size.
+google/paligemma-3b-mix-224,3,,false,Rounded official multimodal total.
+google/paligemma2-3b-pt-224,3,,false,Rounded official multimodal total.
+google/t5gemma-2-1b-1b,2.115,,false,Approximate total includes vision and shared embeddings once; summed from rounded official architectural component counts.
+google/t5gemma-2-270m-270m,0.785,,false,Approximate total includes vision and shared embeddings once; summed from rounded official architectural component counts.
+google/t5gemma-2-4b-4b,7.51,,false,Approximate total includes vision and shared embeddings once; summed from rounded official architectural component counts.
+google/t5gemma-2b-2b-prefixlm,5.6,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-2b-2b-prefixlm-it,5.6,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-2b-2b-ul2,5.6,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-2b-2b-ul2-it,5.6,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-2b-prefixlm,12.29,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-2b-prefixlm-it,12.29,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-2b-ul2,12.29,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-2b-ul2-it,12.29,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-9b-prefixlm,20.33,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-9b-prefixlm-it,20.33,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-9b-ul2,20.33,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-9b-9b-ul2-it,20.33,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-b-b-prefixlm,0.59149,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-b-b-prefixlm-it,0.59149,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-b-b-ul2,0.59149,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-b-b-ul2-it,0.59149,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-l-l-prefixlm,1.24,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-l-l-prefixlm-it,1.24,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-l-l-ul2,1.24,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-l-l-ul2-it,1.24,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-ml-ml-prefixlm,2.2,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-ml-ml-prefixlm-it,2.2,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-ml-ml-ul2,2.2,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-ml-ml-ul2-it,2.2,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-s-s-prefixlm,0.31252,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-s-s-prefixlm-it,0.31252,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-s-s-ul2,0.31252,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-s-s-ul2-it,0.31252,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-xl-xl-prefixlm,3.77,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-xl-xl-prefixlm-it,3.77,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-xl-xl-ul2,3.77,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+google/t5gemma-xl-xl-ul2-it,3.77,,false,"Rounded total reported in official architecture preset table, including encoder and decoder."
+HuggingFaceTB/nanowhale-100m,0.11,,true,"Approximately110M total, as explicitly reported; the100M name is not the total."
+HuggingFaceTB/nanowhale-100m-base,0.11,,true,"Approximately110M total, as explicitly reported; the100M name is not the total."
+HuggingFaceTB/SmolLM-1.7B,1.7,,false,Rounded official model size.
+HuggingFaceTB/SmolLM-1.7B-Instruct,1.7,,false,Rounded official model size.
+HuggingFaceTB/SmolLM-135M,0.135,,false,Rounded official model size.
+HuggingFaceTB/SmolLM-135M-Instruct,0.135,,false,Rounded official model size.
+HuggingFaceTB/SmolLM-360M,0.36,,false,Rounded official model size.
+HuggingFaceTB/SmolLM-360M-Instruct,0.36,,false,Rounded official model size.
+HuggingFaceTB/smollm-360M-instruct-add-basics,0.36,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-1.7B,1.7,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-1.7B-Instruct,1.7,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-1.7B-Instruct-16k,1.7,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-135M,0.135,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-135M-Instruct,0.135,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-360M,0.36,,false,Rounded official model size.
+HuggingFaceTB/SmolLM2-360M-Instruct,0.36,,false,Rounded official model size.
+HuggingFaceTB/SmolLM3-3B,3,,false,Rounded official model size.
+HuggingFaceTB/SmolLM3-3B-Base,3,,false,Rounded official model size.
+HuggingFaceTB/SmolVLM-256M-Base,0.256,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM-256M-Instruct,0.256,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM-500M-Base,0.5,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM-500M-Instruct,0.5,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM2-2.2B-Base,2.2,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM2-2.2B-Instruct,2.2,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM2-256M-Video-Instruct,0.256,,false,Rounded official multimodal total.
+HuggingFaceTB/SmolVLM2-500M-Video-Instruct,0.5,,false,Rounded official multimodal total.
+ibm-granite/granite-20b-code-base-8k,20,,false,Rounded official model size.
+ibm-granite/granite-20b-code-base-r1.1,20,,false,Rounded official model size.
+ibm-granite/granite-20b-code-instruct-8k,20,,false,Rounded official model size.
+ibm-granite/granite-20b-code-instruct-r1.1,20,,false,Rounded official model size.
+ibm-granite/granite-3.0-1b-a400m-base,1.3,0.4,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-1b-a400m-instruct,1.3,0.4,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-2b-base,2.5,2.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-2b-instruct,2.5,2.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-3b-a800m-base,3.3,0.8,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-8b-base,8.1,8.1,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.0-8b-instruct,8.1,8.1,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-1b-a400m-base,1.3,0.4,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-1b-a400m-instruct,1.3,0.4,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-2b-base,2.5,2.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-2b-instruct,2.5,2.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-3b-a800m-base,3.3,0.8,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-3b-a800m-instruct,3.3,0.8,true,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-8b-base,8.1,8.1,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.1-8b-instruct,8.1,8.1,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.2-2b-instruct,2,,false,Rounded count reported in the checkpoint model summary.
+ibm-granite/granite-3.2-8b-instruct,8,,false,Rounded count reported in the checkpoint model summary.
+ibm-granite/granite-3.3-2b-base,2.5,2.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.3-2b-instruct,2,,false,Rounded count reported in the checkpoint model summary.
+ibm-granite/granite-3.3-8b-base,8.1,8.1,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-3.3-8b-instruct,8,,false,Rounded count reported in the checkpoint model summary.
+ibm-granite/granite-34b-code-base-8k,34,,false,Rounded official model size.
+ibm-granite/granite-34b-code-instruct-8k,34,,false,Rounded official model size.
+ibm-granite/granite-3b-code-base-128k,3,,false,Rounded official model size.
+ibm-granite/granite-3b-code-base-2k,3,,false,Rounded official model size.
+ibm-granite/granite-3b-code-instruct-128k,3,,false,Rounded official model size.
+ibm-granite/granite-3b-code-instruct-2k,3,,false,Rounded official model size.
+ibm-granite/granite-4.0-1b,1.6,1.6,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-1b-base,1.6,1.6,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-350m,0.35,0.35,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-350m-base,0.35,0.35,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-h-1b,1.5,1.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-h-1b-base,1.5,1.5,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-h-350m,0.34,0.34,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-h-350m-base,0.34,0.34,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-h-small,32,9,true,
+ibm-granite/granite-4.0-h-small-FP8,32,9,true,Official FP8 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.0-h-tiny,7,1,true,
+ibm-granite/granite-4.0-micro,3,3,false,
+ibm-granite/granite-4.1-30b,30,,false,
+ibm-granite/granite-4.1-30b-base,30,,false,
+ibm-granite/granite-4.1-30b-fp8,30,,false,Official FP8 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.1-3b,3,,false,
+ibm-granite/granite-4.1-3b-base,3,,false,
+ibm-granite/granite-4.1-3b-fp8,3,,false,Official FP8 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.1-8b,8,,false,
+ibm-granite/granite-4.1-8b-base,8,,false,
+ibm-granite/granite-4.1-8b-fp8,8,,false,Official FP8 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-8b-code-base-4k,8,,false,Rounded official model size.
+ibm-granite/granite-8b-code-instruct-128k,8,,false,Rounded official model size.
+ibm-granite/granite-8b-code-instruct-4k,8,,false,Rounded official model size.
+ibm-granite/granite-vision-3.1-2b-preview,3,,false,
+ibm-granite/granite-vision-4.1-4b,4,,false,Rounded official model size.
+inclusionAI/AReaL-SEA-235B-A22B,235,22,true,Official paper reports the unchanged Qwen3-MoE architecture used for this SFT/RL checkpoint.
+inclusionAI/Ling-2.6-1T,1000,,,Approximate official trillion-parameter model size; no active count verified.
+inclusionAI/Ling-2.6-flash,104,7.4,true,
+inclusionAI/Ling-2.6-flash-fp8,104,7.4,true,
+inclusionAI/Ling-2.6-flash-int4,104,7.4,true,
+inclusionAI/Ling-3.0-flash,124,5.1,true,
+inclusionAI/Ling-3.0-flash-base,124,5.1,true,Official reported total. Active count excludes embeddings.
+inclusionAI/Ling-3.0-flash-base-30T,124,5.1,true,Official reported total. Active count excludes embeddings.
+inclusionAI/Ling-3.0-flash-base-midtrain,124,5.1,true,Official reported total. Active count excludes embeddings.
+inclusionAI/Ling-3.0-flash-Fin,124,5.1,true,
+inclusionAI/Ling-3.0-flash-Fin-fp4,124,5.1,true,
+inclusionAI/Ling-3.0-flash-Fin-fp8,124,5.1,true,
+inclusionAI/Ling-3.0-flash-Fin-int4,124,5.1,true,
+inclusionAI/Ling-3.0-flash-fp4,124,5.1,true,
+inclusionAI/Ling-3.0-flash-fp8,124,5.1,true,
+inclusionAI/Ling-3.0-flash-int4,124,5.1,true,
+inclusionAI/Ling-3.0-flash-VL,124,5.5,true,
+inclusionAI/Ling-3.0-flash-VL-fp4,124,5.5,true,
+inclusionAI/Ling-3.0-flash-VL-fp8,124,5.5,true,
+inclusionAI/Ling-3.0-flash-VL-int4,124,5.5,true,
+inclusionAI/Ling-3.0-tiny-base,7.9,,true,Official Parameter Scale table reports 7.9B total. Active count omitted: model-specific table says 1.3B but copied overview says 5.1B.
+inclusionAI/Ling-3.0-tiny-base-30T,7.9,,true,Official Parameter Scale table reports 7.9B total. Active count omitted: model-specific table says 1.3B but copied overview says 5.1B.
+inclusionAI/Ling-3.0-tiny-base-midtrain,7.9,,true,Official Parameter Scale table reports 7.9B total. Active count omitted: model-specific table says 1.3B but copied overview says 5.1B.
+inclusionAI/Ling-3.0-tiny-fp8,7.9,1.3,true,Official Parameter Scale table reports 7.9B total.
+inclusionAI/Ling-3.0-tiny-int4,7.9,1.3,true,Official Parameter Scale table reports 7.9B total.
+inclusionAI/LLaDA-MoE-7B-A1B-Base,7.03,1.4,true,Official model card reports 7.03B non-embedding parameters.
+inclusionAI/LLaDA-MoE-7B-A1B-Instruct,7.03,1.4,true,Official model card reports 7.03B non-embedding parameters.
+inclusionAI/LLaDA-MoE-7B-A1B-Instruct-TD,7.03,1.4,true,Official model card reports 7.03B non-embedding parameters.
+inclusionAI/LLaDA2.0-mini,16,1.4,true,Official model card reports non-embedding parameters.
+inclusionAI/LLaDA2.0-mini-CAP,16,,true,Official model card reports non-embedding parameters.
+inclusionAI/LLaDA2.0-mini-preview,16,1.4,true,Official model card reports non-embedding parameters.
+inclusionAI/LLaDA2.1-mini,16,,true,Official model card reports non-embedding parameters.
+inclusionAI/LLaDA2.2-mini,16,1.4,true,Official model card reports non-embedding parameters.
+inclusionAI/Ring-2.6-1T,1000,,,Approximate official trillion-parameter model size; no active count verified.
+internlm/Intern-S1-FP8,241,28,true,"Rounded official multimodal total, including vision encoder."
+internlm/Intern-S2-397B,397,,,Rounded official reported total.
+internlm/Intern-S2-397B-FP8,397,,,Rounded official reported total.
+internlm/Intern-S2-Mobius,35,,,Rounded official foundation-model size.
+internlm/Intern-S2-Mobius-FP8,35,,,Rounded official foundation-model size.
+internlm/Intern-S2-Preview,35,,,Official reported parameter count.
+internlm/Intern-S2-Preview-397B,397,,,Rounded official reported total.
+internlm/Intern-S2-Preview-397B-FP8,397,,,Rounded official reported total.
+internlm/Intern-S2-Preview-FP8,35,,,Official reported parameter count.
+internlm/internlm-20b,20,,,Rounded official model-card parameter count.
+internlm/internlm-7b,7,,,Rounded official model-card parameter count.
+internlm/internlm-chat-20b,20,,,Rounded official model-card parameter count.
+internlm/internlm-chat-7b,7,,,Rounded official model-card parameter count.
+internlm/internlm2-1_8b,1.8,,,Rounded official model-card parameter count.
+internlm/internlm2-1_8b-reward,1.8,,,Rounded official reward-model total.
+internlm/internlm2-20b,20,,,Rounded official model total.
+internlm/internlm2-20b-reward,20,,,Rounded official reward-model total.
+internlm/internlm2-7b,7,,,Rounded official model total.
+internlm/internlm2-7b-reward,7,,,Rounded official reward-model total.
+internlm/internlm2-base-20b,20,,,Rounded official model total.
+internlm/internlm2-base-7b,7,,,Rounded official model total.
+internlm/internlm2-chat-1_8b,1.8,,,Rounded official model-card parameter count.
+internlm/internlm2-chat-1_8b-sft,1.8,,,Rounded official model-card parameter count.
+internlm/internlm2-chat-20b,20,,,Rounded official model-card parameter count.
+internlm/internlm2-chat-20b-sft,20,,,Rounded official model-card parameter count.
+internlm/internlm2-chat-7b,7,,,Rounded official model-card parameter count.
+internlm/internlm2-chat-7b-sft,7,,,Rounded official model-card parameter count.
+internlm/internlm2-math-20b,20,,,Rounded official model total.
+internlm/internlm2-math-7b,7,,,Rounded official model total.
+internlm/internlm2-math-base-20b,20,,,Rounded official model total.
+internlm/internlm2-math-base-7b,7,,,Rounded official model total.
+internlm/internlm2-math-plus-1_8b,1.8,,,Rounded official model total.
+internlm/internlm2-math-plus-20b,20,,,Rounded official model total.
+internlm/internlm2-math-plus-7b,7,,,Rounded official model total.
+internlm/internlm2-math-plus-mixtral8x22b,141,39,true,Rounded published Mixtral-8x22B architecture total; mathematical post-training preserves architecture with vocabulary padding to32064.
+internlm/internlm2_5-1_8b,1.8,,,Rounded official model total.
+internlm/internlm2_5-1_8b-chat,1.8,,,Rounded official model-card parameter count.
+internlm/internlm2_5-20b,20,,,Rounded official model total.
+internlm/internlm2_5-20b-chat,20,,,Rounded official model-card parameter count.
+internlm/internlm2_5-7b,7,,,Rounded official model total.
+internlm/internlm2_5-7b-chat,7,,,Rounded official model-card parameter count.
+internlm/internlm2_5-7b-chat-1m,7,,,Rounded official model-card parameter count.
+internlm/internlm3-8b-instruct,8,,,Rounded official model-card parameter count.
+internlm/internlm3-8b-instruct-gptq-int4,8,,,Rounded official model-card parameter count.
+LiquidAI/LFM2.5-1.2B-Instruct-DSpark,0.2957,,false,Speculative-decoding draft model; target model size is not used.
+LiquidAI/LFM2.5-2.6B,2.69,,false,
+LiquidAI/LFM2.5-2.6B-Base,2.69,,false,
+LiquidAI/LFM2.5-2.6B-DSpark,0.3277,,false,Speculative-decoding draft model; target model size is not used.
+LiquidAI/LFM2.5-230M,0.23,,false,
+LiquidAI/LFM2.5-8B-A1B-DSpark,0.3277,,false,Speculative-decoding draft model; target model size is not used.
+LiquidAI/LFM2.5-Encoder-230M,0.2297,,false,Approximate official total; bidirectional masked-language encoder.
+LiquidAI/LFM2.5-Encoder-350M,0.3545,,false,Approximate official total; bidirectional masked-language encoder.
+LiquidAI/LFM2.5-VL-3B,3.1,,false,Rounded end-to-end vision-language model total.
+LiquidAI/LFM2.5-VL-3B-DSpark,0.2795,,false,Speculative-decoding draft model; target model size is not used.
+meta-llama/CodeLlama-13b-hf,13,,false,Rounded official model size.
+meta-llama/CodeLlama-13b-Instruct-hf,13,,false,Rounded official model size.
+meta-llama/CodeLlama-13b-Python-hf,13,,false,Rounded official model size.
+meta-llama/CodeLlama-34b-hf,34,,false,Rounded official model size.
+meta-llama/CodeLlama-34b-Instruct-hf,34,,false,Rounded official model size.
+meta-llama/CodeLlama-34b-Python-hf,34,,false,Rounded official model size.
+meta-llama/CodeLlama-70b-hf,70,,false,Rounded official model size.
+meta-llama/CodeLlama-70b-Instruct-hf,70,,false,Rounded official model size.
+meta-llama/CodeLlama-70b-Python-hf,70,,false,Rounded official model size.
+meta-llama/CodeLlama-7b-hf,7,,false,Rounded official model size.
+meta-llama/CodeLlama-7b-Instruct-hf,7,,false,Rounded official model size.
+meta-llama/CodeLlama-7b-Python-hf,7,,false,Rounded official model size.
+meta-llama/Llama-2-13b,13,,false,Rounded official model size.
+meta-llama/Llama-2-13b-chat,13,,false,Rounded official model size.
+meta-llama/Llama-2-13b-chat-hf,13,,false,Rounded official model size.
+meta-llama/Llama-2-13b-hf,13,,false,Rounded official model size.
+meta-llama/Llama-2-70b,70,,false,Rounded official model size.
+meta-llama/Llama-2-70b-chat,70,,false,Rounded official model size.
+meta-llama/Llama-2-70b-chat-hf,70,,false,Rounded official model size.
+meta-llama/Llama-2-70b-hf,70,,false,Rounded official model size.
+meta-llama/Llama-2-7b,7,,false,Rounded official model size.
+meta-llama/Llama-2-7b-chat,7,,false,Rounded official model size.
+meta-llama/Llama-2-7b-chat-hf,7,,false,Rounded official model size.
+meta-llama/Llama-2-7b-hf,7,,false,Rounded official model size.
+meta-llama/Llama-3.1-70B,70,,false,Rounded official model size.
+meta-llama/Llama-3.1-70B-Instruct,70,,false,Rounded official model size.
+meta-llama/Llama-3.1-8B,8,,false,Rounded official model size.
+meta-llama/Llama-3.1-8B-Instruct,8,,false,Rounded official model size.
+meta-llama/Llama-3.2-11B-Vision,11,,false,Rounded official multimodal model size.
+meta-llama/Llama-3.2-11B-Vision-Instruct,11,,false,Rounded official multimodal model size.
+meta-llama/Llama-3.2-1B,1.23,,false,
+meta-llama/Llama-3.2-1B-Instruct,1.23,,false,
+meta-llama/Llama-3.2-3B,3.21,,false,
+meta-llama/Llama-3.2-3B-Instruct,3.21,,false,
+meta-llama/Llama-3.2-90B-Vision,90,,false,Rounded official multimodal model size.
+meta-llama/Llama-3.2-90B-Vision-Instruct,90,,false,Rounded official multimodal model size.
+meta-llama/Llama-3.3-70B-Instruct,70,,false,Rounded official model size.
+meta-llama/Meta-Llama-3-70B,70,,false,Rounded official model size.
+meta-llama/Meta-Llama-3-70B-Instruct,70,,false,Rounded official model size.
+meta-llama/Meta-Llama-3-8B,8,,false,Rounded official model size.
+meta-llama/Meta-Llama-3-8B-Instruct,8,,false,Rounded official model size.
+microsoft/bitnet-b1.58-2B-4T,2,,false,Official reported model size; approximate.
+microsoft/bitnet-b1.58-2B-4T-bf16,2,,false,Official reported model size; approximate.
+microsoft/Fara-7B,7,,false,
+MiniMaxAI/MiniMax-M2.5,229.9,9.8,true,Official M2-series reported backbone count; auxiliary MTP is not added.
+MiniMaxAI/MiniMax-M2.7,229.9,9.8,true,Official M2-series reported backbone count; auxiliary MTP is not added.
+mistral-community/Codestral-22B-v0.1,22,,false,Rounded official model size; community-format mirror of the specified release.
+mistral-community/Mistral-7B-Instruct-v0.3,7,,false,Rounded official model size; community-format mirror of the specified release.
+mistralai/Codestral-22B-v0.1,22,,false,Rounded official model size.
+mistralai/Devstral-2-123B-Instruct-2512,123,,,
+mistralai/Devstral-Small-2-24B-Instruct-2512,24,,false,Rounded official model size.
+mistralai/Mamba-Codestral-7B-v0.1,7.285403648,,false,
+mistralai/Mathstral-7B-v0.1,7,,false,Rounded official model size.
+mistralai/Ministral-3-14B-Base-2512,13.9,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-14B-Instruct-2512,13.9,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-14B-Instruct-2512-BF16,13.9,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-14B-Reasoning-2512,13.9,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-3B-Base-2512,3.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-3B-Instruct-2512,3.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-3B-Instruct-2512-BF16,3.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-3B-Instruct-2512-ONNX,3.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-3B-Reasoning-2512,3.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-8B-Base-2512,8.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-8B-Instruct-2512,8.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-8B-Instruct-2512-BF16,8.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-3-8B-Reasoning-2512,8.8,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Ministral-8B-Instruct-2410,8.019808256,,false,
+mistralai/Mistral-7B-Instruct-v0.1,7,,false,Rounded official model size.
+mistralai/Mistral-7B-Instruct-v0.2,7,,false,Rounded official model size.
+mistralai/Mistral-7B-Instruct-v0.3,7,,false,Rounded official model size.
+mistralai/Mistral-7B-v0.1,7,,false,Rounded official model size.
+mistralai/Mistral-7B-v0.3,7,,false,Rounded official model size.
+mistralai/Mistral-Small-24B-Base-2501,24,,false,Rounded official model size.
+mistralai/Mistral-Small-3.1-24B-Base-2503,24,,false,Rounded official model size.
+mistralai/Mistral-Small-3.2-24B-Instruct-2506,24,,false,Rounded official model size.
+mistralai/Pixtral-12B-2409,12.4,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+mistralai/Pixtral-12B-Base-2409,12.4,,false,Approximate total includes vision; sum of rounded official architectural component counts.
+moonshotai/Kimi-Linear-48B-A3B-Base,48,3,true,
+moonshotai/Kimi-Linear-48B-A3B-Instruct,48,3,true,
+moonshotai/Moonlight-16B-A3B,16,3,true,Official rounded total including embeddings; not the non-embedding table.
+moonshotai/Moonlight-16B-A3B-Instruct,16,3,true,Official rounded total including embeddings; not the non-embedding table.
+nvidia/Cosmos-Reason2-32B,32,,,Official reported parameter count.
+nvidia/gpt-oss-puzzle-88B,88,,true,Official 88B count excludes auxiliary MXFP4 quantization scale tensors.
+nvidia/Hymba-1.5B-Instruct,1.5,,,Official reported parameter count.
+nvidia/Kimi-K2-Thinking-Eagle3,1.8,,,Speculative-decoding draft head; not the target Kimi model size.
+nvidia/Kimi-K2.5-Thinking-Eagle3,1.8,,,Speculative-decoding draft head; not the target Kimi model size.
+nvidia/Llama-3_3-Nemotron-Super-49B-GenRM,49,,,Official reported parameter count.
+nvidia/Mistral-NeMo-12B-Base,12,,false,Official reported parameter count.
+nvidia/Mistral-NeMo-12B-Instruct,12,,false,Official reported parameter count.
+nvidia/nemo-megatron-gpt-1.3B,1.3,,false,Official reported parameter count.
+nvidia/nemo-megatron-gpt-20B,20,,false,Official reported parameter count.
+nvidia/nemo-megatron-gpt-5B,5,,false,Official reported parameter count.
+nvidia/nemotron-3-8b-base-4k,8,,,Official reported parameter count.
+nvidia/Nemotron-3-Labs-Ultra-Math-RL,550,55,true,
+nvidia/Nemotron-3-Labs-Ultra-Math-SFT,550,55,true,
+nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16,31,,true,Official reported parameter count.
+nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-FP8,31,,true,Official reported parameter count.
+nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4,31,,true,Official reported parameter count.
+nvidia/Nemotron-Cascade-2-30B-A3B,30,3,true,Official reported parameter count.
+nvidia/Nemotron-H-47B-Base-8K,47,,,Official reported parameter count.
+nvidia/Nemotron-H-47B-Reasoning-128K,47,,,Official reported parameter count.
+nvidia/Nemotron-H-47B-Reasoning-128K-FP8,47,,,Official reported parameter count.
+nvidia/Nemotron-H-56B-Base-8K,56,,,Official reported parameter count.
+nvidia/Nemotron-H-8B-Base-8K,8,,,Official reported parameter count.
+nvidia/Nemotron-H-8B-Reasoning-128K,8,,,Official reported parameter count.
+nvidia/Nemotron-H-8B-Reasoning-128K-FP8,8,,,Official reported parameter count.
+nvidia/Nemotron-Orchestrator-8B,8,,,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16,30,,true,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8,30,3.5,true,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-NVFP4,30,3.5,true,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16,3.97,,,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3-Nano-4B-FP8,3.97,,,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16,30,3,true,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4,30,3,true,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DFlash,0.833,,false,Draft-head total includes embeddings; target model parameter count does not apply.
+nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4-DSpark,0.967,,false,Draft-head total includes embeddings; target model parameter count does not apply.
+nvidia/NVIDIA-Nemotron-Nano-12B-v2-Base,12.31,,,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16,12.6,,,Official reported parameter count.
+nvidia/NVIDIA-Nemotron-Nano-9B-v2-Base,8.89,,,Official reported parameter count.
+nvidia/OpenCodeReasoning-Nemotron-1.1-14B,14,,,Official reported parameter count.
+nvidia/OpenCodeReasoning-Nemotron-1.1-7B,7,,,Official reported parameter count.
+nvidia/OpenCodeReasoning-Nemotron-14B,14,,,Official reported parameter count.
+nvidia/OpenCodeReasoning-Nemotron-32B,32,,,Official reported parameter count.
+nvidia/OpenCodeReasoning-Nemotron-7B,7,,,Official reported parameter count.
+nvidia/OpenMath-Nemotron-1.5B,1.5,,,Official reported parameter count.
+nvidia/OpenReasoning-Nemotron-7B,7,,,Official reported parameter count.
+openai/gpt-oss-20b,21,3.6,true,Official reported model size; rounded.
+openbmb/BitCPM4-0.5B,0.5,,,Rounded official released parameter count.
+openbmb/cpm-bee-10b,10,,,Rounded official published full model total.
+openbmb/MiniCPM-1B-sft-bf16,1.2,,,Official reported non-embedding parameter count; excludes embeddings.
+openbmb/MiniCPM-2B-128k,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-dpo-bf16,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-dpo-bf16-llama-format,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-dpo-fp16,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-dpo-fp32,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-history,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-sft-bf16,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-sft-bf16-llama-format,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-sft-fp32,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-2B-sft-fp32-llama-format,2.7,,false,"Rounded official full total, including embeddings."
+openbmb/MiniCPM-V-4-int4,4.1,,,Rounded official overall multimodal total.
+openbmb/MiniCPM-V-4_5-int4,8,,,Rounded official overall multimodal total.
+openbmb/MiniCPM4-0.5B,0.5,,,Rounded official released parameter count.
+openbmb/MiniCPM4-0.5B-mlx,0.5,,,Rounded official released parameter count.
+openbmb/MiniCPM4-8B,8,,,Rounded official released parameter count.
+openbmb/MiniCPM4-8B-marlin-cpmcu,8,,,Rounded official released parameter count.
+openbmb/MiniCPM4-8B-marlin-vLLM,8,,,Rounded official released parameter count.
+openbmb/MiniCPM4-8B-mlx,8,,,Rounded official released parameter count.
+openbmb/MiniCPM4.1-8B,8,,,Rounded official released parameter count.
+openbmb/MiniCPM4.1-8B-Marlin,8,,,Rounded official released parameter count.
+openbmb/MiniCPM5-1B,1.080632832,,,Explicit official total; includes embeddings.
+openbmb/MiniCPM5-1B-SFT,1.080632832,,,Explicit official total; includes embeddings.
+openbmb/MiniCPM5-2B,2.51675648,,,Explicit official total; includes embeddings.
+openbmb/MiniCPM5-2B-Midtrain,2.51675648,,,Explicit official total; includes embeddings.
+OpenGVLab/InternVL-Chat-V1-5,25.5,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-1B,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-26B,25.5,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-2B,2.2,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-40B,40.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-4B,4.2,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-8B,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2-Llama3-76B,76.3,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-1B,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-1B-MPO,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-26B,25.5,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-2B,2.2,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-38B,38.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-38B-MPO,38.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-4B,3.7,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-4B-MPO,3.7,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-8B,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL2_5-8B-MPO,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-14B,15.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-1B,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-1B-hf,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-1B-Instruct,0.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-2B,1.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-2B-hf,1.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-2B-Instruct,1.9,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-38B,38.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-38B-Instruct,38.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-78B,78.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-78B-Instruct,78.4,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-8B,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-8B-hf,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3-8B-Instruct,8.1,,,Rounded full model total reported in the official architecture table.
+OpenGVLab/InternVL3_5-1B,1.1,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-1B-HF,1.1,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-241B-A28B-Instruct,240.7,,true,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-2B-Instruct,2.3,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-30B-A3B,30.8,,true,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-38B,38.4,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-4B,4.7,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-4B-Instruct,4.7,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-8B,8.5,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview,21.2,,true,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview-HF,21.2,,true,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/Mini-InternVL-Chat-2B-V1-5,2.21,,,Official architecture-table full total including vision encoder and projector.
+OpenGVLab/Mono-InternVL-2B,3,,,Official full total including endogenous visual-expert weights; active count is modality-dependent.
+poolside/Laguna-M.1,225,23,true,
+poolside/Laguna-M.1-base,225,23,true,
+poolside/Laguna-M.1-FP8,225,23,true,
+poolside/Laguna-M.1-NVFP4,225,23,true,
+poolside/Laguna-S-2.1,118,8,true,Official reported total and active parameters; rounded values.
+poolside/Laguna-S-2.1-FP8,117.6,8.5,true,
+poolside/Laguna-S-2.1-INT4,117.6,8.5,true,
+poolside/Laguna-S-2.1-NVFP4,117.6,8.5,true,
+poolside/Laguna-XS-2.1,33,3,true,
+poolside/Laguna-XS-2.1-FP8,33,3,true,
+poolside/Laguna-XS-2.1-INT4,33,3,true,
+poolside/Laguna-XS-2.1-NVFP4,33,3,true,
+poolside/Laguna-XS.2,33,3,true,
+poolside/Laguna-XS.2-FP8,33,3,true,
+poolside/Laguna-XS.2-INT4,33,3,true,
+poolside/Laguna-XS.2-NVFP4,33,3,true,
+Qwen/CodeQwen1.5-7B,7,,,Rounded official published model total.
+Qwen/CodeQwen1.5-7B-Chat,7,,,Rounded official published model total.
+Qwen/Qwen-14B,14,,,Rounded official model-card total.
+Qwen/Qwen-14B-Chat,14,,,Rounded official model-card total.
+Qwen/Qwen-14B-Chat-Int4,14,,,Rounded official model-card total.
+Qwen/Qwen-14B-Chat-Int8,14,,,Rounded official model-card total.
+Qwen/Qwen-1_8B,1.8,,,Rounded official model-card total.
+Qwen/Qwen-1_8B-Chat-Int4,1.8,,,Rounded official model-card total.
+Qwen/Qwen-1_8B-Chat-Int8,1.8,,,Rounded official model-card total.
+Qwen/Qwen-72B,72,,,Rounded official model-card total.
+Qwen/Qwen-72B-Chat,72,,,Rounded official model-card total.
+Qwen/Qwen-72B-Chat-Int4,72,,,Rounded official model-card total.
+Qwen/Qwen-72B-Chat-Int8,72,,,Rounded official model-card total.
+Qwen/Qwen-7B,7,,,Rounded official model-card total.
+Qwen/Qwen-7B-Chat,7,,,Rounded official model-card total.
+Qwen/Qwen-7B-Chat-Int4,7,,,Rounded official model-card total.
+Qwen/Qwen-7B-Chat-Int8,7,,,Rounded official model-card total.
+Qwen/Qwen1.5-0.5B,0.5,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-0.5B-Chat,0.5,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-1.8B,1.8,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-1.8B-Chat,1.8,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-110B,110,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-110B-Chat,110,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-14B,14,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-14B-Chat,14,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-32B,32,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-32B-Chat,32,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-4B,4,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-4B-Chat,4,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-72B,72,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-72B-Chat,72,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-7B,7,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen1.5-7B-Chat,7,,false,Rounded official release size; dense base/chat checkpoint.
+Qwen/Qwen2-0.5B,0.49,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-0.5B-Instruct,0.49,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-1.5B,1.54,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-1.5B-Instruct,1.54,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-57B-A14B,57.41,14,true,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-57B-A14B-Instruct,57.41,14,true,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-72B,72.71,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-72B-Instruct,72.71,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-7B,7.07,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-7B-Instruct,7.07,,,"Official architecture-table full total, including embeddings."
+Qwen/Qwen2-Math-1.5B,1.5,,false,Rounded official release parameter scale.
+Qwen/Qwen2-Math-1.5B-Instruct,1.5,,false,Rounded official release parameter scale.
+Qwen/Qwen2-Math-72B,72,,false,Rounded official release parameter scale.
+Qwen/Qwen2-Math-72B-Instruct,72,,false,Rounded official release parameter scale.
+Qwen/Qwen2-Math-7B,7,,false,Rounded official release parameter scale.
+Qwen/Qwen2-Math-7B-Instruct,7,,false,Rounded official release parameter scale.
+Qwen/Qwen2-VL-2B,2,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2-VL-2B-Instruct,2,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2-VL-72B,72,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2-VL-72B-Instruct,72,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2-VL-7B,8,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2-VL-7B-Instruct,8,,,Rounded multimodal size reported in the official paper;7B-named release is reported as8B including vision.
+Qwen/Qwen2.5-0.5B,0.49,,,Official model-card reported total.
+Qwen/Qwen2.5-0.5B-Instruct,0.49,,,Official model-card reported total.
+Qwen/Qwen2.5-1.5B,1.54,,,Official model-card reported total.
+Qwen/Qwen2.5-1.5B-Instruct,1.54,,,Official model-card reported total.
+Qwen/Qwen2.5-14B,14.7,,,Official model-card reported total.
+Qwen/Qwen2.5-14B-Instruct,14.7,,,Official model-card reported total.
+Qwen/Qwen2.5-14B-Instruct-1M,14.7,,,Official model-card reported total.
+Qwen/Qwen2.5-32B,32.5,,,Official model-card reported total.
+Qwen/Qwen2.5-32B-Instruct,32.5,,,Official model-card reported total.
+Qwen/Qwen2.5-3B,3.09,,,Official model-card reported total.
+Qwen/Qwen2.5-3B-Instruct,3.09,,,Official model-card reported total.
+Qwen/Qwen2.5-72B,72.7,,,Official model-card reported total.
+Qwen/Qwen2.5-72B-Instruct,72.7,,,Official model-card reported total.
+Qwen/Qwen2.5-7B,7.61,,,Official model-card reported total.
+Qwen/Qwen2.5-7B-Instruct,7.61,,,Official model-card reported total.
+Qwen/Qwen2.5-7B-Instruct-1M,7.61,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-0.5B,0.49,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-0.5B-Instruct,0.49,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-1.5B,1.54,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-1.5B-Instruct,1.54,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-14B,14.7,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-14B-Instruct,14.7,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-32B,32.5,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-32B-Instruct,32.5,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-3B,3.09,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-3B-Instruct,3.09,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-7B,7.61,,,Official model-card reported total.
+Qwen/Qwen2.5-Coder-7B-Instruct,7.61,,,Official model-card reported total.
+Qwen/Qwen2.5-Math-1.5B,1.5,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-Math-1.5B-Instruct,1.5,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-Math-72B,72,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-Math-72B-Instruct,72,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-Math-7B,7,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-Math-7B-Instruct,7,,false,Rounded official release parameter scale.
+Qwen/Qwen2.5-VL-32B-Instruct,32,,,Rounded official model-card parameter figure; not an exact tensor count including every multimodal component.
+Qwen/Qwen2.5-VL-3B-Instruct,3,,,Rounded official model-card parameter figure; not an exact tensor count including every multimodal component.
+Qwen/Qwen2.5-VL-72B-Instruct,72,,,Rounded official model-card parameter figure; not an exact tensor count including every multimodal component.
+Qwen/Qwen2.5-VL-7B-Instruct,7,,,Rounded official model-card parameter figure; not an exact tensor count including every multimodal component.
+Qwen/Qwen3-0.6B,0.6,,false,Official model-card reported total.
+Qwen/Qwen3-0.6B-Base,0.6,,false,Official model-card reported total.
+Qwen/Qwen3-0.6B-FP8,0.6,,false,Official model-card reported total.
+Qwen/Qwen3-1.7B,1.7,,false,Official model-card reported total.
+Qwen/Qwen3-1.7B-Base,1.7,,false,Official model-card reported total.
+Qwen/Qwen3-1.7B-FP8,1.7,,false,Official model-card reported total.
+Qwen/Qwen3-14B,14.8,,false,Official model-card reported total.
+Qwen/Qwen3-14B-Base,14.8,,false,Official model-card reported total.
+Qwen/Qwen3-14B-FP8,14.8,,false,Official model-card reported total.
+Qwen/Qwen3-30B-A3B,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-Base,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-FP8,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-Instruct-2507,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-Instruct-2507-FP8,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-Thinking-2507,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-30B-A3B-Thinking-2507-FP8,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-32B,32.8,,false,Official model-card reported total.
+Qwen/Qwen3-32B-FP8,32.8,,false,Official model-card reported total.
+Qwen/Qwen3-4B,4,,false,Official model-card reported total.
+Qwen/Qwen3-4B-Base,4,,false,Official model-card reported total.
+Qwen/Qwen3-4B-FP8,4,,false,Official model-card reported total.
+Qwen/Qwen3-4B-Instruct-2507,4,,,Official model-card reported total.
+Qwen/Qwen3-4B-Instruct-2507-FP8,4,,,Official model-card reported total.
+Qwen/Qwen3-4B-Thinking-2507,4,,,Official model-card reported total.
+Qwen/Qwen3-4B-Thinking-2507-FP8,4,,,Official model-card reported total.
+Qwen/Qwen3-8B,8.2,,false,Official model-card reported total.
+Qwen/Qwen3-8B-Base,8.2,,false,Official model-card reported total.
+Qwen/Qwen3-8B-FP8,8.2,,false,Official model-card reported total.
+Qwen/Qwen3-Coder-30B-A3B-Instruct,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8,30.5,3.3,true,Official model-card reported total.
+Qwen/Qwen3-Next-80B-A3B-Instruct,80,3,true,Official model-card reported total.
+Qwen/Qwen3-Next-80B-A3B-Instruct-FP8,80,3,true,Official model-card reported total.
+Qwen/Qwen3-Next-80B-A3B-Thinking,80,3,true,Official model-card reported total.
+Qwen/Qwen3-Next-80B-A3B-Thinking-FP8,80,3,true,Official model-card reported total.
+Qwen/Qwen3-VL-235B-A22B-Instruct,235,22,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-235B-A22B-Instruct-FP8,235,22,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-235B-A22B-Thinking,235,22,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-235B-A22B-Thinking-FP8,235,22,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-2B-Instruct,2,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-2B-Instruct-FP8,2,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-2B-Thinking,2,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-2B-Thinking-FP8,2,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-30B-A3B-Instruct,30,,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-30B-A3B-Instruct-FP8,30,,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-30B-A3B-Thinking,30,,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-30B-A3B-Thinking-FP8,30,,true,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-32B-Instruct,32,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-32B-Instruct-FP8,32,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-32B-Thinking,32,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-32B-Thinking-FP8,32,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-4B-Instruct,4,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-4B-Instruct-FP8,4,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-4B-Thinking,4,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-4B-Thinking-FP8,4,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-8B-Instruct,8,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-8B-Instruct-FP8,8,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-8B-Thinking,8,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3-VL-8B-Thinking-FP8,8,,false,Rounded reported language-backbone scale; excludes separately described vision encoder.
+Qwen/Qwen3.5-0.8B,0.8,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-0.8B-Base,0.8,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-27B,27,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-27B-FP8,27,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-2B,2,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-2B-Base,2,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-35B-A3B,35,3,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-35B-A3B-Base,35,3,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-35B-A3B-FP8,35,3,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-4B,4,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-4B-Base,4,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-9B,9,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.5-9B-Base,9,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.6-27B,27,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.6-27B-FP8,27,,,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.6-35B-A3B,35,3,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.6-35B-A3B-FP8,35,3,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.8-2.4T-A95B,2400,95,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.8-2.4T-A95B-FP8,2400,95,true,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.8-27B,27,,false,Reported language-model total; excludes vision encoder.
+Qwen/Qwen3.8-27B-FP8,27,,false,Reported language-model total; excludes vision encoder.
+Qwen/QwQ-32B,32.5,,,Official model-card reported total.
+Qwen/QwQ-32B-Preview,32.5,,,Official model-card reported total.
+rednote-hilab/dots.mocr,3,,false,Official reported VLM size; rounded.
+Skywork/Skywork-13B-base,13,,false,Rounded reported size.
+Skywork/Skywork-13B-Base-8bits,13,,false,Rounded reported size.
+Skywork/Skywork-13B-Math,13,,false,Rounded reported size.
+Skywork/Skywork-13B-Math-8bits,13,,false,Rounded reported size.
+Skywork/Skywork-R1V-38B,38,,false,Rounded reported VLM total.
+Skywork/Skywork-R1V2-38B,38,,false,Rounded reported VLM total.
+Skywork/Skywork-R1V3-38B,38,,false,Rounded reported VLM total.
+Skywork/Skywork-VL-Reward-7B,7,,false,Rounded reported reward-VLM size; includes added value head in release.
+Skywork/SkyworkVL-2B,2,,false,Official reported VLM size; rounded.
+Skywork/SkyworkVL-38B,38,,false,Official reported VLM size; rounded.
+Snowflake/Arctic-Text2SQL-R1-7B,7,,false,Official reported model size; rounded.
+Snowflake/Qwen-2.5-coder-Arctic-ExCoT-32B,32,,false,Rounded reported size.
+tencent/Hunyuan-0.5B-Instruct,0.5,,false,Rounded official released dense model size.
+tencent/Hunyuan-0.5B-Instruct-FP8,0.5,,false,Rounded official released dense model size.
+tencent/Hunyuan-0.5B-Pretrain,0.5,,false,Rounded official released dense model size.
+tencent/Hunyuan-1.8B-Instruct,1.8,,false,Rounded official released dense model size.
+tencent/Hunyuan-1.8B-Pretrain,1.8,,false,Rounded official released dense model size.
+tencent/Hunyuan-4B-Instruct,4,,false,Rounded official released dense model size.
+tencent/Hunyuan-4B-Pretrain,4,,false,Rounded official released dense model size.
+tencent/Hunyuan-7B-Instruct,7,,false,Rounded official released dense model size.
+tencent/Hunyuan-7B-Instruct-FP8,7,,false,Rounded official released dense model size.
+tencent/Hunyuan-7B-Pretrain,7,,false,Rounded official released dense model size.
+tencent/Hunyuan-A13B-Instruct-FP8,80,13,true,
+tencent/HY-MT1.5-1.8B,1.8,,,Rounded official reported translation-model size.
+tencent/HY-MT1.5-1.8B-FP8,1.8,,,Rounded official reported translation-model size.
+tencent/HY-MT1.5-7B,7,,,Rounded official reported translation-model size.
+tencent/HY-MT1.5-7B-FP8,7,,,Rounded official reported translation-model size.
+tencent/Hy3,295,21,true,Reported backbone total; excludes 3.8B MTP layer.
+tencent/Hy3-FP8,295,21,true,Reported backbone total; excludes 3.8B MTP layer.
+tencent/Hy3-preview,295,21,true,Reported backbone total; excludes 3.8B MTP layer.
+tencent/Hy3-preview-Base,295,21,true,Reported backbone total; excludes 3.8B MTP layer.
+tencent/Hy4-preview,770,49,true,Reported backbone total; excludes 10B MTP layer.
+tencent/Hy4-preview-FP8,770,49,true,Reported backbone total; excludes 10B MTP layer.
+tencent/WeDLM-7B-Base,7,,,
+tencent/WeDLM-7B-Instruct,7,,,
+tencent/WeDLM-8B-Base,8,,,
+tencent/WeDLM-8B-Instruct,8,,,
+tencent/Youtu-LLM-2B,1.96,,,
+tencent/Youtu-LLM-2B-Base,1.96,,,
+THUDM/chatglm-6b,6.2,,,
+THUDM/chatglm-6b-int4,6.2,,,
+THUDM/chatglm-6b-int4-qe,6.2,,,
+THUDM/chatglm-6b-int8,6.2,,,
+THUDM/codegeex2-6b,6,,,Rounded official reported total.
+THUDM/codegeex2-6b-int4,6,,,Rounded official reported total.
+THUDM/cogvlm2-llama3-chat-19B,19,,,Rounded full model total reported in the official architecture table.
+THUDM/cogvlm2-llama3-chat-19B-int4,19,,,Rounded full model total reported in the official architecture table.
+THUDM/cogvlm2-llama3-chat-19B-tgi,19,,,Rounded full model total reported in the official architecture table.
+THUDM/cogvlm2-llama3-chinese-chat-19B,19,,,Rounded full model total reported in the official architecture table.
+THUDM/cogvlm2-llama3-chinese-chat-19B-int4,19,,,Rounded full model total reported in the official architecture table.
+THUDM/cogvlm2-llama3-chinese-chat-19B-tgi,19,,,Rounded full model total reported in the official architecture table.
+THUDM/GLM-4-32B-Base-0414,32,,,Rounded official reported total.
+THUDM/GLM-4.1V-9B-Base,9,,,Rounded official published multimodal model total.
+THUDM/GLM-4.1V-9B-Thinking,9,,,Rounded official published multimodal model total.
+THUDM/glm-edge-1.5b-chat,1.5,,,Rounded official published model size.
+THUDM/glm-edge-4b-chat,4,,,Rounded official published model size.
+THUDM/glm-edge-v-2b,2,,,Rounded official published model size.
+THUDM/glm-edge-v-5b,5,,,Rounded official published model size.
+THUDM/GLM-Z1-32B-0414,32,,,Rounded official reported total.
+THUDM/GLM-Z1-9B-0414,9,,,Rounded official model total.
+THUDM/GLM-Z1-Rumination-32B-0414,32,,,Rounded official reported total.
+THUDM/visualglm-6b,7.8,,,Official reported total including vision components.
+THUDM/WebGLM-2B,2,,,Rounded reported GLM language-model total.
+tiiuae/falcon-11B,11,,false,Official reported model size; rounded.
+tiiuae/falcon-180B,180,,false,Official reported model size; rounded.
+tiiuae/falcon-180B-chat,180,,false,Official reported model size; rounded.
+tiiuae/falcon-40b,40,,false,Official reported model size; rounded.
+tiiuae/falcon-40b-instruct,40,,false,Official reported model size; rounded.
+tiiuae/falcon-7b,7,,false,Official reported model size; rounded.
+tiiuae/falcon-7b-instruct,7,,false,Official reported model size; rounded.
+tiiuae/Falcon-H1-0.5B-Base,0.5,,false,Rounded reported size.
+tiiuae/falcon-mamba-7b,7,,false,Rounded reported model scale.
+tiiuae/falcon-mamba-7b-4bit,7,,false,Rounded reported model scale.
+tiiuae/falcon-mamba-7b-instruct,7,,false,Rounded reported model scale.
+tiiuae/falcon-mamba-7b-instruct-4bit,7,,false,Rounded reported model scale.
+tiiuae/falcon-rw-1b,1,,false,Official reported model size; rounded.
+tiiuae/falcon-rw-7b,7,,false,Official reported model size; rounded.
+tiiuae/Falcon3-10B-Base,10,,false,Rounded reported model scale.
+tiiuae/Falcon3-10B-Instruct,10,,false,Rounded reported model scale.
+tiiuae/Falcon3-1B-Instruct,1,,false,Rounded reported model scale.
+tiiuae/Falcon3-3B-Instruct,3,,false,Rounded reported model scale.
+tiiuae/Falcon3-7B-Instruct,7,,false,Rounded reported model scale.
+tiiuae/Falcon3-Mamba-7B-Instruct,7,,false,Rounded reported model scale.
+XiaomiMiMo/MiMo-V2.5-Pro,1020,42,true,
+XiaomiMiMo/MiMo-V2.5-Pro-Base,1020,42,true,
+XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash,1020,42,true,Official reported architectural total and active parameters. Backbone count; accompanying DFlash drafter is auxiliary.
+XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B,9,,false,Rounded reported size.
+XiaomiMiMo/MiMo-V2.6-Flash-MOPD,309,15,true,
+XiaomiMiMo/MiMo-V2.6-Flash-RL,309,15,true,
+XiaomiMiMo/MiMo-V2.6-Pro-MOPD,1020,42,true,
+XiaomiMiMo/MiMo-V2.6-Pro-RL,1020,42,true,
+zai-org/chatglm-6b,6.2,,,
+zai-org/chatglm-6b-int4,6.2,,,
+zai-org/chatglm-6b-int4-qe,6.2,,,
+zai-org/chatglm-6b-int8,6.2,,,
+zai-org/codegeex2-6b,6,,,Rounded official reported total.
+zai-org/codegeex2-6b-int4,6,,,Rounded official reported total.
+zai-org/cogvlm2-llama3-chat-19B,19,,,Rounded full model total reported in the official architecture table.
+zai-org/cogvlm2-llama3-chat-19B-int4,19,,,Rounded full model total reported in the official architecture table.
+zai-org/cogvlm2-llama3-chat-19B-tgi,19,,,Rounded full model total reported in the official architecture table.
+zai-org/cogvlm2-llama3-chinese-chat-19B,19,,,Rounded full model total reported in the official architecture table.
+zai-org/cogvlm2-llama3-chinese-chat-19B-int4,19,,,Rounded full model total reported in the official architecture table.
+zai-org/cogvlm2-llama3-chinese-chat-19B-tgi,19,,,Rounded full model total reported in the official architecture table.
+zai-org/GLM-4-32B-0414,32,,,Rounded official reported total.
+zai-org/GLM-4-32B-Base-0414,32,,,Rounded official reported total.
+zai-org/GLM-4.1V-9B-Base,9,,,Rounded official published multimodal model total.
+zai-org/GLM-4.1V-9B-Thinking,9,,,Rounded official published multimodal model total.
+zai-org/GLM-4.5-Air-FP8,106,12,true,
+zai-org/GLM-4.5-FP8,355,32,true,
+zai-org/GLM-ASR-Nano-2512,1.5,,,
+zai-org/glm-edge-1.5b-chat,1.5,,,Rounded official published model size.
+zai-org/glm-edge-4b-chat,4,,,Rounded official published model size.
+zai-org/glm-edge-v-2b,2,,,Rounded official published model size.
+zai-org/glm-edge-v-5b,5,,,Rounded official published model size.
+zai-org/GLM-Z1-32B-0414,32,,,Rounded official reported total.
+zai-org/GLM-Z1-9B-0414,9,,,Rounded official model total.
+zai-org/GLM-Z1-Rumination-32B-0414,32,,,Rounded official reported total.
+zai-org/visualglm-6b,7.8,,,Official reported total including vision components.
+zai-org/WebGLM-2B,2,,,Rounded reported GLM language-model total.
