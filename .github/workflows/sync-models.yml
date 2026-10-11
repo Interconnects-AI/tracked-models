@@ -43,6 +43,11 @@ jobs:
             --mention "@xeophon" \
             --verbose
 
+      - name: Include missing parameter sizes in the model review
+        run: |
+          python -m metadata.audit_parameter_coverage --base-ref HEAD --markdown \
+            >> "$RUNNER_TEMP/model_sync.md"
+
       - name: Detect changes
         id: changes
         run: |

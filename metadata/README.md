@@ -65,6 +65,11 @@ Active parameters are never inferred from total parameters, including for dense
 models. Store one explicit row per checkpoint; do not inherit values across a
 family or normalize model ID casing.
 
+Prefer full architectural totals. If the publisher's reported model size covers
+a backbone and excludes auxiliary vision, memory, or prediction modules, state
+that scope in `notes`. A component count near a size cutoff does not establish
+which side the full model falls on; keep unresolved cases visible for review.
+
 `is_moe` records architecture only; it does not fill a missing active count.
 Rows migrated from the older manual-size table remain usable and carry a
 `Legacy data; not recently reviewed.` note. Approximate values are described in
@@ -99,6 +104,27 @@ python metadata/generate_model_sizes.py --check
 The checker validates exact headers, unique IDs, positive decimal values,
 tri-state `is_moe`, stripped notes, `active_params_b <= total_params_b`, and
 generated map parity. CI runs the same check.
+
+Audit size coverage against the primary `models.csv` list with:
+
+```bash
+python -m metadata.audit_parameter_coverage --json-output /tmp/parameter-coverage.json
+python -m metadata.audit_parameter_coverage --base-ref origin/main --check
+```
+
+The report separates known totals strictly above 100B, known smaller models,
+and missing sizes. Secondary models in `extra_models.csv` do not affect these
+counts. A missing total means unclassified, never zero or below 100B.
+Exactly 100B entries are listed separately for review of rounding and component
+scope before using a strict >100B cutoff.
+
+CI rejects newly tracked checkpoints without size metadata and removal of
+previously known sizes. Existing gaps remain listed in the downloadable CI
+report; `--check` without a baseline requires complete coverage. Weekly model
+sync PRs also list new gaps for source review. Review the official card, paper,
+or launch document before adding each exact checkpoint's total. Tokenizers,
+draft heads, and ambiguous component totals must not inherit the size of the
+model named in their repository ID.
 
 ### `release_date_corrections.csv`
 
