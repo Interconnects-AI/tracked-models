@@ -16,6 +16,30 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
+### `local-models.csv` (local conversions)
+
+Conversion-only local copies (GGUF, MLX, AWQ, GPTQ, ONNX, ModelOpt/NVFP4, …) of
+`models.csv` checkpoints, from first-party and community publishers. Each row names
+its parent checkpoint, the parent's organization and region (local downloads are
+credited to the original model maker, never the converter), its formats, and its
+creation date. Fine-tuned, pruned, merged and other modified descendants are
+excluded. Repositories already in `models.csv` or `extra_models.csv` are left out,
+so totals are never double counted. This list does not change the primary or
+secondary lists.
+
+A repository is included when the Hugging Face Hub records it as a quantized child
+of exactly one `models.csv` parent (or, for first-party releases that predate Hub
+base-model metadata, it is published by the parent's organization), it has format
+evidence (library, tag, quantization config or file type), and its name keeps the
+parent's name with only conversion modifiers (including `qat`). It must also be published by the parent organization or have
+at least 100K lifetime downloads. Lifetime downloads never decrease, so an admitted
+row stays admitted.
+[`metadata/local_models_overrides.json`](metadata/local_models_overrides.json)
+holds reviewed exceptions: repository renames, conversions the Hub doesn't tag,
+and modified descendants that look like conversions. Regenerate the list with
+`uv run metadata/local_models.py` (it needs `HF_TOKEN` for rate limits); CI runs
+`python metadata/local_models.py --validate`.
+
 ### `arxiv_models.csv` (research-paper mentions)
 
 A separate family-level list for tracking model mentions in arXiv papers. Unlike
@@ -71,6 +95,7 @@ Curated, project-neutral model metadata for reuse across analysis projects:
 - `model_sizes.py`: generated legacy-compatible total-parameter map and analysis helpers.
 - `generate_model_sizes.py`: metadata validator and compatibility-map generator.
 - `organization_regions.csv`: canonical ATOM region buckets for exact Hugging Face organization namespaces, including explicit `unknown` classifications.
+- `local_models.py`, `local_models_overrides.json`: generator, validator, and reviewed exceptions for `local-models.csv`.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
 
 Legacy values remain usable and are labeled `Legacy data; not recently
@@ -105,6 +130,9 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/a
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv > all_models.csv
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/extra_models.csv | tail -n +2 >> all_models.csv
 
+# Fetch local conversions (a separate cohort; do not add to main totals)
+curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/local-models.csv
+
 # Get just the model IDs from primary list
 curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/models.csv | tail -n +2 | cut -d',' -f3
 ```
@@ -128,6 +156,9 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 
 ## Changelog
+
+### 2026-10-13
+- Added `local-models.csv`: 1,606 conversion-only local copies of `models.csv` checkpoints, with parent region attribution, plus its generator, validator and reviewed overrides.
 
 ### 2026-09-28
 - Weekly Hugging Face sync

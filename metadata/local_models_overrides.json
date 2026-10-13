@@ -1,0 +1,249 @@
+{
+  "aliases": {
+    "meta-llama/Meta-Llama-3.1-405B": "meta-llama/Llama-3.1-405B",
+    "meta-llama/Meta-Llama-3.1-405B-FP8": "meta-llama/Llama-3.1-405B-FP8",
+    "meta-llama/Meta-Llama-3.1-405B-Instruct": "meta-llama/Llama-3.1-405B-Instruct",
+    "meta-llama/Meta-Llama-3.1-405B-Instruct-FP8": "meta-llama/Llama-3.1-405B-Instruct-FP8",
+    "meta-llama/Meta-Llama-3.1-70B": "meta-llama/Llama-3.1-70B",
+    "meta-llama/Meta-Llama-3.1-70B-Instruct": "meta-llama/Llama-3.1-70B-Instruct",
+    "meta-llama/Meta-Llama-3.1-8B": "meta-llama/Llama-3.1-8B",
+    "meta-llama/Meta-Llama-3.1-8B-Instruct": "meta-llama/Llama-3.1-8B-Instruct",
+    "PY007/TinyLlama-1.1B-Chat-v0.3": "TinyLlama/TinyLlama-1.1B-Chat-v0.3"
+  },
+  "include": {
+    "bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF": {
+      "parent": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "bartowski/THUDM_GLM-4-32B-0414-GGUF": {
+      "parent": "THUDM/GLM-4-32B-0414",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "casperhansen/deepseek-r1-distill-qwen-32b-awq": {
+      "parent": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+    },
+    "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4": {
+      "parent": "meta-llama/Llama-3.1-70B-Instruct"
+    },
+    "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4": {
+      "parent": "meta-llama/Llama-3.1-8B-Instruct"
+    },
+    "kaitchup/Phi-3-mini-4k-instruct-gptq-4bit": {
+      "parent": "microsoft/Phi-3-mini-4k-instruct"
+    },
+    "MaziyarPanahi/Mixtral-8x22B-v0.1-GGUF": {
+      "parent": "mistralai/Mixtral-8x22B-v0.1",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "mistral-community/Mixtral-8x22B-v0.1-AWQ": {
+      "parent": "mistralai/Mixtral-8x22B-v0.1",
+      "formats": [
+        "awq"
+      ]
+    },
+    "mlx-community/gemma-3-12b-it-4bit": {
+      "parent": "google/gemma-3-12b-it",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Llama-3.2-1B-Instruct-4bit": {
+      "parent": "meta-llama/Llama-3.2-1B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Meta-Llama-3-70B-Instruct-4bit": {
+      "parent": "meta-llama/Meta-Llama-3-70B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Meta-Llama-3-8B-Instruct-4bit": {
+      "parent": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Meta-Llama-3.1-70B-Instruct-4bit": {
+      "parent": "meta-llama/Llama-3.1-70B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Meta-Llama-3.1-8B-Instruct-4bit": {
+      "parent": "meta-llama/Llama-3.1-8B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Mistral-7B-Instruct-v0.3-4bit": {
+      "parent": "mistralai/Mistral-7B-Instruct-v0.3",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Mistral-Large-Instruct-2407-4bit": {
+      "parent": "mistralai/Mistral-Large-Instruct-2407",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Mistral-Nemo-Instruct-2407-4bit": {
+      "parent": "mistralai/Mistral-Nemo-Instruct-2407",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-0.5B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-0.5B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-1.5B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-1.5B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-14B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-14B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-32B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-32B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-3B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-3B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-7B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-7B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-Coder-1.5B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-Coder-7B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "mlx-community/Qwen2.5-VL-7B-Instruct-4bit": {
+      "parent": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "openbmb/MiniCPM5-1B-GGUF": {
+      "parent": "openbmb/MiniCPM5-1B"
+    },
+    "openbmb/MiniCPM5-1B-MLX": {
+      "parent": "openbmb/MiniCPM5-1B",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "openbmb/MiniCPM5-2B-DSpark-GGUF": {
+      "parent": "openbmb/MiniCPM5-2B-DSpark"
+    },
+    "openbmb/MiniCPM5-2B-GGUF": {
+      "parent": "openbmb/MiniCPM5-2B"
+    },
+    "openbmb/MiniCPM5-2B-GPTQ": {
+      "parent": "openbmb/MiniCPM5-2B"
+    },
+    "openbmb/MiniCPM5-2B-MLX": {
+      "parent": "openbmb/MiniCPM5-2B",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF": {
+      "parent": "Qwen/Qwen3.8-27B",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "Preyazz/DeepSeek-V4-Flash-GGUF": {
+      "parent": "deepseek-ai/DeepSeek-V4-Flash",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "Qwen/Qwen3.5-122B-A10B-GPTQ-Int4": {
+      "parent": "Qwen/Qwen3.5-122B-A10B"
+    },
+    "stepfun-ai/Step-3.5-Flash-GGUF-Q4_K_S": {
+      "parent": "stepfun-ai/Step-3.5-Flash",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "stepfun-ai/Step-3.5-Flash-GGUF-Q8_0": {
+      "parent": "stepfun-ai/Step-3.5-Flash",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "unsloth/GLM-4-32B-0414-GGUF": {
+      "parent": "THUDM/GLM-4-32B-0414",
+      "formats": [
+        "gguf"
+      ]
+    },
+    "unsloth/mistral-7b-instruct-v0.2-bnb-4bit": {
+      "parent": "mistralai/Mistral-7B-Instruct-v0.2",
+      "formats": [
+        "bitsandbytes"
+      ]
+    }
+  },
+  "exclude": {
+    "006aman/Bharat-Model-V1": "finetune: Publisher describes a custom Mistral fine-tune on 15,001 instruction pairs before GGUF export.",
+    "0xSero/deepseek-v4-flash-0731-spark": "pruned: Publisher describes REAP pruning and routed-expert compaction before EXL3 quantization; Classify this local descendant as pruned.",
+    "0xSero/DeepSeek-V4-Flash-Spark-GGUF": "pruned: Publisher states the GGUF is produced from a REAP-pruned Spark lineage, despite the original checkpoint in base metadata.",
+    "0xSero/DeepSeek-V4-Flash-Spark-Mini-GGUF": "pruned: Publisher states this is a mini variant of the REAP-pruned Spark lineage, despite the original checkpoint in base metadata.",
+    "0xSero/GLM-5-381B-GGUF-IQ2_M": "pruned: Publisher describes 50% expert removal from GLM-5 before GGUF quantization; Classify this local descendant as pruned.",
+    "0xSero/GLM-5.1-444B-GGUF": "pruned: Publisher describes 40% expert pruning from GLM-5.1 before GGUF quantization; Classify this local descendant as pruned.",
+    "0xSero/GLM-5.1-555B-GGUF": "pruned: Publisher describes 25% expert pruning from GLM-5.1 before GGUF quantization; Classify this local descendant as pruned.",
+    "0xSero/GLM-5.3-488B-EXL3-TR3-3.42bpw": "pruned: Publisher describes removing 36% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "0xSero/GLM-5.3-569B-EXL3-TR3-3.42bpw": "pruned: Publisher describes removing 25% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "0xSero/GLM-5.3-621B-EXL3-TR3-3.42bpw": "pruned: Publisher describes removing 18% of routed experts from an existing EXL3 checkpoint; the quantized card relation does not indicate a pure conversion.",
+    "0xSero/Qwen3.5-264B-W4A16": "excluded: Publisher describes a REAP-pruned 264B model with a transplanted vision encoder followed by AutoRound quantization; this modifies the tracked original beyond quantization.",
+    "empero-ai/Qwen3.8-2B-Distill": "distilled: The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces.",
+    "empero-ai/Qwen3.8-4B-Distill": "distilled: The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces.",
+    "empero-ai/Qwen3.8-9B-Distill": "distilled: The pinned publisher card explicitly identifies the Qwen3.5 checkpoint as student base weights and describes full-parameter SFT on teacher traces.",
+    "fireworks-ai/llama-3-firefunction-v2": "finetune: Pinned config explicitly identifies Meta-Llama-3-70B-Instruct as source.",
+    "HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive": "unknown: The pinned publisher card explicitly credits Qwen/Qwen3.5-4B and describes stronger uncensoring and refusal removal.",
+    "HauhauCS/Qwen3.8-27B-Uncensored-HauhauCS-Aggressive-MTP-GGUF": "abliterated: Publisher states it applies the HauhauCS Aggressive uncensoring profile to Qwen before distributing quantizations.",
+    "HF1BitLLM/Llama3-8B-1.58-100B-tokens": "finetune: Pinned publisher card explicitly identifies Llama3-8B-Instruct as the starting model and describes continued BitNet1.58 training on 100B tokens.",
+    "huihui-ai/Huihui-Qwen3.8-27B-abliterated-GGUF": "excluded: Publisher describes abliteration of Qwen and additional GGUF series sourced from several derivative repositories, including mixed weights.",
+    "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF": "adapter/abliterated: Despite an explicit quantized card relation, the publisher describes bf16 abliteration and a merged LoRA that changes attention and MLP weights.",
+    "mlx-community/gemma-3-4b-it-qat-4bit": "excluded: Publisher metadata names an unrelated InternVL parent and the conversion statement references a local filesystem path rather than a verifiable Hub parent.",
+    "OBLITERATUS/Qwen3.8-27B-OBLITERATED": "abliterated: Publisher describes refusal-direction projection and blending weights from different ablation procedures.",
+    "prism-ml/Ternary-Bonsai-2-27B-gguf": "unknown: Publisher identifies Qwen3.8-27B as the parent and describes ternary weight quantization and GGUF packing.",
+    "winglian/Llama-3-8b-64k-PoSE": "finetune: Pinned config identifies meta-llama/Meta-Llama-3-8B; publisher card documents PoSE context extension using continued training on 300M RedPajama tokens and rank 256 LoRA.",
+    "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF": "finetune/distilled: Publisher identifies a focused fine-tune and documents new agentic, coding, and general training data with distilled reasoning."
+  }
+}

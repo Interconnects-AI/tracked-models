@@ -18,6 +18,10 @@ on:
       - "metadata/release_date_corrections.csv"
       - "metadata/validate_release_date_corrections.py"
       - "metadata/test_validate_release_date_corrections.py"
+      - "local-models.csv"
+      - "metadata/local_models.py"
+      - "metadata/local_models_overrides.json"
+      - "metadata/test_local_models.py"
       - ".github/workflows/validate-metadata.yml"
   push:
     branches:
@@ -37,6 +41,10 @@ on:
       - "metadata/release_date_corrections.csv"
       - "metadata/validate_release_date_corrections.py"
       - "metadata/test_validate_release_date_corrections.py"
+      - "local-models.csv"
+      - "metadata/local_models.py"
+      - "metadata/local_models_overrides.json"
+      - "metadata/test_local_models.py"
       - ".github/workflows/validate-metadata.yml"
 
 permissions:
@@ -95,3 +103,9 @@ jobs:
 
       - name: Test release-date correction validation rules
         run: python -m unittest metadata/test_validate_release_date_corrections.py
+
+      - name: Validate local model conversions
+        run: python metadata/local_models.py --validate
+
+      - name: Test local model conversion rules
+        run: python -m unittest metadata/test_local_models.py
