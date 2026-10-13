@@ -1,0 +1,96 @@
+name: Sync local model conversions
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly, Tuesday 06:17 UTC: the day after the Monday tracked-models sync,
+    # so newly merged models.csv parents pick up their local conversions.
+    - cron: "17 6 * * 2"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-local-models
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: python -m pip install --upgrade uv
+
+      - name: Regenerate local-models.csv from the Hugging Face Hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          cp local-models.csv "$RUNNER_TEMP/local-models.before.csv"
+          uv run metadata/local_models.py
+          python -m unittest metadata/test_local_models.py
+
+      - name: Summarize changes
+        id: changes
+        run: |
+          if git diff --quiet -- local-models.csv; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          python - "$RUNNER_TEMP/local-models.before.csv" local-models.csv > "$RUNNER_TEMP/local_models.md" <<'PYTHON'
+          import csv
+          import sys
+
+          def rows(path):
+              with open(path, newline="") as handle:
+                  return {row["modelId"]: row for row in csv.DictReader(handle)}
+
+          before, after = rows(sys.argv[1]), rows(sys.argv[2])
+          added = sorted(set(after) - set(before), key=str.casefold)
+          removed = sorted(set(before) - set(after), key=str.casefold)
+          changed = sorted(
+              (m for m in set(before) & set(after) if before[m] != after[m]), key=str.casefold
+          )
+          print("Weekly regeneration of `local-models.csv` (conversion-only local copies of")
+          print("`models.csv` checkpoints). Review additions for fine-tunes or pruned models")
+          print("that slipped through; add those to `exclude` in")
+          print("`metadata/local_models_overrides.json`.\n")
+          print(f"**{len(before):,} → {len(after):,} rows**: {len(added)} added, "
+                f"{len(removed)} removed, {len(changed)} changed.\n")
+          for title, ids, source in (("Added", added, after), ("Removed", removed, before),
+                                     ("Changed", changed, after)):
+              if not ids:
+                  continue
+              print(f"<details><summary>{title} ({len(ids)})</summary>\n")
+              print("| Repository | Parent | Formats |\n|---|---|---|")
+              for model_id in ids:
+                  row = source[model_id]
+                  print(f"| [{model_id}](https://huggingface.co/{model_id}) | "
+                        f"{row['parent_model_id']} | {row['local_formats']} |")
+              print("\n</details>\n")
+          PYTHON
+          cat "$RUNNER_TEMP/local_models.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create pull request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: bot/sync-local-models-${{ github.run_id }}
+          delete-branch: true
+          commit-message: Update local model conversions
+          title: Update local model conversions
+          body-path: ${{ runner.temp }}/local_models.md
+          reviewers: natolambert
+          add-paths: |
+            local-models.csv

@@ -36,9 +36,11 @@ at least 100K lifetime downloads. Lifetime downloads never decrease, so an admit
 row stays admitted.
 [`metadata/local_models_overrides.json`](metadata/local_models_overrides.json)
 holds reviewed exceptions: repository renames, conversions the Hub doesn't tag,
-and modified descendants that look like conversions. Regenerate the list with
-`uv run metadata/local_models.py` (it needs `HF_TOKEN` for rate limits); CI runs
-`python metadata/local_models.py --validate`.
+and modified descendants that look like conversions. The **Sync local model
+conversions** workflow regenerates the list every Tuesday, the day after the
+model sync, and opens a review PR listing added and removed repositories. To
+regenerate it by hand, run `uv run metadata/local_models.py` (it needs `HF_TOKEN`
+for rate limits); CI runs `python metadata/local_models.py --validate`.
 
 ### `arxiv_models.csv` (research-paper mentions)
 
