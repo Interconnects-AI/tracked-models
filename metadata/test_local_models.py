@@ -85,6 +85,17 @@ class LocalModelTests(unittest.TestCase):
                 self.assertIsNotNone(rejection(model, "Qwen/Qwen3-8B", {}))
                 self.assertEqual(rows_for(("Qwen/Qwen3-8B", model)), [])
 
+    def test_untagged_official_conversions_count_by_name(self) -> None:
+        untagged = {"id": "Qwen/Qwen3-8B-GGUF", "tags": ["gguf"], "downloads_all_time": 50}
+        qat = child("Qwen/Qwen3-8B-qat-q4_0-gguf", "Qwen/Qwen3-8B", tags=["gguf"], downloads=10)
+        self.assertEqual(
+            [row["modelId"] for row in rows_for(("Qwen/Qwen3-8B", untagged), ("Qwen/Qwen3-8B", qat))],
+            ["Qwen/Qwen3-8B-GGUF", "Qwen/Qwen3-8B-qat-q4_0-gguf"],
+        )
+        # A third party must still declare its base model.
+        stray = {"id": "someone/Qwen3-8B-GGUF", "tags": ["gguf"], "downloads_all_time": 10**7}
+        self.assertEqual(rejection(stray, "Qwen/Qwen3-8B", {}), "not_single_parent")
+
     def test_multi_parent_repositories_are_excluded(self) -> None:
         model = child("someone/Qwen3-8B-GGUF-2", "Qwen/Qwen3-8B", tags=["gguf", "base_model:Qwen/Qwen3-14B"])
         self.assertEqual(rejection(model, "Qwen/Qwen3-8B", {}), "not_single_parent")

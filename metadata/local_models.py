@@ -123,7 +123,7 @@ CONVERSION_WORDS = frozenset(FORMAT_ALIASES) | frozenset(
     int q k m s l xl xxs xs iq i ud bpw bit bits g gs group size imatrix imat static
     dynamic hf cpu gpu cuda npu xpu ov web v model models exl exllama auto runtime lm
     vlm bnb nl w a x actorder true false desc act sym asym triton directml webgpu mxfp
-    nvfp nf autoround round sharded""".split()
+    nvfp nf autoround round sharded qat""".split()
 )
 
 
@@ -221,7 +221,10 @@ def rejection(model: dict, parent_id: str, aliases: dict[str, str]) -> str | Non
     if not detect_formats(model):
         return "no_format_evidence"
     bases, relations = base_models(model, aliases)
-    if bases != {parent_id.casefold()}:
+    # Older first-party releases often declare no base model; their name and
+    # publisher still identify the parent (checked below).
+    official = model["id"].split("/")[0].casefold() == parent_id.split("/")[0].casefold()
+    if bases != {parent_id.casefold()} and not (official and not bases):
         return "not_single_parent"
     if relations - {"quantized"}:
         return "modified_relation"
@@ -351,7 +354,8 @@ def _to_dict(info) -> dict:
 
 
 def fetch_candidates(parents: list[str], overrides: dict) -> list[tuple[str, dict]]:
-    """List every quantized child of each parent (and its renamed aliases)."""
+    """Quantized children of each parent (and its renamed aliases), plus
+    first-party repositories named as conversions of a parent."""
     import logging
 
     from huggingface_hub import HfApi
@@ -365,10 +369,10 @@ def fetch_candidates(parents: list[str], overrides: dict) -> list[tuple[str, dic
     for alias, target in overrides["aliases"].items():
         if target.casefold() in canonical:
             names[canonical[target.casefold()]].append(alias)
-    def children(name: str) -> list:
+    def listing(**query) -> list:
         for attempt in range(4):
             try:
-                return list(api.list_models(filter=f"base_model:quantized:{name}", expand=expand))
+                return list(api.list_models(expand=expand, **query))
             except HfHubHTTPError as exc:
                 if exc.response is None or exc.response.status_code != 429 or attempt == 3:
                     raise
@@ -378,9 +382,22 @@ def fetch_candidates(parents: list[str], overrides: dict) -> list[tuple[str, dic
     candidates = []
     for index, parent in enumerate(parents, start=1):
         for name in names[parent]:
-            candidates.extend((parent, _to_dict(info)) for info in children(name))
+            listed = listing(filter=f"base_model:quantized:{name}")
+            candidates.extend((parent, _to_dict(info)) for info in listed)
         if index % 100 == 0:
             print(f"  {index}/{len(parents)} parents, {len(candidates)} children", file=sys.stderr)
+    # First-party conversions published before base_model tagging existed are
+    # found by name among each parent organization's own repositories.
+    by_org: dict[str, list[str]] = {}
+    for parent in parents:
+        by_org.setdefault(parent.split("/")[0], []).append(parent)
+    for org, org_parents in sorted(by_org.items()):
+        for info in listing(author=org):
+            if info.id.casefold() in canonical:
+                continue
+            matches = [p for p in org_parents if name_preserves_parent(info.id, p)]
+            if matches:
+                candidates.append((max(matches, key=len), _to_dict(info)))
     # Reviewed includes may lack the quantized tag; fetch them directly.
     for model_id in overrides["include"]:
         candidates.append(("", _to_dict(api.model_info(model_id, expand=expand))))

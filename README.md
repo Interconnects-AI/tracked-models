@@ -28,9 +28,10 @@ so totals are never double counted. This list does not change the primary or
 secondary lists.
 
 A repository is included when the Hugging Face Hub records it as a quantized child
-of exactly one `models.csv` parent, it has format evidence (library, tag,
-quantization config or file type), and its name keeps the parent's name with only
-conversion modifiers. It must also be published by the parent organization or have
+of exactly one `models.csv` parent (or, for first-party releases that predate Hub
+base-model metadata, it is published by the parent's organization), it has format
+evidence (library, tag, quantization config or file type), and its name keeps the
+parent's name with only conversion modifiers (including `qat`). It must also be published by the parent organization or have
 at least 100K lifetime downloads. Lifetime downloads never decrease, so an admitted
 row stays admitted.
 [`metadata/local_models_overrides.json`](metadata/local_models_overrides.json)
@@ -157,7 +158,7 @@ Models intentionally excluded from tracking despite high download counts:
 ## Changelog
 
 ### 2026-10-13
-- Added `local-models.csv`: 1,443 conversion-only local copies of `models.csv` checkpoints, with parent region attribution, plus its generator, validator and reviewed overrides.
+- Added `local-models.csv`: 1,606 conversion-only local copies of `models.csv` checkpoints, with parent region attribution, plus its generator, validator and reviewed overrides.
 
 ### 2026-09-28
 - Weekly Hugging Face sync
