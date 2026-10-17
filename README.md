@@ -16,6 +16,12 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 **Existing orgs with additional models**: allenai, arcee-ai, google, microsoft, Qwen
 
+### `logos/` (organization logos)
+
+One logo per model-building organization, named by Hugging Face organization slug
+(`logos/orgs/<slug>.<ext>`), for charts, dashboards, and talks. See
+[`logos/README.md`](logos/README.md) for sources, aliases, and how to add a logo.
+
 ### `local-models.csv` (local conversions)
 
 Conversion-only local copies (GGUF, MLX, AWQ, GPTQ, ONNX, ModelOpt/NVFP4, …) of
