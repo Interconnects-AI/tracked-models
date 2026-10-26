@@ -159,6 +159,12 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-10-26
+- Weekly Hugging Face sync
+- Added 11 models to `models.csv`: ibm-granite, inclusionAI, LiquidAI, nvidia
+- Added 3 models to `extra_models.csv`: nvidia
+- 86 candidates rejected, 11 left for manual review
+
 ### 2026-10-13
 - Added `local-models.csv`: 1,606 conversion-only local copies of `models.csv` checkpoints, with parent region attribution, plus its generator, validator and reviewed overrides.
 

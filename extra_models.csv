@@ -139,6 +139,9 @@ nvidia,Nemotron-Labs-Audex-30B-A3B,nvidia/Nemotron-Labs-Audex-30B-A3B
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-BF16
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-FP8
 nvidia,NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4,nvidia/NVIDIA-Nemotron-Labs-3-Elastic-30B-A3B-NVFP4
+nvidia,NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16,nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16
+nvidia,NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8,nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8
+nvidia,NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4,nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4
 nvidia,NVIDIA-Nemotron-Labs-Teacher-Chat,nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat
 nvidia,NVIDIA-Nemotron-Labs-Teacher-Competition-Coding,nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding
 nvidia,NVIDIA-Nemotron-Labs-Teacher-General-Reasoning,nvidia/NVIDIA-Nemotron-Labs-Teacher-General-Reasoning
