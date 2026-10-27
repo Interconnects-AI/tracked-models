@@ -1593,3 +1593,19 @@ zai-org/webrl-glm-4-9b,9,,false,Rounded official reported total; checkpoint line
 zai-org/webrl-llama-3.1-70b,70,,false,Rounded official reported total; checkpoint lineage reviewed individually.
 zai-org/webrl-llama-3.1-8b,8,,false,Rounded official reported total; checkpoint lineage reviewed individually.
 zai-org/WebVIA-Agent,9,,false,Rounded full VLM total; official unchanged training lineage reviewed.
+LiquidAI/LFM2.5-24B-A2B,24,2.45,true,Official reported total and active count.
+LiquidAI/LFM2.5-24B-A2B-Base,24,2.45,true,Official reported total and active count.
+LiquidAI/LFM2.5-24B-A2B-FP8,24,2.45,true,Official reported total and active count of the LFM2.5-24B-A2B checkpoint this quantizes.
+ibm-granite/granite-switch-4.1-30b,30,,,Rounded official size of the granite-4.1-30b base model; the embedded 470M speech encoder and aLoRA adapters are excluded.
+ibm-granite/granite-switch-4.1-8b,8,,,Rounded official size of the granite-4.1-8b base model; the embedded 470M speech encoder and aLoRA adapters are excluded.
+nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB,74,9,true,Official reported total and active count.
+nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr,1.113,,,"Speculative-decoding draft model; official draft count excludes shared target embeddings and the LM head. Target model size is not used."
+nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16,74,9,true,Official reported total and active count.
+nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16,120,12,true,Official reported total and active count.
+nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16,120,12,true,Official reported total and active count.
+nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4,120,12,true,Official reported total and active count.
+nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr,1.13,,,"Speculative-decoding draft model; official trained-parameter count, excluding a 0.54B NVFP4 copy of the target's LM head. Target model size is not used."
+LiquidAI/LFM2.5-24B-A2B-DSpark,0.3277,,false,Speculative-decoding draft model; target model size is not used.
+inclusionAI/Ling-3.0-flash-Sante,124,5.1,true,Official reported total and active count.
+inclusionAI/Ling-3.0-flash-UBTree,0.482,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (481,983,774) of the UBTree speculative-decoding draft model. Target model size is not used."
+inclusionAI/Ling-3.0-tiny-UBTree,0.183,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (183,127,326) of the UBTree speculative-decoding draft model. Target model size is not used."

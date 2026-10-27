@@ -590,6 +590,8 @@ inclusionAI,Ling-3.0-flash-Fin-int4,inclusionAI/Ling-3.0-flash-Fin-int4
 inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
+inclusionAI,Ling-3.0-flash-Sante,inclusionAI/Ling-3.0-flash-Sante
+inclusionAI,Ling-3.0-flash-UBTree,inclusionAI/Ling-3.0-flash-UBTree
 inclusionAI,Ling-3.0-flash-VL,inclusionAI/Ling-3.0-flash-VL
 inclusionAI,Ling-3.0-flash-VL-fp4,inclusionAI/Ling-3.0-flash-VL-fp4
 inclusionAI,Ling-3.0-flash-VL-fp8,inclusionAI/Ling-3.0-flash-VL-fp8
@@ -600,6 +602,7 @@ inclusionAI,Ling-3.0-tiny-base-30T,inclusionAI/Ling-3.0-tiny-base-30T
 inclusionAI,Ling-3.0-tiny-base-midtrain,inclusionAI/Ling-3.0-tiny-base-midtrain
 inclusionAI,Ling-3.0-tiny-fp8,inclusionAI/Ling-3.0-tiny-fp8
 inclusionAI,Ling-3.0-tiny-int4,inclusionAI/Ling-3.0-tiny-int4
+inclusionAI,Ling-3.0-tiny-UBTree,inclusionAI/Ling-3.0-tiny-UBTree
 inclusionAI,Ling-Coder-lite,inclusionAI/Ling-Coder-lite
 inclusionAI,Ling-Coder-lite-base,inclusionAI/Ling-Coder-lite-base
 inclusionAI,Ling-flash-2.0,inclusionAI/Ling-flash-2.0
@@ -771,6 +774,7 @@ LiquidAI,LFM2.5-2.6B-DSpark,LiquidAI/LFM2.5-2.6B-DSpark
 LiquidAI,LFM2.5-230M,LiquidAI/LFM2.5-230M
 LiquidAI,LFM2.5-24B-A2B,LiquidAI/LFM2.5-24B-A2B
 LiquidAI,LFM2.5-24B-A2B-Base,LiquidAI/LFM2.5-24B-A2B-Base
+LiquidAI,LFM2.5-24B-A2B-DSpark,LiquidAI/LFM2.5-24B-A2B-DSpark
 LiquidAI,LFM2.5-24B-A2B-FP8,LiquidAI/LFM2.5-24B-A2B-FP8
 LiquidAI,LFM2.5-8B-A1B-DSpark,LiquidAI/LFM2.5-8B-A1B-DSpark
 LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M

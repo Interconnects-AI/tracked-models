@@ -1606,6 +1606,22 @@ MANUAL_SIZES = {
     'zai-org/webrl-llama-3.1-70b': 70,
     'zai-org/webrl-llama-3.1-8b': 8,
     'zai-org/WebVIA-Agent': 9,
+    'LiquidAI/LFM2.5-24B-A2B': 24,
+    'LiquidAI/LFM2.5-24B-A2B-Base': 24,
+    'LiquidAI/LFM2.5-24B-A2B-FP8': 24,
+    'ibm-granite/granite-switch-4.1-30b': 30,
+    'ibm-granite/granite-switch-4.1-8b': 8,
+    'nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB': 74,
+    'nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr': 1.113,
+    'nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16': 74,
+    'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16': 120,
+    'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16': 120,
+    'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4': 120,
+    'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr': 1.13,
+    'LiquidAI/LFM2.5-24B-A2B-DSpark': 0.3277,
+    'inclusionAI/Ling-3.0-flash-Sante': 124,
+    'inclusionAI/Ling-3.0-flash-UBTree': 0.482,
+    'inclusionAI/Ling-3.0-tiny-UBTree': 0.183,
 }
 # END GENERATED MANUAL_SIZES
 
