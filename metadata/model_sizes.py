@@ -1618,6 +1618,10 @@ MANUAL_SIZES = {
     'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16': 120,
     'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4': 120,
     'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr': 1.13,
+    'LiquidAI/LFM2.5-24B-A2B-DSpark': 0.3277,
+    'inclusionAI/Ling-3.0-flash-Sante': 124,
+    'inclusionAI/Ling-3.0-flash-UBTree': 0.482,
+    'inclusionAI/Ling-3.0-tiny-UBTree': 0.183,
 }
 # END GENERATED MANUAL_SIZES
 

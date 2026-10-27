@@ -1605,3 +1605,7 @@ nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-Base-BF16,120,12,true,Official rep
 nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16,120,12,true,Official reported total and active count.
 nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4,120,12,true,Official reported total and active count.
 nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr,1.13,,,"Speculative-decoding draft model; official trained-parameter count, excluding a 0.54B NVFP4 copy of the target's LM head. Target model size is not used."
+LiquidAI/LFM2.5-24B-A2B-DSpark,0.3277,,false,Speculative-decoding draft model; target model size is not used.
+inclusionAI/Ling-3.0-flash-Sante,124,5.1,true,Official reported total and active count.
+inclusionAI/Ling-3.0-flash-UBTree,0.482,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (481,983,774) of the UBTree speculative-decoding draft model. Target model size is not used."
+inclusionAI/Ling-3.0-tiny-UBTree,0.183,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (183,127,326) of the UBTree speculative-decoding draft model. Target model size is not used."
