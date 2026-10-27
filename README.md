@@ -159,6 +159,9 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-10-27
+- Added 17 manually approved models to `models.csv`: deepseek-ai, h2oai, inclusionAI, LiquidAI, microsoft, MiniMaxAI, openbmb, rednote-hilab, tencent
+
 ### 2026-10-26
 - Weekly Hugging Face sync
 - Added 4 models to `models.csv`: inclusionAI, LiquidAI (the rest of this window's matches landed in the 2026-10-19 sync)

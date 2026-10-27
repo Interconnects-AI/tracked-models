@@ -1622,6 +1622,23 @@ MANUAL_SIZES = {
     'inclusionAI/Ling-3.0-flash-Sante': 124,
     'inclusionAI/Ling-3.0-flash-UBTree': 0.482,
     'inclusionAI/Ling-3.0-tiny-UBTree': 0.183,
+    'deepseek-ai/DeepSeek-V4.1-Flash-1017': 552,
+    'inclusionAI/Ling-3.1-flash': 560,
+    'h2oai/h2o-lightning-31b': 31,
+    'MiniMaxAI/MiniMax-M3.1-Flash': 428,
+    'tencent/Hy-Memory-30B-A3B': 30,
+    'tencent/Hy-Memory-30B-A3B-FP8': 30,
+    'tencent/WeVisOne-VL-2B': 2,
+    'tencent/WeVisOne-VL-4B': 4,
+    'microsoft/Sentiment-Analysis-7B': 7,
+    'microsoft/UserRepGen-4B': 4,
+    'LiquidAI/d1-omni-600M': 0.587,
+    'openbmb/MiniCPM-V-4.7-1B': 1.55,
+    'openbmb/MiniCPM-V-4.7-1B-int4': 1.55,
+    'openbmb/MiniCPM-V-4.7-35B-A3B': 35.2,
+    'openbmb/MiniCPM-V-4.7-35B-A3B-FP8': 35.2,
+    'openbmb/MiniCPM-V-4.7-35B-A3B-int4': 35.2,
+    'rednote-hilab/dots.llm1.base': 142,
 }
 # END GENERATED MANUAL_SIZES
 

@@ -1609,3 +1609,20 @@ LiquidAI/LFM2.5-24B-A2B-DSpark,0.3277,,false,Speculative-decoding draft model; t
 inclusionAI/Ling-3.0-flash-Sante,124,5.1,true,Official reported total and active count.
 inclusionAI/Ling-3.0-flash-UBTree,0.482,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (481,983,774) of the UBTree speculative-decoding draft model. Target model size is not used."
 inclusionAI/Ling-3.0-tiny-UBTree,0.183,,,"Approximate: the card gives no parameter count, so this is the published safetensors tensor count (183,127,326) of the UBTree speculative-decoding draft model. Target model size is not used."
+deepseek-ai/DeepSeek-V4.1-Flash-1017,552,,true,Reported backbone total; excludes 196B conditional memory and auxiliary vision/draft components. Active 8B prefill/16B decode; architecture config matches DeepSeek-V4.1-Flash.
+inclusionAI/Ling-3.1-flash,560,25,true,Official reported total and active count.
+h2oai/h2o-lightning-31b,31,,false,Rounded publisher-reported size of the Gemma 4 31B fine-tune.
+MiniMaxAI/MiniMax-M3.1-Flash,428,23,true,Approximately 428B total and 23B active as reported in the official model card.
+tencent/Hy-Memory-30B-A3B,30,3,true,Rounded publisher-reported total and approximate active count.
+tencent/Hy-Memory-30B-A3B-FP8,30,3,true,Official FP8 quantization of Hy-Memory-30B-A3B; rounded reported total and approximate active count.
+tencent/WeVisOne-VL-2B,2,,false,Rounded reported Qwen3-VL language-backbone scale; excludes the vision encoder and 9.6M pixel decoder.
+tencent/WeVisOne-VL-4B,4,,false,Rounded reported Qwen3-VL language-backbone scale; excludes the vision encoder and 9.6M pixel decoder.
+microsoft/Sentiment-Analysis-7B,7,,false,Rounded official reported total for the Mistral-7B-Instruct-v0.2 fine-tune.
+microsoft/UserRepGen-4B,4,,,Rounded official reported language-model scale of the Qwen3.5-4B fine-tune; excludes the vision encoder.
+LiquidAI/d1-omni-600M,0.587,,,Official total includes the 381M trunk and decision head plus 94M vision and 112M audio encoders.
+openbmb/MiniCPM-V-4.7-1B,1.55,,false,Official reported multimodal total; separately released DSpark draft heads excluded.
+openbmb/MiniCPM-V-4.7-1B-int4,1.55,,false,Official INT4 quantization of MiniCPM-V-4.7-1B; reported multimodal total excludes separately released DSpark draft heads.
+openbmb/MiniCPM-V-4.7-35B-A3B,35.2,3.5,true,Official reported multimodal total and approximate active count; separately released DSpark draft heads excluded.
+openbmb/MiniCPM-V-4.7-35B-A3B-FP8,35.2,3.5,true,Official FP8 quantization of MiniCPM-V-4.7-35B-A3B; reported multimodal total and approximate active count exclude separately released DSpark draft heads.
+openbmb/MiniCPM-V-4.7-35B-A3B-int4,35.2,3.5,true,Official INT4 quantization of MiniCPM-V-4.7-35B-A3B; reported multimodal total and approximate active count exclude separately released DSpark draft heads.
+rednote-hilab/dots.llm1.base,142,14,true,Official reported total and active count for the base checkpoint.
