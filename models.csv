@@ -288,6 +288,7 @@ deepseek-ai,DeepSeek-V4-Pro-0813,deepseek-ai/DeepSeek-V4-Pro-0813
 deepseek-ai,DeepSeek-V4-Pro-Base,deepseek-ai/DeepSeek-V4-Pro-Base
 deepseek-ai,DeepSeek-V4-Pro-DSpark,deepseek-ai/DeepSeek-V4-Pro-DSpark
 deepseek-ai,DeepSeek-V4.1-Flash,deepseek-ai/DeepSeek-V4.1-Flash
+deepseek-ai,DeepSeek-V4.1-Flash-1017,deepseek-ai/DeepSeek-V4.1-Flash-1017
 deepseek-ai,deepseek-vl-1.3b-base,deepseek-ai/deepseek-vl-1.3b-base
 deepseek-ai,deepseek-vl-1.3b-chat,deepseek-ai/deepseek-vl-1.3b-chat
 deepseek-ai,deepseek-vl-7b-base,deepseek-ai/deepseek-vl-7b-base
@@ -299,7 +300,6 @@ deepseek-ai,Janus-1.3B,deepseek-ai/Janus-1.3B
 deepseek-ai,Janus-Pro-1B,deepseek-ai/Janus-Pro-1B
 deepseek-ai,Janus-Pro-7B,deepseek-ai/Janus-Pro-7B
 deepseek-ai,JanusFlow-1.3B,deepseek-ai/JanusFlow-1.3B
-deepseek-ai,DeepSeek-V4.1-Flash-1017,deepseek-ai/DeepSeek-V4.1-Flash-1017
 dots-studio,dots3-note-prev,dots-studio/dots3-note-prev
 EleutherAI,llemma_7b,EleutherAI/llemma_7b
 EleutherAI,pythia-1.4b,EleutherAI/pythia-1.4b
@@ -443,6 +443,7 @@ google,t5gemma-xl-xl-ul2,google/t5gemma-xl-xl-ul2
 google,t5gemma-xl-xl-ul2-it,google/t5gemma-xl-xl-ul2-it
 google,translategemma-12b-it,google/translategemma-12b-it
 google,vaultgemma-1b,google/vaultgemma-1b
+h2oai,h2o-lightning-31b,h2oai/h2o-lightning-31b
 HuggingFaceTB,FineMath-Llama-3B,HuggingFaceTB/FineMath-Llama-3B
 HuggingFaceTB,nanowhale-100m,HuggingFaceTB/nanowhale-100m
 HuggingFaceTB,nanowhale-100m-base,HuggingFaceTB/nanowhale-100m-base
@@ -592,6 +593,7 @@ inclusionAI,Ling-3.0-flash-fp4,inclusionAI/Ling-3.0-flash-fp4
 inclusionAI,Ling-3.0-flash-fp8,inclusionAI/Ling-3.0-flash-fp8
 inclusionAI,Ling-3.0-flash-int4,inclusionAI/Ling-3.0-flash-int4
 inclusionAI,Ling-3.0-flash-Sante,inclusionAI/Ling-3.0-flash-Sante
+inclusionAI,Ling-3.0-flash-Sante-fp8,inclusionAI/Ling-3.0-flash-Sante-fp8
 inclusionAI,Ling-3.0-flash-UBTree,inclusionAI/Ling-3.0-flash-UBTree
 inclusionAI,Ling-3.0-flash-VL,inclusionAI/Ling-3.0-flash-VL
 inclusionAI,Ling-3.0-flash-VL-fp4,inclusionAI/Ling-3.0-flash-VL-fp4
@@ -604,6 +606,7 @@ inclusionAI,Ling-3.0-tiny-base-midtrain,inclusionAI/Ling-3.0-tiny-base-midtrain
 inclusionAI,Ling-3.0-tiny-fp8,inclusionAI/Ling-3.0-tiny-fp8
 inclusionAI,Ling-3.0-tiny-int4,inclusionAI/Ling-3.0-tiny-int4
 inclusionAI,Ling-3.0-tiny-UBTree,inclusionAI/Ling-3.0-tiny-UBTree
+inclusionAI,Ling-3.1-flash,inclusionAI/Ling-3.1-flash
 inclusionAI,Ling-Coder-lite,inclusionAI/Ling-Coder-lite
 inclusionAI,Ling-Coder-lite-base,inclusionAI/Ling-Coder-lite-base
 inclusionAI,Ling-flash-2.0,inclusionAI/Ling-flash-2.0
@@ -676,7 +679,6 @@ inclusionAI,ZwZ-2B,inclusionAI/ZwZ-2B
 inclusionAI,ZwZ-4B,inclusionAI/ZwZ-4B
 inclusionAI,ZwZ-7B,inclusionAI/ZwZ-7B
 inclusionAI,ZwZ-8B,inclusionAI/ZwZ-8B
-inclusionAI,Ling-3.1-flash,inclusionAI/Ling-3.1-flash
 internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
@@ -769,6 +771,7 @@ internlm,POLAR-7B,internlm/POLAR-7B
 internlm,POLAR-7B-Base,internlm/POLAR-7B-Base
 internlm,SWE-Fixer-Editor-72B,internlm/SWE-Fixer-Editor-72B
 internlm,SWE-Fixer-Retriever-7B,internlm/SWE-Fixer-Retriever-7B
+LiquidAI,d1-omni-600M,LiquidAI/d1-omni-600M
 LiquidAI,LFM2.5-1.2B-Instruct-DSpark,LiquidAI/LFM2.5-1.2B-Instruct-DSpark
 LiquidAI,LFM2.5-2.6B,LiquidAI/LFM2.5-2.6B
 LiquidAI,LFM2.5-2.6B-Base,LiquidAI/LFM2.5-2.6B-Base
@@ -783,7 +786,6 @@ LiquidAI,LFM2.5-Encoder-230M,LiquidAI/LFM2.5-Encoder-230M
 LiquidAI,LFM2.5-Encoder-350M,LiquidAI/LFM2.5-Encoder-350M
 LiquidAI,LFM2.5-VL-3B,LiquidAI/LFM2.5-VL-3B
 LiquidAI,LFM2.5-VL-3B-DSpark,LiquidAI/LFM2.5-VL-3B-DSpark
-LiquidAI,d1-omni-600M,LiquidAI/d1-omni-600M
 llava-hf,bakLlava-v1-hf,llava-hf/bakLlava-v1-hf
 llava-hf,llama3-llava-next-8b-hf,llava-hf/llama3-llava-next-8b-hf
 llava-hf,llava-1.5-13b-hf,llava-hf/llava-1.5-13b-hf
@@ -894,10 +896,10 @@ MiniMaxAI,MiniMax-M2.5,MiniMaxAI/MiniMax-M2.5
 MiniMaxAI,MiniMax-M2.7,MiniMaxAI/MiniMax-M2.7
 MiniMaxAI,MiniMax-M3,MiniMaxAI/MiniMax-M3
 MiniMaxAI,MiniMax-M3-MXFP8,MiniMaxAI/MiniMax-M3-MXFP8
+MiniMaxAI,MiniMax-M3.1-Flash,MiniMaxAI/MiniMax-M3.1-Flash
 MiniMaxAI,MiniMax-Text-01,MiniMaxAI/MiniMax-Text-01
 MiniMaxAI,MiniMax-Text-01-hf,MiniMaxAI/MiniMax-Text-01-hf
 MiniMaxAI,MiniMax-VL-01,MiniMaxAI/MiniMax-VL-01
-MiniMaxAI,MiniMax-M3.1-Flash,MiniMaxAI/MiniMax-M3.1-Flash
 mistral-community,Codestral-22B-v0.1,mistral-community/Codestral-22B-v0.1
 mistral-community,Mistral-7B-Instruct-v0.3,mistral-community/Mistral-7B-Instruct-v0.3
 mistral-community,Mistral-7B-v0.2,mistral-community/Mistral-7B-v0.2
@@ -1207,6 +1209,11 @@ openbmb,MiniCPM-V-4,openbmb/MiniCPM-V-4
 openbmb,MiniCPM-V-4-int4,openbmb/MiniCPM-V-4-int4
 openbmb,MiniCPM-V-4.6,openbmb/MiniCPM-V-4.6
 openbmb,MiniCPM-V-4.6-Thinking,openbmb/MiniCPM-V-4.6-Thinking
+openbmb,MiniCPM-V-4.7-1B,openbmb/MiniCPM-V-4.7-1B
+openbmb,MiniCPM-V-4.7-1B-int4,openbmb/MiniCPM-V-4.7-1B-int4
+openbmb,MiniCPM-V-4.7-35B-A3B,openbmb/MiniCPM-V-4.7-35B-A3B
+openbmb,MiniCPM-V-4.7-35B-A3B-FP8,openbmb/MiniCPM-V-4.7-35B-A3B-FP8
+openbmb,MiniCPM-V-4.7-35B-A3B-int4,openbmb/MiniCPM-V-4.7-35B-A3B-int4
 openbmb,MiniCPM-V-4_5,openbmb/MiniCPM-V-4_5
 openbmb,MiniCPM-V-4_5-int4,openbmb/MiniCPM-V-4_5-int4
 openbmb,MiniCPM3-4B,openbmb/MiniCPM3-4B
@@ -1248,11 +1255,6 @@ openbmb,VisCPM-Chat,openbmb/VisCPM-Chat
 openbmb,VisCPM-Paint,openbmb/VisCPM-Paint
 openbmb,VisRAG-Ret,openbmb/VisRAG-Ret
 openbmb,VoxCPM-0.5B,openbmb/VoxCPM-0.5B
-openbmb,MiniCPM-V-4.7-1B,openbmb/MiniCPM-V-4.7-1B
-openbmb,MiniCPM-V-4.7-1B-int4,openbmb/MiniCPM-V-4.7-1B-int4
-openbmb,MiniCPM-V-4.7-35B-A3B,openbmb/MiniCPM-V-4.7-35B-A3B
-openbmb,MiniCPM-V-4.7-35B-A3B-FP8,openbmb/MiniCPM-V-4.7-35B-A3B-FP8
-openbmb,MiniCPM-V-4.7-35B-A3B-int4,openbmb/MiniCPM-V-4.7-35B-A3B-int4
 OpenGVLab,InternVL-Chat-V1-5,OpenGVLab/InternVL-Chat-V1-5
 OpenGVLab,InternVL2-1B,OpenGVLab/InternVL2-1B
 OpenGVLab,InternVL2-26B,OpenGVLab/InternVL2-26B
@@ -1522,10 +1524,10 @@ Qwen,Qwen3.8-Flash-Next,Qwen/Qwen3.8-Flash-Next
 Qwen,Qwen3.8-Flash-Next-FP8,Qwen/Qwen3.8-Flash-Next-FP8
 Qwen,QwQ-32B,Qwen/QwQ-32B
 Qwen,QwQ-32B-Preview,Qwen/QwQ-32B-Preview
+rednote-hilab,dots.llm1.base,rednote-hilab/dots.llm1.base
 rednote-hilab,dots.mocr,rednote-hilab/dots.mocr
 rednote-hilab,dots.mocr-svg,rednote-hilab/dots.mocr-svg
 rednote-hilab,dots.ocr,rednote-hilab/dots.ocr
-rednote-hilab,dots.llm1.base,rednote-hilab/dots.llm1.base
 Skywork,Matrix-Game-3.0,Skywork/Matrix-Game-3.0
 Skywork,R1V4,Skywork/R1V4
 Skywork,Skywork-13B-base,Skywork/Skywork-13B-base
@@ -1584,6 +1586,8 @@ tencent,Hunyuan-MT-Chimera-7B,tencent/Hunyuan-MT-Chimera-7B
 tencent,Hunyuan-MT-Chimera-7B-fp8,tencent/Hunyuan-MT-Chimera-7B-fp8
 tencent,Hunyuan3D-Omni,tencent/Hunyuan3D-Omni
 tencent,HunyuanOCR,tencent/HunyuanOCR
+tencent,Hy-Memory-30B-A3B,tencent/Hy-Memory-30B-A3B
+tencent,Hy-Memory-30B-A3B-FP8,tencent/Hy-Memory-30B-A3B-FP8
 tencent,HY-MT1.5-1.8B,tencent/HY-MT1.5-1.8B
 tencent,HY-MT1.5-1.8B-FP8,tencent/HY-MT1.5-1.8B-FP8
 tencent,HY-MT1.5-7B,tencent/HY-MT1.5-7B
@@ -1604,12 +1608,10 @@ tencent,WeDLM-7B-Base,tencent/WeDLM-7B-Base
 tencent,WeDLM-7B-Instruct,tencent/WeDLM-7B-Instruct
 tencent,WeDLM-8B-Base,tencent/WeDLM-8B-Base
 tencent,WeDLM-8B-Instruct,tencent/WeDLM-8B-Instruct
-tencent,Youtu-LLM-2B,tencent/Youtu-LLM-2B
-tencent,Youtu-LLM-2B-Base,tencent/Youtu-LLM-2B-Base
-tencent,Hy-Memory-30B-A3B,tencent/Hy-Memory-30B-A3B
-tencent,Hy-Memory-30B-A3B-FP8,tencent/Hy-Memory-30B-A3B-FP8
 tencent,WeVisOne-VL-2B,tencent/WeVisOne-VL-2B
 tencent,WeVisOne-VL-4B,tencent/WeVisOne-VL-4B
+tencent,Youtu-LLM-2B,tencent/Youtu-LLM-2B
+tencent,Youtu-LLM-2B-Base,tencent/Youtu-LLM-2B-Base
 thinkingmachines,Inkling,thinkingmachines/Inkling
 thinkingmachines,Inkling-Small,thinkingmachines/Inkling-Small
 THUDM,agentlm-13b,THUDM/agentlm-13b
@@ -1871,4 +1873,3 @@ zai-org,webrl-llama-3.1-8b,zai-org/webrl-llama-3.1-8b
 zai-org,webrl-orm-llama-3.1-8b,zai-org/webrl-orm-llama-3.1-8b
 zai-org,WebVIA-Agent,zai-org/WebVIA-Agent
 Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
-h2oai,h2o-lightning-31b,h2oai/h2o-lightning-31b
