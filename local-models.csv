@@ -25,6 +25,7 @@ antirez,qwen3.8-flash-next-gguf,antirez/qwen3.8-flash-next-gguf,Qwen/Qwen3.8-Fla
 apolo13x,Qwen3.5-27B-NVFP4,apolo13x/Qwen3.5-27B-NVFP4,Qwen/Qwen3.5-27B,Qwen,china,compressed-tensors,2026-02-26
 apolo13x,Qwen3.5-35B-A3B-NVFP4,apolo13x/Qwen3.5-35B-A3B-NVFP4,Qwen/Qwen3.5-35B-A3B,Qwen,china,compressed-tensors,2026-02-25
 apolo13x,Qwen3.5-9B-NVFP4,apolo13x/Qwen3.5-9B-NVFP4,Qwen/Qwen3.5-9B,Qwen,china,compressed-tensors,2026-03-03
+Ar4ikov,Qwen3.8-27B-AWQ-W4A16-ASYM,Ar4ikov/Qwen3.8-27B-AWQ-W4A16-ASYM,Qwen/Qwen3.8-27B,Qwen,china,awq;compressed-tensors,2026-08-15
 arcee-ai,Trinity-Large-Preview-GGUF,arcee-ai/Trinity-Large-Preview-GGUF,arcee-ai/Trinity-Large-Preview,arcee-ai,us,gguf,2026-01-28
 arcee-ai,Trinity-Large-Thinking-GGUF,arcee-ai/Trinity-Large-Thinking-GGUF,arcee-ai/Trinity-Large-Thinking,arcee-ai,us,gguf,2026-03-31
 arcee-ai,Trinity-Nano-Preview-MLX-5bit,arcee-ai/Trinity-Nano-Preview-MLX-5bit,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,mlx,2026-01-19
@@ -84,6 +85,7 @@ bartowski,mistralai_Devstral-Small-2-24B-Instruct-2512-GGUF,bartowski/mistralai_
 bartowski,mistralai_Ministral-3-3B-Instruct-2512-GGUF,bartowski/mistralai_Ministral-3-3B-Instruct-2512-GGUF,mistralai/Ministral-3-3B-Instruct-2512-BF16,mistralai,eu,gguf,2025-12-02
 bartowski,mistralai_Mistral-Small-3.1-24B-Instruct-2503-GGUF,bartowski/mistralai_Mistral-Small-3.1-24B-Instruct-2503-GGUF,mistralai/Mistral-Small-3.1-24B-Instruct-2503,mistralai,eu,gguf,2025-03-18
 bartowski,mistralai_Mistral-Small-3.2-24B-Instruct-2506-GGUF,bartowski/mistralai_Mistral-Small-3.2-24B-Instruct-2506-GGUF,mistralai/Mistral-Small-3.2-24B-Instruct-2506,mistralai,eu,gguf,2025-06-20
+bartowski,moonshotai_Kimi-Linear-48B-A3B-Instruct-GGUF,bartowski/moonshotai_Kimi-Linear-48B-A3B-Instruct-GGUF,moonshotai/Kimi-Linear-48B-A3B-Instruct,moonshotai,china,gguf,2026-02-06
 bartowski,Muse-Glimmer-30B-GGUF,bartowski/Muse-Glimmer-30B-GGUF,meta-models/Muse-Glimmer-30B,meta-models,us,gguf,2026-08-10
 bartowski,Nemotron-Mini-4B-Instruct-GGUF,bartowski/Nemotron-Mini-4B-Instruct-GGUF,nvidia/Nemotron-Mini-4B-Instruct,nvidia,us,gguf,2024-09-13
 bartowski,NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF,bartowski/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,nvidia,us,gguf,2026-08-11
@@ -338,6 +340,8 @@ ibm-granite,granite-4.1-3b-GGUF,ibm-granite/granite-4.1-3b-GGUF,ibm-granite/gran
 ibm-granite,granite-4.1-8b-GGUF,ibm-granite/granite-4.1-8b-GGUF,ibm-granite/granite-4.1-8b,ibm-granite,us,gguf,2026-04-16
 ibm-granite,granite-8b-code-base-4k-GGUF,ibm-granite/granite-8b-code-base-4k-GGUF,ibm-granite/granite-8b-code-base-4k,ibm-granite,us,gguf,2024-05-30
 ibm-granite,granite-docling-258M-GGUF,ibm-granite/granite-docling-258M-GGUF,ibm-granite/granite-docling-258M,ibm-granite,us,gguf,2025-10-23
+ibm-granite,granite-switch-4.1-30b-GGUF,ibm-granite/granite-switch-4.1-30b-GGUF,ibm-granite/granite-switch-4.1-30b,ibm-granite,us,gguf,2026-10-22
+ibm-granite,granite-switch-4.1-8b-GGUF,ibm-granite/granite-switch-4.1-8b-GGUF,ibm-granite/granite-switch-4.1-8b,ibm-granite,us,gguf,2026-10-22
 ibm-granite,granite-vision-3.3-2b-GGUF,ibm-granite/granite-vision-3.3-2b-GGUF,ibm-granite/granite-vision-3.3-2b,ibm-granite,us,gguf,2025-08-12
 ibm-granite,granite-vision-4.1-4b-GGUF,ibm-granite/granite-vision-4.1-4b-GGUF,ibm-granite/granite-vision-4.1-4b,ibm-granite,us,gguf,2026-06-18
 ibnzterrell,Meta-Llama-3.3-70B-Instruct-AWQ-INT4,ibnzterrell/Meta-Llama-3.3-70B-Instruct-AWQ-INT4,meta-llama/Llama-3.3-70B-Instruct,meta-llama,us,awq,2024-12-07
@@ -355,6 +359,7 @@ Inferact,Qwen3.8-Flash-Next-NVFP4,Inferact/Qwen3.8-Flash-Next-NVFP4,Qwen/Qwen3.8
 Intel,DeepSeek-R1-0528-Qwen3-8B-int4-AutoRound,Intel/DeepSeek-R1-0528-Qwen3-8B-int4-AutoRound,deepseek-ai/DeepSeek-R1-0528-Qwen3-8B,deepseek-ai,china,auto-round,2025-06-01
 Intel,gemma-4-26B-A4B-it-int4-AutoRound,Intel/gemma-4-26B-A4B-it-int4-AutoRound,google/gemma-4-26B-A4B-it,google,us,auto-round,2026-04-03
 Intel,gemma-4-31B-it-int4-AutoRound,Intel/gemma-4-31B-it-int4-AutoRound,google/gemma-4-31B-it,google,us,auto-round,2026-04-03
+Intel,Qwen3-VL-30B-A3B-Instruct-int4-AutoRound,Intel/Qwen3-VL-30B-A3B-Instruct-int4-AutoRound,Qwen/Qwen3-VL-30B-A3B-Instruct,Qwen,china,auto-round,2026-01-06
 Intel,Qwen3.5-122B-A10B-int4-AutoRound,Intel/Qwen3.5-122B-A10B-int4-AutoRound,Qwen/Qwen3.5-122B-A10B,Qwen,china,auto-round,2026-02-27
 Intel,Qwen3.5-27B-int4-AutoRound,Intel/Qwen3.5-27B-int4-AutoRound,Qwen/Qwen3.5-27B,Qwen,china,auto-round,2026-03-05
 Intel,Qwen3.5-397B-A17B-int4-AutoRound,Intel/Qwen3.5-397B-A17B-int4-AutoRound,Qwen/Qwen3.5-397B-A17B,Qwen,china,auto-round,2026-02-27
@@ -371,6 +376,7 @@ internlm,internlm2_5-7b-chat-gguf,internlm/internlm2_5-7b-chat-gguf,internlm/int
 internlm,internlm3-8b-instruct-awq,internlm/internlm3-8b-instruct-awq,internlm/internlm3-8b-instruct,internlm,china,awq,2025-01-14
 internlm,internlm3-8b-instruct-gguf,internlm/internlm3-8b-instruct-gguf,internlm/internlm3-8b-instruct,internlm,china,gguf,2025-01-14
 iqbalamo93,Phi-4-mini-instruct-GPTQ-8bit,iqbalamo93/Phi-4-mini-instruct-GPTQ-8bit,microsoft/Phi-4-mini-instruct,microsoft,us,gptq,2025-05-18
+ISTA-DASLab,DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF,ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF,deepseek-ai/DeepSeek-V4.1-Flash-1017,deepseek-ai,china,gguf,2026-10-23
 ISTA-DASLab,Qwen3.8-27B-GSQ-RCO-GGUF,ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF,Qwen/Qwen3.8-27B,Qwen,china,gguf,2026-08-28
 ISTA-DASLab,Qwen3.8-Flash-Next-GSQ-RCO-GGUF,ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF,Qwen/Qwen3.8-Flash-Next,Qwen,china,gguf,2026-09-07
 JamAndTeaStudios,DeepSeek-R1-Distill-Qwen-32B-FP8-Dynamic,JamAndTeaStudios/DeepSeek-R1-Distill-Qwen-32B-FP8-Dynamic,deepseek-ai/DeepSeek-R1-Distill-Qwen-32B,deepseek-ai,china,compressed-tensors,2025-01-27
@@ -394,6 +400,8 @@ legraphista,gemma-2-9b-it-IMat-GGUF,legraphista/gemma-2-9b-it-IMat-GGUF,google/g
 legraphista,Qwen2-1.5B-Instruct-IMat-GGUF,legraphista/Qwen2-1.5B-Instruct-IMat-GGUF,Qwen/Qwen2-1.5B-Instruct,Qwen,china,gguf,2024-06-06
 leon-se,gemma-3-27b-it-FP8-Dynamic,leon-se/gemma-3-27b-it-FP8-Dynamic,google/gemma-3-27b-it,google,us,compressed-tensors,2025-03-13
 leon-se,gemma-4-E4B-it-FP8-Dynamic,leon-se/gemma-4-E4B-it-FP8-Dynamic,google/gemma-4-E4B-it,google,us,compressed-tensors,2026-04-02
+LiquidAI,d1-omni-600M-GGUF,LiquidAI/d1-omni-600M-GGUF,LiquidAI/d1-omni-600M,LiquidAI,us,gguf,2026-10-06
+LiquidAI,d1-omni-600M-MLX-8bit,LiquidAI/d1-omni-600M-MLX-8bit,LiquidAI/d1-omni-600M,LiquidAI,us,mlx,2026-10-12
 LiquidAI,LFM2.5-1.2B-Instruct-DSpark-GGUF,LiquidAI/LFM2.5-1.2B-Instruct-DSpark-GGUF,LiquidAI/LFM2.5-1.2B-Instruct-DSpark,LiquidAI,us,gguf,2026-08-19
 LiquidAI,LFM2.5-2.6B-DSpark-GGUF,LiquidAI/LFM2.5-2.6B-DSpark-GGUF,LiquidAI/LFM2.5-2.6B-DSpark,LiquidAI,us,gguf,2026-08-19
 LiquidAI,LFM2.5-2.6B-GGUF,LiquidAI/LFM2.5-2.6B-GGUF,LiquidAI/LFM2.5-2.6B,LiquidAI,us,gguf,2026-08-01
@@ -411,6 +419,13 @@ LiquidAI,LFM2.5-230M-MLX-5bit,LiquidAI/LFM2.5-230M-MLX-5bit,LiquidAI/LFM2.5-230M
 LiquidAI,LFM2.5-230M-MLX-6bit,LiquidAI/LFM2.5-230M-MLX-6bit,LiquidAI/LFM2.5-230M,LiquidAI,us,mlx,2026-06-15
 LiquidAI,LFM2.5-230M-MLX-8bit,LiquidAI/LFM2.5-230M-MLX-8bit,LiquidAI/LFM2.5-230M,LiquidAI,us,mlx,2026-06-15
 LiquidAI,LFM2.5-230M-ONNX,LiquidAI/LFM2.5-230M-ONNX,LiquidAI/LFM2.5-230M,LiquidAI,us,onnx,2026-06-15
+LiquidAI,LFM2.5-24B-A2B-DSpark-GGUF,LiquidAI/LFM2.5-24B-A2B-DSpark-GGUF,LiquidAI/LFM2.5-24B-A2B-DSpark,LiquidAI,us,gguf,2026-10-20
+LiquidAI,LFM2.5-24B-A2B-GGUF,LiquidAI/LFM2.5-24B-A2B-GGUF,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,gguf,2026-10-09
+LiquidAI,LFM2.5-24B-A2B-MLX-4bit,LiquidAI/LFM2.5-24B-A2B-MLX-4bit,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,mlx,2026-10-12
+LiquidAI,LFM2.5-24B-A2B-MLX-5bit,LiquidAI/LFM2.5-24B-A2B-MLX-5bit,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,mlx,2026-10-12
+LiquidAI,LFM2.5-24B-A2B-MLX-6bit,LiquidAI/LFM2.5-24B-A2B-MLX-6bit,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,mlx,2026-10-12
+LiquidAI,LFM2.5-24B-A2B-MLX-8bit,LiquidAI/LFM2.5-24B-A2B-MLX-8bit,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,mlx,2026-10-12
+LiquidAI,LFM2.5-24B-A2B-ONNX,LiquidAI/LFM2.5-24B-A2B-ONNX,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,onnx,2026-10-09
 LiquidAI,LFM2.5-8B-A1B-DSpark-GGUF,LiquidAI/LFM2.5-8B-A1B-DSpark-GGUF,LiquidAI/LFM2.5-8B-A1B-DSpark,LiquidAI,us,gguf,2026-08-19
 LiquidAI,LFM2.5-Encoder-230M-GGUF,LiquidAI/LFM2.5-Encoder-230M-GGUF,LiquidAI/LFM2.5-Encoder-230M,LiquidAI,us,gguf,2026-07-28
 LiquidAI,LFM2.5-Encoder-350M-GGUF,LiquidAI/LFM2.5-Encoder-350M-GGUF,LiquidAI/LFM2.5-Encoder-350M,LiquidAI,us,gguf,2026-07-20
@@ -488,6 +503,7 @@ lmstudio-community,gpt-oss-120b-MLX-8bit,lmstudio-community/gpt-oss-120b-MLX-8bi
 lmstudio-community,gpt-oss-20b-GGUF,lmstudio-community/gpt-oss-20b-GGUF,openai/gpt-oss-20b,openai,us,gguf,2025-08-05
 lmstudio-community,gpt-oss-20b-MLX-8bit,lmstudio-community/gpt-oss-20b-MLX-8bit,openai/gpt-oss-20b,openai,us,mlx,2025-08-05
 lmstudio-community,granite-4.0-h-tiny-GGUF,lmstudio-community/granite-4.0-h-tiny-GGUF,ibm-granite/granite-4.0-h-tiny,ibm-granite,us,gguf,2025-09-29
+lmstudio-community,Laguna-S-2.1-GGUF,lmstudio-community/Laguna-S-2.1-GGUF,poolside/Laguna-S-2.1,poolside,us,gguf,2026-07-23
 lmstudio-community,Llama-3.2-1B-Instruct-GGUF,lmstudio-community/Llama-3.2-1B-Instruct-GGUF,meta-llama/Llama-3.2-1B-Instruct,meta-llama,us,gguf,2024-09-25
 lmstudio-community,Llama-3.2-3B-Instruct-GGUF,lmstudio-community/Llama-3.2-3B-Instruct-GGUF,meta-llama/Llama-3.2-3B-Instruct,meta-llama,us,gguf,2024-09-25
 lmstudio-community,Llama-3.3-70B-Instruct-GGUF,lmstudio-community/Llama-3.3-70B-Instruct-GGUF,meta-llama/Llama-3.3-70B-Instruct,meta-llama,us,gguf,2024-12-06
@@ -801,6 +817,7 @@ mlx-community,Qwen3-30B-A3B-Instruct-2507-4bit,mlx-community/Qwen3-30B-A3B-Instr
 mlx-community,Qwen3-4B-4bit,mlx-community/Qwen3-4B-4bit,Qwen/Qwen3-4B,Qwen,china,mlx,2025-04-28
 mlx-community,Qwen3-4B-Instruct-2507-4bit,mlx-community/Qwen3-4B-Instruct-2507-4bit,Qwen/Qwen3-4B-Instruct-2507,Qwen,china,mlx,2025-08-06
 mlx-community,Qwen3-8B-4bit,mlx-community/Qwen3-8B-4bit,Qwen/Qwen3-8B,Qwen,china,mlx,2025-04-28
+mlx-community,Qwen3-Coder-30B-A3B-Instruct-4bit,mlx-community/Qwen3-Coder-30B-A3B-Instruct-4bit,Qwen/Qwen3-Coder-30B-A3B-Instruct,Qwen,china,mlx,2025-07-31
 mlx-community,Qwen3-Coder-480B-A35B-Instruct-4bit,mlx-community/Qwen3-Coder-480B-A35B-Instruct-4bit,Qwen/Qwen3-Coder-480B-A35B-Instruct,Qwen,china,mlx,2025-07-22
 mlx-community,Qwen3-Next-80B-A3B-Instruct-4bit,mlx-community/Qwen3-Next-80B-A3B-Instruct-4bit,Qwen/Qwen3-Next-80B-A3B-Instruct,Qwen,china,mlx,2025-09-12
 mlx-community,Qwen3-Next-80B-A3B-Instruct-8bit,mlx-community/Qwen3-Next-80B-A3B-Instruct-8bit,Qwen/Qwen3-Next-80B-A3B-Instruct,Qwen,china,mlx,2025-09-13
@@ -846,6 +863,7 @@ nvidia,Gemma-4-31B-IT-NVFP4,nvidia/Gemma-4-31B-IT-NVFP4,google/gemma-4-31B-it,go
 nvidia,GLM-5.1-NVFP4,nvidia/GLM-5.1-NVFP4,zai-org/GLM-5.1,zai-org,china,modelopt,2026-05-09
 nvidia,GLM-5.2-NVFP4,nvidia/GLM-5.2-NVFP4,zai-org/GLM-5.2,zai-org,china,modelopt,2026-06-22
 nvidia,GLM-5.3-Flash-NVFP4,nvidia/GLM-5.3-Flash-NVFP4,zai-org/GLM-5.3-Flash,zai-org,china,modelopt,2026-09-02
+nvidia,GLM-5.3-NVFP4,nvidia/GLM-5.3-NVFP4,zai-org/GLM-5.3,zai-org,china,modelopt,2026-09-14
 nvidia,Kimi-K2-Thinking-NVFP4,nvidia/Kimi-K2-Thinking-NVFP4,moonshotai/Kimi-K2-Thinking,moonshotai,china,modelopt,2025-12-02
 nvidia,Kimi-K2.5-NVFP4,nvidia/Kimi-K2.5-NVFP4,moonshotai/Kimi-K2.5,moonshotai,china,modelopt,2026-01-30
 nvidia,Kimi-K2.6-NVFP4,nvidia/Kimi-K2.6-NVFP4,moonshotai/Kimi-K2.6,moonshotai,china,modelopt,2026-05-11
@@ -858,6 +876,7 @@ nvidia,MiniMax-M2.7-NVFP4,nvidia/MiniMax-M2.7-NVFP4,MiniMaxAI/MiniMax-M2.7,MiniM
 nvidia,MiniMax-M3-NVFP4,nvidia/MiniMax-M3-NVFP4,MiniMaxAI/MiniMax-M3,MiniMaxAI,china,modelopt,2026-06-23
 nvidia,Nemotron-Mini-4B-Instruct-ONNX-INT4,nvidia/Nemotron-Mini-4B-Instruct-ONNX-INT4,nvidia/Nemotron-Mini-4B-Instruct,nvidia,us,onnx,2024-11-15
 nvidia,NVIDIA-Nemotron-3-Nano-4B-GGUF,nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF,nvidia/NVIDIA-Nemotron-3-Nano-4B-FP8,nvidia,us,gguf,2026-03-07
+nvidia,NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF,nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF,nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16,nvidia,us,gguf,2026-10-07
 nvidia,Phi-4-multimodal-instruct-NVFP4,nvidia/Phi-4-multimodal-instruct-NVFP4,microsoft/Phi-4-multimodal-instruct,microsoft,us,modelopt,2025-09-05
 nvidia,Phi-4-reasoning-plus-FP8,nvidia/Phi-4-reasoning-plus-FP8,microsoft/Phi-4-reasoning-plus,microsoft,us,modelopt,2025-09-05
 nvidia,Phi-4-reasoning-plus-NVFP4,nvidia/Phi-4-reasoning-plus-NVFP4,microsoft/Phi-4-reasoning-plus,microsoft,us,modelopt,2025-09-05
@@ -895,6 +914,7 @@ openbmb,MiniCPM-Llama3-V-2_5-gguf,openbmb/MiniCPM-Llama3-V-2_5-gguf,openbmb/Mini
 openbmb,MiniCPM-Llama3-V-2_5-GPTQ,openbmb/MiniCPM-Llama3-V-2_5-GPTQ,openbmb/MiniCPM-Llama3-V-2_5,openbmb,china,gptq,2026-06-04
 openbmb,MiniCPM-o-2_6-gguf,openbmb/MiniCPM-o-2_6-gguf,openbmb/MiniCPM-o-2_6,openbmb,china,gguf,2025-01-13
 openbmb,MiniCPM-o-2_6-GPTQ,openbmb/MiniCPM-o-2_6-GPTQ,openbmb/MiniCPM-o-2_6,openbmb,china,gptq,2026-06-03
+openbmb,MiniCPM-OCR-1.0-gguf,openbmb/MiniCPM-OCR-1.0-gguf,openbmb/MiniCPM-V-4.6,openbmb,china,gguf,2026-10-21
 openbmb,MiniCPM-S-1B-sft-gguf,openbmb/MiniCPM-S-1B-sft-gguf,openbmb/MiniCPM-S-1B-sft,openbmb,china,gguf,2024-07-03
 openbmb,MiniCPM-V-2-gguf,openbmb/MiniCPM-V-2-gguf,openbmb/MiniCPM-V-2,openbmb,china,gguf,2024-08-08
 openbmb,MiniCPM-V-2_6-gguf,openbmb/MiniCPM-V-2_6-gguf,openbmb/MiniCPM-V-2_6,openbmb,china,gguf,2024-08-04
@@ -910,6 +930,12 @@ openbmb,MiniCPM-V-4.6-Thinking-AWQ,openbmb/MiniCPM-V-4.6-Thinking-AWQ,openbmb/Mi
 openbmb,MiniCPM-V-4.6-Thinking-BNB,openbmb/MiniCPM-V-4.6-Thinking-BNB,openbmb/MiniCPM-V-4.6-Thinking,openbmb,china,bitsandbytes,2026-05-09
 openbmb,MiniCPM-V-4.6-Thinking-gguf,openbmb/MiniCPM-V-4.6-Thinking-gguf,openbmb/MiniCPM-V-4.6-Thinking,openbmb,china,gguf,2026-05-08
 openbmb,MiniCPM-V-4.6-Thinking-GPTQ,openbmb/MiniCPM-V-4.6-Thinking-GPTQ,openbmb/MiniCPM-V-4.6-Thinking,openbmb,china,gptq,2026-05-09
+openbmb,MiniCPM-V-4.7-1B-AWQ,openbmb/MiniCPM-V-4.7-1B-AWQ,openbmb/MiniCPM-V-4.7-1B,openbmb,china,awq,2026-10-06
+openbmb,MiniCPM-V-4.7-1B-gguf,openbmb/MiniCPM-V-4.7-1B-gguf,openbmb/MiniCPM-V-4.7-1B,openbmb,china,gguf,2026-10-06
+openbmb,MiniCPM-V-4.7-1B-GPTQ,openbmb/MiniCPM-V-4.7-1B-GPTQ,openbmb/MiniCPM-V-4.7-1B,openbmb,china,gptq,2026-10-06
+openbmb,MiniCPM-V-4.7-35B-A3B-AWQ,openbmb/MiniCPM-V-4.7-35B-A3B-AWQ,openbmb/MiniCPM-V-4.7-35B-A3B,openbmb,china,compressed-tensors,2026-10-09
+openbmb,MiniCPM-V-4.7-35B-A3B-gguf,openbmb/MiniCPM-V-4.7-35B-A3B-gguf,openbmb/MiniCPM-V-4.7-35B-A3B,openbmb,china,gguf,2026-10-06
+openbmb,MiniCPM-V-4.7-35B-A3B-GPTQ,openbmb/MiniCPM-V-4.7-35B-A3B-GPTQ,openbmb/MiniCPM-V-4.7-35B-A3B,openbmb,china,compressed-tensors,2026-10-09
 openbmb,MiniCPM-V-4_5-AWQ,openbmb/MiniCPM-V-4_5-AWQ,openbmb/MiniCPM-V-4_5,openbmb,china,awq,2025-08-26
 openbmb,MiniCPM-V-4_5-gguf,openbmb/MiniCPM-V-4_5-gguf,openbmb/MiniCPM-V-4_5,openbmb,china,gguf,2025-08-24
 openbmb,MiniCPM-V-4_5-GPTQ,openbmb/MiniCPM-V-4_5-GPTQ,openbmb/MiniCPM-V-4_5,openbmb,china,gptq,2026-05-08
@@ -931,6 +957,7 @@ Orion-zhen,Qwen2.5-Coder-7B-Instruct-AWQ,Orion-zhen/Qwen2.5-Coder-7B-Instruct-AW
 osllmai-community,DeepSeek-R1-Distill-Qwen-14B-GGUF,osllmai-community/DeepSeek-R1-Distill-Qwen-14B-GGUF,deepseek-ai/DeepSeek-R1-Distill-Qwen-14B,deepseek-ai,china,gguf,2025-01-24
 palmfuture,Qwen3.6-35B-A3B-GPTQ-Int4,palmfuture/Qwen3.6-35B-A3B-GPTQ-Int4,Qwen/Qwen3.6-35B-A3B,Qwen,china,gptq,2026-04-17
 pearsonkyle,Qwen3.8-27B-GPTQ-W4A16,pearsonkyle/Qwen3.8-27B-GPTQ-W4A16,Qwen/Qwen3.8-27B,Qwen,china,gptq;compressed-tensors,2026-08-15
+peasantsmith,DeepSeek-V4.1-Flash-1017-Maya-GGUF,peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF,deepseek-ai/DeepSeek-V4.1-Flash-1017,deepseek-ai,china,gguf,2026-10-19
 peasantsmith,GLM-5.3-Flash-Maya-GGUF,peasantsmith/GLM-5.3-Flash-Maya-GGUF,zai-org/GLM-5.3-Flash,zai-org,china,gguf,2026-10-07
 peculiar-ragdoll,Dirk-Qwen3.8-27B-GGUF,peculiar-ragdoll/Dirk-Qwen3.8-27B-GGUF,Qwen/Qwen3.8-27B,Qwen,china,gguf,2026-08-14
 pentacoxian-dev,Qwen3.8-Flash-Next-IQ3E-Q8D-MTP-GGUF,pentacoxian-dev/Qwen3.8-Flash-Next-IQ3E-Q8D-MTP-GGUF,Qwen/Qwen3.8-Flash-Next,Qwen,china,gguf,2026-09-24
@@ -1221,6 +1248,7 @@ RedHatAI,Qwen3-8B-FP8-dynamic,RedHatAI/Qwen3-8B-FP8-dynamic,Qwen/Qwen3-8B,Qwen,c
 RedHatAI,Qwen3-8B-quantized.w4a16,RedHatAI/Qwen3-8B-quantized.w4a16,Qwen/Qwen3-8B,Qwen,china,compressed-tensors,2025-05-06
 RedHatAI,Qwen3.5-122B-A10B-NVFP4,RedHatAI/Qwen3.5-122B-A10B-NVFP4,Qwen/Qwen3.5-122B-A10B,Qwen,china,compressed-tensors,2026-03-17
 RedHatAI,Qwen3.5-4B-FP8-dynamic,RedHatAI/Qwen3.5-4B-FP8-dynamic,Qwen/Qwen3.5-4B,Qwen,china,compressed-tensors,2026-05-11
+RedHatAI,Qwen3.5-4B-quantized.w4a16,RedHatAI/Qwen3.5-4B-quantized.w4a16,Qwen/Qwen3.5-4B,Qwen,china,compressed-tensors,2026-04-16
 RedHatAI,Qwen3.5-9B-FP8-dynamic,RedHatAI/Qwen3.5-9B-FP8-dynamic,Qwen/Qwen3.5-9B,Qwen,china,compressed-tensors,2026-05-11
 RedHatAI,Qwen3.5-9B-quantized.w4a16,RedHatAI/Qwen3.5-9B-quantized.w4a16,Qwen/Qwen3.5-9B,Qwen,china,compressed-tensors,2026-04-24
 RedHatAI,Qwen3.5-9B-quantized.w8a8,RedHatAI/Qwen3.5-9B-quantized.w8a8,Qwen/Qwen3.5-9B,Qwen,china,compressed-tensors,2026-04-16
@@ -1266,6 +1294,7 @@ tencent,Hunyuan-7B-Instruct-AWQ-Int4,tencent/Hunyuan-7B-Instruct-AWQ-Int4,tencen
 tencent,Hunyuan-7B-Instruct-GPTQ-Int4,tencent/Hunyuan-7B-Instruct-GPTQ-Int4,tencent/Hunyuan-7B-Instruct,tencent,china,gptq,2025-07-30
 tencent,Hunyuan-A13B-Instruct-GGUF,tencent/Hunyuan-A13B-Instruct-GGUF,tencent/Hunyuan-A13B-Instruct,tencent,china,gguf,2025-07-10
 tencent,Hunyuan-A13B-Instruct-GPTQ-Int4,tencent/Hunyuan-A13B-Instruct-GPTQ-Int4,tencent/Hunyuan-A13B-Instruct,tencent,china,gptq,2025-06-26
+tencent,Hy-Memory-30B-A3B-GGUF,tencent/Hy-Memory-30B-A3B-GGUF,tencent/Hy-Memory-30B-A3B,tencent,china,gguf,2026-10-19
 tencent,HY-MT1.5-1.8B-GGUF,tencent/HY-MT1.5-1.8B-GGUF,tencent/HY-MT1.5-1.8B,tencent,china,gguf,2025-12-30
 tencent,HY-MT1.5-1.8B-GPTQ-Int4,tencent/HY-MT1.5-1.8B-GPTQ-Int4,tencent/HY-MT1.5-1.8B,tencent,china,gptq,2025-12-30
 tencent,HY-MT1.5-7B-GGUF,tencent/HY-MT1.5-7B-GGUF,tencent/HY-MT1.5-7B,tencent,china,gguf,2025-12-30
@@ -1340,6 +1369,7 @@ tiiuae,Falcon3-7B-Instruct-GGUF,tiiuae/Falcon3-7B-Instruct-GGUF,tiiuae/Falcon3-7
 tiiuae,Falcon3-7B-Instruct-GPTQ-Int4,tiiuae/Falcon3-7B-Instruct-GPTQ-Int4,tiiuae/Falcon3-7B-Instruct,tiiuae,other,gptq,2024-12-14
 tiiuae,Falcon3-7B-Instruct-GPTQ-Int8,tiiuae/Falcon3-7B-Instruct-GPTQ-Int8,tiiuae/Falcon3-7B-Instruct,tiiuae,other,gptq,2024-12-14
 tiiuae,Falcon3-Mamba-7B-Instruct-GGUF,tiiuae/Falcon3-Mamba-7B-Instruct-GGUF,tiiuae/Falcon3-Mamba-7B-Instruct,tiiuae,other,gguf,2024-12-16
+turintech,Qwen3.5-0.8B-Artemis-GGUF,turintech/Qwen3.5-0.8B-Artemis-GGUF,Qwen/Qwen3.5-0.8B,Qwen,china,gguf,2026-10-15
 txn545,Qwen3.5-122B-A10B-NVFP4,txn545/Qwen3.5-122B-A10B-NVFP4,Qwen/Qwen3.5-122B-A10B,Qwen,china,modelopt,2026-02-24
 txn545,Qwen3.5-35B-A3B-NVFP4,txn545/Qwen3.5-35B-A3B-NVFP4,Qwen/Qwen3.5-35B-A3B,Qwen,china,modelopt,2026-02-24
 unsloth,DeepSeek-R1-0528-GGUF,unsloth/DeepSeek-R1-0528-GGUF,deepseek-ai/DeepSeek-R1-0528,deepseek-ai,china,gguf,2025-05-28
@@ -1366,6 +1396,7 @@ unsloth,DeepSeek-V3.2-GGUF,unsloth/DeepSeek-V3.2-GGUF,deepseek-ai/DeepSeek-V3.2,
 unsloth,DeepSeek-V4-Flash-0731-GGUF,unsloth/DeepSeek-V4-Flash-0731-GGUF,deepseek-ai/DeepSeek-V4-Flash-0731,deepseek-ai,china,gguf,2026-07-31
 unsloth,DeepSeek-V4-Flash-GGUF,unsloth/DeepSeek-V4-Flash-GGUF,deepseek-ai/DeepSeek-V4-Flash,deepseek-ai,china,gguf,2026-07-06
 unsloth,DeepSeek-V4-Pro-0813-GGUF,unsloth/DeepSeek-V4-Pro-0813-GGUF,deepseek-ai/DeepSeek-V4-Pro-0813,deepseek-ai,china,gguf,2026-08-13
+unsloth,DeepSeek-V4.1-Flash-1017-GGUF,unsloth/DeepSeek-V4.1-Flash-1017-GGUF,deepseek-ai/DeepSeek-V4.1-Flash-1017,deepseek-ai,china,gguf,2026-10-17
 unsloth,Devstral-2-123B-Instruct-2512-GGUF,unsloth/Devstral-2-123B-Instruct-2512-GGUF,mistralai/Devstral-2-123B-Instruct-2512,mistralai,eu,gguf,2025-12-10
 unsloth,Devstral-Small-2-24B-Instruct-2512-GGUF,unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF,mistralai/Devstral-Small-2-24B-Instruct-2512,mistralai,eu,gguf,2025-12-10
 unsloth,Devstral-Small-2505-GGUF,unsloth/Devstral-Small-2505-GGUF,mistralai/Devstral-Small-2505,mistralai,eu,gguf,2025-05-21
@@ -1434,6 +1465,7 @@ unsloth,Kimi-K2.6-GGUF,unsloth/Kimi-K2.6-GGUF,moonshotai/Kimi-K2.6,moonshotai,ch
 unsloth,Kimi-K2.7-Code-GGUF,unsloth/Kimi-K2.7-Code-GGUF,moonshotai/Kimi-K2.7-Code,moonshotai,china,gguf;compressed-tensors,2026-06-12
 unsloth,Kimi-K3-GGUF,unsloth/Kimi-K3-GGUF,moonshotai/Kimi-K3,moonshotai,china,gguf,2026-07-27
 unsloth,Laguna-S-2.1-GGUF,unsloth/Laguna-S-2.1-GGUF,poolside/Laguna-S-2.1,poolside,us,gguf,2026-07-21
+unsloth,LFM2.5-24B-A2B-GGUF,unsloth/LFM2.5-24B-A2B-GGUF,LiquidAI/LFM2.5-24B-A2B,LiquidAI,us,gguf,2026-10-13
 unsloth,llama-3-8b-bnb-4bit,unsloth/llama-3-8b-bnb-4bit,meta-llama/Meta-Llama-3-8B,meta-llama,us,bitsandbytes,2024-04-18
 unsloth,Llama-3.1-8B-bnb-4bit,unsloth/Llama-3.1-8B-bnb-4bit,meta-llama/Llama-3.1-8B,meta-llama,us,bitsandbytes,2025-02-15
 unsloth,Llama-3.1-8B-Instruct-bnb-4bit,unsloth/Llama-3.1-8B-Instruct-bnb-4bit,meta-llama/Llama-3.1-8B-Instruct,meta-llama,us,bitsandbytes,2025-02-15
@@ -1635,3 +1667,4 @@ zai-org,glm-edge-1.5b-chat-gguf,zai-org/glm-edge-1.5b-chat-gguf,zai-org/glm-edge
 zai-org,glm-edge-4b-chat-gguf,zai-org/glm-edge-4b-chat-gguf,zai-org/glm-edge-4b-chat,zai-org,china,gguf,2024-11-27
 zai-org,glm-edge-v-2b-gguf,zai-org/glm-edge-v-2b-gguf,zai-org/glm-edge-v-2b,zai-org,china,gguf,2024-11-27
 zai-org,glm-edge-v-5b-gguf,zai-org/glm-edge-v-5b-gguf,zai-org/glm-edge-v-5b,zai-org,china,gguf,2024-11-27
+Zerul,Qwen3.5-0.8B-W4A16-AutoRound-AWQ,Zerul/Qwen3.5-0.8B-W4A16-AutoRound-AWQ,Qwen/Qwen3.5-0.8B,Qwen,china,awq,2026-03-21
