@@ -159,6 +159,10 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-11-04
+- Added 17 manually approved models to `models.csv`: baidu, h2oai, inclusionAI, LiquidAI, openbmb
+- Added reviewed parameter metadata for all 17 checkpoints and discovery coverage for LiquidAI LFM3
+
 ### 2026-11-02
 - Weekly Hugging Face sync
 - Added 1 models to `models.csv`: inclusionAI

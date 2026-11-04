@@ -1639,6 +1639,23 @@ MANUAL_SIZES = {
     'openbmb/MiniCPM-V-4.7-35B-A3B-FP8': 35.2,
     'openbmb/MiniCPM-V-4.7-35B-A3B-int4': 35.2,
     'rednote-hilab/dots.llm1.base': 142,
+    'baidu/Unlimited-OCR-2': 3,
+    'h2oai/h2o-lightning-bolt-74b': 74,
+    'h2oai/h2o-lightning-e4b': 8,
+    'inclusionAI/LBS-27B': 27,
+    'inclusionAI/Ling-3.1-flash-1019': 560,
+    'inclusionAI/Ling-3.1-flash-base': 560,
+    'LiquidAI/d1-2B': 1.92,
+    'LiquidAI/LFM3-1.7B': 1.73,
+    'LiquidAI/LFM3-1.7B-Base': 1.73,
+    'LiquidAI/LFM3-1.7B-FP8': 1.73,
+    'LiquidAI/LFM3-1.7B-NVFP4': 1.73,
+    'LiquidAI/LFM3-Omni-2B': 2.17,
+    'LiquidAI/LFM3-VL-2B': 1.92,
+    'LiquidAI/LFM3-VL-2B-FP8': 1.92,
+    'LiquidAI/LFM3-VL-2B-NVFP4': 1.92,
+    'openbmb/MiniCPM-OCR-1.0': 1.3,
+    'openbmb/MiniCPM-OCR-Jev': 2,
 }
 # END GENERATED MANUAL_SIZES
 
