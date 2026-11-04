@@ -1626,3 +1626,20 @@ openbmb/MiniCPM-V-4.7-35B-A3B,35.2,3.5,true,Official reported multimodal total a
 openbmb/MiniCPM-V-4.7-35B-A3B-FP8,35.2,3.5,true,Official FP8 quantization of MiniCPM-V-4.7-35B-A3B; reported multimodal total and approximate active count exclude separately released DSpark draft heads.
 openbmb/MiniCPM-V-4.7-35B-A3B-int4,35.2,3.5,true,Official INT4 quantization of MiniCPM-V-4.7-35B-A3B; reported multimodal total and approximate active count exclude separately released DSpark draft heads.
 rednote-hilab/dots.llm1.base,142,14,true,Official reported total and active count for the base checkpoint.
+baidu/Unlimited-OCR-2,3,0.5,true,Paper-reported rounded MoE decoder scale and active count; full vision-stack total is not specified.
+h2oai/h2o-lightning-bolt-74b,74,9,true,Official reported total and active count; packed quantized tensor counts are not architectural parameters.
+h2oai/h2o-lightning-e4b,8,,false,Rounded reported Gemma 4 E4B size including embeddings; effective size is not used as an active count.
+inclusionAI/LBS-27B,27,,false,Reported Qwen3.8-27B language-backbone scale of the fine-tune; excludes the vision encoder.
+inclusionAI/Ling-3.1-flash-1019,560,25,true,Official reported total and active count.
+inclusionAI/Ling-3.1-flash-base,560,25,true,Official reported total and active count for the base checkpoint.
+LiquidAI/d1-2B,1.92,,false,Official reported total for the LFM3-based vision-language decision model.
+LiquidAI/LFM3-1.7B,1.73,,false,Official reported total for the text model.
+LiquidAI/LFM3-1.7B-Base,1.73,,false,Official reported total for the base text model.
+LiquidAI/LFM3-1.7B-FP8,1.73,,false,Official FP8 quantization of LFM3-1.7B; reported architectural total is unchanged.
+LiquidAI/LFM3-1.7B-NVFP4,1.73,,false,Official NVFP4 quantization of LFM3-1.7B; reported architectural total is unchanged.
+LiquidAI/LFM3-Omni-2B,2.17,,false,Official reported total including the language backbone and vision and audio components.
+LiquidAI/LFM3-VL-2B,1.92,,false,Official rounded total includes the 1.73B language model plus 164M vision encoder and 25M projector.
+LiquidAI/LFM3-VL-2B-FP8,1.92,,false,Official FP8 quantization of LFM3-VL-2B; reported total includes vision encoder and projector.
+LiquidAI/LFM3-VL-2B-NVFP4,1.92,,false,Official NVFP4 quantization of LFM3-VL-2B; reported total includes vision encoder and projector.
+openbmb/MiniCPM-OCR-1.0,1.3,,false,Official reported total for the OCR model; separately released DSpark draft head excluded.
+openbmb/MiniCPM-OCR-Jev,2,,false,Rounded official reported total; Qwen3.5-2B vision encoder and language backbone retained with a binary classification head.

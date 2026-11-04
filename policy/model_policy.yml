@@ -130,6 +130,7 @@ orgs:
   LiquidAI:
     primary_family_patterns:
       - "^LFM2\\.5(?:$|[-_])"
+      - "^LFM3(?:$|[-_])"
 
   llm-jp:
     primary_family_patterns:
