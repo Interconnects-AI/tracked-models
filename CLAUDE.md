@@ -99,7 +99,8 @@ def add_models(original, additions):
 - **LLMs and VLMs only**: `text-generation` and `image-text-to-text` pipeline tags
 - **No guard/shield models**: Safety classifiers are excluded (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, etc.)
 - **No non-LLM siblings**: Embedding, reranker, reward, classifier, speech, image/video generation and vision-backbone models are excluded even when they share a family name with a tracked LLM
-- **No format or integer conversions**: GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8 and 4-bit/8-bit repositories belong in `local-models.csv`, including first-party ones. Official FP8, NVFP4 and BF16 releases stay in `models.csv`
+- **No format or integer conversions**: GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8 and 4-bit/8-bit repositories belong in `local-models.csv`, including first-party ones
+- **First-party FP8 and FP4 are core, everyone else's are local**: A model maker's own FP8, NVFP4, MXFP4 and BF16 releases go in `models.csv`. The same formats published by anyone else (for example NVIDIA's NVFP4 build of another lab's model) go in `local-models.csv`, credited to the original maker
 - **No T5Gemma variants**: Disproportionate download counts relative to real-world impact
 
 ## Checking Model Eligibility
