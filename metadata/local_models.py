@@ -6,7 +6,7 @@
 # ///
 """Generate and validate local-models.csv.
 
-A local model is a conversion-only copy (GGUF, MLX, AWQ, ...) of a models.csv
+A local model is a conversion-only copy (GGUF, MLX, AWQ, LiteRT, ...) of a models.csv
 checkpoint. Fine-tuned, pruned, merged, distilled and other modified
 descendants are excluded. Downloads are credited to the original parent's
 organization and region, never the converter.
@@ -64,6 +64,7 @@ FORMATS = (
     "compressed-tensors",
     "auto-round",
     "modelopt",
+    "litert",
 )
 FORMAT_ALIASES = {
     **{fmt: fmt for fmt in FORMATS},
@@ -86,6 +87,9 @@ FORMAT_ALIASES = {
     "autoround": "auto-round",
     "auto_round": "auto-round",
     "model optimizer": "modelopt",
+    # LiteRT is the on-device runtime formerly called TensorFlow Lite.
+    "litert-lm": "litert",
+    "tflite": "litert",
 }
 # Name or tag markers of a modified descendant rather than a plain conversion.
 MODIFICATION_WORDS = (
@@ -170,6 +174,8 @@ def detect_formats(model: dict) -> list[str]:
             found.add("onnx")
         elif lower.endswith(".exl3"):
             found.add("exl3")
+        elif lower.endswith((".litertlm", ".tflite")):
+            found.add("litert")
         elif re.search(r"(^|/)openvino[^/]*\.xml$", lower):
             found.add("openvino")
     return [fmt for fmt in FORMATS if fmt in found]

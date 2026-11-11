@@ -18,7 +18,7 @@ A secondary list of models that are tracked but not yet included in the main cha
 
 ### `local-models.csv` (local conversions)
 
-Conversion-only local copies (GGUF, MLX, AWQ, GPTQ, ONNX, ModelOpt/NVFP4, …) of
+Conversion-only local copies (GGUF, MLX, AWQ, GPTQ, ONNX, LiteRT, ModelOpt/NVFP4, …) of
 `models.csv` checkpoints, from first-party and community publishers. Each row names
 its parent checkpoint, the parent's organization and region (local downloads are
 credited to the original model maker, never the converter), its formats, and its
@@ -143,6 +143,22 @@ curl -s https://raw.githubusercontent.com/Interconnects-AI/tracked-models/main/m
 
 Post-ChatGPT LLMs and VLMs (released after Nov 30, 2022) with first-party weights on HuggingFace. Threshold: >100K total downloads for new additions (exceptions for notable recent releases).
 
+### Core or local
+
+`models.csv` is the core list and `local-models.csv` holds conversions of it. A
+repository goes in one or the other by who published it and in what form:
+
+| Repository | List |
+|------------|------|
+| The model maker's own checkpoint at its original precision, BF16 included | `models.csv` |
+| The model maker's own FP8 or FP4 release (FP8, NVFP4, MXFP4) | `models.csv` |
+| The model maker's own GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16 or int4/int8 conversion | `local-models.csv` |
+| Anyone else's conversion of a tracked checkpoint, in any format, FP8 and FP4 included | `local-models.csv` |
+
+In short: first-party FP8 and FP4 are core, and everyone else's are local.
+NVIDIA's NVFP4 build of another lab's model is local and its downloads are
+credited to that lab; NVIDIA's NVFP4 build of its own Nemotron is core.
+
 ### Original orgs
 
 The project began with private daily download data from HuggingFace covering 7 organizations (1,971 models through July 10, 2025):
@@ -156,6 +172,10 @@ The tracked list has since expanded to cover additional frontier model providers
 Models intentionally excluded from tracking despite high download counts:
 
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
+- **Models that are not LLMs or VLMs** -- embedding and reranking models, reward models and classifiers, speech recognition and synthesis models, audio tokenizers, image, video and 3D generators, vision backbones, masked-language encoders and robotics policies, even when they share a family name with a tracked LLM.
+- **Auxiliary repositories** -- tokenizers, training-checkpoint dumps and configuration repositories.
+- **Format and integer conversions** (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8, 4-bit/8-bit), including first-party ones -- they are tracked in `local-models.csv` when its rules admit them. A model maker's own FP8, FP4 and BF16 releases stay in `models.csv`; see [Core or local](#core-or-local).
+- **Models released before ChatGPT** (Nov 30, 2022).
 
 ## Changelog
 
@@ -163,6 +183,10 @@ Models intentionally excluded from tracking despite high download counts:
 - Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection
 - Added reviewed parameter metadata for those 8 plus `stepfun-ai/Step-5-Preview` (metadata only)
 - Added release-date corrections for Granite 4.2 and Muse Spark Open, whose Hugging Face repositories predate their public launches
+- Removed 78 rows from `models.csv` that are not LLMs or VLMs (reward models and classifiers, embeddings and rerankers, speech models, image and video generators, vision backbones, tokenizers and checkpoint dumps, pre-ChatGPT models), plus 15 legacy `THUDM` rows that only aliased removed or moved rows
+- Moved 54 first-party format and integer conversions (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8, 4-bit/8-bit) from `models.csv` to `local-models.csv`, which now recognises LiteRT bundles; removed 10 more that the local-model rules cannot place
+- The sync policy now rejects those tasks and LiteRT, W4A16, int4/int8 and n-bit names so they are not added again
+- Wrote down the core-or-local rule: first-party FP8 and FP4 releases are core, everyone else's are local. The policy now rejects NVIDIA's FP8 and FP4 builds of other labs' models, which `local-models.csv` already tracks
 
 ### 2026-11-04
 - Added 17 manually approved models to `models.csv`: baidu, h2oai, inclusionAI, LiquidAI, openbmb

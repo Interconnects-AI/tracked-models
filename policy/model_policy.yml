@@ -13,18 +13,26 @@ global:
     - audio-to-audio
     - depth-estimation
     - feature-extraction
+    - fill-mask
     - image-classification
     - image-feature-extraction
     - image-segmentation
+    - image-text-to-image
+    - image-text-to-video
     - image-to-3d
     - image-to-image
     - image-to-video
     - object-detection
     - reinforcement-learning
+    - robotics
     - sentence-similarity
     - text-classification
     - text-ranking
+    - text-to-image
+    - text-to-speech
+    - text-to-video
     - time-series-forecasting
+    - token-classification
     - video-classification
 
   reject_name_patterns:
@@ -32,18 +40,22 @@ global:
     - "(?i)(classifier|detector|reranker|reward|embedding|embed)"
     - "(?i)(tokenizer|adapter|lora|checkpoint|intermediate|proxy)"
     - "(?i)(gguf|mlx|onnx|openvino|gptq|awq|bnb|bitsandbytes|prequantized)"
+    # On-device LiteRT bundles and integer or n-bit quantizations, including
+    # W4A16-style weight quantization, belong in local-models.csv.
+    - "(?i)(litert|tflite)"
+    - "(?i)(?:^|[-_])(?:int[48]|[48]-?bits?|w\\d+a\\d+)(?:$|[-_])"
     - "(?i)(sae|probe|interpretability)"
     - "(?i)(test|dummy|warmup)"
 
   reject_format_patterns:
     - "(?i)(gguf|mlx|onnx|openvino)"
 
+  # A model maker's own releases at these precisions stay in models.csv. The
+  # same formats from any other publisher belong in local-models.csv.
   official_precision_suffixes:
     - BF16
     - FP8
     - NVFP4
-    - W4A4
-    - W4A16
 
   primary_min_downloads: 100000
 
@@ -107,6 +119,9 @@ orgs:
       - "^granite-switch-4\\.1(?:$|[-_])"
       - "^granite-vision-4\\.1(?:$|[-_])"
       - "^granite-4\\.2(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)-lib$"
 
   inclusionAI:
     primary_family_patterns:
@@ -210,7 +225,8 @@ orgs:
     reject_name_patterns:
       - "(?i)(ASR|Parakeet|Canary|Audio|Speech)"
       - "(?i)(Embed|Rerank|Proxy|Classifier|Calibration)"
-      - "(?i)^(Gemma|Kimi|MiniMax).*NVFP4$"
+      # FP8 and FP4 builds of other labs' models are local conversions.
+      - "(?i)^(?!.*nemotron)(?:gemma|diffusiongemma|kimi|minimax|deepseek|qwen|glm|mistral|muse|llama|phi)[-_.\\d].*(?:nvfp4|fp8|fp4)"
       - "^EGM-"
       - "(?i)^gpt-oss-"
       - "(?i)(MambaVision|AnyFlow|Wan|PixelDiT|PointWorld)"
@@ -223,6 +239,7 @@ orgs:
 
     reject_name_patterns:
       - "^SciCore-Mol$"
+      - "^UltraRM-"
 
   opendatalab:
     primary_family_patterns:
