@@ -106,6 +106,30 @@ request history rather than the CSV. See
 [`metadata/README.md`](metadata/README.md) for the contract and correction
 workflow.
 
+### `policy/` and the weekly sync
+
+The **Sync Hugging Face tracked models** workflow runs `sync_hf_models.py` every
+Monday. It lists every repository in each organization that already has a row
+in `models.csv` or `extra_models.csv` and classifies the ones it has not handled
+before with [`policy/model_policy.yml`](policy/model_policy.yml): a family match
+is added, a rejected format or task is dropped, and anything else in scope is
+listed for manual review in the pull request.
+
+[`policy/seen_models.txt`](policy/seen_models.txt) is the sync's memory. It
+holds the repositories a sync has already raised that were left out of both
+lists, so each candidate is raised once. A repository is new to the sync when it
+is in neither list nor that file, whatever its Hugging Face creation date, which
+is what catches repositories published weeks after they were created. Delete a
+line to have the next sync consider that repository again. Add a reviewed
+candidate to a list in the sync pull request itself; the rest of that week's
+candidates are recorded when it merges.
+
+The sync also follows tracked repositories that were renamed or moved to another
+namespace: it adds the new id beside the old row, which stays for its download
+history, and reports repositories that are no longer on the Hub without removing
+them. A new namespace needs a row in `metadata/organization_regions.csv`, and a
+block in the policy file if its releases should be added automatically.
+
 ## Format
 
 The primary and secondary model-list CSV files share the same three columns:

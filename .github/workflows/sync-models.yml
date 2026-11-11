@@ -37,6 +37,7 @@ jobs:
           uv run sync_hf_models.py \
             --write \
             --policy policy/model_policy.yml \
+            --seen policy/seen_models.txt \
             --report "$RUNNER_TEMP/model_sync.md" \
             --since-days 14 \
             --update-readme \
@@ -51,7 +52,9 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          if git status --short -- models.csv extra_models.csv README.md | grep -q .; then
+          # The ledger changes whenever a candidate needs manual review, so a
+          # pull request opens even when nothing was added automatically.
+          if git status --short -- models.csv extra_models.csv README.md policy/seen_models.txt | grep -q .; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
@@ -70,3 +73,4 @@ jobs:
             models.csv
             extra_models.csv
             README.md
+            policy/seen_models.txt
