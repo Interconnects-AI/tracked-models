@@ -10,9 +10,8 @@ on:
       - "metadata/validate_organization_regions.py"
       - "metadata/test_validate_organization_regions.py"
       - "metadata/model_parameters.csv"
-      - "metadata/model_sizes.py"
-      - "metadata/generate_model_sizes.py"
-      - "metadata/test_generate_model_sizes.py"
+      - "metadata/validate_model_parameters.py"
+      - "metadata/test_validate_model_parameters.py"
       - "metadata/audit_parameter_coverage.py"
       - "metadata/test_audit_parameter_coverage.py"
       - "metadata/release_date_corrections.csv"
@@ -33,9 +32,8 @@ on:
       - "metadata/validate_organization_regions.py"
       - "metadata/test_validate_organization_regions.py"
       - "metadata/model_parameters.csv"
-      - "metadata/model_sizes.py"
-      - "metadata/generate_model_sizes.py"
-      - "metadata/test_generate_model_sizes.py"
+      - "metadata/validate_model_parameters.py"
+      - "metadata/test_validate_model_parameters.py"
       - "metadata/audit_parameter_coverage.py"
       - "metadata/test_audit_parameter_coverage.py"
       - "metadata/release_date_corrections.csv"
@@ -65,11 +63,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate parameter metadata and generated map
-        run: python metadata/generate_model_sizes.py --check
+      - name: Validate parameter metadata
+        run: python metadata/validate_model_parameters.py
 
       - name: Test metadata validation rules
-        run: python -m unittest metadata/test_generate_model_sizes.py metadata/test_audit_parameter_coverage.py
+        run: python -m unittest metadata/test_validate_model_parameters.py metadata/test_audit_parameter_coverage.py
 
       - name: Check primary model size coverage
         shell: bash

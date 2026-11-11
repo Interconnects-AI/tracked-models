@@ -94,8 +94,7 @@ changing those requires separately reviewed scanner or dashboard updates.
 Curated, project-neutral model metadata for reuse across analysis projects:
 
 - `model_parameters.csv`: canonical total/active parameter counts, MoE classification, and concise notes.
-- `model_sizes.py`: generated legacy-compatible total-parameter map and analysis helpers.
-- `generate_model_sizes.py`: metadata validator and compatibility-map generator.
+- `validate_model_parameters.py`: validator for `model_parameters.csv`.
 - `organization_regions.csv`: canonical ATOM region buckets for exact Hugging Face organization namespaces, including explicit `unknown` classifications.
 - `local_models.py`, `local_models_overrides.json`: generator, validator, and reviewed exceptions for `local-models.csv`.
 - `release_date_corrections.csv`: public release-date corrections for models whose Hugging Face `created_at` differs from the actual release date.
@@ -207,6 +206,7 @@ Models intentionally excluded from tracking despite high download counts:
 - Added the current ids of 22 renamed repositories beside their old rows: `AIDC-AI` is now `ATH-MaaS`, `AI-MO` is now `project-numina`, the `rednote-hilab` dots models moved to `dots-studio`, plus `mistral-experimental/pixtral-12b`
 - Added reviewed parameter metadata for 68 of the new `models.csv` rows and copied it for the 4 renamed ones
 - The weekly sync now looks at repositories created in the last 45 days instead of 14, opens a pull request whenever a candidate needs review, follows renamed repositories, and no longer rejects a checkpoint for bundling ONNX or OpenVINO files beside its own weights
+- `metadata/model_parameters.csv` is now the only file to edit for parameter counts. The generated copy in `model_sizes.py` is deleted, and `generate_model_sizes.py` became `validate_model_parameters.py`, which only validates the CSV.
 
 ### 2026-11-10
 - Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection

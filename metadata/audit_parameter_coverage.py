@@ -11,7 +11,7 @@ import subprocess
 from decimal import Decimal
 from pathlib import Path
 
-from metadata.generate_model_sizes import HEADERS, MODEL_ID_RE, load_and_validate
+from metadata.validate_model_parameters import HEADERS, MODEL_ID_RE, load_and_validate
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_HEADERS = ("org", "model", "modelId")
