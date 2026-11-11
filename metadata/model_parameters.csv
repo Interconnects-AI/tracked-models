@@ -1723,6 +1723,4 @@ ai21labs/AI21-Jamba2-3B,3,,false,Official model-card parameter count.
 dots-studio/dots.ocr,3,,,Same repository as rednote-hilab/dots.ocr after its move to this namespace.
 dots-studio/dots.mocr,3,,false,Same repository as rednote-hilab/dots.mocr after its move to this namespace.
 dots-studio/dots.mocr-svg,3,,false,Same repository as rednote-hilab/dots.mocr-svg after its move to this namespace.
-google/gemma-3n-E2B-it-litert-lm,5,,false,Same repository as google/gemma-3n-E2B-it-litert-lm-preview after its move to this namespace.
-google/gemma-3n-E4B-it-litert-lm,8,,false,Same repository as google/gemma-3n-E4B-it-litert-lm-preview after its move to this namespace.
 mistral-experimental/pixtral-12b,12.4,,false,Same repository as mistral-community/pixtral-12b after its move to this namespace.

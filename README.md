@@ -109,20 +109,18 @@ workflow.
 ### `policy/` and the weekly sync
 
 The **Sync Hugging Face tracked models** workflow runs `sync_hf_models.py` every
-Monday. It lists every repository in each organization that already has a row
-in `models.csv` or `extra_models.csv` and classifies the ones it has not handled
-before with [`policy/model_policy.yml`](policy/model_policy.yml): a family match
-is added, a rejected format or task is dropped, and anything else in scope is
-listed for manual review in the pull request.
+Monday. It lists the repositories created in the last 45 days in each
+organization that already has a row in `models.csv` or `extra_models.csv`, and
+classifies the ones in neither list with
+[`policy/model_policy.yml`](policy/model_policy.yml): a family match is added, a
+rejected format or task is dropped, and anything else in scope is listed for
+manual review in the pull request.
 
-[`policy/seen_models.txt`](policy/seen_models.txt) is the sync's memory. It
-holds the repositories a sync has already raised that were left out of both
-lists, so each candidate is raised once. A repository is new to the sync when it
-is in neither list nor that file, whatever its Hugging Face creation date, which
-is what catches repositories published weeks after they were created. Delete a
-line to have the next sync consider that repository again. Add a reviewed
-candidate to a list in the sync pull request itself; the rest of that week's
-candidates are recorded when it merges.
+The window is 45 days because labs often create a repository weeks before they
+publish it. The sync keeps no record of what it has raised, so a review
+candidate nobody adds is listed again each week until it leaves the window; the
+creation date beside each candidate shows which are new. A pull request opens
+whenever there is something to add or review.
 
 The sync also follows tracked repositories that were renamed or moved to another
 namespace: it adds the new id beside the old row, which stays for its download
@@ -186,9 +184,9 @@ Models intentionally excluded from tracking despite high download counts:
 ### 2026-11-11
 - Added 69 models the sync had missed to `models.csv`: ai21labs, allenai, dots-studio, google, ibm-granite, internlm, LiquidAI, meituan-longcat, meta-models, microsoft, mistralai, moonshotai, nvidia, openbmb, OpenGVLab, Qwen, reflection, stepfun-ai, thinkingmachines, tiiuae, upstage, XiaomiMiMo, zai-org, Zyphra
 - Added 37 models to `extra_models.csv`: apple, bigcode, CohereLabs, GSAI-ML, LGAI-EXAONE, LiquidAI, llm-jp, nvidia, Salesforce, state-spaces, typhoon-ai
-- Added the current ids of 24 renamed repositories beside their old rows: `AIDC-AI` is now `ATH-MaaS`, `AI-MO` is now `project-numina`, the `rednote-hilab` dots models moved to `dots-studio`, plus `mistral-experimental/pixtral-12b` and two Gemma 3n LiteRT repositories
-- Added reviewed parameter metadata for 68 of the new `models.csv` rows and copied it for the 6 renamed ones
-- The weekly sync now remembers what it has raised in `policy/seen_models.txt` instead of looking only at repositories created in the last 14 days, opens a pull request whenever a candidate needs review, follows renamed repositories, and no longer rejects a checkpoint for bundling ONNX or OpenVINO files beside its own weights
+- Added the current ids of 22 renamed repositories beside their old rows: `AIDC-AI` is now `ATH-MaaS`, `AI-MO` is now `project-numina`, the `rednote-hilab` dots models moved to `dots-studio`, plus `mistral-experimental/pixtral-12b`
+- Added reviewed parameter metadata for 68 of the new `models.csv` rows and copied it for the 4 renamed ones
+- The weekly sync now looks at repositories created in the last 45 days instead of 14, opens a pull request whenever a candidate needs review, follows renamed repositories, and no longer rejects a checkpoint for bundling ONNX or OpenVINO files beside its own weights
 
 ### 2026-11-10
 - Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection

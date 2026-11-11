@@ -1736,8 +1736,6 @@ MANUAL_SIZES = {
     'dots-studio/dots.ocr': 3,
     'dots-studio/dots.mocr': 3,
     'dots-studio/dots.mocr-svg': 3,
-    'google/gemma-3n-E2B-it-litert-lm': 5,
-    'google/gemma-3n-E4B-it-litert-lm': 8,
     'mistral-experimental/pixtral-12b': 12.4,
 }
 # END GENERATED MANUAL_SIZES

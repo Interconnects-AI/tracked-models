@@ -50,48 +50,20 @@ VARIANT_TOKEN_PATTERN = re.compile(
 )
 
 
-SEEN_HEADER = """\
-# Repositories a sync has already put in front of a reviewer and that were left
-# out of models.csv and extra_models.csv. The sync skips them, so each candidate
-# is raised once and a declined one stays quiet. Delete a line to have the next
-# sync consider that repository again.
-"""
-
-
 @dataclass(frozen=True)
 class Decision:
     bucket: str
     reason: str
 
 
-def load_seen(path: Path) -> set[str]:
-    if not path.exists():
-        return set()
-    return {
-        line.strip()
-        for line in path.read_text().splitlines()
-        if line.strip() and not line.startswith("#")
-    }
-
-
-def write_seen(path: Path, model_ids: set[str]) -> None:
-    ordered = sorted(model_ids, key=lambda model_id: (model_id.lower(), model_id))
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(SEEN_HEADER + "".join(f"{model_id}\n" for model_id in ordered))
-
-
-def resolve_missing(api: HfApi, model_id: str) -> str | None:
-    """Current id of a tracked repository absent from its organization's
-    listing: a new id after a rename, the same id if it is merely unlisted, or
+def resolve_missing(api: HfApi, model_id: str):
+    """What the Hub now serves for a tracked repository absent from its
+    organization's listing: the repository under its new id after a rename, or
     None when the Hub no longer has it."""
     try:
-        return api.model_info(model_id).id
+        return api.model_info(model_id)
     except RepositoryNotFoundError:
         return None
-    except HfHubHTTPError:
-        # A transient Hub error says nothing about the repository; leave the
-        # row alone and let the next run look again.
-        return model_id
 
 
 def tokenize(text: str) -> set[str]:
@@ -418,8 +390,7 @@ def write_report(
     review_rows: list[tuple[str, str]],
     rejected_by_reason: dict[str, list[str]],
     mention: str,
-    seen_path: Path | None = None,
-    renamed_rows: list[tuple[str, str]] | None = None,
+    renamed_rows: list[tuple[str, str, str]] | None = None,
     gone_ids: list[str] | None = None,
     new_orgs: list[str] | None = None,
 ) -> None:
@@ -433,17 +404,10 @@ def write_report(
         for model_id in sorted(model_ids, key=str.lower)
     ]
     lines = ["# Weekly Hugging Face model sync", ""]
-    if seen_path:
+    if sync_after:
         lines.append(
-            "Scope: every repository in a tracked organization that is in "
-            f"neither list nor `{seen_path.name}`, whatever its creation date."
+            f"Window: repositories created {sync_after.date()} to {now.date()} UTC"
         )
-        if sync_after:
-            lines.append(
-                f"Rejected candidates are listed only if created since {sync_after.date()}."
-            )
-    elif sync_after:
-        lines.append(f"Window: {sync_after.date()} to {now.date()} UTC")
     else:
         lines.append("Window: since the last CSV commit")
     if mention:
@@ -500,7 +464,10 @@ def write_report(
                 "The new id is added beside the old row, which stays for its history.",
                 "",
                 markdown_table(
-                    [(old, f"now `{new}`") for old, new in sorted(renamed_rows)]
+                    [
+                        (old, f"now `{new}`" + (f" ({note})" if note else ""))
+                        for old, new, note in sorted(renamed_rows)
+                    ]
                 ),
                 "",
             ]
@@ -539,7 +506,9 @@ def update_readme_changelog(
 ) -> None:
     model_additions = additions_by_path["models.csv"]
     extra_additions = additions_by_path["extra_models.csv"]
-    if not model_additions and not extra_additions:
+    # A run with nothing to add still records its review list, so the
+    # workflow has a change to open a pull request with.
+    if not model_additions and not extra_additions and not review_rows:
         return
 
     today = datetime.now(timezone.utc).date().isoformat()
@@ -613,20 +582,7 @@ def main() -> None:
     parser.add_argument(
         "--since-days",
         type=int,
-        help=(
-            "Only consider Hugging Face models created in the last N days. With "
-            "--seen, this only limits which rejected candidates are reported."
-        ),
-    )
-    parser.add_argument(
-        "--seen",
-        type=Path,
-        help=(
-            "File of repositories already raised for manual review. When set, "
-            "every repository in neither list nor this file is considered, "
-            "whatever its creation date, so repositories published long after "
-            "they were created are not missed."
-        ),
+        help="Only consider Hugging Face models created in the last N days.",
     )
     parser.add_argument(
         "--update-readme",
@@ -650,9 +606,8 @@ def main() -> None:
     if args.since_days is not None:
         sync_after = datetime.now(timezone.utc) - timedelta(days=args.since_days)
 
-    seen_ids = load_seen(args.seen) if args.seen else set()
     api = HfApi(token=os.environ.get("HF_TOKEN") or None)
-    renamed_rows: list[tuple[str, str]] = []
+    renamed_rows: list[tuple[str, str, str]] = []
     gone_ids: list[str] = []
     new_orgs: set[str] = set()
     additions_by_path: dict[str, list[tuple[str, str, str, str]]] = defaultdict(list)
@@ -678,18 +633,13 @@ def main() -> None:
         listed_ids: set[str] = set()
         for model in api.list_models(author=org, sort="created_at", full=True):
             listed_ids.add(model.id)
-            if model.id in existing_model_ids or model.id in seen_ids:
+            if model.id in existing_model_ids:
                 continue
 
             created_at = model.created_at
             if created_at and created_at.tzinfo is None:
                 created_at = created_at.replace(tzinfo=timezone.utc)
-            is_recent = not sync_after or (
-                created_at is not None and created_at > sync_after
-            )
-            # Without --seen, the creation window is the only memory of what an
-            # earlier run already looked at.
-            if not args.seen and not is_recent:
+            if sync_after and (created_at is None or created_at <= sync_after):
                 continue
 
             model_name = model.id.split("/", 1)[1]
@@ -698,19 +648,21 @@ def main() -> None:
                 org, model_name, tags, tracked_models_by_org
             )
 
-            if not args.seen and not sync_after and not variant_path:
+            if not sync_after and not variant_path:
                 if created_at is None or created_at <= cutoffs[default_path]:
                     continue
 
             decision = classify_model(model, policy, tokens_by_org[org])
             if decision.bucket == "reject":
-                # Rejections are recomputed every run, so only recent ones are
-                # worth listing again.
-                if is_recent:
-                    rejected_by_reason[decision.reason].append(model.id)
+                rejected_by_reason[decision.reason].append(model.id)
                 continue
             if decision.bucket == "review":
-                review_rows.append((model.id, decision.reason))
+                # The window has no memory, so an unhandled candidate is listed
+                # again each week; its date shows which ones are new.
+                reason = decision.reason
+                if created_at:
+                    reason += f"; created {created_at.date()}"
+                review_rows.append((model.id, reason))
                 continue
 
             target_path = (
@@ -741,22 +693,33 @@ def main() -> None:
             if row["org"] == org and row["modelId"] not in listed_ids
         ]:
             old_id = f"{org}/{model_name}"
-            current_id = resolve_missing(api, old_id)
-            if current_id is None:
+            try:
+                current = resolve_missing(api, old_id)
+            except HfHubHTTPError:
+                # A transient Hub error says nothing about the repository;
+                # leave the row alone and let the next run look again.
+                continue
+            if current is None:
                 gone_ids.append(old_id)
-            elif (
-                current_id != old_id
-                and current_id not in existing_model_ids
-                and current_id not in seen_ids
-            ):
-                new_org, new_name = current_id.split("/", 1)
-                renamed_rows.append((old_id, current_id))
-                additions_by_path[csv_name].append(
-                    (new_org, new_name, current_id, f"renamed from `{old_id}`")
+                continue
+            if current.id == old_id or current.id in existing_model_ids:
+                continue
+            # The policy still decides what belongs in the lists: a renamed
+            # conversion or helper repository is reported, not added.
+            decision = classify_model(current, policy, tokens_by_org[org])
+            if decision.bucket == "reject":
+                renamed_rows.append(
+                    (old_id, current.id, f"not added: {decision.reason}")
                 )
-                existing_model_ids.add(current_id)
-                if new_org not in default_path_by_org:
-                    new_orgs.add(new_org)
+                continue
+            new_org, new_name = current.id.split("/", 1)
+            renamed_rows.append((old_id, current.id, ""))
+            additions_by_path[csv_name].append(
+                (new_org, new_name, current.id, f"renamed from `{old_id}`")
+            )
+            existing_model_ids.add(current.id)
+            if new_org not in default_path_by_org:
+                new_orgs.add(new_org)
 
     for csv_name in CSV_NAMES:
         additions = sorted_additions(additions_by_path[csv_name])
@@ -775,8 +738,6 @@ def main() -> None:
     if args.write:
         for csv_name in CSV_NAMES:
             validate_csv(REPO_ROOT / csv_name)
-        if args.seen and review_rows:
-            write_seen(args.seen, seen_ids | {model_id for model_id, _ in review_rows})
 
     if args.report:
         write_report(
@@ -786,7 +747,6 @@ def main() -> None:
             review_rows,
             rejected_by_reason,
             args.mention,
-            seen_path=args.seen,
             renamed_rows=renamed_rows,
             gone_ids=gone_ids,
             new_orgs=sorted(new_orgs, key=str.lower),
@@ -794,8 +754,8 @@ def main() -> None:
 
     if renamed_rows or gone_ids:
         print("Renamed on the Hub:")
-        for old_id, current_id in sorted(renamed_rows):
-            print(f"{old_id} -> {current_id}")
+        for old_id, current_id, note in sorted(renamed_rows):
+            print(f"{old_id} -> {current_id}" + (f" ({note})" if note else ""))
         print()
         print(f"No longer on the Hub: {len(gone_ids)}")
         for model_id in sorted(gone_ids, key=str.lower):

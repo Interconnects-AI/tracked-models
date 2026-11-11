@@ -450,8 +450,6 @@ google,t5gemma-xl-xl-ul2,google/t5gemma-xl-xl-ul2
 google,t5gemma-xl-xl-ul2-it,google/t5gemma-xl-xl-ul2-it
 google,translategemma-12b-it,google/translategemma-12b-it
 google,vaultgemma-1b,google/vaultgemma-1b
-google,gemma-3n-E2B-it-litert-lm,google/gemma-3n-E2B-it-litert-lm
-google,gemma-3n-E4B-it-litert-lm,google/gemma-3n-E4B-it-litert-lm
 google,gemma-4-12B,google/gemma-4-12B
 google,gemma-4-26B-A4B,google/gemma-4-26B-A4B
 google,gemma-4-26B-A4B-it-qat-q4_0-unquantized,google/gemma-4-26B-A4B-it-qat-q4_0-unquantized
