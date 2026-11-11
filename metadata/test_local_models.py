@@ -66,6 +66,15 @@ class LocalModelTests(unittest.TestCase):
         }
         self.assertEqual(detect_formats(model), ["gguf", "mlx", "awq", "compressed-tensors"])
 
+    def test_litert_bundles_are_on_device_conversions(self) -> None:
+        self.assertEqual(detect_formats({"library_name": "litert-lm", "tags": []}), ["litert"])
+        self.assertEqual(detect_formats({"tags": ["tflite"]}), ["litert"])
+        self.assertEqual(detect_formats({"tags": [], "siblings": ["model-int4.litertlm"]}), ["litert"])
+        official = {"id": "Qwen/Qwen3-8B-litert-lm", "tags": ["litert-lm"], "downloads_all_time": 50}
+        self.assertEqual(
+            [row["local_formats"] for row in rows_for(("Qwen/Qwen3-8B", official))], ["litert"]
+        )
+
     def test_format_named_only_in_the_repo_name_is_not_evidence(self) -> None:
         model = child("someone/Qwen3-8B-GGUF-soon", "Qwen/Qwen3-8B")
         self.assertEqual(rejection(model, "Qwen/Qwen3-8B", {}), "no_format_evidence")

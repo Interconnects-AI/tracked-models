@@ -319,7 +319,6 @@ google,codegemma-7b-pytorch,google/codegemma-7b-pytorch
 google,diffusiongemma-26B-A4B-it,google/diffusiongemma-26B-A4B-it
 google,gemma-1.1-2b-it,google/gemma-1.1-2b-it
 google,gemma-1.1-2b-it-pytorch,google/gemma-1.1-2b-it-pytorch
-google,gemma-1.1-2b-it-tflite,google/gemma-1.1-2b-it-tflite
 google,gemma-1.1-7b-it,google/gemma-1.1-7b-it
 google,gemma-1.1-7b-it-pytorch,google/gemma-1.1-7b-it-pytorch
 google,gemma-2-27b,google/gemma-2-27b
@@ -343,7 +342,6 @@ google,gemma-2b-flax,google/gemma-2b-flax
 google,gemma-2b-it,google/gemma-2b-it
 google,gemma-2b-it-flax,google/gemma-2b-it-flax
 google,gemma-2b-it-pytorch,google/gemma-2b-it-pytorch
-google,gemma-2b-it-tflite,google/gemma-2b-it-tflite
 google,gemma-2b-pytorch,google/gemma-2b-pytorch
 google,gemma-3-12b-it,google/gemma-3-12b-it
 google,gemma-3-12b-pt,google/gemma-3-12b-pt
@@ -357,12 +355,8 @@ google,gemma-3-4b-it,google/gemma-3-4b-it
 google,gemma-3-4b-pt,google/gemma-3-4b-pt
 google,gemma-3n-E2B,google/gemma-3n-E2B
 google,gemma-3n-E2B-it,google/gemma-3n-E2B-it
-google,gemma-3n-E2B-it-litert-lm-preview,google/gemma-3n-E2B-it-litert-lm-preview
-google,gemma-3n-E2B-it-litert-preview,google/gemma-3n-E2B-it-litert-preview
 google,gemma-3n-E4B,google/gemma-3n-E4B
 google,gemma-3n-E4B-it,google/gemma-3n-E4B-it
-google,gemma-3n-E4B-it-litert-lm-preview,google/gemma-3n-E4B-it-litert-lm-preview
-google,gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it-litert-preview
 google,gemma-4-12B-it,google/gemma-4-12B-it
 google,gemma-4-12B-it-qat-q4_0-unquantized,google/gemma-4-12B-it-qat-q4_0-unquantized
 google,gemma-4-12B-it-qat-q4_0-unquantized-assistant,google/gemma-4-12B-it-qat-q4_0-unquantized-assistant

@@ -289,12 +289,14 @@ google,codegemma-2b-GGUF,google/codegemma-2b-GGUF,google/codegemma-2b,google,us,
 google,codegemma-7b-GGUF,google/codegemma-7b-GGUF,google/codegemma-7b,google,us,gguf,2024-03-21
 google,codegemma-7b-it-GGUF,google/codegemma-7b-it-GGUF,google/codegemma-7b-it,google,us,gguf,2024-03-21
 google,gemma-1.1-2b-it-GGUF,google/gemma-1.1-2b-it-GGUF,google/gemma-1.1-2b-it,google,us,gguf,2024-03-16
+google,gemma-1.1-2b-it-tflite,google/gemma-1.1-2b-it-tflite,google/gemma-1.1-2b-it,google,us,litert,2024-04-09
 google,gemma-1.1-7b-it-GGUF,google/gemma-1.1-7b-it-GGUF,google/gemma-1.1-7b-it,google,us,gguf,2024-03-16
 google,gemma-2-2b-GGUF,google/gemma-2-2b-GGUF,google/gemma-2-2b,google,us,gguf,2024-07-17
 google,gemma-2-2b-it-GGUF,google/gemma-2-2b-it-GGUF,google/gemma-2-2b-it,google,us,gguf,2024-07-17
 google,gemma-2b-AWQ,google/gemma-2b-AWQ,google/gemma-2b,google,us,awq,2024-07-23
 google,gemma-2b-GGUF,google/gemma-2b-GGUF,google/gemma-2b,google,us,gguf,2024-02-23
 google,gemma-2b-it-GGUF,google/gemma-2b-it-GGUF,google/gemma-2b-it,google,us,gguf,2024-02-23
+google,gemma-2b-it-tflite,google/gemma-2b-it-tflite,google/gemma-2b-it,google,us,litert,2024-04-09
 google,gemma-3-12b-it-qat-q4_0-gguf,google/gemma-3-12b-it-qat-q4_0-gguf,google/gemma-3-12b-it,google,us,gguf,2025-03-12
 google,gemma-3-12b-pt-qat-q4_0-gguf,google/gemma-3-12b-pt-qat-q4_0-gguf,google/gemma-3-12b-pt,google,us,gguf,2025-03-12
 google,gemma-3-1b-it-qat-q4_0-gguf,google/gemma-3-1b-it-qat-q4_0-gguf,google/gemma-3-1b-it,google,us,gguf,2025-03-10
@@ -303,6 +305,10 @@ google,gemma-3-27b-it-qat-q4_0-gguf,google/gemma-3-27b-it-qat-q4_0-gguf,google/g
 google,gemma-3-27b-pt-qat-q4_0-gguf,google/gemma-3-27b-pt-qat-q4_0-gguf,google/gemma-3-27b-pt,google,us,gguf,2025-03-20
 google,gemma-3-4b-it-qat-q4_0-gguf,google/gemma-3-4b-it-qat-q4_0-gguf,google/gemma-3-4b-it,google,us,gguf,2025-03-12
 google,gemma-3-4b-pt-qat-q4_0-gguf,google/gemma-3-4b-pt-qat-q4_0-gguf,google/gemma-3-4b-pt,google,us,gguf,2025-03-12
+google,gemma-3n-E2B-it-litert-lm,google/gemma-3n-E2B-it-litert-lm,google/gemma-3n-E2B-it,google,us,litert,2025-06-06
+google,gemma-3n-E2B-it-litert-preview,google/gemma-3n-E2B-it-litert-preview,google/gemma-3n-E2B-it,google,us,litert,2025-05-18
+google,gemma-3n-E4B-it-litert-lm,google/gemma-3n-E4B-it-litert-lm,google/gemma-3n-E4B-it,google,us,litert,2025-06-06
+google,gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it,google,us,litert,2025-05-18
 google,gemma-7b-AWQ,google/gemma-7b-AWQ,google/gemma-7b,google,us,awq,2024-07-19
 google,gemma-7b-GGUF,google/gemma-7b-GGUF,google/gemma-7b,google,us,gguf,2024-02-23
 google,gemma-7b-it-GGUF,google/gemma-7b-it-GGUF,google/gemma-7b-it,google,us,gguf,2024-02-23
