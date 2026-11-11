@@ -2,19 +2,18 @@
 
 from __future__ import annotations
 
+import contextlib
 import csv
+import io
 import tempfile
 import unittest
 from pathlib import Path
 
-from metadata.generate_model_sizes import (
-    BEGIN_MARKER,
-    END_MARKER,
+from metadata.validate_model_parameters import (
     HEADERS,
     MetadataValidationError,
     load_and_validate,
-    render_manual_sizes,
-    replace_generated_block,
+    main,
 )
 
 
@@ -107,27 +106,15 @@ class ModelParameterMetadataTests(unittest.TestCase):
                 self.write_rows([row])
                 self.assertIs(load_and_validate(self.csv_path)[0].is_moe, expected)
 
-    def test_generated_map_uses_every_canonical_row(self) -> None:
-        second = {
-            **self.valid_row,
-            "model_id": "org/second-checkpoint",
-            "total_params_b": "12",
-            "notes": "Legacy data; not recently reviewed.",
-        }
-        self.write_rows([self.valid_row, second])
+    def test_command_reports_an_invalid_file(self) -> None:
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):
+            self.write_rows([self.valid_row])
+            self.assertEqual(main(["--csv", str(self.csv_path)]), 0)
 
-        rendered = render_manual_sizes(load_and_validate(self.csv_path))
-
-        self.assertIn("'org/checkpoint': 10.5", rendered)
-        self.assertIn("'org/second-checkpoint': 12", rendered)
-
-    def test_generated_markers_must_be_unique(self) -> None:
-        module = f"before\n{BEGIN_MARKER}\nold\n{END_MARKER}\nafter\n"
-        generated = f"{BEGIN_MARKER}\nnew\n{END_MARKER}"
-        self.assertIn("\nnew\n", replace_generated_block(module, generated))
-
-        with self.assertRaises(MetadataValidationError):
-            replace_generated_block("no markers", generated)
+            self.write_rows([self.valid_row, self.valid_row])
+            self.assertEqual(main(["--csv", str(self.csv_path)]), 1)
+        self.assertIn("duplicate model_id", output.getvalue())
 
 
 if __name__ == "__main__":

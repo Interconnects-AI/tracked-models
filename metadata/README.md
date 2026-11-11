@@ -76,34 +76,19 @@ Rows migrated from the older manual-size table remain usable and carry a
 notes. Include supporting evidence in the correction issue or pull request so
 it remains in GitHub history without being duplicated in the CSV.
 
-### `model_sizes.py`
-
-Compatibility helpers used by `Interconnects-AI/open-model-analysis`.
-
-The module includes:
-
-- `MANUAL_SIZES`: a generated model ID to total-parameter map.
-- `get_size_bucket(size_b)`: shared size-bucket labels.
-- `parse_size_from_name(model_id)`: fallback parsing for `7B`, `72B`, etc.
-- `get_model_size(model_id, safetensors_params=None)`: resolution order used by
-  downstream analysis.
-- `resolve_model_sizes(df, params_col='safetensors_parameters_json')`: pandas
-  helper for adding `size_b` and `size_bucket`.
-
-`MANUAL_SIZES` preserves the old helper API and is generated from every
-canonical CSV row. New code should read the CSV when it needs active counts,
-MoE classification, or notes.
-
-After editing `model_parameters.csv`, regenerate or check the literal map:
+The CSV is the only place parameter counts are stored. After editing it, run
+the validator:
 
 ```bash
-python metadata/generate_model_sizes.py --write
-python metadata/generate_model_sizes.py --check
+python metadata/validate_model_parameters.py
 ```
 
-The checker validates exact headers, unique IDs, positive decimal values,
-tri-state `is_moe`, stripped notes, `active_params_b <= total_params_b`, and
-generated map parity. CI runs the same check.
+It checks exact headers, unique IDs, positive decimal values, tri-state
+`is_moe`, stripped notes, and `active_params_b <= total_params_b`. CI runs the
+same check.
+
+`model_sizes.py` used to hold a generated copy of the totals. It is now an empty
+placeholder, kept only until the Interconnects API stops reading that path.
 
 Audit size coverage against the primary `models.csv` list with:
 
@@ -181,5 +166,5 @@ token is required.
 
 Downstream projects depend on this directory's file names, field names, and
 basic data shapes. Do not change the format of `organization_regions.csv`,
-`model_parameters.csv`, `model_sizes.py`, or `release_date_corrections.csv`
+`model_parameters.csv`, or `release_date_corrections.csv`
 without coordinating matching updates in those consumers.

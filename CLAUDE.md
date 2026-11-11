@@ -158,8 +158,8 @@ model_id,total_params_b,active_params_b,is_moe,notes
 - Use `notes` only for useful context such as rounding, approximation,
   corrections, or `Legacy data; not recently reviewed.` Include supporting
   evidence in the correction issue or pull request, not in the CSV.
-- Run `python metadata/generate_model_sizes.py --write` after changing the CSV,
-  then run `python metadata/generate_model_sizes.py --check`.
+- `model_parameters.csv` is the only file to edit. Run
+  `python metadata/validate_model_parameters.py` after changing it.
 
 Hugging Face API metadata is discovery/fallback data, not authoritative release
 or parameter metadata. A repository's `created_at` can predate public launch by
