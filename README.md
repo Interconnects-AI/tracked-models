@@ -159,6 +159,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-11-10
+- Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection
+- Added reviewed parameter metadata for those 8 plus `stepfun-ai/Step-5-Preview` (metadata only)
+- Added release-date corrections for Granite 4.2 and Muse Spark Open, whose Hugging Face repositories predate their public launches
+
 ### 2026-11-04
 - Added 17 manually approved models to `models.csv`: baidu, h2oai, inclusionAI, LiquidAI, openbmb
 - Added reviewed parameter metadata for all 17 checkpoints and discovery coverage for LiquidAI LFM3

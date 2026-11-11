@@ -1656,6 +1656,15 @@ MANUAL_SIZES = {
     'LiquidAI/LFM3-VL-2B-NVFP4': 1.92,
     'openbmb/MiniCPM-OCR-1.0': 1.3,
     'openbmb/MiniCPM-OCR-Jev': 2,
+    'reflection/Beam-1.0-501B-A23B': 501.3,
+    'meta-models/Muse-Spark-Open-816B-A42B': 816,
+    'stepfun-ai/Step-5-Preview': 600,
+    'ibm-granite/granite-4.2-30b': 30,
+    'ibm-granite/granite-4.2-30b-fp8': 30,
+    'ibm-granite/granite-4.2-3b': 3,
+    'ibm-granite/granite-4.2-3b-fp8': 3,
+    'ibm-granite/granite-4.2-8b': 8,
+    'ibm-granite/granite-4.2-8b-fp8': 8,
 }
 # END GENERATED MANUAL_SIZES
 
