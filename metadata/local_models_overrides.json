@@ -32,6 +32,9 @@
     "hugging-quants/Meta-Llama-3.1-8B-Instruct-AWQ-INT4": {
       "parent": "meta-llama/Llama-3.1-8B-Instruct"
     },
+    "inclusionAI/Ling-3.0-flash-Fin-int4": {
+      "parent": "inclusionAI/Ling-3.0-flash-Fin"
+    },
     "kaitchup/Phi-3-mini-4k-instruct-gptq-4bit": {
       "parent": "microsoft/Phi-3-mini-4k-instruct"
     },
@@ -151,6 +154,24 @@
     },
     "mlx-community/Qwen2.5-VL-7B-Instruct-4bit": {
       "parent": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "openbmb/MiniCPM-2B-dpo-int4": {
+      "parent": "openbmb/MiniCPM-2B-dpo-bf16"
+    },
+    "openbmb/MiniCPM-2B-sft-int4": {
+      "parent": "openbmb/MiniCPM-2B-sft-bf16"
+    },
+    "openbmb/MiniCPM4-0.5B-mlx": {
+      "parent": "openbmb/MiniCPM4-0.5B",
+      "formats": [
+        "mlx"
+      ]
+    },
+    "openbmb/MiniCPM4-8B-mlx": {
+      "parent": "openbmb/MiniCPM4-8B",
       "formats": [
         "mlx"
       ]

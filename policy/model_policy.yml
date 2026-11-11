@@ -13,18 +13,26 @@ global:
     - audio-to-audio
     - depth-estimation
     - feature-extraction
+    - fill-mask
     - image-classification
     - image-feature-extraction
     - image-segmentation
+    - image-text-to-image
+    - image-text-to-video
     - image-to-3d
     - image-to-image
     - image-to-video
     - object-detection
     - reinforcement-learning
+    - robotics
     - sentence-similarity
     - text-classification
     - text-ranking
+    - text-to-image
+    - text-to-speech
+    - text-to-video
     - time-series-forecasting
+    - token-classification
     - video-classification
 
   reject_name_patterns:
@@ -32,6 +40,8 @@ global:
     - "(?i)(classifier|detector|reranker|reward|embedding|embed)"
     - "(?i)(tokenizer|adapter|lora|checkpoint|intermediate|proxy)"
     - "(?i)(gguf|mlx|onnx|openvino|gptq|awq|bnb|bitsandbytes|prequantized)"
+    # Integer and n-bit quantizations belong in local-models.csv.
+    - "(?i)(?:^|[-_])(?:int[48]|[48]-?bits?)(?:$|[-_])"
     - "(?i)(sae|probe|interpretability)"
     - "(?i)(test|dummy|warmup)"
 
@@ -107,6 +117,9 @@ orgs:
       - "^granite-switch-4\\.1(?:$|[-_])"
       - "^granite-vision-4\\.1(?:$|[-_])"
       - "^granite-4\\.2(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)-lib$"
 
   inclusionAI:
     primary_family_patterns:
@@ -223,6 +236,7 @@ orgs:
 
     reject_name_patterns:
       - "^SciCore-Mol$"
+      - "^UltraRM-"
 
   opendatalab:
     primary_family_patterns:
