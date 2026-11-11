@@ -313,6 +313,10 @@ google,gemma-3n-E2B-it-litert-lm,google/gemma-3n-E2B-it-litert-lm,google/gemma-3
 google,gemma-3n-E2B-it-litert-preview,google/gemma-3n-E2B-it-litert-preview,google/gemma-3n-E2B-it,google,us,litert,2025-05-18
 google,gemma-3n-E4B-it-litert-lm,google/gemma-3n-E4B-it-litert-lm,google/gemma-3n-E4B-it,google,us,litert,2025-06-06
 google,gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it-litert-preview,google/gemma-3n-E4B-it,google,us,litert,2025-05-18
+google,gemma-4-12B-it-qat-w4a16-ct,google/gemma-4-12B-it-qat-w4a16-ct,google/gemma-4-12B-it-qat-q4_0-unquantized,google,us,compressed-tensors,2026-06-05
+google,gemma-4-31B-it-qat-w4a16-ct,google/gemma-4-31B-it-qat-w4a16-ct,google/gemma-4-31B-it-qat-q4_0-unquantized,google,us,compressed-tensors,2026-06-04
+google,gemma-4-E2B-it-qat-w4a16-ct,google/gemma-4-E2B-it-qat-w4a16-ct,google/gemma-4-E2B-it-qat-q4_0-unquantized,google,us,compressed-tensors,2026-06-04
+google,gemma-4-E4B-it-qat-w4a16-ct,google/gemma-4-E4B-it-qat-w4a16-ct,google/gemma-4-E4B-it-qat-q4_0-unquantized,google,us,compressed-tensors,2026-06-04
 google,gemma-7b-AWQ,google/gemma-7b-AWQ,google/gemma-7b,google,us,awq,2024-07-19
 google,gemma-7b-GGUF,google/gemma-7b-GGUF,google/gemma-7b,google,us,gguf,2024-02-23
 google,gemma-7b-it-GGUF,google/gemma-7b-it-GGUF,google/gemma-7b-it,google,us,gguf,2024-02-23
