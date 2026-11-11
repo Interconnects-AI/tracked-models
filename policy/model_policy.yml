@@ -40,10 +40,10 @@ global:
     - "(?i)(classifier|detector|reranker|reward|embedding|embed)"
     - "(?i)(tokenizer|adapter|lora|checkpoint|intermediate|proxy)"
     - "(?i)(gguf|mlx|onnx|openvino|gptq|awq|bnb|bitsandbytes|prequantized)"
-    # On-device LiteRT bundles and integer or n-bit quantizations belong in
-    # local-models.csv.
+    # On-device LiteRT bundles and integer or n-bit quantizations, including
+    # W4A16-style weight quantization, belong in local-models.csv.
     - "(?i)(litert|tflite)"
-    - "(?i)(?:^|[-_])(?:int[48]|[48]-?bits?)(?:$|[-_])"
+    - "(?i)(?:^|[-_])(?:int[48]|[48]-?bits?|w\\d+a\\d+)(?:$|[-_])"
     - "(?i)(sae|probe|interpretability)"
     - "(?i)(test|dummy|warmup)"
 
@@ -54,8 +54,6 @@ global:
     - BF16
     - FP8
     - NVFP4
-    - W4A4
-    - W4A16
 
   primary_min_downloads: 100000
 

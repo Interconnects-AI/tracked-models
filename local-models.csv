@@ -28,12 +28,16 @@ apolo13x,Qwen3.5-9B-NVFP4,apolo13x/Qwen3.5-9B-NVFP4,Qwen/Qwen3.5-9B,Qwen,china,c
 Ar4ikov,Qwen3.8-27B-AWQ-W4A16-ASYM,Ar4ikov/Qwen3.8-27B-AWQ-W4A16-ASYM,Qwen/Qwen3.8-27B,Qwen,china,awq;compressed-tensors,2026-08-15
 arcee-ai,AFM-4.5B-GGUF,arcee-ai/AFM-4.5B-GGUF,arcee-ai/AFM-4.5B,arcee-ai,us,gguf,2025-07-29
 arcee-ai,Trinity-Large-Preview-GGUF,arcee-ai/Trinity-Large-Preview-GGUF,arcee-ai/Trinity-Large-Preview,arcee-ai,us,gguf,2026-01-28
+arcee-ai,Trinity-Large-Preview-W4A16,arcee-ai/Trinity-Large-Preview-W4A16,arcee-ai/Trinity-Large-Preview,arcee-ai,us,compressed-tensors,2026-02-13
 arcee-ai,Trinity-Large-Thinking-GGUF,arcee-ai/Trinity-Large-Thinking-GGUF,arcee-ai/Trinity-Large-Thinking,arcee-ai,us,gguf,2026-03-31
+arcee-ai,Trinity-Large-Thinking-W4A16,arcee-ai/Trinity-Large-Thinking-W4A16,arcee-ai/Trinity-Large-Thinking,arcee-ai,us,compressed-tensors,2026-04-01
 arcee-ai,Trinity-Mini-GGUF,arcee-ai/Trinity-Mini-GGUF,arcee-ai/Trinity-Mini,arcee-ai,us,gguf,2025-12-01
+arcee-ai,Trinity-Mini-W4A16,arcee-ai/Trinity-Mini-W4A16,arcee-ai/Trinity-Mini,arcee-ai,us,compressed-tensors,2026-03-06
 arcee-ai,Trinity-Nano-Preview-GGUF,arcee-ai/Trinity-Nano-Preview-GGUF,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,gguf,2025-12-01
 arcee-ai,Trinity-Nano-Preview-MLX-5bit,arcee-ai/Trinity-Nano-Preview-MLX-5bit,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,mlx,2026-01-19
 arcee-ai,Trinity-Nano-Preview-MLX-6bit,arcee-ai/Trinity-Nano-Preview-MLX-6bit,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,mlx,2026-01-19
 arcee-ai,Trinity-Nano-Preview-MLX-8bit,arcee-ai/Trinity-Nano-Preview-MLX-8bit,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,mlx,2026-01-19
+arcee-ai,Trinity-Nano-Preview-W4A16,arcee-ai/Trinity-Nano-Preview-W4A16,arcee-ai/Trinity-Nano-Preview,arcee-ai,us,compressed-tensors,2026-02-12
 AtomicChat,Ling-3.0-flash-GGUF,AtomicChat/Ling-3.0-flash-GGUF,inclusionAI/Ling-3.0-flash,inclusionAI,china,gguf,2026-08-04
 AtomicChat,Qwen3.8-27B-GGUF,AtomicChat/Qwen3.8-27B-GGUF,Qwen/Qwen3.8-27B,Qwen,china,gguf,2026-08-12
 AtomicChat,Qwen3.8-Flash-Next-GGUF,AtomicChat/Qwen3.8-Flash-Next-GGUF,Qwen/Qwen3.8-Flash-Next,Qwen,china,gguf,2026-08-26

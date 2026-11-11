@@ -158,7 +158,7 @@ Models intentionally excluded from tracking despite high download counts:
 - **Guard/shield models** (Llama-Guard, ShieldGemma, Qwen3Guard, granite-guardian, wildguard, gpt-oss-safeguard, etc.) -- safety classifiers, not generative LLMs.
 - **Models that are not LLMs or VLMs** -- embedding and reranking models, reward models and classifiers, speech recognition and synthesis models, audio tokenizers, image, video and 3D generators, vision backbones, masked-language encoders and robotics policies, even when they share a family name with a tracked LLM.
 - **Auxiliary repositories** -- tokenizers, training-checkpoint dumps and configuration repositories.
-- **Format and integer conversions** (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, int4/int8, 4-bit/8-bit), including first-party ones -- they are tracked in `local-models.csv` when its rules admit them. Official FP8, NVFP4 and BF16 releases stay in `models.csv`.
+- **Format and integer conversions** (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8, 4-bit/8-bit), including first-party ones -- they are tracked in `local-models.csv` when its rules admit them. Official FP8, NVFP4 and BF16 releases stay in `models.csv`.
 - **Models released before ChatGPT** (Nov 30, 2022).
 
 ## Changelog
@@ -168,8 +168,8 @@ Models intentionally excluded from tracking despite high download counts:
 - Added reviewed parameter metadata for those 8 plus `stepfun-ai/Step-5-Preview` (metadata only)
 - Added release-date corrections for Granite 4.2 and Muse Spark Open, whose Hugging Face repositories predate their public launches
 - Removed 78 rows from `models.csv` that are not LLMs or VLMs (reward models and classifiers, embeddings and rerankers, speech models, image and video generators, vision backbones, tokenizers and checkpoint dumps, pre-ChatGPT models), plus 15 legacy `THUDM` rows that only aliased removed or moved rows
-- Moved 50 first-party format and integer conversions (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, int4/int8, 4-bit/8-bit) from `models.csv` to `local-models.csv`, which now recognises LiteRT bundles; removed 10 more that the local-model rules cannot place
-- The sync policy now rejects those tasks and LiteRT, int4/int8 and n-bit names so they are not added again
+- Moved 54 first-party format and integer conversions (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8, 4-bit/8-bit) from `models.csv` to `local-models.csv`, which now recognises LiteRT bundles; removed 10 more that the local-model rules cannot place
+- The sync policy now rejects those tasks and LiteRT, W4A16, int4/int8 and n-bit names so they are not added again
 
 ### 2026-11-04
 - Added 17 manually approved models to `models.csv`: baidu, h2oai, inclusionAI, LiquidAI, openbmb
