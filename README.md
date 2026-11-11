@@ -206,7 +206,7 @@ Models intentionally excluded from tracking despite high download counts:
 - Added the current ids of 22 renamed repositories beside their old rows: `AIDC-AI` is now `ATH-MaaS`, `AI-MO` is now `project-numina`, the `rednote-hilab` dots models moved to `dots-studio`, plus `mistral-experimental/pixtral-12b`
 - Added reviewed parameter metadata for 68 of the new `models.csv` rows and copied it for the 4 renamed ones
 - The weekly sync now looks at repositories created in the last 45 days instead of 14, opens a pull request whenever a candidate needs review, follows renamed repositories, and no longer rejects a checkpoint for bundling ONNX or OpenVINO files beside its own weights
-- `metadata/model_parameters.csv` is now the only file to edit for parameter counts. The generated copy in `model_sizes.py` is gone; an empty placeholder stays until the Interconnects API stops reading that path. `generate_model_sizes.py` became `validate_model_parameters.py` and only validates the CSV.
+- `metadata/model_parameters.csv` is now the only file to edit for parameter counts. The generated copy in `model_sizes.py` is deleted, and `generate_model_sizes.py` became `validate_model_parameters.py`, which only validates the CSV.
 
 ### 2026-11-10
 - Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection

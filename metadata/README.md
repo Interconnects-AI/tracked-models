@@ -87,9 +87,6 @@ It checks exact headers, unique IDs, positive decimal values, tri-state
 `is_moe`, stripped notes, and `active_params_b <= total_params_b`. CI runs the
 same check.
 
-`model_sizes.py` used to hold a generated copy of the totals. It is now an empty
-placeholder, kept only until the Interconnects API stops reading that path.
-
 Audit size coverage against the primary `models.csv` list with:
 
 ```bash
