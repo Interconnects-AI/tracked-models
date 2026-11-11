@@ -64,6 +64,7 @@ meta-models,us,
 microsoft,us,
 MiniMaxAI,china,
 mistral-community,eu,Official Mistral community namespace.
+mistral-experimental,eu,Hosts the repository formerly at mistral-community/pixtral-12b; region follows that repository's Mistral attribution.
 mistralai,eu,
 moondream,us,
 moonshotai,china,
@@ -86,6 +87,7 @@ PleIAs,eu,
 poolside,us,
 PRIME-RL,china,
 PrimeIntellect,us,
+project-numina,eu,Current namespace of the former AI-MO organization.
 Qwen,china,
 rednote-hilab,china,
 reflection,us,

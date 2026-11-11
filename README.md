@@ -183,6 +183,13 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-11-11
+- Added 69 models the sync had missed to `models.csv`: ai21labs, allenai, dots-studio, google, ibm-granite, internlm, LiquidAI, meituan-longcat, meta-models, microsoft, mistralai, moonshotai, nvidia, openbmb, OpenGVLab, Qwen, reflection, stepfun-ai, thinkingmachines, tiiuae, upstage, XiaomiMiMo, zai-org, Zyphra
+- Added 37 models to `extra_models.csv`: apple, bigcode, CohereLabs, GSAI-ML, LGAI-EXAONE, LiquidAI, llm-jp, nvidia, Salesforce, state-spaces, typhoon-ai
+- Added the current ids of 24 renamed repositories beside their old rows: `AIDC-AI` is now `ATH-MaaS`, `AI-MO` is now `project-numina`, the `rednote-hilab` dots models moved to `dots-studio`, plus `mistral-experimental/pixtral-12b` and two Gemma 3n LiteRT repositories
+- Added reviewed parameter metadata for 68 of the new `models.csv` rows and copied it for the 6 renamed ones
+- The weekly sync now remembers what it has raised in `policy/seen_models.txt` instead of looking only at repositories created in the last 14 days, opens a pull request whenever a candidate needs review, follows renamed repositories, and no longer rejects a checkpoint for bundling ONNX or OpenVINO files beside its own weights
+
 ### 2026-11-10
 - Added 8 manually approved models to `models.csv`: ibm-granite, meta-models, reflection
 - Added reviewed parameter metadata for those 8 plus `stepfun-ai/Step-5-Preview` (metadata only)

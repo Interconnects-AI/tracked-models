@@ -1652,3 +1652,77 @@ ibm-granite/granite-4.2-3b,3,,false,
 ibm-granite/granite-4.2-3b-fp8,3,,false,Official FP8 release; architecture count from its explicitly referenced source card.
 ibm-granite/granite-4.2-8b,8,,false,
 ibm-granite/granite-4.2-8b-fp8,8,,false,Official FP8 release; architecture count from its explicitly referenced source card.
+google/gemma-4-E2B,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-12B,11.95,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-26B-A4B,25.2,3.8,true,Checkpoint name rounds 25.2B/3.8B to 26B/A4B.
+google/gemma-4-31B,30.7,,false,Official reported language-model total; separate vision encoder and optional drafter excluded.
+google/gemma-4-26B-A4B-it-qat-q4_0-unquantized,25.2,3.8,true,Checkpoint name rounds 25.2B/3.8B to 26B/A4B.
+google/gemma-4-31B-it-qat-q4_0-unquantized,30.7,,false,Official reported language-model total; separate vision encoder and optional drafter excluded.
+google/gemma-4-E2B-it-qat-q4_0-unquantized,5.1,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+google/gemma-4-E4B-it-qat-q4_0-unquantized,8,,false,Official model-card Total Parameters field; effective memory size is not used as an active count.
+Qwen/Qwen3-Coder-Next,80,3,true,Official model-card total and activated counts.
+Qwen/Qwen3-Coder-Next-FP8,80,3,true,Official model-card total and activated counts.
+Qwen/Qwen3-Coder-Next-Base,80,3,true,Official model-card total and activated counts.
+Qwen/Qwen-AgentWorld-35B-A3B,35,3,true,Official model-card total and activated counts.
+LiquidAI/LFM2.5-1.2B-Instruct,1.17,,false,Official model-card parameter count.
+LiquidAI/LFM2.5-1.2B-Base,1.17,,false,Official model-card parameter count.
+LiquidAI/LFM2.5-1.2B-Thinking,1.17,,false,Official model-card parameter count.
+XiaomiMiMo/MiMo-V2.5,310,15,true,Reported MoE architecture; vision and audio encoders are listed separately.
+XiaomiMiMo/MiMo-V2.5-Base,310,15,true,Reported MoE architecture; vision and audio encoders are listed separately.
+meituan-longcat/LongCat-Flash-Chat,560,27,true,"Official total; activation is dynamic (18.6B-31.3B per token), about 27B on average."
+meituan-longcat/LongCat-2.5,1600,48,true,Official total; approximately 48B activated per token.
+thinkingmachines/Inkling-NVFP4,975,41,true,Official NVFP4 release; counts as reported on its model card.
+thinkingmachines/Inkling-Small-NVFP4,276,12,true,Official NVFP4 release; counts as reported on its model card.
+meta-models/Muse-Spark-Open-816B-A42B-NVFP4,816,42,true,Official NVFP4 release; its model card reports 816B total and 42B active parameters.
+reflection/Beam-1.0-501B-A23B-NVFP4,501.3,23.4,true,Official NVFP4 release; its model card reports 501.3B total and 23.4B active parameters.
+reflection/Beam-1.0-501B-A23B-FP8,501.3,23.4,true,Official FP8 release; its model card reports 501.3B total and 23.4B active parameters.
+ibm-granite/granite-4.2-30b-nvfp4,30,,false,Official NVFP4 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.2-8b-nvfp4,8,,false,Official NVFP4 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.2-3b-nvfp4,3,,false,Official NVFP4 release; architecture count from its explicitly referenced source card.
+ibm-granite/granite-4.0-h-micro,3,3,false,Official architecture table; active count explicitly reported.
+ibm-granite/granite-4.0-micro-base,3,3,false,Official architecture table; active count explicitly reported.
+nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese,9,,false,Official model-card parameter count.
+nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-NVFP4-QAD,12.6,,false,"Official NVFP4 QAD release; architectural count from its explicitly referenced source model, including vision."
+nvidia/OpenReasoning-Nemotron-32B,32,,false,Official model-card parameter count.
+nvidia/Nemotron-H-4B-Instruct-128K,4,,false,Official model-card parameter count.
+nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16,8,,false,Official total with embeddings; the 4B effective figure is not an active count.
+Zyphra/ZAYA1-8B,8.4,0.76,true,Official reported total and active count.
+Zyphra/ZAYA1-VL-8B,8,0.7,true,Rounded active and total counts from the model card's comparison table.
+moonshotai/Kimi-K3.1-Pro,2800,104,true,Official model-card totals; the 401M vision encoder is listed separately.
+mistralai/Mistral-Large-4-1T-A52B,1000,52,true,Official approximate total; the 52B active count includes embeddings and output layers (49B without them).
+openbmb/MiniCPM-o-4_5,9,,false,Rounded official end-to-end multimodal total.
+internlm/Intern-S1-Pro,1000,22,true,Official reported total and activated count.
+stepfun-ai/Step-3.7-Flash,198,,true,Official total: 196B language backbone plus 1.8B vision encoder.
+stepfun-ai/Step-3.7-Flash-NVFP4,198,,true,Official NVFP4 release; 196B language backbone plus 1.8B vision encoder.
+stepfun-ai/Step-3.5-Flash-FP8,196,11,true,Official FP8 release; its model card reports 196B total and about 11B active.
+stepfun-ai/Step3-VL-10B,10,,false,Rounded official model size.
+stepfun-ai/step3,321,38,true,Official vision-language total; the language model alone is 316B.
+upstage/SOLAR-10.7B-Instruct-v1.0,10.7,,false,Official model-card parameter count.
+upstage/SOLAR-10.7B-v1.0,10.7,,false,Official model-card parameter count.
+upstage/Solar-Open-100B,102.6,12,true,Official reported total and active count.
+upstage/solar-pro-preview-instruct,22,,false,Official model-card parameter count.
+zai-org/GLM-4.5V-FP8,106,12,true,Official FP8 release; backbone count as reported on its model card.
+microsoft/Phi-4-reasoning-vision-15B,15,,false,Official model-card parameter count.
+microsoft/Phi-4-mini-flash-reasoning,3.8,,false,Official model-card parameter count.
+dots-studio/dots.llm1.inst,142,14,true,Official reported total and active count.
+tiiuae/Falcon-H1-Tiny-90M-Instruct,0.09,,false,Official model-card parameter count.
+tiiuae/Falcon3-1B-Base,1,,false,Rounded reported model scale.
+tiiuae/Falcon3-3B-Base,3,,false,Rounded reported model scale.
+tiiuae/Falcon3-7B-Base,7,,false,Rounded reported model scale.
+OpenGVLab/InternVL3_5-14B,15.1,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-14B-Instruct,15.1,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-8B-HF,8.5,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-8B-Instruct,8.5,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-1B-Instruct,1.1,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-2B,2.3,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-4B-HF,4.7,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+OpenGVLab/InternVL3_5-38B-Instruct,38.4,,,Official multimodal total from model-detail table; rounded components may not sum exactly.
+allenai/Olmo-Hybrid-7B,7,,false,Reported rounded model size.
+ai21labs/AI21-Jamba2-3B,3,,false,Official model-card parameter count.
+dots-studio/dots.ocr,3,,,Same repository as rednote-hilab/dots.ocr after its move to this namespace.
+dots-studio/dots.mocr,3,,false,Same repository as rednote-hilab/dots.mocr after its move to this namespace.
+dots-studio/dots.mocr-svg,3,,false,Same repository as rednote-hilab/dots.mocr-svg after its move to this namespace.
+google/gemma-3n-E2B-it-litert-lm,5,,false,Same repository as google/gemma-3n-E2B-it-litert-lm-preview after its move to this namespace.
+google/gemma-3n-E4B-it-litert-lm,8,,false,Same repository as google/gemma-3n-E4B-it-litert-lm-preview after its move to this namespace.
+mistral-experimental/pixtral-12b,12.4,,false,Same repository as mistral-community/pixtral-12b after its move to this namespace.
