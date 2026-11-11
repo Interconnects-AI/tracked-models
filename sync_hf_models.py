@@ -19,6 +19,7 @@ from pathlib import Path
 
 import yaml
 from huggingface_hub import HfApi
+from huggingface_hub.errors import HfHubHTTPError, RepositoryNotFoundError
 
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -55,6 +56,16 @@ class Decision:
     reason: str
 
 
+def resolve_missing(api: HfApi, model_id: str):
+    """What the Hub now serves for a tracked repository absent from its
+    organization's listing: the repository under its new id after a rename, or
+    None when the Hub no longer has it."""
+    try:
+        return api.model_info(model_id)
+    except RepositoryNotFoundError:
+        return None
+
+
 def tokenize(text: str) -> set[str]:
     text = re.sub(r"([a-z])([A-Z])", r"\1 \2", text)
     return {token.lower() for token in re.findall(r"[A-Za-z]{4,}", text)}
@@ -74,9 +85,14 @@ def format_skip_reason(model_name: str, tags: set[str], file_names: list[str]) -
     if any(name.endswith(".gguf") for name in file_names):
         return "gguf"
 
+    # An original checkpoint may bundle an ONNX or OpenVINO export, or ONNX
+    # helper modules, beside its own weights; only a repository without native
+    # weights is a conversion.
+    has_native_weights = any(name.endswith(".safetensors") for name in file_names)
+
     if "onnx" in lowered_name:
         return "format"
-    if any(
+    if not has_native_weights and any(
         name.endswith(".onnx") or name.startswith("onnx/") or "/onnx/" in name
         for name in file_names
     ):
@@ -89,7 +105,7 @@ def format_skip_reason(model_name: str, tags: set[str], file_names: list[str]) -
         return "format"
     if re.search(r"(^|[-_])ov($|[-_])", lowered_name):
         return "format"
-    if any("openvino" in name for name in file_names):
+    if not has_native_weights and any("openvino" in name for name in file_names):
         return "format"
 
     return ""
@@ -236,7 +252,12 @@ def classify_model(
     org_policy = policy.get("orgs", {}).get(org, {})
     tags = {tag.lower() for tag in (model.tags or [])}
     file_names = [sibling.rfilename.lower() for sibling in (model.siblings or [])]
-    searchable_files = "\n".join([model_name, *file_names])
+    # File names only identify a conversion when the repository has no native
+    # weights of its own (see format_skip_reason).
+    has_native_weights = any(name.endswith(".safetensors") for name in file_names)
+    searchable_files = "\n".join(
+        [model_name] if has_native_weights else [model_name, *file_names]
+    )
 
     pattern = matches_any(global_policy.get("reject_name_patterns"), model_name)
     if pattern:
@@ -369,8 +390,14 @@ def write_report(
     review_rows: list[tuple[str, str]],
     rejected_by_reason: dict[str, list[str]],
     mention: str,
+    renamed_rows: list[tuple[str, str, str]] | None = None,
+    gone_ids: list[str] | None = None,
+    new_orgs: list[str] | None = None,
 ) -> None:
     now = datetime.now(timezone.utc)
+    renamed_rows = renamed_rows or []
+    gone_ids = gone_ids or []
+    new_orgs = new_orgs or []
     rejected_rows = [
         (model_id, reason)
         for reason, model_ids in sorted(rejected_by_reason.items())
@@ -378,7 +405,9 @@ def write_report(
     ]
     lines = ["# Weekly Hugging Face model sync", ""]
     if sync_after:
-        lines.append(f"Window: {sync_after.date()} to {now.date()} UTC")
+        lines.append(
+            f"Window: repositories created {sync_after.date()} to {now.date()} UTC"
+        )
     else:
         lines.append("Window: since the last CSV commit")
     if mention:
@@ -392,6 +421,8 @@ def write_report(
             f"- Added to `extra_models.csv`: {len(additions_by_path['extra_models.csv'])}",
             f"- Needs manual review: {len(review_rows)}",
             f"- Rejected: {len(rejected_rows)}",
+            f"- Renamed on the Hub: {len(renamed_rows)}",
+            f"- No longer on the Hub: {len(gone_ids)}",
             "",
             "## Added to models.csv",
             "",
@@ -425,6 +456,45 @@ def write_report(
             "",
         ]
     )
+    if renamed_rows:
+        lines.extend(
+            [
+                "## Renamed on the Hub",
+                "",
+                "The new id is added beside the old row, which stays for its history.",
+                "",
+                markdown_table(
+                    [
+                        (old, f"now `{new}`" + (f" ({note})" if note else ""))
+                        for old, new, note in sorted(renamed_rows)
+                    ]
+                ),
+                "",
+            ]
+        )
+    if new_orgs:
+        lines.extend(
+            [
+                "New namespaces need a row in `metadata/organization_regions.csv` "
+                "and, to auto-add their releases, a block in `policy/model_policy.yml`: "
+                + ", ".join(f"`{org}`" for org in sorted(new_orgs, key=str.lower))
+                + ".",
+                "",
+            ]
+        )
+    if gone_ids:
+        lines.extend(
+            [
+                "## No longer on the Hub",
+                "",
+                "Rows are kept for their download history.",
+                "",
+                ", ".join(
+                    f"`{model_id}`" for model_id in sorted(gone_ids, key=str.lower)
+                ),
+                "",
+            ]
+        )
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text("\n".join(lines))
 
@@ -436,7 +506,9 @@ def update_readme_changelog(
 ) -> None:
     model_additions = additions_by_path["models.csv"]
     extra_additions = additions_by_path["extra_models.csv"]
-    if not model_additions and not extra_additions:
+    # A run with nothing to add still records its review list, so the
+    # workflow has a change to open a pull request with.
+    if not model_additions and not extra_additions and not review_rows:
         return
 
     today = datetime.now(timezone.utc).date().isoformat()
@@ -535,6 +607,9 @@ def main() -> None:
         sync_after = datetime.now(timezone.utc) - timedelta(days=args.since_days)
 
     api = HfApi(token=os.environ.get("HF_TOKEN") or None)
+    renamed_rows: list[tuple[str, str, str]] = []
+    gone_ids: list[str] = []
+    new_orgs: set[str] = set()
     additions_by_path: dict[str, list[tuple[str, str, str, str]]] = defaultdict(list)
     rejected_by_reason: dict[str, list[str]] = defaultdict(list)
     review_rows: list[tuple[str, str]] = []
@@ -555,7 +630,9 @@ def main() -> None:
 
     for org in sorted(default_path_by_org, key=str.lower):
         default_path = default_path_by_org[org]
+        listed_ids: set[str] = set()
         for model in api.list_models(author=org, sort="created_at", full=True):
+            listed_ids.add(model.id)
             if model.id in existing_model_ids:
                 continue
 
@@ -580,7 +657,12 @@ def main() -> None:
                 rejected_by_reason[decision.reason].append(model.id)
                 continue
             if decision.bucket == "review":
-                review_rows.append((model.id, decision.reason))
+                # The window has no memory, so an unhandled candidate is listed
+                # again each week; its date shows which ones are new.
+                reason = decision.reason
+                if created_at:
+                    reason += f"; created {created_at.date()}"
+                review_rows.append((model.id, reason))
                 continue
 
             target_path = (
@@ -600,6 +682,44 @@ def main() -> None:
             tracked_models_by_org[org].sort(
                 key=lambda row: (-len(row[0]), row[0].lower(), row[1])
             )
+
+        # A tracked repository missing from the listing was renamed, moved to
+        # another namespace or deleted. Track a new id beside the old row so its
+        # downloads, and any new namespace, are covered from the next run on.
+        for model_name, csv_name in [
+            (row["model"], name)
+            for name in CSV_NAMES
+            for row in rows_by_path[name]
+            if row["org"] == org and row["modelId"] not in listed_ids
+        ]:
+            old_id = f"{org}/{model_name}"
+            try:
+                current = resolve_missing(api, old_id)
+            except HfHubHTTPError:
+                # A transient Hub error says nothing about the repository;
+                # leave the row alone and let the next run look again.
+                continue
+            if current is None:
+                gone_ids.append(old_id)
+                continue
+            if current.id == old_id or current.id in existing_model_ids:
+                continue
+            # The policy still decides what belongs in the lists: a renamed
+            # conversion or helper repository is reported, not added.
+            decision = classify_model(current, policy, tokens_by_org[org])
+            if decision.bucket == "reject":
+                renamed_rows.append(
+                    (old_id, current.id, f"not added: {decision.reason}")
+                )
+                continue
+            new_org, new_name = current.id.split("/", 1)
+            renamed_rows.append((old_id, current.id, ""))
+            additions_by_path[csv_name].append(
+                (new_org, new_name, current.id, f"renamed from `{old_id}`")
+            )
+            existing_model_ids.add(current.id)
+            if new_org not in default_path_by_org:
+                new_orgs.add(new_org)
 
     for csv_name in CSV_NAMES:
         additions = sorted_additions(additions_by_path[csv_name])
@@ -627,7 +747,20 @@ def main() -> None:
             review_rows,
             rejected_by_reason,
             args.mention,
+            renamed_rows=renamed_rows,
+            gone_ids=gone_ids,
+            new_orgs=sorted(new_orgs, key=str.lower),
         )
+
+    if renamed_rows or gone_ids:
+        print("Renamed on the Hub:")
+        for old_id, current_id, note in sorted(renamed_rows):
+            print(f"{old_id} -> {current_id}" + (f" ({note})" if note else ""))
+        print()
+        print(f"No longer on the Hub: {len(gone_ids)}")
+        for model_id in sorted(gone_ids, key=str.lower):
+            print(model_id)
+        print()
 
     print("Needs manual review:")
     for model_id, reason in sorted(review_rows, key=lambda row: row[0].lower()):

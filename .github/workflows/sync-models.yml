@@ -38,7 +38,7 @@ jobs:
             --write \
             --policy policy/model_policy.yml \
             --report "$RUNNER_TEMP/model_sync.md" \
-            --since-days 14 \
+            --since-days 45 \
             --update-readme \
             --mention "@xeophon" \
             --verbose
@@ -51,6 +51,8 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
+          # The sync writes a changelog entry whenever a candidate needs manual
+          # review, so a pull request opens even when nothing was added.
           if git status --short -- models.csv extra_models.csv README.md | grep -q .; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else

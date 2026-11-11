@@ -76,6 +76,13 @@ orgs:
       - "^EMO$"
       - "^(?:Dense|EMO|Emo|StdMoE)_"
 
+  ATH-MaaS:
+    # Current namespace of the former AIDC-AI organization.
+    primary_family_patterns:
+      - "^Ovis(?:$|[-_])"
+      - "^Ovis\\d"
+      - "^Marco-(?:Mini|Nano|DeepResearch)(?:$|[-_])"
+
   apple:
     primary_family_patterns:
       - "^CADD-Base-7B$"
