@@ -560,6 +560,12 @@ ibm-granite,granite-vision-3.1-2b-preview,ibm-granite/granite-vision-3.1-2b-prev
 ibm-granite,granite-vision-3.2-2b,ibm-granite/granite-vision-3.2-2b
 ibm-granite,granite-vision-3.3-2b,ibm-granite/granite-vision-3.3-2b
 ibm-granite,granite-vision-4.1-4b,ibm-granite/granite-vision-4.1-4b
+ibm-granite,granite-4.2-30b,ibm-granite/granite-4.2-30b
+ibm-granite,granite-4.2-30b-fp8,ibm-granite/granite-4.2-30b-fp8
+ibm-granite,granite-4.2-3b,ibm-granite/granite-4.2-3b
+ibm-granite,granite-4.2-3b-fp8,ibm-granite/granite-4.2-3b-fp8
+ibm-granite,granite-4.2-8b,ibm-granite/granite-4.2-8b
+ibm-granite,granite-4.2-8b-fp8,ibm-granite/granite-4.2-8b-fp8
 inclusionAI,AReaL-1.5B-Preview-Stage-1,inclusionAI/AReaL-1.5B-Preview-Stage-1
 inclusionAI,AReaL-1.5B-Preview-Stage-2,inclusionAI/AReaL-1.5B-Preview-Stage-2
 inclusionAI,AReaL-1.5B-Preview-Stage-3,inclusionAI/AReaL-1.5B-Preview-Stage-3
@@ -870,6 +876,7 @@ meta-llama,Meta-Llama-3-70B-Instruct,meta-llama/Meta-Llama-3-70B-Instruct
 meta-llama,Meta-Llama-3-8B,meta-llama/Meta-Llama-3-8B
 meta-llama,Meta-Llama-3-8B-Instruct,meta-llama/Meta-Llama-3-8B-Instruct
 meta-models,Muse-Glimmer-30B,meta-models/Muse-Glimmer-30B
+meta-models,Muse-Spark-Open-816B-A42B,meta-models/Muse-Spark-Open-816B-A42B
 microsoft,bitnet-b1.58-2B-4T,microsoft/bitnet-b1.58-2B-4T
 microsoft,bitnet-b1.58-2B-4T-bf16,microsoft/bitnet-b1.58-2B-4T-bf16
 microsoft,Fara-7B,microsoft/Fara-7B
@@ -1890,3 +1897,4 @@ zai-org,webrl-llama-3.1-8b,zai-org/webrl-llama-3.1-8b
 zai-org,webrl-orm-llama-3.1-8b,zai-org/webrl-orm-llama-3.1-8b
 zai-org,WebVIA-Agent,zai-org/WebVIA-Agent
 Zyphra,ZAYA1-74B-preview,Zyphra/ZAYA1-74B-preview
+reflection,Beam-1.0-501B-A23B,reflection/Beam-1.0-501B-A23B

@@ -106,6 +106,7 @@ orgs:
       - "^granite-4\\.1(?:$|[-_])"
       - "^granite-switch-4\\.1(?:$|[-_])"
       - "^granite-vision-4\\.1(?:$|[-_])"
+      - "^granite-4\\.2(?:$|[-_])"
 
   inclusionAI:
     primary_family_patterns:
@@ -147,6 +148,7 @@ orgs:
   meta-models:
     primary_family_patterns:
       - "^Muse-Glimmer-30B$"
+      - "^Muse-Spark-Open(?:$|[-_])"
 
   microsoft:
     reject_name_patterns:
@@ -232,6 +234,10 @@ orgs:
 
     reject_name_patterns:
       - "(?i)(DFlash|speculator)"
+
+  reflection:
+    primary_family_patterns:
+      - "^Beam-"
 
   tencent:
     primary_family_patterns:
