@@ -38,6 +38,18 @@
         "litert"
       ]
     },
+    "google/gemma-4-12B-it-qat-w4a16-ct": {
+      "parent": "google/gemma-4-12B-it-qat-q4_0-unquantized"
+    },
+    "google/gemma-4-31B-it-qat-w4a16-ct": {
+      "parent": "google/gemma-4-31B-it-qat-q4_0-unquantized"
+    },
+    "google/gemma-4-E2B-it-qat-w4a16-ct": {
+      "parent": "google/gemma-4-E2B-it-qat-q4_0-unquantized"
+    },
+    "google/gemma-4-E4B-it-qat-w4a16-ct": {
+      "parent": "google/gemma-4-E4B-it-qat-q4_0-unquantized"
+    },
     "hugging-quants/Meta-Llama-3.1-70B-Instruct-AWQ-INT4": {
       "parent": "meta-llama/Llama-3.1-70B-Instruct"
     },

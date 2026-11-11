@@ -214,6 +214,7 @@ Models intentionally excluded from tracking despite high download counts:
 - Added release-date corrections for Granite 4.2 and Muse Spark Open, whose Hugging Face repositories predate their public launches
 - Removed 78 rows from `models.csv` that are not LLMs or VLMs (reward models and classifiers, embeddings and rerankers, speech models, image and video generators, vision backbones, tokenizers and checkpoint dumps, pre-ChatGPT models), plus 15 legacy `THUDM` rows that only aliased removed or moved rows
 - Moved 54 first-party format and integer conversions (GGUF, MLX, ONNX, LiteRT, AWQ, GPTQ, W4A16, int4/int8, 4-bit/8-bit) from `models.csv` to `local-models.csv`, which now recognises LiteRT bundles; removed 10 more that the local-model rules cannot place
+- Moved the four Gemma 4 `-qat-w4a16-ct` rows to `local-models.csv` as well, now that their parent QAT checkpoints are tracked
 - The sync policy now rejects those tasks and LiteRT, W4A16, int4/int8 and n-bit names so they are not added again
 - Wrote down the core-or-local rule: first-party FP8 and FP4 releases are core, everyone else's are local. The policy now rejects NVIDIA's FP8 and FP4 builds of other labs' models, which `local-models.csv` already tracks
 
