@@ -200,6 +200,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-11-16
+- Weekly Hugging Face sync
+- Added 6 models to `models.csv`: nvidia, reflection, thinkingmachines
+- 242 candidates rejected, 33 left for manual review
+
 ### 2026-11-11
 - Added 69 models the sync had missed to `models.csv`: ai21labs, allenai, dots-studio, google, ibm-granite, internlm, LiquidAI, meituan-longcat, meta-models, microsoft, mistralai, moonshotai, nvidia, openbmb, OpenGVLab, Qwen, reflection, stepfun-ai, thinkingmachines, tiiuae, upstage, XiaomiMiMo, zai-org, Zyphra
 - Added 37 models to `extra_models.csv`: apple, bigcode, CohereLabs, GSAI-ML, LGAI-EXAONE, LiquidAI, llm-jp, nvidia, Salesforce, state-spaces, typhoon-ai
