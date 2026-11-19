@@ -256,3 +256,6 @@ ATH-MaaS,Ovis2.5-9B,ATH-MaaS/Ovis2.5-9B
 ATH-MaaS,Ovis2.6-30B-A3B,ATH-MaaS/Ovis2.6-30B-A3B
 ATH-MaaS,Ovis2.6-80B-A3B,ATH-MaaS/Ovis2.6-80B-A3B
 project-numina,Kimina-Prover-72B,project-numina/Kimina-Prover-72B
+inclusionAI,Duo-1.0-causal-base,inclusionAI/Duo-1.0-causal-base
+inclusionAI,Duo-1.0-distill-quant,inclusionAI/Duo-1.0-distill-quant
+inclusionAI,Duo-1.2-causal-base,inclusionAI/Duo-1.2-causal-base

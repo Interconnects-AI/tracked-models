@@ -39,6 +39,7 @@ global:
     - "(?i)(guard|guardian|shield|safeguard|safety)"
     - "(?i)(classifier|detector|reranker|reward|embedding|embed)"
     - "(?i)(tokenizer|adapter|lora|checkpoint|intermediate|proxy)"
+    - "(?i)(?:^|[-_])dflash\\d*(?:$|[-_])"
     - "(?i)(gguf|mlx|onnx|openvino|gptq|awq|bnb|bitsandbytes|prequantized)"
     # On-device LiteRT bundles and integer or n-bit quantizations, including
     # W4A16-style weight quantization, belong in local-models.csv.
@@ -92,6 +93,10 @@ orgs:
     primary_family_patterns:
       - "^Trinity-(?:Large|Mini|Nano)(?:$|[-_])"
 
+  baidu:
+    primary_family_patterns:
+      - "^ERNIE-5\\.5(?:$|[-_])"
+
   ByteDance-Seed:
     primary_family_patterns:
       - "^Cola-DLM(?:$|[-_])"
@@ -112,6 +117,10 @@ orgs:
   google:
     primary_family_patterns:
       - "^gemma-4(?:$|[-_])"
+
+  h2oai:
+    primary_family_patterns:
+      - "^h2o-lightning-"
 
   HuggingFaceTB:
     primary_family_patterns:

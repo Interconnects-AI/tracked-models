@@ -1724,3 +1724,20 @@ dots-studio/dots.ocr,3,,,Same repository as rednote-hilab/dots.ocr after its mov
 dots-studio/dots.mocr,3,,false,Same repository as rednote-hilab/dots.mocr after its move to this namespace.
 dots-studio/dots.mocr-svg,3,,false,Same repository as rednote-hilab/dots.mocr-svg after its move to this namespace.
 mistral-experimental/pixtral-12b,12.4,,false,Same repository as mistral-community/pixtral-12b after its move to this namespace.
+baidu/ERNIE-5.5-Flash-Base,280,14,true,Publisher-reported FP8 checkpoint size and per-token active count; both exclude 0.36B ECHO parameters.
+baidu/ERNIE-5.5-Flash-Base-BF16,280,14,true,Publisher-reported BF16 checkpoint size and per-token active count; both exclude 0.36B ECHO parameters.
+ByteDance-Seed/Cola2,8.77,,false,Approximate combined VAE and DiT size derived from the publisher's FP32 weight index.
+h2oai/h2o-lightning-12b,12,,false,Rounded publisher-reported total for the Gemma 4 12B Unified fine-tune.
+h2oai/h2o-lightning-4b,4,,false,Rounded publisher-reported language backbone size; excludes the vision encoder.
+h2oai/h2o-lightning-4b-nemotron-nano,4,,false,Rounded publisher-reported total for the Nemotron 3 Nano 4B fine-tune.
+inclusionAI/SingVL_S1_4B,4,,false,Rounded publisher-reported Qwen3.5 language backbone size; excludes the vision encoder.
+inclusionAI/ZwZ2-4B,4,,false,Published Qwen3.5-4B language backbone scale of the fine-tune; excludes the vision encoder.
+inclusionAI/ZwZ2-9B,9,,false,Published Qwen3.5-9B language backbone scale of the fine-tune; excludes the vision encoder.
+inclusionAI/ZwZ2-27B,27,,false,Published Qwen3.6-27B language backbone scale of the fine-tune; excludes the vision encoder.
+LiquidAI/d1-3B,3.12,,false,Publisher-reported vision-language model total.
+mistralai/Mistral-Large-4-1T-A52B-NVFP4,1000,52,true,Approximate publisher-reported total; active count includes embeddings and output layers (49B without them).
+nvidia/Eagle2.5-8B,8,,false,Rounded published Eagle 2.5 vision-language model size.
+thinkingmachines/Inkling-2-Small,594,17,true,Publisher-reported total and active parameters.
+thinkingmachines/Inkling-2-Small-MXFP8,594,17,true,Publisher-reported total and active parameters for the MXFP8 checkpoint.
+typhoon-ai/typhoon-ocr2-0.8b,0.8,,false,Rounded publisher-reported size for the OvisOCR2 fine-tune.
+typhoon-ai/typhoon-ocr2-2b,2,,false,Rounded publisher-reported size for the Infinity-Parser2-Flash fine-tune.
