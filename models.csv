@@ -191,6 +191,8 @@ baidu,Qianfan-VL-3B,baidu/Qianfan-VL-3B
 baidu,Qianfan-VL-70B,baidu/Qianfan-VL-70B
 baidu,Qianfan-VL-8B,baidu/Qianfan-VL-8B
 baidu,Unlimited-OCR-2,baidu/Unlimited-OCR-2
+baidu,ERNIE-5.5-Flash-Base,baidu/ERNIE-5.5-Flash-Base
+baidu,ERNIE-5.5-Flash-Base-BF16,baidu/ERNIE-5.5-Flash-Base-BF16
 ByteDance-Seed,academic-ds-9B,ByteDance-Seed/academic-ds-9B
 ByteDance-Seed,BAGEL-7B-MoT,ByteDance-Seed/BAGEL-7B-MoT
 ByteDance-Seed,BFS-Prover-V1-7B,ByteDance-Seed/BFS-Prover-V1-7B
@@ -205,6 +207,7 @@ ByteDance-Seed,Seed-OSS-36B-Base-woSyn,ByteDance-Seed/Seed-OSS-36B-Base-woSyn
 ByteDance-Seed,Seed-OSS-36B-Instruct,ByteDance-Seed/Seed-OSS-36B-Instruct
 ByteDance-Seed,UI-TARS-1.5-7B,ByteDance-Seed/UI-TARS-1.5-7B
 ByteDance-Seed,UI-TARS-7B-DPO,ByteDance-Seed/UI-TARS-7B-DPO
+ByteDance-Seed,Cola2,ByteDance-Seed/Cola2
 CohereLabs,command-a-plus-05-2026-bf16,CohereLabs/command-a-plus-05-2026-bf16
 CohereLabs,North-Micro-Vision-Instruct,CohereLabs/North-Micro-Vision-Instruct
 CohereLabs,tiny-aya-base-32K,CohereLabs/tiny-aya-base-32K
@@ -440,6 +443,9 @@ google,gemma-4-E4B-it-qat-q4_0-unquantized,google/gemma-4-E4B-it-qat-q4_0-unquan
 h2oai,h2o-lightning-31b,h2oai/h2o-lightning-31b
 h2oai,h2o-lightning-bolt-74b,h2oai/h2o-lightning-bolt-74b
 h2oai,h2o-lightning-e4b,h2oai/h2o-lightning-e4b
+h2oai,h2o-lightning-12b,h2oai/h2o-lightning-12b
+h2oai,h2o-lightning-4b,h2oai/h2o-lightning-4b
+h2oai,h2o-lightning-4b-nemotron-nano,h2oai/h2o-lightning-4b-nemotron-nano
 HuggingFaceTB,FineMath-Llama-3B,HuggingFaceTB/FineMath-Llama-3B
 HuggingFaceTB,nanowhale-100m,HuggingFaceTB/nanowhale-100m
 HuggingFaceTB,nanowhale-100m-base,HuggingFaceTB/nanowhale-100m-base
@@ -672,6 +678,10 @@ inclusionAI,ZwZ-2B,inclusionAI/ZwZ-2B
 inclusionAI,ZwZ-4B,inclusionAI/ZwZ-4B
 inclusionAI,ZwZ-7B,inclusionAI/ZwZ-7B
 inclusionAI,ZwZ-8B,inclusionAI/ZwZ-8B
+inclusionAI,SingVL_S1_4B,inclusionAI/SingVL_S1_4B
+inclusionAI,ZwZ2-4B,inclusionAI/ZwZ2-4B
+inclusionAI,ZwZ2-9B,inclusionAI/ZwZ2-9B
+inclusionAI,ZwZ2-27B,inclusionAI/ZwZ2-27B
 internlm,Agent-FLAN-7b,internlm/Agent-FLAN-7b
 internlm,AlchemistCoder-CL-7B,internlm/AlchemistCoder-CL-7B
 internlm,AlchemistCoder-DS-6.7B,internlm/AlchemistCoder-DS-6.7B
@@ -773,6 +783,7 @@ LiquidAI,LFM3-VL-2B-NVFP4,LiquidAI/LFM3-VL-2B-NVFP4
 LiquidAI,LFM2.5-1.2B-Base,LiquidAI/LFM2.5-1.2B-Base
 LiquidAI,LFM2.5-1.2B-Instruct,LiquidAI/LFM2.5-1.2B-Instruct
 LiquidAI,LFM2.5-1.2B-Thinking,LiquidAI/LFM2.5-1.2B-Thinking
+LiquidAI,d1-3B,LiquidAI/d1-3B
 llava-hf,bakLlava-v1-hf,llava-hf/bakLlava-v1-hf
 llava-hf,llama3-llava-next-8b-hf,llava-hf/llama3-llava-next-8b-hf
 llava-hf,llava-1.5-13b-hf,llava-hf/llava-1.5-13b-hf
@@ -957,6 +968,7 @@ mistralai,Pixtral-12B-2409,mistralai/Pixtral-12B-2409
 mistralai,Pixtral-12B-Base-2409,mistralai/Pixtral-12B-Base-2409
 mistralai,Pixtral-Large-Instruct-2411,mistralai/Pixtral-Large-Instruct-2411
 mistralai,Mistral-Large-4-1T-A52B,mistralai/Mistral-Large-4-1T-A52B
+mistralai,Mistral-Large-4-1T-A52B-NVFP4,mistralai/Mistral-Large-4-1T-A52B-NVFP4
 moondream,moondream-2b-2025-04-14,moondream/moondream-2b-2025-04-14
 moondream,moondream3-preview,moondream/moondream3-preview
 moondream,moondream3.1-9B-A2B,moondream/moondream3.1-9B-A2B
@@ -1131,6 +1143,7 @@ nvidia,NVIDIA-Nemotron-3.5-Bolt-E4B-BF16,nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF1
 nvidia,NVIDIA-Nemotron-Nano-12B-v2-VL-NVFP4-QAD,nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-NVFP4-QAD
 nvidia,NVIDIA-Nemotron-Nano-9B-v2-Japanese,nvidia/NVIDIA-Nemotron-Nano-9B-v2-Japanese
 nvidia,OpenReasoning-Nemotron-32B,nvidia/OpenReasoning-Nemotron-32B
+nvidia,Eagle2.5-8B,nvidia/Eagle2.5-8B
 openai,gpt-oss-120b,openai/gpt-oss-120b
 openai,gpt-oss-20b,openai/gpt-oss-20b
 openbmb,BitCPM-CANN-0.5B,openbmb/BitCPM-CANN-0.5B
@@ -1567,6 +1580,8 @@ thinkingmachines,Inkling,thinkingmachines/Inkling
 thinkingmachines,Inkling-Small,thinkingmachines/Inkling-Small
 thinkingmachines,Inkling-NVFP4,thinkingmachines/Inkling-NVFP4
 thinkingmachines,Inkling-Small-NVFP4,thinkingmachines/Inkling-Small-NVFP4
+thinkingmachines,Inkling-2-Small,thinkingmachines/Inkling-2-Small
+thinkingmachines,Inkling-2-Small-MXFP8,thinkingmachines/Inkling-2-Small-MXFP8
 THUDM,agentlm-13b,THUDM/agentlm-13b
 THUDM,agentlm-70b,THUDM/agentlm-70b
 THUDM,agentlm-7b,THUDM/agentlm-7b
@@ -1810,3 +1825,5 @@ reflection,Beam-1.0-501B-A23B,reflection/Beam-1.0-501B-A23B
 reflection,Beam-1.0-501B-A23B-FP8,reflection/Beam-1.0-501B-A23B-FP8
 reflection,Beam-1.0-501B-A23B-NVFP4,reflection/Beam-1.0-501B-A23B-NVFP4
 mistral-experimental,pixtral-12b,mistral-experimental/pixtral-12b
+typhoon-ai,typhoon-ocr2-0.8b,typhoon-ai/typhoon-ocr2-0.8b
+typhoon-ai,typhoon-ocr2-2b,typhoon-ai/typhoon-ocr2-2b

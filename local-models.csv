@@ -331,6 +331,7 @@ google,gemma-7b-AWQ,google/gemma-7b-AWQ,google/gemma-7b,google,us,awq,2024-07-19
 google,gemma-7b-GGUF,google/gemma-7b-GGUF,google/gemma-7b,google,us,gguf,2024-02-23
 google,gemma-7b-it-GGUF,google/gemma-7b-it-GGUF,google/gemma-7b-it,google,us,gguf,2024-02-23
 GPT4All-Community,Meta-Llama-3.1-8B-Instruct-128k-GGUF,GPT4All-Community/Meta-Llama-3.1-8B-Instruct-128k-GGUF,meta-llama/Llama-3.1-8B-Instruct,meta-llama,us,gguf,2024-07-27
+h2oai,h2o-lightning-4b-gguf,h2oai/h2o-lightning-4b-gguf,h2oai/h2o-lightning-4b,h2oai,us,gguf,2026-10-10
 hugging-quants,gemma-2-9b-it-AWQ-INT4,hugging-quants/gemma-2-9b-it-AWQ-INT4,google/gemma-2-9b-it,google,us,awq,2024-10-15
 hugging-quants,Llama-3.2-1B-Instruct-Q4_K_M-GGUF,hugging-quants/Llama-3.2-1B-Instruct-Q4_K_M-GGUF,meta-llama/Llama-3.2-1B-Instruct,meta-llama,us,gguf,2024-09-25
 hugging-quants,Llama-3.2-1B-Instruct-Q8_0-GGUF,hugging-quants/Llama-3.2-1B-Instruct-Q8_0-GGUF,meta-llama/Llama-3.2-1B-Instruct,meta-llama,us,gguf,2024-09-25
