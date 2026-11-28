@@ -82,6 +82,7 @@ orgs:
     primary_family_patterns:
       - "^Ovis(?:$|[-_])"
       - "^Ovis\\d"
+      - "^OvisOCR\\d"
       - "^Marco-(?:Mini|Nano|DeepResearch)(?:$|[-_])"
 
   apple:
@@ -191,6 +192,9 @@ orgs:
       - "^Muse-Spark-Open(?:$|[-_])"
 
   microsoft:
+    primary_family_patterns:
+      - "^Aion(?:$|[-_])"
+
     reject_name_patterns:
       - "^Dayhoff-"
 

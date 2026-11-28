@@ -202,10 +202,11 @@ Models intentionally excluded from tracking despite high download counts:
 
 ### 2026-11-23
 - Weekly Hugging Face sync
-- Added 7 models to `models.csv`: tencent, thinkingmachines
-- Added 10 models to `extra_models.csv`: nvidia
+- Added 8 models to `models.csv`: microsoft, tencent, thinkingmachines
+- Added 14 models to `extra_models.csv`: ATH-MaaS, microsoft, nvidia, tencent
 - Promoted 16 core LiquidAI `LFM2` and `LFM2.5` checkpoints from `extra_models.csv` to `models.csv` with reviewed parameter metadata, and added a LiquidAI core-model inclusion rule in `policy/model_policy.yml`
-- 258 candidates rejected, 20 left for manual review
+- Added reviewed parameter metadata for the new `models.csv` rows
+- 258 candidates rejected, 15 left for manual review
 
 ### 2026-11-16
 - Weekly Hugging Face sync

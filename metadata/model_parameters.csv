@@ -1757,3 +1757,11 @@ LiquidAI/LFM2.5-8B-A1B,8.3,1.5,true,Official model-card total and active counts.
 LiquidAI/LFM2.5-8B-A1B-Base,8.3,1.5,true,Official model-card total and active counts.
 LiquidAI/LFM2.5-VL-450M,0.45,,false,Rounded end-to-end vision-language model total (LFM2.5-350M backbone plus 86M SigLIP2 vision encoder).
 LiquidAI/LFM2.5-VL-1.6B,1.6,,false,Rounded end-to-end vision-language model total (LFM2.5-1.2B-Base backbone plus 400M SigLIP2 vision encoder).
+microsoft/Aion-1.0-Instruct-2.3B,2.29,,false,Official model-card parameter count (~2.29B with tied input/output embeddings).
+tencent/Hy4,770,49,true,"Reported backbone total and text active count; excludes 1.23B ViT, adapter, and 3.3B DFly2 draft module."
+tencent/Hy4-base,770,49,true,"Reported backbone total and text active count; excludes 1.23B ViT, adapter, and 3.3B DFly2 draft module."
+tencent/Hy4-FP8,770,49,true,"Official FP8 checkpoint; reported backbone total and text active count exclude 1.23B ViT, adapter, and 3.3B DFly2 draft module."
+tencent/Hy4-flash,155.5,11.3,true,"Reported backbone total and text active count; excludes 63.5B Engram conditional memory, 0.43B ViT, and 0.85B DFly2 draft module."
+tencent/Hy4-flash-base,155.5,11.3,true,"Reported backbone total and text active count; excludes 63.5B Engram conditional memory, 0.43B ViT, and 0.85B DFly2 draft module."
+tencent/Hy4-flash-FP8,155.5,11.3,true,"Official FP8 checkpoint; reported backbone total and text active count exclude 63.5B Engram conditional memory, 0.43B ViT, and 0.85B DFly2 draft module."
+thinkingmachines/Inkling-2-Mini,26.4,3.4,true,Publisher-reported total and active parameters (5.4B effective active across three looped passes).
