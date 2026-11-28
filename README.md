@@ -200,6 +200,14 @@ Models intentionally excluded from tracking despite high download counts:
 
 ## Changelog
 
+### 2026-11-23
+- Weekly Hugging Face sync
+- Added 8 models to `models.csv`: microsoft, tencent, thinkingmachines
+- Added 14 models to `extra_models.csv`: ATH-MaaS, microsoft, nvidia, tencent
+- Promoted 16 core LiquidAI `LFM2` and `LFM2.5` checkpoints from `extra_models.csv` to `models.csv` with reviewed parameter metadata, and added a LiquidAI core-model inclusion rule in `policy/model_policy.yml`
+- Added reviewed parameter metadata for the new `models.csv` rows
+- 258 candidates rejected, 15 left for manual review
+
 ### 2026-11-16
 - Weekly Hugging Face sync
 - Added 17 models to `models.csv`: baidu, ByteDance-Seed, h2oai, inclusionAI, LiquidAI, mistralai, nvidia, thinkingmachines, typhoon-ai
