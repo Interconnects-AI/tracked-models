@@ -160,9 +160,18 @@ orgs:
       - "(?i)DSpark"
 
   LiquidAI:
+    # Core text, VL, and Omni checkpoints across LFM2, LFM2.5, LFM3+, and d1+
+    # belong in models.csv; task-specific, regional, and experimental variants
+    # stay in extra_models.csv.
     primary_family_patterns:
-      - "^LFM2\\.5(?:$|[-_])"
-      - "^LFM3(?:$|[-_])"
+      - "^LFM(?:2(?:\\.5)?|[3-9](?:\\.\\d+)?)(?:-(?:VL|Omni))?-(?:\\d+(?:\\.\\d+)?[MB])(?:-A\\d+(?:\\.\\d+)?[MB])?(?:-(?:Base|Instruct|Thinking))?(?:-(?:BF16|FP8|NVFP4|MXFP4|MXFP8))?$"
+      - "^d\\d+(?:-[Oo]mni)?-(?:\\d+(?:\\.\\d+)?[MB])(?:-(?:Base|Instruct|Thinking))?(?:-(?:BF16|FP8|NVFP4|MXFP4|MXFP8))?$"
+
+    extra_family_patterns:
+      - "^LFM(?:2(?:\\.5)?|[3-9](?:\\.\\d+)?).*-(?:Exp|Extract|JP|Math|RAG|Tool|Transcript|Longevity)(?:$|[-_])"
+
+    reject_name_patterns:
+      - "(?i)(?:^|[-_])(?:Audio|ColBERT|DSpark|Encoder)(?:$|[-_])"
 
   llm-jp:
     primary_family_patterns:
